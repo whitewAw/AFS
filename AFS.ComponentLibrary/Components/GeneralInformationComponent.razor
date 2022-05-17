@@ -1,0 +1,46 @@
+﻿@implements IDisposable
+
+<RadzenCard Style="width: 100%;">
+    <div class="row mb-2">
+        <div class="col-md-2" style="align-self: center;">
+            <RadzenLabel Text="@ResLoc["CompanyName"]" />
+        </div>
+        <div class="col">
+            <RadzenTextBox @bind-Value="@MainModel.CompanyName" Class="w-100" />
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-md-2" style="align-self: center;">
+            <RadzenLabel Text="@ResLoc["CurrentYear"]" />
+        </div>
+        <div class="col">
+            <YearSelectCurrent />
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-md-2" style="align-self: center;">
+            <RadzenLabel Text="@ResLoc["BaseYear"]" />
+        </div>
+        <div class="col">
+            <YearSelectBase />
+        </div>
+    </div>
+</RadzenCard>
+
+<SaveLoadComponent/>
+
+@code {
+    private event Action? fieldChanged;
+
+    protected override void OnInitialized()
+    {
+        fieldChanged = () => StateHasChanged();
+        MainModel.OnChange += fieldChanged;
+        base.OnInitialized();
+    }
+
+    public void Dispose()
+    {
+        MainModel.OnChange -= fieldChanged;
+    }
+}

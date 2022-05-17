@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountsReceivable" xml:space="preserve">
+    <value>Дебіторська заборгованість за розрахунками</value>
+  </data>
+  <data name="accumulatedDepreciation" xml:space="preserve">
+    <value>накопичена амортизація</value>
+  </data>
+  <data name="AccumulatedExchangeRateDifferences" xml:space="preserve">
+    <value>Накопичені курсові різниці</value>
+  </data>
+  <data name="AdditionalCapital" xml:space="preserve">
+    <value>Додатковий капітал</value>
+  </data>
+  <data name="AdjustedAverageNumberOrdinaryShares" xml:space="preserve">
+    <value>Скоригована середньорічна кількість простих акцій</value>
+  </data>
+  <data name="AdjustedNetProfitLossPerOrdinaryShare" xml:space="preserve">
+    <value>Скоригований чистий прибуток (збиток) на одну просту акцію</value>
+  </data>
+  <data name="AdministrativeExpenses" xml:space="preserve">
+    <value>Адміністративні витрати</value>
+  </data>
+  <data name="Amortization" xml:space="preserve">
+    <value>Амортизація</value>
+  </data>
+  <data name="Article" xml:space="preserve">
+    <value>Стаття</value>
+  </data>
+  <data name="AssessmentOfFinancialStatements" xml:space="preserve">
+    <value>Оцінка фінансової звітності</value>
+  </data>
+  <data name="Asset" xml:space="preserve">
+    <value>Актив</value>
+  </data>
+  <data name="AtBeginningReportingPeriod" xml:space="preserve">
+    <value>На початок звітного періоду</value>
+  </data>
+  <data name="AtEndingReportingPeriod" xml:space="preserve">
+    <value>На кінець звітного періоду</value>
+  </data>
+  <data name="AverageNumberOrdinaryShares" xml:space="preserve">
+    <value>Середньорічна кількість простих акцій</value>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>Баланс</value>
+  </data>
+  <data name="BaseYear" xml:space="preserve">
+    <value>Базовий рік</value>
+  </data>
+  <data name="CalculationStockProfitabilityIndicators" xml:space="preserve">
+    <value>Розрахунок показників прибутковості акцій</value>
+  </data>
+  <data name="CapitalInRevaluations" xml:space="preserve">
+    <value>Капітал у дооцінках</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Назва компанії</value>
+  </data>
+  <data name="ComprehensiveIncome" xml:space="preserve">
+    <value>Сукупний дохід</value>
+  </data>
+  <data name="CostOfGoodsSold" xml:space="preserve">
+    <value>Собівартість реалізованої продукції (товарів, робіт, послуг)</value>
+  </data>
+  <data name="CurrentAccountsPayableFor" xml:space="preserve">
+    <value>Поточна кредиторська заборгованість за</value>
+  </data>
+  <data name="CurrentAssets" xml:space="preserve">
+    <value>Оборотні активи</value>
+  </data>
+  <data name="CurrentBiologicalAssets" xml:space="preserve">
+    <value>Поточні біологічні активи</value>
+  </data>
+  <data name="CurrentFinancialInvestments" xml:space="preserve">
+    <value>Поточні фінансові інвестиції</value>
+  </data>
+  <data name="CurrentLiabilitiesAndProvisions" xml:space="preserve">
+    <value>Поточні зобов'язання і забезпечення</value>
+  </data>
+  <data name="CurrentSupplies" xml:space="preserve">
+    <value>Поточні забезпечення</value>
+  </data>
+  <data name="CurrentYear" xml:space="preserve">
+    <value>Поточний рік</value>
+  </data>
+  <data name="DeductionsSocialEvents" xml:space="preserve">
+    <value>Відрахування на соціальні заходи</value>
+  </data>
+  <data name="DeferredTaxLiabilities" xml:space="preserve">
+    <value>Відстрочені податкові зобов'язання</value>
+  </data>
+  <data name="DividendsPerSimpleShare" xml:space="preserve">
+    <value>Дивіденди на одну просту акцію</value>
+  </data>
+  <data name="ElementsOperatingCosts" xml:space="preserve">
+    <value>Елементи операційних витрат</value>
+  </data>
+  <data name="Equity" xml:space="preserve">
+    <value>Власний капітал</value>
+  </data>
+  <data name="ExpensesIncomeFromIncomeTax" xml:space="preserve">
+    <value>Витрати (дохід) з податку на прибуток</value>
+  </data>
+  <data name="FinancialExpenses" xml:space="preserve">
+    <value>Фінансові витрати</value>
+  </data>
+  <data name="FinancialResultBeforeTax" xml:space="preserve">
+    <value>Фінансовий результат до оподаткування</value>
+  </data>
+  <data name="FinancialResultFromOperatingActivities" xml:space="preserve">
+    <value>Фінансовий результат від операційної діяльності</value>
+  </data>
+  <data name="FinancialResults" xml:space="preserve">
+    <value>Фінансові результати</value>
+  </data>
+  <data name="FixedAssets" xml:space="preserve">
+    <value>Основні засоби</value>
+  </data>
+  <data name="FutureExpenses" xml:space="preserve">
+    <value>Витрати майбутніх періодів</value>
+  </data>
+  <data name="FutureIncome" xml:space="preserve">
+    <value>Доходи майбутніх періодів</value>
+  </data>
+  <data name="GeneralInformation" xml:space="preserve">
+    <value>Загальна інформація</value>
+  </data>
+  <data name="goodsWorksServices" xml:space="preserve">
+    <value>товари, роботи, послуги</value>
+  </data>
+  <data name="Gross" xml:space="preserve">
+    <value>Валовий</value>
+  </data>
+  <data name="includingIncomeTax" xml:space="preserve">
+    <value>у тому числі з податку на прибуток</value>
+  </data>
+  <data name="IncomeFromEquityParticipation" xml:space="preserve">
+    <value>Дохід від участі в капіталі</value>
+  </data>
+  <data name="IncomeTaxRelatedOtherComprehensiveIncome" xml:space="preserve">
+    <value>Податок на прибуток, пов’язаний з іншим сукупним доходом</value>
+  </data>
+  <data name="IncompleteCapitalInvestments" xml:space="preserve">
+    <value>Незавершені капітальні інвестиції</value>
+  </data>
+  <data name="initialCost" xml:space="preserve">
+    <value>первісна вартість</value>
+  </data>
+  <data name="InputData" xml:space="preserve">
+    <value>Вхідні дані</value>
+  </data>
+  <data name="IntangibleAssets" xml:space="preserve">
+    <value>Нематеріальні активи</value>
+  </data>
+  <data name="InvestmentProperty" xml:space="preserve">
+    <value>Інвестиційна нерухомість</value>
+  </data>
+  <data name="Liabilities" xml:space="preserve">
+    <value>Пасив</value>
+  </data>
+  <data name="LiabilitiesRelatedNonCurrentAssetsHeldForSale" xml:space="preserve">
+    <value>Зобов'язання, пов'язані з необоротними активами утримуваними для продажу, та групами вибуття</value>
+  </data>
+  <data name="LineСode" xml:space="preserve">
+    <value>Код рядка</value>
+  </data>
+  <data name="LongTermBankCredits" xml:space="preserve">
+    <value>Довгострокові кредити банків</value>
+  </data>
+  <data name="LongTermBiologicalAssets" xml:space="preserve">
+    <value>Довгострокові біологічні активи</value>
+  </data>
+  <data name="LongTermFinancialIvestments" xml:space="preserve">
+    <value>Довгострокові фінансові інвестиції</value>
+  </data>
+  <data name="longTermLiabilities" xml:space="preserve">
+    <value>довгостроковими зобов'язаннями</value>
+  </data>
+  <data name="LongTermLiabilitiesAndCollateral" xml:space="preserve">
+    <value>Довгострокові зобов'язання і забезпечення</value>
+  </data>
+  <data name="LongTermLoans" xml:space="preserve">
+    <value>Довгострокові забезпечення</value>
+  </data>
+  <data name="LongTermReceivables" xml:space="preserve">
+    <value>Довгострокова дебіторська заборгованість</value>
+  </data>
+  <data name="loss" xml:space="preserve">
+    <value>збиток</value>
+  </data>
+  <data name="LossesFromEquityParticipation" xml:space="preserve">
+    <value>Втрати від участі в капіталі</value>
+  </data>
+  <data name="MaterialCosts" xml:space="preserve">
+    <value>Матеріальні затрати</value>
+  </data>
+  <data name="MoneyAndTheirEquivalents" xml:space="preserve">
+    <value>Гроші та їх еквіваленти</value>
+  </data>
+  <data name="NetFinancialResult" xml:space="preserve">
+    <value>Чистий фінансовий результат</value>
+  </data>
+  <data name="NetIncomeFromSalesOfProducts" xml:space="preserve">
+    <value>Чистий дохід від реалізації продукції (товарів, робіт, послуг)</value>
+  </data>
+  <data name="NetProfitLossPerOrdinaryShare" xml:space="preserve">
+    <value>Чистий прибуток (збиток) на одну просту акцію</value>
+  </data>
+  <data name="NonCurrentAssets" xml:space="preserve">
+    <value>Необоротні активи</value>
+  </data>
+  <data name="NonCurrentAssetsHeldForSale" xml:space="preserve">
+    <value>Необоротні активи, утримувані для продажу, та групи вибуття</value>
+  </data>
+  <data name="onIssuedAdvances" xml:space="preserve">
+    <value>за виданими авансами</value>
+  </data>
+  <data name="Other expenses" xml:space="preserve">
+    <value>Other expenses</value>
+  </data>
+  <data name="OtherAggregateIncomeAfterTax" xml:space="preserve">
+    <value>Інший сукупний дохід після оподаткування</value>
+  </data>
+  <data name="OtherAggregatePreTaxIncome" xml:space="preserve">
+    <value>Інший сукупний дохід до оподаткування</value>
+  </data>
+  <data name="OtherCurrentAssets" xml:space="preserve">
+    <value>Інші оборотні активи</value>
+  </data>
+  <data name="OtherCurrentLiabilities" xml:space="preserve">
+    <value>Інші поточні зобов'язання</value>
+  </data>
+  <data name="OtherCurrentReceivables" xml:space="preserve">
+    <value>Інша поточна дебіторська заборгованість</value>
+  </data>
+  <data name="OtherExpenses" xml:space="preserve">
+    <value>Інші витрати</value>
+  </data>
+  <data name="OtherFinancialIncome" xml:space="preserve">
+    <value>Інші фінансові доходи</value>
+  </data>
+  <data name="otherFinancialInvestments" xml:space="preserve">
+    <value>інші фінансові інвестиції</value>
+  </data>
+  <data name="OtherFixedAssets" xml:space="preserve">
+    <value>Інші необоротні активи</value>
+  </data>
+  <data name="OtherIncome" xml:space="preserve">
+    <value>Інші доходи</value>
+  </data>
+  <data name="OtherLongTermLiabilities" xml:space="preserve">
+    <value>Інші довгострокові зобов'язання</value>
+  </data>
+  <data name="OtherOperatingExpenses" xml:space="preserve">
+    <value>Інші операційні витрати</value>
+  </data>
+  <data name="OtherOperatingIncome" xml:space="preserve">
+    <value>Інші операційні доходи</value>
+  </data>
+  <data name="OtherTotalIncome" xml:space="preserve">
+    <value>Інший сукупний дохід</value>
+  </data>
+  <data name="profit" xml:space="preserve">
+    <value>прибуток</value>
+  </data>
+  <data name="ProfitLossFromDiscontinuedOperationsAfterTax" xml:space="preserve">
+    <value>Прибуток (збиток) від припиненої діяльності після оподаткування</value>
+  </data>
+  <data name="ReceivablesForProducts" xml:space="preserve">
+    <value>Дебіторська заборгованість за продукцію, товари, роботи, послуги</value>
+  </data>
+  <data name="RegisteredСapital" xml:space="preserve">
+    <value>Зареєстрований (пайовий) капітал</value>
+  </data>
+  <data name="ReserveCapital" xml:space="preserve">
+    <value>Резервний капітал</value>
+  </data>
+  <data name="RetainedEarnings" xml:space="preserve">
+    <value>Нерозподілений прибуток (непокритий збиток)</value>
+  </data>
+  <data name="RevaluationDepreciationFinancialInstruments" xml:space="preserve">
+    <value>Дооцінка (уцінка) фінансових інструментів</value>
+  </data>
+  <data name="RevaluationDepreciationNonCurrentAssets" xml:space="preserve">
+    <value>Дооцінка (уцінка) необоротних активів</value>
+  </data>
+  <data name="SalaryExpenses" xml:space="preserve">
+    <value>Витрати на оплату праці</value>
+  </data>
+  <data name="SellingExpenses" xml:space="preserve">
+    <value>Витрати на збут</value>
+  </data>
+  <data name="settlementsWithBudget" xml:space="preserve">
+    <value>розрахунками з бюджетом</value>
+  </data>
+  <data name="settlementsWithInsurance" xml:space="preserve">
+    <value>розрахунками зі страхування</value>
+  </data>
+  <data name="settlementsWithPayroll" xml:space="preserve">
+    <value>розрахунками з оплати праці</value>
+  </data>
+  <data name="ShareOtherComprehensiveIncome" xml:space="preserve">
+    <value>Частка іншого сукупного доходу асоційованих та спільних підприємств</value>
+  </data>
+  <data name="ShortTermBankCredits" xml:space="preserve">
+    <value>Короткострокові кредити банків</value>
+  </data>
+  <data name="StatementOfFinancialPerformance" xml:space="preserve">
+    <value>Звіт про фінансові результати (Звіт про сукупний дохід)</value>
+  </data>
+  <data name="Stocks" xml:space="preserve">
+    <value>Запаси</value>
+  </data>
+  <data name="TargetedFinancing" xml:space="preserve">
+    <value>Цільове фінансування</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Разом</value>
+  </data>
+  <data name="TotalIncome" xml:space="preserve">
+    <value>Сукупний дохід</value>
+  </data>
+  <data name="TotalSection" xml:space="preserve">
+    <value>Усього за розділом</value>
+  </data>
+  <data name="UnpaidCapital" xml:space="preserve">
+    <value>Неоплачений капітал</value>
+  </data>
+  <data name="wear" xml:space="preserve">
+    <value>знос</value>
+  </data>
+  <data name="whichAccountedForUsingEquityMethod" xml:space="preserve">
+    <value>які обліковуються за методом участі в капіталі інших підприємств</value>
+  </data>
+  <data name="withBudget" xml:space="preserve">
+    <value>з бюджетом</value>
+  </data>
+  <data name="WithdrawnCapital" xml:space="preserve">
+    <value>Вилучений капітал</value>
+  </data>
+</root>

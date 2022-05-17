@@ -1,0 +1,34 @@
+﻿@inject AFSConstraints Constraints
+@implements IDisposable
+
+<RadzenDropDown TValue="int" Class="w-100"
+                Data=@YearList
+                @bind-Value=@MainModel.CurrentYear />
+
+@code {
+
+    private event Action? fieldChanged;
+
+    List<int> YearList = new();
+
+    void FillYearList()
+    {
+        for (int firstYear = Constraints.MinYear, lastYear = Constraints.MaxYear; firstYear < lastYear; lastYear--)
+        {
+            YearList.Add(lastYear);
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        fieldChanged = () => StateHasChanged();
+        MainModel.SubscribeOnChange(fieldChanged);
+        FillYearList();
+        base.OnInitialized();
+    }
+    public void Dispose()
+    {
+        MainModel.UnSubscribeOnChange(fieldChanged);
+        this.Dispose();
+    }
+}

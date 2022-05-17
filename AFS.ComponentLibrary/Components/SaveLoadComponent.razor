@@ -1,0 +1,47 @@
+﻿@using AFS.Core.Services
+@using Microsoft.AspNetCore.Components.Forms
+@using System.Text
+@inject IModelExportImportHandler ExportImportHandler
+@inject JsInterop JsInterop
+@inject AFSConstraints Constraints
+
+<div class="row mb-4 align-middle text-right">
+    <div class="col">
+
+        <RadzenButton Icon="save" BusyText="Saving ..." IsBusy=@isSave Click=@OnLoadClick Text="Save to file" ButtonStyle="ButtonStyle.Primary" />
+        <RadzenButton Icon="upload_file" BusyText="Uploading ..." IsBusy=@isUpload Click=@OnUploadClick Text="Upload from file" ButtonStyle="ButtonStyle.Secondary" />
+        <InputFile id="@filePickerId" accept="@Constraints.FileExtension" OnChange="@LoadFiles" hidden />
+    </div>
+</div>
+
+@code {
+
+    bool isSave;
+    bool isUpload;
+
+    string filePickerId = "filePickerId";
+
+    async Task OnLoadClick()
+    {
+        isSave = true;
+        await ExportImportHandler.ExportAsync(MainModel);
+        isSave = false;
+    }
+
+    async Task OnUploadClick()
+    {
+        await JsInterop.TriggerClick(filePickerId);
+    }
+
+    private async Task LoadFiles(InputFileChangeEventArgs file)
+    {
+        if (file.File.Size < Constraints.MaxFileSize)
+        {
+            isUpload = true;
+            using var stream = file.File.OpenReadStream();
+            AFSModel? model = await ExportImportHandler.ImportAsync(stream);
+            ExportImportHandler.InitializeModelAsync(model);
+            isUpload = false;
+        }
+    }
+}

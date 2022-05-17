@@ -1,0 +1,58 @@
+﻿@inject IModelStorageHandler modelStorag
+@implements IDisposable
+
+<RadzenTabs TabPosition="0" RenderMode="TabRenderMode.Client">
+    <Tabs>
+        <RadzenTabsItem class="align-middle text-center" Text="@ResLoc["GeneralInformation"]">
+            <GeneralInformationComponent />
+        </RadzenTabsItem>
+        <RadzenTabsItem class="align-middle text-center" Text="@currentYearF1">
+            <Form1Current />
+        </RadzenTabsItem>
+        <RadzenTabsItem class="align-middle text-center" Text="@baseYearF1">
+            <Form1Base />
+        </RadzenTabsItem>
+        <RadzenTabsItem class="align-middle text-center" Text="@currentYearF2">
+            <Form2Current />
+        </RadzenTabsItem>
+        <RadzenTabsItem class="align-middle text-center" Text="@baseYearF2">
+            <Form2Base />
+        </RadzenTabsItem>
+    </Tabs>
+</RadzenTabs>
+@code
+{
+    private string currentYearF1 => $"{ResLoc["Balance"]} ({MainModel.CurrentYear})";
+
+    private string baseYearF1 => $"{ResLoc["Balance"]} ({MainModel.BaseYear})";
+
+    private string currentYearF2 => $"{ResLoc["StatementOfFinancialPerformance"]} ({MainModel.CurrentYear})";
+
+    private string baseYearF2 => $"{ResLoc["StatementOfFinancialPerformance"]} ({MainModel.BaseYear})";
+
+    private event Action? fieldChanged;
+
+    protected override void OnInitialized()
+    {
+        fieldChanged = async () =>
+        {
+            StateHasChanged();
+            await SaveModelToLocalStorage(MainModel);
+        };
+        MainModel.SubscribeOnChange(fieldChanged);
+        base.OnInitialized();
+    }
+
+    private async Task SaveModelToLocalStorage(AFSModel model)
+    {
+        await modelStorag.WriteModelAsync(model);
+    }
+
+    public void Dispose()
+    {
+        MainModel.UnSubscribeOnChange(fieldChanged);
+        this.Dispose();
+    }
+}
+
+

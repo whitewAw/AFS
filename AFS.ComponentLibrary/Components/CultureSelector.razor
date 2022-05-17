@@ -1,0 +1,31 @@
+@using System.Globalization
+@inject ICultureStorageHandler CultureHandler
+@inject NavigationManager Navigator
+
+
+<RadzenDropDown TValue="CultureInfo"
+                Data="@suportCulture.Select(c=> new{Value = c, Text = c.NativeName})"
+                TextProperty="Text"
+                ValueProperty="Value"
+                @bind-Value="@curentCulture"
+                Change="CultureChanged" />
+
+@code {
+    private readonly CultureInfo[] suportCulture = new[]
+                {
+            new CultureInfo("uk-UA"),
+            //new CultureInfo("ru-Ru"),
+            //new CultureInfo("en-Us")
+    };
+
+    private CultureInfo? curentCulture = CultureInfo.DefaultThreadCurrentCulture;
+
+    private async Task CultureChanged(object param)
+    {
+        if (param is CultureInfo newCulture)
+        {
+            await CultureHandler.WriteCultureAsync(newCulture);
+            Navigator.NavigateTo(Navigator.Uri, true);
+        }
+    }
+}
