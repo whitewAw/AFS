@@ -18,6 +18,9 @@ jobs:
         dotnet-version: '6.0.x'
         include-prerelease: true
         
+    - name: Install .NET WebAssembly Tools
+      run: dotnet workload install wasm-tools
+        
      # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
       run: dotnet publish AFS/AFS.csproj -c Release -o release --nologo
