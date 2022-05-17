@@ -8,10 +8,8 @@ jobs:
   deploy-to-github-pages:
     runs-on: ubuntu-latest
     steps:
-      # клонируем репозиторий на виртуальную машину
     - uses: actions/checkout@v2
     
-      # ставим нужный SDK (можно использовать и более старые)
     - name: Setup .NET 6
       uses: actions/setup-dotnet@v2
       with:
