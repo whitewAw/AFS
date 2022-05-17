@@ -8,6 +8,8 @@ Assessment of Financial Statements
 
 [![N|Solid](https://miro.medium.com/max/875/1*mNOKpf7lW6dQC8LvewtMdQ.jpeg)](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly)
 
+[Working instance of the application](https://whitewaw.github.io/AFS/).
+
 You can integrate into your build process or continuous integration pipeline next script, as done in this GitHub Actions workflow:
 
 ```sh
@@ -88,6 +90,5 @@ jobs:
 ```
 
 [How to deploy ASP.NET Blazor WebAssembly to GitHub Pages](https://swimburger.net/blog/dotnet/how-to-deploy-aspnet-blazor-webassembly-to-github-pages).
-[Fix Blazor WebAssembly PWA integrity checks](https://swimburger.net/blog/dotnet/fix-blazor-webassembly-pwa-integrity-checks).
 
-[Working instance of the application](https://whitewaw.github.io/AFS/).
+[Fix Blazor WebAssembly PWA integrity checks](https://swimburger.net/blog/dotnet/fix-blazor-webassembly-pwa-integrity-checks).
