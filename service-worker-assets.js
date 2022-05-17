@@ -461,9 +461,13 @@
       "url": "_content\/Radzen.Blazor\/Radzen.Blazor.js"
     },
     {
+      "hash": "sha256-bkLDGlaPDCY0joTzs89kPHSvApADrG7AsMJj1Y9cGOA=",
+      "url": "_content\/AFS.ComponentLibrary\/JsInterop.js"
+    },
+    {
       "hash": "sha256-DpK1Ew9mdRTd2cWQXS3+SLwLlG+RuqE3LRQ9sj2xoYU=",
       "url": "_content\/AFS.ComponentLibrary\/AFS.ComponentLibrary.bundle.scp.css"
     }
   ],
-  "version": "0WGhxy0i"
+  "version": "k\/7WGned"
 };
