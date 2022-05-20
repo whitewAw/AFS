@@ -23,6 +23,7 @@ builder.Services.AddScoped<IModelExportImportHandler, BrowserExportImportHandler
 builder.Services.AddScoped<JsInterop>();
 
 builder.Services.AddTransient<CharacteristicsOfCapital>();
+builder.Services.AddTransient<IndicatorsOfTurnoverOfCurrentAssets>();
 
 builder.Logging.SetMinimumLevel(LogLevel.Warning);
 

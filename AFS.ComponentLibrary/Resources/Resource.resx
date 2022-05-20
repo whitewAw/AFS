@@ -168,6 +168,9 @@
   <data name="AverageNumberOrdinaryShares" xml:space="preserve">
     <value>Середньорічна кількість простих акцій</value>
   </data>
+  <data name="AverageWorkingCapitalBalances" xml:space="preserve">
+    <value>Середні залишки оборотних засобів</value>
+  </data>
   <data name="Balance" xml:space="preserve">
     <value>Баланс</value>
   </data>
@@ -228,6 +231,9 @@
   <data name="CurrentYear" xml:space="preserve">
     <value>Поточний рік</value>
   </data>
+  <data name="days" xml:space="preserve">
+    <value>днів</value>
+  </data>
   <data name="DeductionsSocialEvents" xml:space="preserve">
     <value>Відрахування на соціальні заходи</value>
   </data>
@@ -237,8 +243,14 @@
   <data name="deviation" xml:space="preserve">
     <value>відхилення</value>
   </data>
+  <data name="Deviation_" xml:space="preserve">
+    <value>Відхилення</value>
+  </data>
   <data name="DividendsPerSimpleShare" xml:space="preserve">
     <value>Дивіденди на одну просту акцію</value>
+  </data>
+  <data name="Dynamics" xml:space="preserve">
+    <value>Динаміка</value>
   </data>
   <data name="ElementsOperatingCosts" xml:space="preserve">
     <value>Елементи операційних витрат</value>
@@ -267,6 +279,9 @@
   <data name="FixedAssets" xml:space="preserve">
     <value>Основні засоби</value>
   </data>
+  <data name="FixingRatioOfCurrentAssets" xml:space="preserve">
+    <value>Коефіцієнт закріплення оборотних засобів</value>
+  </data>
   <data name="ForReportingPeriod" xml:space="preserve">
     <value>За звітний період</value>
   </data>
@@ -278,6 +293,15 @@
   </data>
   <data name="fromInternalSettlements" xml:space="preserve">
     <value>із внутрішніх розрахунків</value>
+  </data>
+  <data name="fromMoney" xml:space="preserve">
+    <value>грошових коштів</value>
+  </data>
+  <data name="fromReceivables" xml:space="preserve">
+    <value>дебіторської заборгованості</value>
+  </data>
+  <data name="fromTangibleAssets" xml:space="preserve">
+    <value>матеріальних цінностей</value>
   </data>
   <data name="FutureExpenses" xml:space="preserve">
     <value>Витрати майбутніх періодів</value>
@@ -314,6 +338,12 @@
   </data>
   <data name="Indicators" xml:space="preserve">
     <value>Показники</value>
+  </data>
+  <data name="IndicatorsOfTurnoverOfCurrentAssets" xml:space="preserve">
+    <value>Показники оборотності оборотних засобів</value>
+  </data>
+  <data name="IndicatorsOfTurnoverOfCurrentAssetsTablName" xml:space="preserve">
+    <value>Таблиця {0}. Показники оборотності оборотних засобів {1} за {2}-{3} роки</value>
   </data>
   <data name="initialCost" xml:space="preserve">
     <value>первісна вартість</value>
@@ -366,11 +396,20 @@
   <data name="MaterialCosts" xml:space="preserve">
     <value>Матеріальні затрати</value>
   </data>
+  <data name="materialValuesTurnover" xml:space="preserve">
+    <value>оборотність матеріальних цінностей</value>
+  </data>
   <data name="MoneyAndTheirEquivalents" xml:space="preserve">
     <value>Гроші та їх еквіваленти</value>
   </data>
+  <data name="moneyTurnover" xml:space="preserve">
+    <value>оборотність грошових коштів</value>
+  </data>
   <data name="NetFinancialResult" xml:space="preserve">
     <value>Чистий фінансовий результат</value>
+  </data>
+  <data name="NetIncomeFromSales" xml:space="preserve">
+    <value>Чистий доход (виручка) від реалізації</value>
   </data>
   <data name="NetIncomeFromSalesOfProducts" xml:space="preserve">
     <value>Чистий дохід від реалізації продукції (товарів, робіт, послуг)</value>
@@ -389,6 +428,12 @@
   </data>
   <data name="NumberInOrder" xml:space="preserve">
     <value>№ п/п</value>
+  </data>
+  <data name="NumberOfRevolutionsOfCurrentAssets" xml:space="preserve">
+    <value>Кількість оборотів оборотних засобів</value>
+  </data>
+  <data name="OneDaySalesRevenue" xml:space="preserve">
+    <value>Одноденна виручка від реалізації</value>
   </data>
   <data name="onIssuedAdvances" xml:space="preserve">
     <value>за виданими авансами</value>
@@ -459,8 +504,14 @@
   <data name="ReceivablesForProducts" xml:space="preserve">
     <value>Дебіторська заборгованість за продукцію, товари, роботи, послуги</value>
   </data>
+  <data name="receivablesTurnover" xml:space="preserve">
+    <value>оборотність дебіторської заборгованості</value>
+  </data>
   <data name="RegisteredСapital" xml:space="preserve">
     <value>Зареєстрований (пайовий) капітал</value>
+  </data>
+  <data name="ReleaseOrLackOfCurrentAssetsDueTurnover" xml:space="preserve">
+    <value>Звільнення (-), відсутність оборотних активів (+) через зміну їх оборотності</value>
   </data>
   <data name="ReserveCapital" xml:space="preserve">
     <value>Резервний капітал</value>
@@ -519,6 +570,9 @@
   <data name="thousandUAH" xml:space="preserve">
     <value>тис.грн.</value>
   </data>
+  <data name="times" xml:space="preserve">
+    <value>раз</value>
+  </data>
   <data name="Total" xml:space="preserve">
     <value>Разом</value>
   </data>
@@ -530,6 +584,9 @@
   </data>
   <data name="TotalSection" xml:space="preserve">
     <value>Усього за розділом</value>
+  </data>
+  <data name="TurnoverOfWorkingCapital" xml:space="preserve">
+    <value>Оборотність оборотних засобів</value>
   </data>
   <data name="unfinishedProduction" xml:space="preserve">
     <value>незавершене виробництво</value>

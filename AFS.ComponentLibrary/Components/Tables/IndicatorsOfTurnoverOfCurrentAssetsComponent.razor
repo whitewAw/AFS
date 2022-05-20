@@ -1,0 +1,157 @@
+﻿@inject IndicatorsOfTurnoverOfCurrentAssets IndicatorsOfTurnoverOfCurrentAssets
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <thead>
+            <tr>
+                <ThComponent>@ResLoc["NumberInOrder"]</ThComponent>
+                <ThComponent>@ResLoc["Indicators"]</ThComponent>
+                <ThComponent>@MainModel.BaseYear  @ResLoc["year"]</ThComponent>
+                <ThComponent>@MainModel.CurrentYear  @ResLoc["year"]</ThComponent>
+                <ThComponent>@ResLoc["Deviation_"] (+,-)</ThComponent>
+                <ThComponent>@ResLoc["Dynamics"], %</ThComponent>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <TdComponent Align="ML">1.</TdComponent>
+                <TdComponent Align="ML">@ResLoc["AverageWorkingCapitalBalances"], @ResLoc["thousandUAH"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageWorkingCapitalBalances.BaseYear)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageWorkingCapitalBalances.CurrentYear)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageWorkingCapitalBalances.Deviations)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageWorkingCapitalBalances.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">1.1.</TdComponent>
+                <TdComponent Align="ML" Spacing="pl-3">-@ResLoc["fromMoney"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageFromMoney.BaseYear)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageFromMoney.CurrentYear)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageFromMoney.Deviations)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageFromMoney.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">1.2.</TdComponent>
+                <TdComponent Align="ML" Spacing="pl-3">-@ResLoc["fromReceivables"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageFromReceivables.BaseYear)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageFromReceivables.CurrentYear)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageFromReceivables.Deviations)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageFromReceivables.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">1.3.</TdComponent>
+                <TdComponent Align="ML" Spacing="pl-3">-@ResLoc["fromTangibleAssets"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageFromTangibleAssets.BaseYear)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageFromTangibleAssets.CurrentYear)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageFromTangibleAssets.Deviations)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.AverageFromTangibleAssets.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">2.</TdComponent>
+                <TdComponent Align="ML">@ResLoc["NetIncomeFromSales"], @ResLoc["thousandUAH"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.NetIncomeFromSales.BaseYear)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.NetIncomeFromSales.CurrentYear)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.NetIncomeFromSales.Deviations)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.NetIncomeFromSales.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">2.1.</TdComponent>
+                <TdComponent Align="ML">@ResLoc["OneDaySalesRevenue"], @ResLoc["thousandUAH"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.OneDaySalesRevenue.BaseYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.OneDaySalesRevenue.CurrentYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.OneDaySalesRevenue.Deviations, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.OneDaySalesRevenue.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">3.</TdComponent>
+                <TdComponent Align="ML">@ResLoc["TurnoverOfWorkingCapital"], @ResLoc["days"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.TurnoverOfWorkingCapital.BaseYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.TurnoverOfWorkingCapital.CurrentYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.TurnoverOfWorkingCapital.Deviations, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.TurnoverOfWorkingCapital.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">3.1.</TdComponent>
+                <TdComponent Align="ML" Spacing="pl-3">-@ResLoc["moneyTurnover"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.MoneyTurnover.BaseYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.MoneyTurnover.CurrentYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.MoneyTurnover.Deviations, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.MoneyTurnover.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">3.2.</TdComponent>
+                <TdComponent Align="ML" Spacing="pl-3">-@ResLoc["receivablesTurnover"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.ReceivablesTurnover.BaseYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.ReceivablesTurnover.CurrentYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.ReceivablesTurnover.Deviations, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.ReceivablesTurnover.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">3.3.</TdComponent>
+                <TdComponent Align="ML" Spacing="pl-3">-@ResLoc["materialValuesTurnover"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.MaterialValuesTurnover.BaseYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.MaterialValuesTurnover.CurrentYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.MaterialValuesTurnover.Deviations, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.MaterialValuesTurnover.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">4.</TdComponent>
+                <TdComponent Align="ML">@ResLoc["NumberOfRevolutionsOfCurrentAssets"], @ResLoc["times"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.NumberOfRevolutionsOfCurrentAssets.BaseYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.NumberOfRevolutionsOfCurrentAssets.CurrentYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.NumberOfRevolutionsOfCurrentAssets.Deviations, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.NumberOfRevolutionsOfCurrentAssets.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">4.1.</TdComponent>
+                <TdComponent Align="ML" Spacing="pl-3">-@ResLoc["fromMoney"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromMoney.BaseYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromMoney.CurrentYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromMoney.Deviations, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromMoney.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">4.2.</TdComponent>
+                <TdComponent Align="ML" Spacing="pl-3">-@ResLoc["fromReceivables"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromReceivables.BaseYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromReceivables.CurrentYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromReceivables.Deviations, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromReceivables.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">4.3.</TdComponent>
+                <TdComponent Align="ML" Spacing="pl-3">-@ResLoc["fromTangibleAssets"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromTangibleAssets.BaseYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromTangibleAssets.CurrentYear, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromTangibleAssets.Deviations, 2)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromTangibleAssets.GrowthRate)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">5.</TdComponent>
+                <TdComponent Align="ML">@ResLoc["FixingRatioOfCurrentAssets"]</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.FixingRatioOfCurrentAssets.BaseYear, 4)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.FixingRatioOfCurrentAssets.CurrentYear, 4)</TdComponent>
+                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.FixingRatioOfCurrentAssets.Deviations, 4)</TdComponent>
+                <TdComponent Align="MR">x</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">6.</TdComponent>
+                <TdComponent Align="ML">@ResLoc["ReleaseOrLackOfCurrentAssetsDueTurnover"]</TdComponent>
+                <TdComponent Align="MR">x</TdComponent>
+                 <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.ReleaseOrLackOfCurrentAssetsDueTurnover.CurrentYear, 4)</TdComponent>
+                <TdComponent Align="MR">x</TdComponent>
+                <TdComponent Align="MR">x</TdComponent>
+            </tr>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+
+    protected override void OnInitialized()
+    {
+        tableName = String.Format(ResLoc["IndicatorsOfTurnoverOfCurrentAssetsTablName"], 2, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear);
+        base.OnInitialized();
+    }
+}
