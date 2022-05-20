@@ -1,6 +1,7 @@
 ﻿using AFS.Core.Interfaces;
 using AFS.Core.Model;
 using Blazored.LocalStorage;
+using Microsoft.Extensions.Logging;
 using System.Text.Json;
 
 namespace AFS.Core.Services
@@ -9,11 +10,13 @@ namespace AFS.Core.Services
     {
         private ILocalStorageService storage;
         private AFSModel model;
+        private ILogger<LocalStorageModelHandler> logger;
 
-        public LocalStorageModelHandler(ILocalStorageService storage, AFSModel model)
+        public LocalStorageModelHandler(ILocalStorageService storage, AFSModel model, ILoggerFactory loggerFactory)
         {
             this.storage = storage;
             this.model = model;
+            logger = loggerFactory.CreateLogger<LocalStorageModelHandler>();
         }
 
         public async Task InitializeModelAsync()
@@ -37,7 +40,7 @@ namespace AFS.Core.Services
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    logger.LogError(ex.Message);
                 }
             }
             return null;

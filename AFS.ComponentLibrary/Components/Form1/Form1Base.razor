@@ -3,303 +3,371 @@
 <table class="table table-bordered py-0">
     <thead>
         <tr>
-            <th scope="col" class="text-center">@ResLoc["Asset"]</th>
-            <th scope="col" class="text-center">@ResLoc["LineСode"]</th>
-            <th scope="col" class="text-center">@ResLoc["AtBeginningReportingPeriod"]</th>
-            <th scope="col" class="text-center">@ResLoc["AtEndingReportingPeriod"]</th>
+            <ThComponent>@ResLoc["Asset"]</ThComponent>
+            <ThComponent>@ResLoc["LineСode"]</ThComponent>
+            <ThComponent>@ResLoc["AtBeginningReportingPeriod"]</ThComponent>
+            <ThComponent>@ResLoc["AtEndingReportingPeriod"]</ThComponent>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td class="text-center">1</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td class="text-center">4</td>
+            <TdComponent>1</TdComponent>
+            <TdComponent>2</TdComponent>
+            <TdComponent>3</TdComponent>
+            <TdComponent>4</TdComponent>
         </tr>
         <tr>
-            <th scope="row" colspan="4" class="pl-5">I. @ResLoc["NonCurrentAssets"]</th>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">I. @ResLoc["NonCurrentAssets"]</ThComponent>
         </tr>
         <tr>
-            <td scope="row">@ResLoc["IntangibleAssets"]</td>
-            <td class="align-middle text-center">1000</td>
-            <td class="align-middle text-right pr-4">@MainModel.F1Base.F1000begin</td>
-            <td class="align-middle text-right pr-4">@MainModel.F1Base.F1000end</td>
+            <TdComponent Align="ML">@ResLoc["IntangibleAssets"]</TdComponent>
+            <TdComponent>1000</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1000begin</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1000end</TdComponent>
         </tr>
         <tr>
-            <td scope="row" class="pl-4">@ResLoc["initialCost"]</td>
-            <td class="align-middle text-center">1001</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["initialCost"]</TdComponent>
+            <TdComponent>1001</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1001begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1001end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row" class="pl-4">@ResLoc["accumulatedDepreciation"]</td>
-            <td class="align-middle text-center">1002</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["accumulatedDepreciation"]</TdComponent>
+            <TdComponent>1002</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1002begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1002end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@ResLoc["IncompleteCapitalInvestments"]</td>
-            <td class="align-middle text-center">1005</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@ResLoc["IncompleteCapitalInvestments"]</TdComponent>
+            <TdComponent>1005</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1005begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1005end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@ResLoc["FixedAssets"]</td>
-            <td class="align-middle text-center">1010</td>
-            <td class="align-middle text-right pr-4">
+            <TdComponent Align="ML">@ResLoc["FixedAssets"]</TdComponent>
+            <TdComponent>1010</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">
                 @MainModel.F1Base.F1010begin
-            </td>
-            <td class="align-middle text-right pr-4">@MainModel.F1Base.F1010end</td>
+            </TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">
+                @MainModel.F1Base.F1010end
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row" class="pl-4">@ResLoc["initialCost"]</td>
-            <td class="align-middle text-center">1011</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["initialCost"]</TdComponent>
+            <TdComponent>1011</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1011begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1011end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row" class="pl-4">@ResLoc["wear"]</td>
-            <td class="align-middle text-center">1012</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["wear"]</TdComponent>
+            <TdComponent>1012</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1012begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1012end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@ResLoc["InvestmentProperty"]</td>
-            <td class="align-middle text-center">1015</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@ResLoc["InvestmentProperty"]</TdComponent>
+            <TdComponent>1015</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1015begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1015end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@ResLoc["LongTermBiologicalAssets"]</td>
-            <td class="align-middle text-center">1020</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@ResLoc["LongTermBiologicalAssets"]</TdComponent>
+            <TdComponent>1020</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1020begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1020end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["LongTermFinancialIvestments"])</td>
-            <td rowspan="2" class="align-middle text-center">1030</td>
-            <td rowspan="2" class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["LongTermFinancialIvestments"])</TdComponent>
+            <TdComponent Rowspan=2>1030</TdComponent>
+            <TdComponent Rowspan=2 Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1030begin Class="w-100" />
-            </td>
-            <td rowspan="2" class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Rowspan=2 Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1030end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row" class="pl-4">@(ResLoc["whichAccountedForUsingEquityMethod"])</td>
+            <TdComponent Align="ML" Spacing="pl-4">@(ResLoc["whichAccountedForUsingEquityMethod"])</TdComponent>
         </tr>
         <tr>
-            <td scope="row" class="pl-4">@ResLoc["otherFinancialInvestments"]</td>
-            <td class="align-middle text-center">1035</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["otherFinancialInvestments"]</TdComponent>
+            <TdComponent>1035</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1035begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1035end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@ResLoc["LongTermReceivables"]</td>
-            <td class="align-middle text-center">1040</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@ResLoc["LongTermReceivables"]</TdComponent>
+            <TdComponent>1040</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1040begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1040end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@ResLoc["Відстрочені податкові активи"]</td>
-            <td class="align-middle text-center">1045</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@ResLoc["Відстрочені податкові активи"]</TdComponent>
+            <TdComponent>1045</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1045begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1045end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@ResLoc["OtherFixedAssets"]</td>
-            <td class="align-middle text-center">1090</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@ResLoc["OtherFixedAssets"]</TdComponent>
+            <TdComponent>1090</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1090begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1090end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <th scope="row">@(ResLoc["TotalSection"]+" I")</th>
-            <th class="align-middle text-center">1095</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1095begin</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1095end</th>
+            <ThComponent Align="ML">@(ResLoc["TotalSection"]+" I")</ThComponent>
+            <ThComponent>1095</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1095begin</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1095end</ThComponent>
         </tr>
         <tr>
-            <th scope="row" colspan="4" class="pl-5">II. @ResLoc["CurrentAssets"]</th>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">II. @ResLoc["CurrentAssets"]</ThComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["Stocks"])</td>
-            <td class="align-middle text-center">1100</td>
-            <td class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1100begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1100end Class="w-100" />
-            </td>
+            <TdComponent Align="ML">@(ResLoc["Stocks"])</TdComponent>
+            <TdComponent>1100</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1100begin</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1100end</TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["CurrentBiologicalAssets"])</td>
-            <td class="align-middle text-center">1110</td>
-            <td class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1110begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1110end Class="w-100" />
-            </td>
+            <TdComponent Align="ML" Spacing="pl-4">@(ResLoc["productionStocks"])</TdComponent>
+            <TdComponent>1101</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1101begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1101end Class="w-100" />
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["ReceivablesForProducts"])</td>
-            <td class="align-middle text-center">1125</td>
-            <td class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1125begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1125end Class="w-100" />
-            </td>
+            <TdComponent Align="ML" Spacing="pl-4">@(ResLoc["unfinishedProduction"])</TdComponent>
+            <TdComponent>1102</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1102begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1102end Class="w-100" />
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["AccountsReceivable"])</td>
-            <td rowspan="2" class="align-middle text-center">1130</td>
-            <td rowspan="2" class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1130begin Class="w-100" />
-            </td>
-            <td rowspan="2" class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1130end Class="w-100" />
-            </td>
-        </tr>
-        <tr>
-            <td scope="row" class="pl-4">@(ResLoc["onIssuedAdvances"])</td>
-        </tr>
-        <tr>
-            <td scope="row" class="pl-4">@ResLoc["withBudget"]</td>
-            <td class="align-middle text-center">1135</td>
-            <td class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1135begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1135end Class="w-100" />
-            </td>
-        </tr>
-        <tr>
-            <td scope="row" class="pl-4">@ResLoc["includingIncomeTax"]</td>
-            <td class="align-middle text-center">1136</td>
-            <td class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1136begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1136end Class="w-100" />
-            </td>
-        </tr>
-        <tr>
-            <td scope="row">@(ResLoc["OtherCurrentReceivables"])</td>
-            <td class="align-middle text-center">1155</td>
-            <td class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1155begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
-                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1155end Class="w-100" />
-            </td>
+            <TdComponent Align="ML" Spacing="pl-4">@(ResLoc["finishedProducts"])</TdComponent>
+            <TdComponent>1103</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1103begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1103end Class="w-100" />
+            </TdComponent>
         </tr>
 
         <tr>
-            <td scope="row">@(ResLoc["CurrentFinancialInvestments"])</td>
-            <td class="align-middle text-center">1160</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML" Spacing="pl-4">@(ResLoc["cargo"])</TdComponent>
+            <TdComponent>1104</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1104begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1104end Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["CurrentBiologicalAssets"])</TdComponent>
+            <TdComponent>1110</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1110begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1110end Class="w-100" />
+            </TdComponent>
+        </tr>
+         <tr>
+            <TdComponent Align="ML">@(ResLoc["PromissoryNotesReceived"])</TdComponent>
+            <TdComponent>1120</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1120begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1120end Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["ReceivablesForProducts"])</TdComponent>
+            <TdComponent>1125</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1125begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1125end Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["AccountsReceivableForDebts"])</TdComponent>
+            <TdComponent Rowspan=2>1130</TdComponent>
+            <TdComponent Rowspan=2 Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1130begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Rowspan=2 Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1130end Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML" Spacing="pl-4">@(ResLoc["onIssuedAdvances"])</TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["withBudget"]</TdComponent>
+            <TdComponent>1135</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1135begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1135end Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML" Spacing="pl-5">@ResLoc["includingIncomeTax"]</TdComponent>
+            <TdComponent>1136</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1136begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1136end Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML" Spacing="pl-4">@(ResLoc["fromAccruedIncome"])</TdComponent>
+            <TdComponent>1140</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1140begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1140end Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML" Spacing="pl-4">@(ResLoc["fromInternalSettlements"])</TdComponent>
+            <TdComponent>1145</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1145begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1145end Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["OtherCurrentReceivables"])</TdComponent>
+            <TdComponent>1155</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1155begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1155end Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["CurrentFinancialInvestments"])</TdComponent>
+            <TdComponent>1160</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1160begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1160end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["MoneyAndTheirEquivalents"])</td>
-            <td class="align-middle text-center">1165</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["MoneyAndTheirEquivalents"])</TdComponent>
+            <TdComponent>1165</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1165begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1165end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["FutureExpenses"])</td>
-            <td class="align-middle text-center">1170</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["FutureExpenses"])</TdComponent>
+            <TdComponent>1170</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1170begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1170end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["OtherCurrentAssets"])</td>
-            <td class="align-middle text-center">1190</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["OtherCurrentAssets"])</TdComponent>
+            <TdComponent>1190</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1190begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1190end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <th scope="row">@(ResLoc["TotalSection"]+" II")</th>
-            <th class="align-middle text-center">1195</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1195begin</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1195end</th>
+            <ThComponent Align="ML">@(ResLoc["TotalSection"]+" II")</ThComponent>
+            <ThComponent>1195</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1195begin</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1195end</ThComponent>
         </tr>
         <tr>
-            <th scope="row" class="pl-5">III. @ResLoc["NonCurrentAssetsHeldForSale"]</th>
-            <th class="align-middle text-center">1200</th>
-            <th class="align-middle text-right">
+            <ThComponent Align="ML" Spacing="pl-5">III. @ResLoc["NonCurrentAssetsHeldForSale"]</ThComponent>
+            <ThComponent>1200</ThComponent>
+            <ThComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1200begin Class="w-100" />
-            </th>
-            <th class="align-middle text-right">
+            </ThComponent>
+            <ThComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1200end Class="w-100" />
-            </th>
+            </ThComponent>
         </tr>
         <tr>
-            <th scope="row">@ResLoc["Balance"]</th>
-            <th class="align-middle text-center">1300</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1300begin</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1300end</th>
+            <ThComponent Align="ML">@ResLoc["Balance"]</ThComponent>
+            <ThComponent>1300</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1300begin</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1300end</ThComponent>
         </tr>
     </tbody>
 </table>
@@ -308,284 +376,324 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th scope="col" class="text-center">@ResLoc["Liabilities"]</th>
-            <th scope="col" class="text-center">@ResLoc["LineСode"]</th>
-            <th scope="col" class="text-center">@ResLoc["AtBeginningReportingPeriod"]</th>
-            <th scope="col" class="text-center">@ResLoc["AtEndingReportingPeriod"]</th>
+            <ThComponent>@ResLoc["Liabilities"]</ThComponent>
+            <ThComponent>@ResLoc["LineСode"]</ThComponent>
+            <ThComponent>@ResLoc["AtBeginningReportingPeriod"]</ThComponent>
+            <ThComponent>@ResLoc["AtEndingReportingPeriod"]</ThComponent>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td class="text-center">1</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td class="text-center">4</td>
+            <TdComponent>1</TdComponent>
+            <TdComponent>2</TdComponent>
+            <TdComponent>3</TdComponent>
+            <TdComponent>4</TdComponent>
         </tr>
         <tr>
-            <th scope="row" colspan="4" class="pl-5">I. @ResLoc["Equity"]</th>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">I. @ResLoc["Equity"]</ThComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["RegisteredСapital"])</td>
-            <td class="align-middle text-center">1400</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["RegisteredСapital"])</TdComponent>
+            <TdComponent>1400</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1400begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1400end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["CapitalInRevaluations"])</td>
-            <td class="align-middle text-center">1405</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["CapitalInRevaluations"])</TdComponent>
+            <TdComponent>1405</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1405begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1405end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["AdditionalCapital"])</td>
-            <td class="align-middle text-center">1410</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["AdditionalCapital"])</TdComponent>
+            <TdComponent>1410</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1410begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1410end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["ReserveCapital"])</td>
-            <td class="align-middle text-center">1415</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["ReserveCapital"])</TdComponent>
+            <TdComponent>1415</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1415begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1415end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["RetainedEarnings"])</td>
-            <td class="align-middle text-center">1420</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["RetainedEarnings"])</TdComponent>
+            <TdComponent>1420</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1420begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1420end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["UnpaidCapital"])</td>
-            <td class="align-middle text-center">1425</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["UnpaidCapital"])</TdComponent>
+            <TdComponent>1425</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1425begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1425end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["WithdrawnCapital"])</td>
-            <td class="align-middle text-center">1430</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["WithdrawnCapital"])</TdComponent>
+            <TdComponent>1430</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1430begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1430end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <th scope="row">@(ResLoc["TotalSection"]+" I")</th>
-            <th class="align-middle text-center">1495</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1495begin</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1495end</th>
+            <ThComponent Align="ML">@(ResLoc["TotalSection"]+" I")</ThComponent>
+            <ThComponent>1495</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1495begin</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1495end</ThComponent>
         </tr>
         <tr>
-            <th scope="row" colspan="4" class="pl-5">II. @ResLoc["LongTermLiabilitiesAndCollateral"]</th>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">II. @ResLoc["LongTermLiabilitiesAndCollateral"]</ThComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["DeferredTaxLiabilities"])</td>
-            <td class="align-middle text-center">1500</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["DeferredTaxLiabilities"])</TdComponent>
+            <TdComponent>1500</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1500begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1500end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["LongTermBankCredits"])</td>
-            <td class="align-middle text-center">1510</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["LongTermBankCredits"])</TdComponent>
+            <TdComponent>1510</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1510begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1510end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["OtherLongTermLiabilities"])</td>
-            <td class="align-middle text-center">1515</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["OtherLongTermLiabilities"])</TdComponent>
+            <TdComponent>1515</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1515begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1515end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["LongTermLoans"])</td>
-            <td class="align-middle text-center">1520</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["LongTermLoans"])</TdComponent>
+            <TdComponent>1520</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1520begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1520end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["TargetedFinancing"])</td>
-            <td class="align-middle text-center">1525</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["TargetedFinancing"])</TdComponent>
+            <TdComponent>1525</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1525begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1525end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <th scope="row">@(ResLoc["TotalSection"]+" II")</th>
-            <th class="align-middle text-center">1595</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1595begin</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1595end</th>
+            <ThComponent Align="ML">@(ResLoc["TotalSection"]+" II")</ThComponent>
+            <ThComponent>1595</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1595begin</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1595end</ThComponent>
         </tr>
         <tr>
-            <th scope="row" colspan="4" class="pl-5">III. @ResLoc["CurrentLiabilitiesAndProvisions"]</th>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">III. @ResLoc["CurrentLiabilitiesAndProvisions"]</ThComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["ShortTermBankCredits"])</td>
-            <td class="align-middle text-center">1600</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["ShortTermBankCredits"])</TdComponent>
+            <TdComponent>1600</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1600begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1600end Class="w-100" />
-            </td>
+            </TdComponent>
+        </tr>
+           <tr>
+            <TdComponent Align="ML">@(ResLoc["PromissoryNotesIssued"])</TdComponent>
+            <TdComponent>1605</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1605begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1605end Class="w-100" />
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["CurrentAccountsPayableFor"])</td>
-            <td rowspan="2" class="align-middle text-center">1610</td>
-            <td rowspan="2" class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["CurrentAccountsPayableFor"])</TdComponent>
+            <TdComponent Rowspan=2>1610</TdComponent>
+            <TdComponent Rowspan=2 Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1610begin Class="w-100" />
-            </td>
-            <td rowspan="2" class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Rowspan=2 Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1610end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row" class="pl-4">@(ResLoc["longTermLiabilities"])</td>
+            <TdComponent Align="ML" Spacing="pl-4">@(ResLoc["longTermLiabilities"])</TdComponent>
         </tr>
         <tr>
-            <td scope="row" class="pl-4">@ResLoc["goodsWorksServices"]</td>
-            <td class="align-middle text-center">1615</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["goodsWorksServices"]</TdComponent>
+            <TdComponent>1615</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1615begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1615end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row" class="pl-4">@ResLoc["settlementsWithBudget"]</td>
-            <td class="align-middle text-center">1620</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["settlementsWithBudget"]</TdComponent>
+            <TdComponent>1620</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1620begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1620end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row" class="pl-4">@ResLoc["includingIncomeTax"]</td>
-            <td class="align-middle text-center">1621</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML" Spacing="pl-5">@ResLoc["includingIncomeTax"]</TdComponent>
+            <TdComponent>1621</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1621begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1621end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row" class="pl-4">@ResLoc["settlementsWithInsurance"]</td>
-            <td class="align-middle text-center">1625</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["settlementsWithInsurance"]</TdComponent>
+            <TdComponent>1625</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1625begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1625end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row" class="pl-4">@ResLoc["settlementsWithPayroll"]</td>
-            <td class="align-middle text-center">1630</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["settlementsWithPayroll"]</TdComponent>
+            <TdComponent>1630</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1630begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1630end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["CurrentSupplies"])</td>
-            <td class="align-middle text-center">1660</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["onReceivedAdvances"]</TdComponent>
+            <TdComponent>1635</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1635begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1635end Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["bySettlementsWithParticipants"]</TdComponent>
+            <TdComponent>1640</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1640begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1640end Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML" Spacing="pl-4">@ResLoc["fromInternalSettlements"]</TdComponent>
+            <TdComponent>1645</TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1645begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1645end Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["CurrentSupplies"])</TdComponent>
+            <TdComponent>1660</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1660begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1660end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["FutureIncome"])</td>
-            <td class="align-middle text-center">1665</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["FutureIncome"])</TdComponent>
+            <TdComponent>1665</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1665begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1665end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <td scope="row">@(ResLoc["OtherCurrentLiabilities"])</td>
-            <td class="align-middle text-center">1690</td>
-            <td class="align-middle text-right">
+            <TdComponent Align="ML">@(ResLoc["OtherCurrentLiabilities"])</TdComponent>
+            <TdComponent>1690</TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1690begin Class="w-100" />
-            </td>
-            <td class="align-middle text-right">
+            </TdComponent>
+            <TdComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1690end Class="w-100" />
-            </td>
+            </TdComponent>
         </tr>
         <tr>
-            <th scope="row">@(ResLoc["TotalSection"]+" III")</th>
-            <th class="align-middle text-center">1695</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1695begin</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1695end</th>
+            <ThComponent Align="ML">@(ResLoc["TotalSection"]+" III")</ThComponent>
+            <ThComponent>1695</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1695begin</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1695end</ThComponent>
         </tr>
         <tr>
-            <th scope="row" class="pl-5">III. @ResLoc["LiabilitiesRelatedNonCurrentAssetsHeldForSale"]</th>
-            <th class="align-middle text-center">1700</th>
-            <th class="align-middle text-right">
+            <ThComponent Align="ML" Spacing="pl-5">III. @ResLoc["LiabilitiesRelatedNonCurrentAssetsHeldForSale"]</ThComponent>
+            <ThComponent>1700</ThComponent>
+            <ThComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1700begin Class="w-100" />
-            </th>
-            <th class="align-middle text-right">
+            </ThComponent>
+            <ThComponent Align="MR">
                 <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.F1Base.F1700end Class="w-100" />
-            </th>
+            </ThComponent>
         </tr>
         <tr>
-            <th scope="row">@ResLoc["Balance"]</th>
-            <th class="align-middle text-center">1900</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1900begin</th>
-            <th class="align-middle text-right pr-4">@MainModel.F1Base.F1900end</th>
+            <ThComponent Align="ML">@ResLoc["Balance"]</ThComponent>
+            <ThComponent>1900</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1900begin</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@MainModel.F1Base.F1900end</ThComponent>
         </tr>
     </tbody>
 </table>
@@ -601,9 +709,5 @@
         base.OnInitialized();
     }
 
-    public void Dispose()
-    {
-        MainModel.F1Base.OnChange -= fieldChanged;
-        this.Dispose();
-    }
+    public void Dispose() => MainModel.F1Base.OnChange -= fieldChanged;
 }

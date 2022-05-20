@@ -1,5 +1,4 @@
-﻿@inject AFSConstraints Constraints
-@implements IDisposable
+﻿@implements IDisposable
 
 <RadzenDropDown TValue="int" Class="w-100"
                 Data=@YearList
@@ -29,7 +28,6 @@
     public void Dispose()
     {
         MainModel.UnSubscribeOnChange(fieldChanged);
-        this.Dispose();
     }
 }
 

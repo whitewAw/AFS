@@ -14,12 +14,18 @@
         private double f1040begin;
         private double f1045begin;
         private double f1090begin;
-        private double f1100begin;
+        private double f1101begin;
+        private double f1102begin;
+        private double f1103begin;
+        private double f1104begin;
         private double f1110begin;
+        private double f1120begin;
         private double f1125begin;
         private double f1130begin;
         private double f1135begin;
         private double f1136begin;
+        private double f1140begin;
+        private double f1145begin;
         private double f1155begin;
         private double f1160begin;
         private double f1165begin;
@@ -39,12 +45,16 @@
         private double f1520begin;
         private double f1525begin;
         private double f1600begin;
+        private double f1605begin;
         private double f1610begin;
         private double f1615begin;
         private double f1620begin;
         private double f1621begin;
         private double f1625begin;
         private double f1630begin;
+        private double f1635begin;
+        private double f1640begin;
+        private double f1645begin;
         private double f1660begin;
         private double f1665begin;
         private double f1690begin;
@@ -62,12 +72,18 @@
         private double f1040end;
         private double f1045end;
         private double f1090end;
-        private double f1100end;
+        private double f1101end;
+        private double f1102end;
+        private double f1103end;
+        private double f1104end;
         private double f1110end;
+        private double f1120end;
         private double f1125end;
         private double f1130end;
         private double f1135end;
         private double f1136end;
+        private double f1140end;
+        private double f1145end;
         private double f1155end;
         private double f1160end;
         private double f1165end;
@@ -87,12 +103,16 @@
         private double f1520end;
         private double f1525end;
         private double f1600end;
+        private double f1605end;
         private double f1610end;
         private double f1615end;
         private double f1620end;
         private double f1621end;
         private double f1625end;
         private double f1630end;
+        private double f1635end;
+        private double f1640end;
+        private double f1645end;
         private double f1660end;
         private double f1665end;
         private double f1690end;
@@ -225,19 +245,61 @@
         }
         public double F1100begin
         {
-            get => f1100begin;
+            get => F1101begin + F1102begin + F1103begin + F1104begin;
+        }
+        public double F1101begin
+        {
+            get => f1101begin;
             set
             {
-                f1100begin = Round(value);
+                f1101begin = Round(value);
                 NotifyStateChanged();
             }
         }
+        public double F1102begin
+        {
+            get => f1102begin;
+            set
+            {
+                f1102begin = Round(value);
+                NotifyStateChanged();
+            }
+        }
+        public double F1103begin
+        {
+            get => f1103begin;
+            set
+            {
+                f1103begin = Round(value);
+                NotifyStateChanged();
+            }
+        }
+        public double F1104begin
+        {
+            get => f1104begin;
+            set
+            {
+                f1104begin = Round(value);
+                NotifyStateChanged();
+            }
+        }
+
+
         public double F1110begin
         {
             get => f1110begin;
             set
             {
                 f1110begin = Round(value);
+                NotifyStateChanged();
+            }
+        }
+        public double F1120begin
+        {
+            get => f1120begin;
+            set
+            {
+                f1120begin = Round(value);
                 NotifyStateChanged();
             }
         }
@@ -274,6 +336,24 @@
             set
             {
                 f1136begin = Round(value);
+                NotifyStateChanged();
+            }
+        }
+        public double F1140begin
+        {
+            get => f1140begin;
+            set
+            {
+                f1140begin = Round(value);
+                NotifyStateChanged();
+            }
+        }
+        public double F1145begin
+        {
+            get => f1145begin;
+            set
+            {
+                f1145begin = Round(value);
                 NotifyStateChanged();
             }
         }
@@ -324,7 +404,7 @@
         }
         public double F1195begin
         {
-            get => F1100begin + F1110begin + F1125begin + F1130begin + F1135begin + F1155begin + F1160begin + F1165begin + F1170begin + F1190begin;
+            get => F1100begin + F1110begin + F1120begin + F1125begin + F1130begin + F1135begin + F1140begin + F1145begin + F1155begin + F1160begin + F1165begin + F1170begin + F1190begin;
         }
         public double F1200begin
         {
@@ -464,6 +544,15 @@
                 NotifyStateChanged();
             }
         }
+        public double F1605begin
+        {
+            get => f1605begin;
+            set
+            {
+                f1605begin = Round(value);
+                NotifyStateChanged();
+            }
+        }
         public double F1610begin
         {
             get => f1610begin;
@@ -518,6 +607,36 @@
                 NotifyStateChanged();
             }
         }
+
+        public double F1635begin
+        {
+            get => f1635begin;
+            set
+            {
+                f1635begin = Round(value);
+                NotifyStateChanged();
+            }
+        }
+        public double F1640begin
+        {
+            get => f1640begin;
+            set
+            {
+                f1640begin = Round(value);
+                NotifyStateChanged();
+            }
+        }
+        public double F1645begin
+        {
+            get => f1645begin;
+            set
+            {
+                f1645begin = Round(value);
+                NotifyStateChanged();
+            }
+        }
+
+
         public double F1660begin
         {
             get => f1660begin;
@@ -547,7 +666,7 @@
         }
         public double F1695begin
         {
-            get => F1600begin + F1610begin + F1615begin + F1620begin + F1625begin + F1630begin + F1660begin + F1665begin + F1690begin;
+            get => F1600begin+ F1605begin + F1610begin + F1615begin + F1620begin + F1625begin + F1630begin + F1635begin + F1640begin + F1645begin + F1660begin + F1665begin + F1690begin;
 
         }
         public double F1700begin
@@ -689,10 +808,46 @@
         }
         public double F1100end
         {
-            get => f1100end;
+            get => F1101end + F1102end + F1103end + F1104end;
+        }
+
+
+        public double F1101end
+        {
+            get => f1101end;
             set
             {
-                f1100end = Round(value);
+                f1101end = Round(value);
+                NotifyStateChanged();
+            }
+        }
+
+        public double F1102end
+        {
+            get => f1102end;
+            set
+            {
+                f1102end = Round(value);
+                NotifyStateChanged();
+            }
+        }
+
+        public double F1103end
+        {
+            get => f1103end;
+            set
+            {
+                f1103end = Round(value);
+                NotifyStateChanged();
+            }
+        }
+
+        public double F1104end
+        {
+            get => f1104end;
+            set
+            {
+                f1104end = Round(value);
                 NotifyStateChanged();
             }
         }
@@ -702,6 +857,15 @@
             set
             {
                 f1110end = Round(value);
+                NotifyStateChanged();
+            }
+        }
+        public double F1120end
+        {
+            get => f1120end;
+            set
+            {
+                f1120end = Round(value);
                 NotifyStateChanged();
             }
         }
@@ -738,6 +902,24 @@
             set
             {
                 f1136end = Round(value);
+                NotifyStateChanged();
+            }
+        }
+        public double F1140end
+        {
+            get => f1140end;
+            set
+            {
+                f1140end = Round(value);
+                NotifyStateChanged();
+            }
+        }
+        public double F1145end
+        {
+            get => f1145end;
+            set
+            {
+                f1145end = Round(value);
                 NotifyStateChanged();
             }
         }
@@ -788,7 +970,7 @@
         }
         public double F1195end
         {
-            get => F1100end + F1110end + F1125end + F1130end + F1135end + F1155end + F1160end + F1165end + F1170end + F1190end;
+            get => F1100end + F1110end + F1120end + F1125end + F1130end + F1135end + F1140end + F1145end + F1155end + F1160end + F1165end + F1170end + F1190end;
         }
         public double F1200end
         {
@@ -928,6 +1110,15 @@
                 NotifyStateChanged();
             }
         }
+        public double F1605end
+        {
+            get => f1605end;
+            set
+            {
+                f1605end = Round(value);
+                NotifyStateChanged();
+            }
+        }
         public double F1610end
         {
             get => f1610end;
@@ -982,6 +1173,34 @@
                 NotifyStateChanged();
             }
         }
+        public double F1635end
+        {
+            get => f1635end;
+            set
+            {
+                f1635end = Round(value);
+                NotifyStateChanged();
+            }
+        }
+        public double F1640end
+        {
+            get => f1640end;
+            set
+            {
+                f1640end = Round(value);
+                NotifyStateChanged();
+            }
+        }
+        public double F1645end
+        {
+            get => f1645end;
+            set
+            {
+                f1645end = Round(value);
+                NotifyStateChanged();
+            }
+        }
+
         public double F1660end
         {
             get => f1660end;
@@ -1011,7 +1230,7 @@
         }
         public double F1695end
         {
-            get => F1600end + F1610end + F1615end + F1620end + F1625end + F1630end + F1660end + F1665end + F1690end;
+            get => F1600end+ F1605end + F1610end + F1615end + F1620end + F1625end + F1630end + F1635end + F1640end + F1645end + F1660end + F1665end + F1690end;
 
         }
         public double F1700end
@@ -1029,7 +1248,7 @@
         }
         private static double Round(double value)
         {
-            return Math.Round(value, 1, MidpointRounding.AwayFromZero);
+            return AFSConstraints.RoundStat(value);
         }
 
         private void NotifyStateChanged()
@@ -1051,12 +1270,18 @@
             f1040begin = form1.F1040begin;
             f1045begin = form1.F1045begin;
             f1090begin = form1.F1090begin;
-            f1100begin = form1.F1100begin;
+            f1101begin = form1.F1101begin;
+            f1102begin = form1.F1102begin;
+            f1103begin = form1.F1103begin;
+            f1104begin = form1.F1104begin;
             f1110begin = form1.F1110begin;
+            f1120begin = form1.F1120begin;
             f1125begin = form1.F1125begin;
             f1130begin = form1.F1130begin;
             f1135begin = form1.F1135begin;
             f1136begin = form1.F1136begin;
+            f1140begin = form1.F1140begin;
+            f1145begin = form1.F1145begin;
             f1155begin = form1.F1155begin;
             f1160begin = form1.F1160begin;
             f1165begin = form1.F1165begin;
@@ -1076,12 +1301,16 @@
             f1520begin = form1.F1520begin;
             f1525begin = form1.F1525begin;
             f1600begin = form1.F1600begin;
+            f1605begin = form1.F1605begin;
             f1610begin = form1.F1610begin;
             f1615begin = form1.F1615begin;
             f1620begin = form1.F1620begin;
             f1621begin = form1.F1621begin;
             f1625begin = form1.F1625begin;
             f1630begin = form1.F1630begin;
+            f1635begin = form1.F1635begin;
+            f1640begin = form1.F1640begin;
+            f1645begin = form1.F1645begin;
             f1660begin = form1.F1660begin;
             f1665begin = form1.F1665begin;
             f1690begin = form1.F1690begin;
@@ -1099,12 +1328,18 @@
             f1040end = form1.F1040end;
             f1045end = form1.F1045end;
             f1090end = form1.F1090end;
-            f1100end = form1.F1100end;
+            f1101end = form1.F1101end;
+            f1102end = form1.F1102end;
+            f1103end = form1.F1103end;
+            f1104end = form1.F1104end;
             f1110end = form1.F1110end;
+            f1120end = form1.F1120end;
             f1125end = form1.F1125end;
             f1130end = form1.F1130end;
             f1135end = form1.F1135end;
             f1136end = form1.F1136end;
+            f1140end = form1.F1140end;
+            f1145end = form1.F1145end;
             f1155end = form1.F1155end;
             f1160end = form1.F1160end;
             f1165end = form1.F1165end;
@@ -1124,18 +1359,30 @@
             f1520end = form1.F1520end;
             f1525end = form1.F1525end;
             f1600end = form1.F1600end;
+            f1605end = form1.F1605end;
             f1610end = form1.F1610end;
             f1615end = form1.F1615end;
             f1620end = form1.F1620end;
             f1621end = form1.F1621end;
             f1625end = form1.F1625end;
             f1630end = form1.F1630end;
+            f1635end = form1.F1635end;
+            f1640end = form1.F1640end;
+            f1645end = form1.F1645end;
             f1660end = form1.F1660end;
             f1665end = form1.F1665end;
             f1690end = form1.F1690end;
             f1700end = form1.F1700end;
 
             NotifyStateChanged();
+        }
+        public double AccountsReceivable(bool begin)
+        {
+            if (begin)
+            {
+                return F1120begin + F1125begin + F1130begin + F1135begin + F1140begin + F1145begin + F1155begin;
+            }
+            return F1120end + F1125end + F1130end + F1135end + F1140end + F1145end + F1155end;
         }
     }
 }

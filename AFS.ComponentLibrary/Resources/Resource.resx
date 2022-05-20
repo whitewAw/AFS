@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AccountsReceivable" xml:space="preserve">
+    <value>Дебіторська заборгованість</value>
+  </data>
+  <data name="AccountsReceivableForDebts" xml:space="preserve">
     <value>Дебіторська заборгованість за розрахунками</value>
   </data>
   <data name="accumulatedDepreciation" xml:space="preserve">
@@ -153,8 +156,14 @@
   <data name="AtBeginningReportingPeriod" xml:space="preserve">
     <value>На початок звітного періоду</value>
   </data>
+  <data name="atBeginOfYear" xml:space="preserve">
+    <value>на початок року</value>
+  </data>
   <data name="AtEndingReportingPeriod" xml:space="preserve">
     <value>На кінець звітного періоду</value>
+  </data>
+  <data name="atEndOfYear" xml:space="preserve">
+    <value>на кінець року</value>
   </data>
   <data name="AverageNumberOrdinaryShares" xml:space="preserve">
     <value>Середньорічна кількість простих акцій</value>
@@ -165,11 +174,26 @@
   <data name="BaseYear" xml:space="preserve">
     <value>Базовий рік</value>
   </data>
+  <data name="bySettlementsWithParticipants" xml:space="preserve">
+    <value>за розрахунками з учасниками</value>
+  </data>
   <data name="CalculationStockProfitabilityIndicators" xml:space="preserve">
     <value>Розрахунок показників прибутковості акцій</value>
   </data>
   <data name="CapitalInRevaluations" xml:space="preserve">
     <value>Капітал у дооцінках</value>
+  </data>
+  <data name="cargo" xml:space="preserve">
+    <value>товари</value>
+  </data>
+  <data name="CashCurrentFinancialInvestments" xml:space="preserve">
+    <value>Грошові засоби і поточні фінансові інвестиції</value>
+  </data>
+  <data name="CharacteristicsOfCapital" xml:space="preserve">
+    <value>Характеристика капіталу</value>
+  </data>
+  <data name="CharacteristicsOfCapitalTablName" xml:space="preserve">
+    <value>Таблиця {0}. Характеристика капіталу {1} за {2}-{3} роки</value>
   </data>
   <data name="CompanyName" xml:space="preserve">
     <value>Назва компанії</value>
@@ -195,6 +219,9 @@
   <data name="CurrentLiabilitiesAndProvisions" xml:space="preserve">
     <value>Поточні зобов'язання і забезпечення</value>
   </data>
+  <data name="CurrentMobileAssets" xml:space="preserve">
+    <value>Оборотні (мобільні) засоби</value>
+  </data>
   <data name="CurrentSupplies" xml:space="preserve">
     <value>Поточні забезпечення</value>
   </data>
@@ -206,6 +233,9 @@
   </data>
   <data name="DeferredTaxLiabilities" xml:space="preserve">
     <value>Відстрочені податкові зобов'язання</value>
+  </data>
+  <data name="deviation" xml:space="preserve">
+    <value>відхилення</value>
   </data>
   <data name="DividendsPerSimpleShare" xml:space="preserve">
     <value>Дивіденди на одну просту акцію</value>
@@ -231,8 +261,23 @@
   <data name="FinancialResults" xml:space="preserve">
     <value>Фінансові результати</value>
   </data>
+  <data name="finishedProducts" xml:space="preserve">
+    <value>готова продукція</value>
+  </data>
   <data name="FixedAssets" xml:space="preserve">
     <value>Основні засоби</value>
+  </data>
+  <data name="ForReportingPeriod" xml:space="preserve">
+    <value>За звітний період</value>
+  </data>
+  <data name="ForSamePeriodLastYear" xml:space="preserve">
+    <value>За аналогічний період попереднього року</value>
+  </data>
+  <data name="fromAccruedIncome" xml:space="preserve">
+    <value>з нарахованих доходів</value>
+  </data>
+  <data name="fromInternalSettlements" xml:space="preserve">
+    <value>із внутрішніх розрахунків</value>
   </data>
   <data name="FutureExpenses" xml:space="preserve">
     <value>Витрати майбутніх періодів</value>
@@ -249,6 +294,12 @@
   <data name="Gross" xml:space="preserve">
     <value>Валовий</value>
   </data>
+  <data name="growthRate" xml:space="preserve">
+    <value>темп роста</value>
+  </data>
+  <data name="in%toCurrentMobileAssets" xml:space="preserve">
+    <value>в %  до оборотних засобів</value>
+  </data>
   <data name="includingIncomeTax" xml:space="preserve">
     <value>у тому числі з податку на прибуток</value>
   </data>
@@ -260,6 +311,9 @@
   </data>
   <data name="IncompleteCapitalInvestments" xml:space="preserve">
     <value>Незавершені капітальні інвестиції</value>
+  </data>
+  <data name="Indicators" xml:space="preserve">
+    <value>Показники</value>
   </data>
   <data name="initialCost" xml:space="preserve">
     <value>первісна вартість</value>
@@ -330,8 +384,17 @@
   <data name="NonCurrentAssetsHeldForSale" xml:space="preserve">
     <value>Необоротні активи, утримувані для продажу, та групи вибуття</value>
   </data>
+  <data name="NonCurrentImmobilizedAssets" xml:space="preserve">
+    <value>Необоротні (імобілізовані) засоби</value>
+  </data>
+  <data name="NumberInOrder" xml:space="preserve">
+    <value>№ п/п</value>
+  </data>
   <data name="onIssuedAdvances" xml:space="preserve">
     <value>за виданими авансами</value>
+  </data>
+  <data name="onReceivedAdvances" xml:space="preserve">
+    <value>за одержаними авансами</value>
   </data>
   <data name="Other expenses" xml:space="preserve">
     <value>Other expenses</value>
@@ -378,11 +441,20 @@
   <data name="OtherTotalIncome" xml:space="preserve">
     <value>Інший сукупний дохід</value>
   </data>
+  <data name="productionStocks" xml:space="preserve">
+    <value>виробничі запаси</value>
+  </data>
   <data name="profit" xml:space="preserve">
     <value>прибуток</value>
   </data>
   <data name="ProfitLossFromDiscontinuedOperationsAfterTax" xml:space="preserve">
     <value>Прибуток (збиток) від припиненої діяльності після оподаткування</value>
+  </data>
+  <data name="PromissoryNotesIssued" xml:space="preserve">
+    <value>Векселі видані</value>
+  </data>
+  <data name="PromissoryNotesReceived" xml:space="preserve">
+    <value>Векселі одержані</value>
   </data>
   <data name="ReceivablesForProducts" xml:space="preserve">
     <value>Дебіторська заборгованість за продукцію, товари, роботи, послуги</value>
@@ -404,6 +476,12 @@
   </data>
   <data name="SalaryExpenses" xml:space="preserve">
     <value>Витрати на оплату праці</value>
+  </data>
+  <data name="Samein%OfAssets" xml:space="preserve">
+    <value>То же в % до активів</value>
+  </data>
+  <data name="SaveToFile" xml:space="preserve">
+    <value>Зберегти у файл</value>
   </data>
   <data name="SellingExpenses" xml:space="preserve">
     <value>Витрати на збут</value>
@@ -429,11 +507,23 @@
   <data name="Stocks" xml:space="preserve">
     <value>Запаси</value>
   </data>
+  <data name="Table" xml:space="preserve">
+    <value>Таблиця</value>
+  </data>
+  <data name="TangibleCurrentAssets" xml:space="preserve">
+    <value>Матеріальні оборотні засоби</value>
+  </data>
   <data name="TargetedFinancing" xml:space="preserve">
     <value>Цільове фінансування</value>
   </data>
+  <data name="thousandUAH" xml:space="preserve">
+    <value>тис.грн.</value>
+  </data>
   <data name="Total" xml:space="preserve">
     <value>Разом</value>
+  </data>
+  <data name="TotalAssets" xml:space="preserve">
+    <value>Усього капіталу (активів)</value>
   </data>
   <data name="TotalIncome" xml:space="preserve">
     <value>Сукупний дохід</value>
@@ -441,8 +531,14 @@
   <data name="TotalSection" xml:space="preserve">
     <value>Усього за розділом</value>
   </data>
+  <data name="unfinishedProduction" xml:space="preserve">
+    <value>незавершене виробництво</value>
+  </data>
   <data name="UnpaidCapital" xml:space="preserve">
     <value>Неоплачений капітал</value>
+  </data>
+  <data name="UploadFromFile" xml:space="preserve">
+    <value>Завантажити з файлу</value>
   </data>
   <data name="wear" xml:space="preserve">
     <value>знос</value>
@@ -455,5 +551,8 @@
   </data>
   <data name="WithdrawnCapital" xml:space="preserve">
     <value>Вилучений капітал</value>
+  </data>
+  <data name="year" xml:space="preserve">
+    <value>рік</value>
   </data>
 </root>

@@ -735,7 +735,7 @@
         }
         private static double Round(double value)
         {
-            return Math.Round(value, 1, MidpointRounding.AwayFromZero);
+            return AFSConstraints.RoundStat(value);
         }
         private void NotifyStateChanged() => OnChange?.Invoke();
 
@@ -761,9 +761,9 @@
         {
             if (begin)
             {
-                return F2290begin + F2295begin + F2300begin + F2305begin;
+                return F2290begin + F2295begin - F2300begin + F2305begin;
             }
-            return F2290end + F2295end + F2300end + F2305end;
+            return F2290end + F2295end - F2300end + F2305end;
         }
         private double OtherAggregatePreTaxIncome(bool begin)
         {

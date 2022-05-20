@@ -3,13 +3,12 @@
 @using System.Text
 @inject IModelExportImportHandler ExportImportHandler
 @inject JsInterop JsInterop
-@inject AFSConstraints Constraints
 
 <div class="row mb-4 align-middle text-right">
     <div class="col">
 
-        <RadzenButton Icon="save" BusyText="Saving ..." IsBusy=@isSave Click=@OnLoadClick Text="Save to file" ButtonStyle="ButtonStyle.Primary" />
-        <RadzenButton Icon="upload_file" BusyText="Uploading ..." IsBusy=@isUpload Click=@OnUploadClick Text="Upload from file" ButtonStyle="ButtonStyle.Secondary" />
+        <RadzenButton Icon="save" BusyText="Saving ..." IsBusy=@isSave Click=@OnLoadClick Text="@ResLoc["SaveToFile"]" ButtonStyle="ButtonStyle.Primary" />
+        <RadzenButton Icon="upload_file" BusyText="Uploading ..." IsBusy=@isUpload Click=@OnUploadClick Text="@ResLoc["UploadFromFile"]" ButtonStyle="ButtonStyle.Secondary" />
         <InputFile id="@filePickerId" accept="@Constraints.FileExtension" OnChange="@LoadFiles" hidden />
     </div>
 </div>

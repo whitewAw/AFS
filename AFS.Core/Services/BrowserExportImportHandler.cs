@@ -1,5 +1,6 @@
 ﻿using AFS.Core.Interfaces;
 using AFS.Core.Model;
+using Microsoft.Extensions.Logging;
 using Microsoft.JSInterop;
 using System.Text;
 using System.Text.Json;
@@ -11,12 +12,14 @@ namespace AFS.Core.Services
         private JsInterop jsInterop;
         private AFSModel model;
         private AFSConstraints constraints;
+        private ILogger<BrowserExportImportHandler> logger;
 
-        public BrowserExportImportHandler(JsInterop jsInterop, AFSModel model, AFSConstraints constraints)
+        public BrowserExportImportHandler(JsInterop jsInterop, AFSModel model, AFSConstraints constraints, ILoggerFactory loggerFactory)
         {
             this.jsInterop = jsInterop;
             this.model = model;
             this.constraints = constraints;
+            logger = loggerFactory.CreateLogger<BrowserExportImportHandler>();
         }
 
         public async Task ExportAsync(AFSModel model)
@@ -37,7 +40,7 @@ namespace AFS.Core.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                logger.LogError(ex.Message);
             }
             return null;
         }

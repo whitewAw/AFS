@@ -1,0 +1,38 @@
+﻿<th scope="col" rowspan="@Rowspan" colspan="@Colspan" class="@GetAlign() @GetSpacing()">@ChildContent</th>
+
+@code {
+    [Parameter]
+    public int Rowspan { get; set; } = 1;
+
+    [Parameter]
+    public int Colspan { get; set; } = 1;
+
+    [Parameter]
+    public string? Align { get; set; } = "MC";
+
+    [Parameter]
+    public string? Spacing { get; set; } = "";
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    protected string GetAlign() =>
+        Align switch
+        {
+            "MC" => "align-middle text-center",
+            "MR" => "align-middle text-right",
+            "ML" => "align-middle text-left",
+            _ => throw new ArgumentException("Invalid enum value for command", nameof(Align)),
+        };
+
+    protected string GetSpacing() =>
+        Spacing switch
+        {
+            "" => "",
+            "pr-4" => "pr-4",
+            "pl-3" => "pl-3",
+            "pl-4" => "pl-4",
+            "pl-5" => "pl-5",
+            _ => throw new ArgumentException("Invalid enum value for command", nameof(Spacing)),
+        };
+}

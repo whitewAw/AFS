@@ -1,15 +1,18 @@
 ﻿using AFS.Core.Interfaces;
 using Blazored.LocalStorage;
+using Microsoft.Extensions.Logging;
 using System.Globalization;
 namespace AFS.Core.Services
 {
     public class LocalStorageCultureHandler : ICultureStorageHandler
     {
         private ILocalStorageService storage;
+        private ILogger<LocalStorageCultureHandler> logger;
 
-        public LocalStorageCultureHandler(ILocalStorageService storage)
+        public LocalStorageCultureHandler(ILocalStorageService storage, ILoggerFactory loggerFactory)
         {
             this.storage = storage;
+            logger = loggerFactory.CreateLogger<LocalStorageCultureHandler>();
         }
 
         public async Task<CultureInfo> ReadCultureAsync()
@@ -24,7 +27,7 @@ namespace AFS.Core.Services
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    logger.LogError(ex.Message);
                 }
             }
             return new CultureInfo("uk-UA");
