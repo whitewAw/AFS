@@ -1,0 +1,21 @@
+﻿<tr>
+    <TdComponent Align="ML">@FieldNumber</TdComponent>
+    <TdComponent Align="ML" Spacing=@Spacing>@ChildContent</TdComponent>
+    <TdComponent Align="MR">@Constraints.RoundStr(Item.BaseYear, Digits)</TdComponent>
+    <TdComponent Align="MR">@Constraints.RoundStr(Item.CurrentYear, Digits)</TdComponent>
+    <TdComponent Align="MR">@Constraints.RoundStr(Item.Deviations, Digits)</TdComponent>
+    <TdComponent Align="MR">@Constraints.RoundStr(Item.GrowthRate, Digits)</TdComponent>
+</tr>
+
+@code {
+    [Parameter]
+    public TwoYearsCalculationData Item { get; set; } = new();
+    [Parameter]
+    public int Digits { get; set; } = 1;
+    [Parameter]
+    public string? FieldNumber { get; set; }
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+    [Parameter]
+    public string? Spacing { get; set; } = String.Empty;
+}

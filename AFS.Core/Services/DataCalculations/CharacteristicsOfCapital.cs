@@ -31,8 +31,8 @@ namespace AFS.Core.Services.DataCalculations
 
     public class TotalAssets
     {
-        public BasicCalculationData Base { get; private set; } = new();
-        public BasicCalculationData Current { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Base { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Current { get; private set; } = new();
 
         public void Init(AFSModel model)
         {
@@ -46,10 +46,10 @@ namespace AFS.Core.Services.DataCalculations
 
     public class NonCurrentImmobilizedFunds
     {
-        public BasicCalculationData Base { get; private set; } = new();
-        public BasicCalculationData Current { get; private set; } = new();
-        public BasicCalculationData InPercentageOfAssetsBase { get; private set; } = new();
-        public BasicCalculationData InPercentageOfAssetsCurrent { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Base { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Current { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfAssetsBase { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfAssetsCurrent { get; private set; } = new();
 
         public void Init(AFSModel model)
         {
@@ -68,10 +68,10 @@ namespace AFS.Core.Services.DataCalculations
     }
     public class CurrentMobileAssets
     {
-        public BasicCalculationData Base { get; private set; } = new();
-        public BasicCalculationData Current { get; private set; } = new();
-        public BasicCalculationData InPercentageOfAssetsBase { get; private set; } = new();
-        public BasicCalculationData InPercentageOfAssetsCurrent { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Base { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Current { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfAssetsBase { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfAssetsCurrent { get; private set; } = new();
 
         public void Init(AFSModel model)
         {
@@ -90,10 +90,10 @@ namespace AFS.Core.Services.DataCalculations
     }
     public class LiabilitiesRelatedNonCurrentAssetsHeldForSale
     {
-        public BasicCalculationData Base { get; private set; } = new();
-        public BasicCalculationData Current { get; private set; } = new();
-        public BasicCalculationData InPercentageOfAssetsBase { get; private set; } = new();
-        public BasicCalculationData InPercentageOfAssetsCurrent { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Base { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Current { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfAssetsBase { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfAssetsCurrent { get; private set; } = new();
 
         public void Init(AFSModel model)
         {
@@ -112,10 +112,10 @@ namespace AFS.Core.Services.DataCalculations
     }
     public class TangibleCurrentAssets
     {
-        public BasicCalculationData Base { get; private set; } = new();
-        public BasicCalculationData Current { get; private set; } = new();
-        public BasicCalculationData InPercentageOfCurrentAssetsBase { get; private set; } = new();
-        public BasicCalculationData InPercentageOfCurrentAssetsCurrent { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Base { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Current { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfCurrentAssetsBase { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfCurrentAssetsCurrent { get; private set; } = new();
 
         public void Init(AFSModel model)
         {
@@ -134,10 +134,10 @@ namespace AFS.Core.Services.DataCalculations
     }
     public class FutureExpenses
     {
-        public BasicCalculationData Base { get; private set; } = new();
-        public BasicCalculationData Current { get; private set; } = new();
-        public BasicCalculationData InPercentageOfCurrentAssetsBase { get; private set; } = new();
-        public BasicCalculationData InPercentageOfCurrentAssetsCurrent { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Base { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Current { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfCurrentAssetsBase { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfCurrentAssetsCurrent { get; private set; } = new();
 
         public void Init(AFSModel model)
         {
@@ -156,10 +156,10 @@ namespace AFS.Core.Services.DataCalculations
     }
     public class CashCurrentFinancialInvestments
     {
-        public BasicCalculationData Base { get; private set; } = new();
-        public BasicCalculationData Current { get; private set; } = new();
-        public BasicCalculationData InPercentageOfCurrentAssetsBase { get; private set; } = new();
-        public BasicCalculationData InPercentageOfCurrentAssetsCurrent { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Base { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Current { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfCurrentAssetsBase { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfCurrentAssetsCurrent { get; private set; } = new();
 
         public void Init(AFSModel model)
         {
@@ -178,10 +178,10 @@ namespace AFS.Core.Services.DataCalculations
     }
     public class OtherCurrentAssets
     {
-        public BasicCalculationData Base { get; private set; } = new();
-        public BasicCalculationData Current { get; private set; } = new();
-        public BasicCalculationData InPercentageOfCurrentAssetsBase { get; private set; } = new();
-        public BasicCalculationData InPercentageOfCurrentAssetsCurrent { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Base { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Current { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfCurrentAssetsBase { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfCurrentAssetsCurrent { get; private set; } = new();
 
         public void Init(AFSModel model)
         {
@@ -200,10 +200,10 @@ namespace AFS.Core.Services.DataCalculations
     }
     public class AccountsReceivable
     {
-        public BasicCalculationData Base { get; private set; } = new();
-        public BasicCalculationData Current { get; private set; } = new();
-        public BasicCalculationData InPercentageOfCurrentAssetsBase { get; private set; } = new();
-        public BasicCalculationData InPercentageOfCurrentAssetsCurrent { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Base { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow Current { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfCurrentAssetsBase { get; private set; } = new();
+        public CharacteristicsOfCapitalCalculationRow InPercentageOfCurrentAssetsCurrent { get; private set; } = new();
 
         public void Init(AFSModel model)
         {

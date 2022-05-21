@@ -1,6 +1,6 @@
 ﻿namespace AFS.Core.Model
 {
-    public class BasicCalculationData
+    public class CharacteristicsOfCapitalCalculationRow
     {
         public double BeginningOfyear { get; set; }
         public double EndOfYear { get; set; }

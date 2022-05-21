@@ -1,0 +1,33 @@
+﻿<TdComponent Colspan=@Colspan Spacing=@Spacing Align="ML">@FieldName</TdComponent>
+<TdComponent Align="MR">@Constraints.RoundStr(Base.BeginningOfyear)</TdComponent>
+<TdComponent Align="MR">@Constraints.RoundStr(Base.EndOfYear)</TdComponent>
+<TdComponent Align="MR">@Constraints.RoundStr(Base.Deviations)</TdComponent>
+<TdComponent Align="MR">@GetGrowthRateText(Base)</TdComponent>
+<TdComponent Align="MR">@Constraints.RoundStr(Current.BeginningOfyear)</TdComponent>
+<TdComponent Align="MR">@Constraints.RoundStr(Current.EndOfYear)</TdComponent>
+<TdComponent Align="MR">@Constraints.RoundStr(Current.Deviations)</TdComponent>
+<TdComponent Align="MR">@GetGrowthRateText(Current)</TdComponent>
+
+@code {
+    [Parameter]
+    public CharacteristicsOfCapitalCalculationRow Base { get; set; } = new();
+    [Parameter]
+    public CharacteristicsOfCapitalCalculationRow Current { get; set; } = new();
+    [Parameter]
+    public int Colspan { get; set; } = 1;
+    [Parameter]
+    public string? FieldName { get; set; }
+    [Parameter]
+    public string? Spacing { get; set; } = String.Empty;
+    [Parameter]
+    public bool IsShowGrowthRate { get; set; } = true;
+
+    private string GetGrowthRateText(CharacteristicsOfCapitalCalculationRow Item)
+    {
+        if (IsShowGrowthRate == false)
+        {
+            return "x";
+        }
+        return Constraints.RoundStr(Item.GrowthRate);
+    }
+}
