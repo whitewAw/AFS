@@ -155,9 +155,9 @@
     protected override void OnInitialized()
     {
         fieldChanged = () => StateHasChanged();
-        MainModel.F2Base.OnChange += fieldChanged;
+        F2.OnChange += fieldChanged;
         base.OnInitialized();
     }
 
-    public void Dispose() => MainModel.F2Base.OnChange += fieldChanged;
+    public void Dispose() => F2.OnChange += fieldChanged;
 }

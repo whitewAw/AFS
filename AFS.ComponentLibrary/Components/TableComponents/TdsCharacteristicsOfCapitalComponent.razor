@@ -1,12 +1,12 @@
 ﻿<TdComponent Colspan=@Colspan Spacing=@Spacing Align="ML">@FieldName</TdComponent>
-<TdComponent Align="MR">@Constraints.RoundStr(Base.BeginningOfyear)</TdComponent>
-<TdComponent Align="MR">@Constraints.RoundStr(Base.EndOfYear)</TdComponent>
-<TdComponent Align="MR">@Constraints.RoundStr(Base.Deviations)</TdComponent>
-<TdComponent Align="MR">@GetGrowthRateText(Base)</TdComponent>
-<TdComponent Align="MR">@Constraints.RoundStr(Current.BeginningOfyear)</TdComponent>
-<TdComponent Align="MR">@Constraints.RoundStr(Current.EndOfYear)</TdComponent>
-<TdComponent Align="MR">@Constraints.RoundStr(Current.Deviations)</TdComponent>
-<TdComponent Align="MR">@GetGrowthRateText(Current)</TdComponent>
+<TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Base.BeginningOfyear)</TdComponent>
+<TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Base.EndOfYear)</TdComponent>
+<TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Base.Deviations)</TdComponent>
+<TdComponent Align="MR" Spacing="pr-2">@GetGrowthRateText(Base)</TdComponent>
+<TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Current.BeginningOfyear)</TdComponent>
+<TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Current.EndOfYear)</TdComponent>
+<TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Current.Deviations)</TdComponent>
+<TdComponent Align="MR" Spacing="pr-2">@GetGrowthRateText(Current)</TdComponent>
 
 @code {
     [Parameter]

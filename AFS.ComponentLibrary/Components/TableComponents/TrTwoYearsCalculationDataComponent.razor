@@ -1,10 +1,10 @@
 ﻿<tr>
     <TdComponent Align="ML">@FieldNumber</TdComponent>
     <TdComponent Align="ML" Spacing=@Spacing>@ChildContent</TdComponent>
-    <TdComponent Align="MR">@Constraints.RoundStr(Item.BaseYear, Digits)</TdComponent>
-    <TdComponent Align="MR">@Constraints.RoundStr(Item.CurrentYear, Digits)</TdComponent>
-    <TdComponent Align="MR">@Constraints.RoundStr(Item.Deviations, Digits)</TdComponent>
-    <TdComponent Align="MR">@Constraints.RoundStr(Item.GrowthRate, Digits)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.BaseYear, Digits)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.CurrentYear, Digits)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.Deviations, Digits)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.GrowthRate, Digits)</TdComponent>
 </tr>
 
 @code {

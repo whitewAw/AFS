@@ -15,48 +15,48 @@
         </thead>
         <tbody>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.AverageWorkingCapitalBalances
-                                                 FieldNumber="1.">@ResLoc["AverageWorkingCapitalBalances"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="1.">@ResLoc["AverageWorkingCapitalBalances"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.AverageFromMoney
-                                                 FieldNumber="1.1." Spacing="pl-3">- @ResLoc["fromMoney"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="1.1." Spacing="pl-3">- @ResLoc["fromMoney"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.AverageFromReceivables
-                                                 FieldNumber="1.2." Spacing="pl-3">- @ResLoc["fromReceivables"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="1.2." Spacing="pl-3">- @ResLoc["fromReceivables"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.AverageFromTangibleAssets
-                                                 FieldNumber="1.3." Spacing="pl-3">- @ResLoc["fromTangibleAssets"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="1.3." Spacing="pl-3">- @ResLoc["fromTangibleAssets"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.NetIncomeFromSales
-                                                 FieldNumber="2.">@ResLoc["NetIncomeFromSales"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="2.">@ResLoc["NetIncomeFromSales"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.OneDaySalesRevenue Digits="2"
-                                                 FieldNumber="2.1.">@ResLoc["OneDaySalesRevenue"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="2.1.">@ResLoc["OneDaySalesRevenue"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.TurnoverOfWorkingCapital Digits="2"
-                                                 FieldNumber="3.">@ResLoc["TurnoverOfWorkingCapital"], @ResLoc["days"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="3.">@ResLoc["TurnoverOfWorkingCapital"], @ResLoc["days"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.MoneyTurnover Digits="2"
-                                                 FieldNumber="3.1." Spacing="pl-3">- @ResLoc["moneyTurnover"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="3.1." Spacing="pl-3">- @ResLoc["moneyTurnover"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.ReceivablesTurnover Digits="2"
-                                                 FieldNumber="3.2." Spacing="pl-3">- @ResLoc["receivablesTurnover"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="3.2." Spacing="pl-3">- @ResLoc["receivablesTurnover"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.MaterialValuesTurnover Digits="2"
-                                                 FieldNumber="3.3." Spacing="pl-3">- @ResLoc["materialValuesTurnover"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="3.3." Spacing="pl-3">- @ResLoc["materialValuesTurnover"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.NumberOfRevolutionsOfCurrentAssets Digits="2"
-                                                 FieldNumber="4.">@ResLoc["NumberOfRevolutionsOfCurrentAssets"], @ResLoc["times"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="4.">@ResLoc["NumberOfRevolutionsOfCurrentAssets"], @ResLoc["times"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromMoney Digits="2"
-                                                 FieldNumber="4.1." Spacing="pl-3">- @ResLoc["fromMoney"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="4.1." Spacing="pl-3">- @ResLoc["fromMoney"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromReceivables Digits="2"
-                                                 FieldNumber="4.2." Spacing="pl-3">- @ResLoc["fromReceivables"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="4.2." Spacing="pl-3">- @ResLoc["fromReceivables"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromTangibleAssets Digits="2"
-                                                 FieldNumber="4.3." Spacing="pl-3">- @ResLoc["fromTangibleAssets"]</TrTwoYearsCalculationDataComponent>
+                                                FieldNumber="4.3." Spacing="pl-3">- @ResLoc["fromTangibleAssets"]</TrTwoYearsCalculationDataComponent>
             <tr>
                 <TdComponent Align="ML">5.</TdComponent>
                 <TdComponent Align="ML">@ResLoc["FixingRatioOfCurrentAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.FixingRatioOfCurrentAssets.BaseYear, 4)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.FixingRatioOfCurrentAssets.CurrentYear, 4)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.FixingRatioOfCurrentAssets.Deviations, 4)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.FixingRatioOfCurrentAssets.BaseYear, 4)</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.FixingRatioOfCurrentAssets.CurrentYear, 4)</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.FixingRatioOfCurrentAssets.Deviations, 4)</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">x</TdComponent>
             </tr>
             <tr>
                 <TdComponent Align="ML">6.</TdComponent>
                 <TdComponent Align="ML">@ResLoc["ReleaseOrLackOfCurrentAssetsDueTurnover"]</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.ReleaseOrLackOfCurrentAssetsDueTurnover.CurrentYear, 4)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">x</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(@IndicatorsOfTurnoverOfCurrentAssets.ReleaseOrLackOfCurrentAssetsDueTurnover.CurrentYear, 4)</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">x</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">x</TdComponent>
             </tr>
         </tbody>
     </table>
