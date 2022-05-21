@@ -486,6 +486,9 @@
   <data name="OtherTotalIncome" xml:space="preserve">
     <value>Інший сукупний дохід</value>
   </data>
+  <data name="PostponedTaxAssets" xml:space="preserve">
+    <value>Відстрочені податкові активи</value>
+  </data>
   <data name="productionStocks" xml:space="preserve">
     <value>виробничі запаси</value>
   </data>

@@ -45,28 +45,28 @@ namespace AFS.Core.Services.DataCalculations
 
         private void IndicatorsOfTurnoverOfCurrentAssetsInit(AFSModel model)
         {
-            AverageWorkingCapitalBalances.BaseYear = (model.F1Base.F1195begin + model.F1Base.F1195end) / 2;
-            AverageWorkingCapitalBalances.CurrentYear = (model.F1Current.F1195begin + model.F1Current.F1195end) / 2;
+            AverageWorkingCapitalBalances.BaseYear = (model.F1Base.GetF1195Begin() + model.F1Base.GetF1195End()) / 2;
+            AverageWorkingCapitalBalances.CurrentYear = (model.F1Current.GetF1195Begin() + model.F1Current.GetF1195End()) / 2;
         }
         private void AverageFromMoneyInit(AFSModel model)
         {
-            AverageFromMoney.BaseYear = (model.F1Base.F1160begin + model.F1Base.F1165begin + model.F1Base.F1160end + model.F1Base.F1165end) / 2;
-            AverageFromMoney.CurrentYear = (model.F1Current.F1160begin + model.F1Current.F1165begin + model.F1Current.F1160end + model.F1Current.F1165end) / 2;
+            AverageFromMoney.BaseYear = (model.F1Base.GetAccountsMoney(true) + model.F1Base.GetAccountsMoney(false)) / 2;
+            AverageFromMoney.CurrentYear = (model.F1Current.F1160.Begin + model.F1Current.F1165.Begin + model.F1Current.F1160.End + model.F1Current.F1165.End) / 2;
         }
         private void AverageFromReceivablesInit(AFSModel model)
         {
-            AverageFromReceivables.BaseYear = (model.F1Base.AccountsReceivable(true) + model.F1Base.AccountsReceivable(false)) / 2;
-            AverageFromReceivables.CurrentYear = (model.F1Current.AccountsReceivable(true) + model.F1Current.AccountsReceivable(false)) / 2;
+            AverageFromReceivables.BaseYear = (model.F1Base.GetAccountsReceivable(true) + model.F1Base.GetAccountsReceivable(false)) / 2;
+            AverageFromReceivables.CurrentYear = (model.F1Current.GetAccountsReceivable(true) + model.F1Current.GetAccountsReceivable(false)) / 2;
         }
         private void AverageFromTangibleAssetsInit(AFSModel model)
         {
-            AverageFromTangibleAssets.BaseYear = (model.F1Base.F1100begin + model.F1Base.F1110begin + model.F1Base.F1100end + model.F1Base.F1110end) / 2;
-            AverageFromTangibleAssets.CurrentYear = (model.F1Current.F1100begin + model.F1Current.F1110begin+ model.F1Current.F1100end + model.F1Current.F1110end) / 2;
+            AverageFromTangibleAssets.BaseYear = (model.F1Base.GetAccountsTangibleAssets(true) + model.F1Base.GetAccountsTangibleAssets(false)) / 2;
+            AverageFromTangibleAssets.CurrentYear = (model.F1Current.GetF1100Begin() + model.F1Current.F1110.Begin+ model.F1Current.GetF1100End() + model.F1Current.F1110.End) / 2;
         }
         private void NetIncomeFromSalesInit(AFSModel model)
         {
-            NetIncomeFromSales.BaseYear = model.F2Base.F2000curent;
-            NetIncomeFromSales.CurrentYear = model.F2Current.F2000curent;
+            NetIncomeFromSales.BaseYear = model.F2Base.F2000.Curent;
+            NetIncomeFromSales.CurrentYear = model.F2Current.F2000.Curent;
         }
         private void OneDaySalesRevenueInit()
         {

@@ -25,198 +25,96 @@
         <tbody>
             <tr>
                 <TdComponent Colspan=2 Align="ML">@ResLoc["TotalAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TotalAssets.Base.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TotalAssets.Base.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TotalAssets.Base.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TotalAssets.Base.GrowthRate)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TotalAssets.Current.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TotalAssets.Current.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TotalAssets.Current.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TotalAssets.Current.GrowthRate)</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.TotalAssets.Base" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.TotalAssets.Current" />
             </tr>
             <tr>
                 <TdComponent Rowspan="2" Align="ML">1.</TdComponent>
                 <TdComponent Align="ML">@ResLoc["NonCurrentImmobilizedAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Base.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Base.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Base.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Base.GrowthRate)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Current.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Current.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Current.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Current.GrowthRate)</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Base" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Current" />
             </tr>
             <tr>
                 <TdComponent Align="ML">@ResLoc["Samein%OfAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.InPercentageOfAssetsBase.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.InPercentageOfAssetsBase.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.InPercentageOfAssetsBase.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.InPercentageOfAssetsCurrent.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.InPercentageOfAssetsCurrent.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.NonCurrentImmobilizedFunds.InPercentageOfAssetsCurrent.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.NonCurrentImmobilizedFunds.InPercentageOfAssetsBase" IsShowGrowthRate="false" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.NonCurrentImmobilizedFunds.InPercentageOfAssetsCurrent" IsShowGrowthRate="false" />
             </tr>
             <tr>
                 <TdComponent Rowspan="2" Align="ML">2.</TdComponent>
                 <TdComponent Align="ML">@ResLoc["CurrentMobileAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.Base.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.Base.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.Base.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.Base.GrowthRate)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.Current.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.Current.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.Current.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.Current.GrowthRate)</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.CurrentMobileAssets.Base" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.CurrentMobileAssets.Current" />
             </tr>
             <tr>
                 <TdComponent Align="ML">@ResLoc["Samein%OfAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.InPercentageOfAssetsBase.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.InPercentageOfAssetsBase.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.InPercentageOfAssetsBase.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.InPercentageOfAssetsCurrent.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.InPercentageOfAssetsCurrent.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CurrentMobileAssets.InPercentageOfAssetsCurrent.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.CurrentMobileAssets.InPercentageOfAssetsBase" IsShowGrowthRate="false" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.CurrentMobileAssets.InPercentageOfAssetsCurrent" IsShowGrowthRate="false" />
             </tr>
             <tr>
                 <TdComponent Rowspan="2" Align="ML">2.1.</TdComponent>
                 <TdComponent Align="ML" Spacing="pl-3">@ResLoc["TangibleCurrentAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.Base.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.Base.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.Base.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.Base.GrowthRate)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.Current.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.Current.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.Current.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.Current.GrowthRate)</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.TangibleCurrentAssets.Base" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.TangibleCurrentAssets.Current" />
             </tr>
             <tr>
                 <TdComponent Align="ML" Spacing="pl-3">@ResLoc["in%toCurrentMobileAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.InPercentageOfCurrentAssetsBase.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.InPercentageOfCurrentAssetsBase.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.InPercentageOfCurrentAssetsBase.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.InPercentageOfCurrentAssetsCurrent.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.InPercentageOfCurrentAssetsCurrent.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.TangibleCurrentAssets.InPercentageOfCurrentAssetsCurrent.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.TangibleCurrentAssets.InPercentageOfCurrentAssetsBase" IsShowGrowthRate="false" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.TangibleCurrentAssets.InPercentageOfCurrentAssetsCurrent" IsShowGrowthRate="false" />
             </tr>
             <tr>
                 <TdComponent Rowspan="2" Align="ML">2.2.</TdComponent>
                 <TdComponent Align="ML" Spacing="pl-3">@ResLoc["AccountsReceivable"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.Base.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.Base.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.Base.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.Base.GrowthRate)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.Current.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.Current.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.Current.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.Current.GrowthRate)</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.AccountsReceivable.Base" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.AccountsReceivable.Current" />
             </tr>
             <tr>
                 <TdComponent Align="ML" Spacing="pl-3">@ResLoc["in%toCurrentMobileAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.InPercentageOfCurrentAssetsBase.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.InPercentageOfCurrentAssetsBase.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.InPercentageOfCurrentAssetsBase.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.InPercentageOfCurrentAssetsCurrent.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.InPercentageOfCurrentAssetsCurrent.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.AccountsReceivable.InPercentageOfCurrentAssetsCurrent.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.AccountsReceivable.InPercentageOfCurrentAssetsBase" IsShowGrowthRate="false" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.AccountsReceivable.InPercentageOfCurrentAssetsCurrent" IsShowGrowthRate="false" />
             </tr>
             <tr>
                 <TdComponent Rowspan="2" Align="ML">2.3.</TdComponent>
                 <TdComponent Align="ML" Spacing="pl-3">@ResLoc["CashCurrentFinancialInvestments"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.Base.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.Base.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.Base.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.Base.GrowthRate)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.Current.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.Current.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.Current.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.Current.GrowthRate)</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.CashCurrentFinancialInvestments.Base" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.CashCurrentFinancialInvestments.Current" />
             </tr>
             <tr>
                 <TdComponent Align="ML" Spacing="pl-3">@ResLoc["in%toCurrentMobileAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.InPercentageOfCurrentAssetsBase.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.InPercentageOfCurrentAssetsBase.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.InPercentageOfCurrentAssetsBase.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.InPercentageOfCurrentAssetsCurrent.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.InPercentageOfCurrentAssetsCurrent.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.CashCurrentFinancialInvestments.InPercentageOfCurrentAssetsCurrent.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.CashCurrentFinancialInvestments.InPercentageOfCurrentAssetsBase" IsShowGrowthRate="false" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.CashCurrentFinancialInvestments.InPercentageOfCurrentAssetsCurrent" IsShowGrowthRate="false" />
             </tr>
             <tr>
                 <TdComponent Rowspan="2" Align="ML">2.4.</TdComponent>
                 <TdComponent Align="ML" Spacing="pl-3">@ResLoc["OtherCurrentAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.Base.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.Base.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.Base.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.Base.GrowthRate)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.Current.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.Current.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.Current.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.Current.GrowthRate)</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.OtherCurrentAssets.Base" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.OtherCurrentAssets.Current" />
             </tr>
             <tr>
                 <TdComponent Align="ML" Spacing="pl-3">@ResLoc["in%toCurrentMobileAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.InPercentageOfCurrentAssetsBase.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.InPercentageOfCurrentAssetsBase.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.InPercentageOfCurrentAssetsBase.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.InPercentageOfCurrentAssetsCurrent.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.InPercentageOfCurrentAssetsCurrent.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.OtherCurrentAssets.InPercentageOfCurrentAssetsCurrent.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.OtherCurrentAssets.InPercentageOfCurrentAssetsBase" IsShowGrowthRate="false" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.OtherCurrentAssets.InPercentageOfCurrentAssetsCurrent" IsShowGrowthRate="false" />
             </tr>
             <tr>
                 <TdComponent Rowspan="2" Align="ML">2.5.</TdComponent>
                 <TdComponent Align="ML" Spacing="pl-3">@ResLoc["FutureExpenses"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.Base.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.Base.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.Base.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.Base.GrowthRate)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.Current.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.Current.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.Current.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.Current.GrowthRate)</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.FutureExpenses.Base" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.FutureExpenses.Current" />
             </tr>
             <tr>
                 <TdComponent Align="ML" Spacing="pl-3">@ResLoc["in%toCurrentMobileAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.InPercentageOfCurrentAssetsBase.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.InPercentageOfCurrentAssetsBase.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.InPercentageOfCurrentAssetsBase.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.InPercentageOfCurrentAssetsCurrent.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.InPercentageOfCurrentAssetsCurrent.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.FutureExpenses.InPercentageOfCurrentAssetsCurrent.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.FutureExpenses.InPercentageOfCurrentAssetsBase" IsShowGrowthRate="false" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.FutureExpenses.InPercentageOfCurrentAssetsCurrent" IsShowGrowthRate="false" />
             </tr>
             <tr>
                 <TdComponent Rowspan="2" Align="ML">3.</TdComponent>
                 <TdComponent Align="ML">@ResLoc["LiabilitiesRelatedNonCurrentAssetsHeldForSale"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Base.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Base.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Base.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Base.GrowthRate)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Current.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Current.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Current.Deviations)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Current.GrowthRate)</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Base" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Current" />
             </tr>
             <tr>
                 <TdComponent Align="ML">@ResLoc["Samein%OfAssets"]</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.InPercentageOfAssetsBase.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.InPercentageOfAssetsBase.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.InPercentageOfAssetsBase.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.InPercentageOfAssetsCurrent.BeginningOfyear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.InPercentageOfAssetsCurrent.EndOfYear)</TdComponent>
-                <TdComponent Align="MR">@Constraints.RoundStr(CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.InPercentageOfAssetsCurrent.Deviations, 2)</TdComponent>
-                <TdComponent Align="MR">x</TdComponent>
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.InPercentageOfAssetsBase" IsShowGrowthRate="false" />
+                <TdsBasicCalculationDataComponent Item="@CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.InPercentageOfAssetsCurrent" IsShowGrowthRate="false" />
             </tr>
         </tbody>
     </table>

@@ -1,0 +1,243 @@
+﻿@implements IDisposable
+
+<table class="table table-bordered py-0 table-sm">
+    <thead>
+        <tr>
+            <ThComponent>@ResLoc["Asset"]</ThComponent>
+            <ThComponent>@ResLoc["LineСode"]</ThComponent>
+            <ThComponent>@ResLoc["AtBeginningReportingPeriod"]</ThComponent>
+            <ThComponent>@ResLoc["AtEndingReportingPeriod"]</ThComponent>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <TdComponent>1</TdComponent>
+            <TdComponent>2</TdComponent>
+            <TdComponent>3</TdComponent>
+            <TdComponent>4</TdComponent>
+        </tr>
+        <tr>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">I. @ResLoc["NonCurrentAssets"]</ThComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@ResLoc["IntangibleAssets"]</TdComponent>
+            <TdComponent>1000</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F1.GetF1000Begin()</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F1.GetF1000End()</TdComponent>
+        </tr>
+        <TrF1Component Field=@F1.F1001 FieldNumber="1001" Spacing="pl-4" FieldName=@ResLoc["initialCost"] />
+        <TrF1Component Field=@F1.F1002 FieldNumber="1002" Spacing="pl-4" FieldName=@ResLoc["accumulatedDepreciation"] />
+        <TrF1Component Field=@F1.F1005 FieldNumber="1005" FieldName=@ResLoc["IncompleteCapitalInvestments"] />
+        <tr>
+            <TdComponent Align="ML">@ResLoc["FixedAssets"]</TdComponent>
+            <TdComponent>1010</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F1.GetF1010Begin()</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F1.GetF1010End()</TdComponent>
+        </tr>
+        <TrF1Component Field=@F1.F1011 FieldNumber="1011" Spacing="pl-4" FieldName=@ResLoc["initialCost"] />
+        <TrF1Component Field=@F1.F1012 FieldNumber="1012" Spacing="pl-4" FieldName=@ResLoc["wear"] />
+        <TrF1Component Field=@F1.F1015 FieldNumber="1015" FieldName=@ResLoc["InvestmentProperty"] />
+        <TrF1Component Field=@F1.F1020 FieldNumber="1020" FieldName=@ResLoc["LongTermBiologicalAssets"] />
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["LongTermFinancialIvestments"])</TdComponent>
+            <TdComponent Rowspan=2>1030</TdComponent>
+            <TdComponent Rowspan=2 Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@F1.F1030.Begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Rowspan=2 Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@F1.F1030.End Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML" Spacing="pl-4">@(ResLoc["whichAccountedForUsingEquityMethod"])</TdComponent>
+        </tr>
+        <TrF1Component Field=@F1.F1035 FieldNumber="1035" Spacing="pl-4" FieldName=@ResLoc["otherFinancialInvestments"] />
+        <TrF1Component Field=@F1.F1040 FieldNumber="1040" FieldName=@ResLoc["LongTermReceivables"] />
+        <TrF1Component Field=@F1.F1045 FieldNumber="1045" FieldName=@ResLoc["PostponedTaxAssets"] />
+        <TrF1Component Field=@F1.F1090 FieldNumber="1090" FieldName=@ResLoc["OtherFixedAssets"] />
+        <tr>
+            <ThComponent Align="ML">@(ResLoc["TotalSection"]+" I")</ThComponent>
+            <ThComponent>1095</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1095Begin()</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1095End()</ThComponent>
+        </tr>
+        <tr>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">II. @ResLoc["CurrentAssets"]</ThComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["Stocks"])</TdComponent>
+            <TdComponent>1100</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F1.GetF1100Begin()</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F1.GetF1100End()</TdComponent>
+        </tr>
+        <TrF1Component Field=@F1.F1101 FieldNumber="1101" Spacing="pl-4" FieldName=@ResLoc["productionStocks"] />
+        <TrF1Component Field=@F1.F1102 FieldNumber="1102" Spacing="pl-4" FieldName=@ResLoc["unfinishedProduction"] />
+        <TrF1Component Field=@F1.F1103 FieldNumber="1103" Spacing="pl-4" FieldName=@ResLoc["finishedProducts"] />
+
+        <TrF1Component Field=@F1.F1104 FieldNumber="1104" Spacing="pl-4" FieldName=@ResLoc["cargo"] />
+        <TrF1Component Field=@F1.F1110 FieldNumber="1110" FieldName=@ResLoc["CurrentBiologicalAssets"] />
+        <TrF1Component Field=@F1.F1120 FieldNumber="1120" FieldName=@ResLoc["PromissoryNotesReceived"] />
+        <TrF1Component Field=@F1.F1125 FieldNumber="1125" FieldName=@ResLoc["ReceivablesForProducts"] />
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["AccountsReceivableForDebts"])</TdComponent>
+            <TdComponent Rowspan=2>1130</TdComponent>
+            <TdComponent Rowspan=2 Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@F1.F1130.Begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Rowspan=2 Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@F1.F1130.End Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML" Spacing="pl-4">@(ResLoc["onIssuedAdvances"])</TdComponent>
+        </tr>
+        <TrF1Component Field=@F1.F1135 FieldNumber="1135" Spacing="pl-4" FieldName=@ResLoc["withBudget"] />
+        <TrF1Component Field=@F1.F1136 FieldNumber="1136" Spacing="pl-5" FieldName=@ResLoc["includingIncomeTax"] />
+        <TrF1Component Field=@F1.F1140 FieldNumber="1140" Spacing="pl-4" FieldName=@ResLoc["fromAccruedIncome"] />
+        <TrF1Component Field=@F1.F1145 FieldNumber="1145" Spacing="pl-4" FieldName=@ResLoc["fromInternalSettlements"] />
+        <TrF1Component Field=@F1.F1155 FieldNumber="1155" FieldName=@ResLoc["OtherCurrentReceivables"] />
+        <TrF1Component Field=@F1.F1160 FieldNumber="1160" FieldName=@ResLoc["CurrentFinancialInvestments"] />
+        <TrF1Component Field=@F1.F1165 FieldNumber="1165" FieldName=@ResLoc["MoneyAndTheirEquivalents"] />
+        <TrF1Component Field=@F1.F1170 FieldNumber="1170" FieldName=@ResLoc["FutureExpenses"] />
+        <TrF1Component Field=@F1.F1190 FieldNumber="1190" FieldName=@ResLoc["OtherCurrentAssets"] />
+        <tr>
+            <ThComponent Align="ML">@(ResLoc["TotalSection"]+" II")</ThComponent>
+            <ThComponent>1195</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1195Begin()</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1195End()</ThComponent>
+        </tr>
+        <tr>
+            <ThComponent Align="ML" Spacing="pl-5">III. @ResLoc["NonCurrentAssetsHeldForSale"]</ThComponent>
+            <ThComponent>1200</ThComponent>
+            <ThComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@F1.F1200.Begin Class="w-100" />
+            </ThComponent>
+            <ThComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@F1.F1200.End Class="w-100" />
+            </ThComponent>
+        </tr>
+        <tr>
+            <ThComponent Align="ML">@ResLoc["Balance"]</ThComponent>
+            <ThComponent>1300</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1300Begin()</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1300End()</ThComponent>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-bordered py-0 table-sm">
+    <thead>
+        <tr>
+            <ThComponent>@ResLoc["Liabilities"]</ThComponent>
+            <ThComponent>@ResLoc["LineСode"]</ThComponent>
+            <ThComponent>@ResLoc["AtBeginningReportingPeriod"]</ThComponent>
+            <ThComponent>@ResLoc["AtEndingReportingPeriod"]</ThComponent>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <TdComponent>1</TdComponent>
+            <TdComponent>2</TdComponent>
+            <TdComponent>3</TdComponent>
+            <TdComponent>4</TdComponent>
+        </tr>
+        <tr>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">I. @ResLoc["Equity"]</ThComponent>
+        </tr>
+        <TrF1Component Field=@F1.F1400 FieldNumber="1400" FieldName=@ResLoc["RegisteredСapital"] />
+        <TrF1Component Field=@F1.F1405 FieldNumber="1405" FieldName=@ResLoc["CapitalInRevaluations"] />
+        <TrF1Component Field=@F1.F1410 FieldNumber="1410" FieldName=@ResLoc["AdditionalCapital"] />
+        <TrF1Component Field=@F1.F1415 FieldNumber="1415" FieldName=@ResLoc["ReserveCapital"] />
+        <TrF1Component Field=@F1.F1420 FieldNumber="1420" FieldName=@ResLoc["RetainedEarnings"] />
+        <TrF1Component Field=@F1.F1425 FieldNumber="1425" FieldName=@ResLoc["UnpaidCapital"] />
+        <TrF1Component Field=@F1.F1430 FieldNumber="1430" FieldName=@ResLoc["WithdrawnCapital"] />
+        <tr>
+            <ThComponent Align="ML">@(ResLoc["TotalSection"]+" I")</ThComponent>
+            <ThComponent>1495</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1495Begin()</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1495End()</ThComponent>
+        </tr>
+        <tr>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">II. @ResLoc["LongTermLiabilitiesAndCollateral"]</ThComponent>
+        </tr>
+        <TrF1Component Field=@F1.F1500 FieldNumber="1500" FieldName=@ResLoc["DeferredTaxLiabilities"] />
+        <TrF1Component Field=@F1.F1510 FieldNumber="1510" FieldName=@ResLoc["LongTermBankCredits"] />
+        <TrF1Component Field=@F1.F1515 FieldNumber="1515" FieldName=@ResLoc["OtherLongTermLiabilities"] />
+        <TrF1Component Field=@F1.F1520 FieldNumber="1520" FieldName=@ResLoc["LongTermLoans"] />
+        <TrF1Component Field=@F1.F1525 FieldNumber="1525" FieldName=@ResLoc["TargetedFinancing"] />
+        <tr>
+            <ThComponent Align="ML">@(ResLoc["TotalSection"]+" II")</ThComponent>
+            <ThComponent>1595</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1595Begin()</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1595End()</ThComponent>
+        </tr>
+        <tr>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">III. @ResLoc["CurrentLiabilitiesAndProvisions"]</ThComponent>
+        </tr>
+        <TrF1Component Field=@F1.F1600 FieldNumber="1600" FieldName=@ResLoc["ShortTermBankCredits"] />
+        <TrF1Component Field=@F1.F1605 FieldNumber="1605" FieldName=@ResLoc["PromissoryNotesIssued"] />
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["CurrentAccountsPayableFor"])</TdComponent>
+            <TdComponent Rowspan=2>1610</TdComponent>
+            <TdComponent Rowspan=2 Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@F1.F1610.Begin Class="w-100" />
+            </TdComponent>
+            <TdComponent Rowspan=2 Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@F1.F1610.End Class="w-100" />
+            </TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML" Spacing="pl-4">@(ResLoc["longTermLiabilities"])</TdComponent>
+        </tr>
+        <TrF1Component Field=@F1.F1615 FieldNumber="1615" Spacing="pl-4" FieldName=@ResLoc["goodsWorksServices"] />
+        <TrF1Component Field=@F1.F1620 FieldNumber="1620" Spacing="pl-4" FieldName=@ResLoc["settlementsWithBudget"] />
+        <TrF1Component Field=@F1.F1621 FieldNumber="1621" Spacing="pl-5" FieldName=@ResLoc["includingIncomeTax"] />
+        <TrF1Component Field=@F1.F1625 FieldNumber="1625" Spacing="pl-4" FieldName=@ResLoc["settlementsWithInsurance"] />
+        <TrF1Component Field=@F1.F1630 FieldNumber="1630" Spacing="pl-4" FieldName=@ResLoc["settlementsWithPayroll"] />
+        <TrF1Component Field=@F1.F1635 FieldNumber="1635" Spacing="pl-4" FieldName=@ResLoc["onReceivedAdvances"] />
+        <TrF1Component Field=@F1.F1640 FieldNumber="1640" Spacing="pl-4" FieldName=@ResLoc["bySettlementsWithParticipants"] />
+        <TrF1Component Field=@F1.F1645 FieldNumber="1645" Spacing="pl-4" FieldName=@ResLoc["fromInternalSettlements"] />
+        <TrF1Component Field=@F1.F1660 FieldNumber="1660" FieldName=@ResLoc["CurrentSupplies"] />
+        <TrF1Component Field=@F1.F1665 FieldNumber="1665" FieldName=@ResLoc["FutureIncome"] />
+        <TrF1Component Field=@F1.F1690 FieldNumber="1690" FieldName=@ResLoc["OtherCurrentLiabilities"] />
+        <tr>
+            <ThComponent Align="ML">@(ResLoc["TotalSection"]+" III")</ThComponent>
+            <ThComponent>1695</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1695Begin()</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1695End()</ThComponent>
+        </tr>
+        <tr>
+            <ThComponent Align="ML" Spacing="pl-5">III. @ResLoc["LiabilitiesRelatedNonCurrentAssetsHeldForSale"]</ThComponent>
+            <ThComponent>1700</ThComponent>
+            <ThComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@F1.F1700.Begin Class="w-100" />
+            </ThComponent>
+            <ThComponent Align="MR">
+                <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@F1.F1700.End Class="w-100" />
+            </ThComponent>
+        </tr>
+        <tr>
+            <ThComponent Align="ML">@ResLoc["Balance"]</ThComponent>
+            <ThComponent>1900</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1900Begin()</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F1.GetF1900End()</ThComponent>
+        </tr>
+    </tbody>
+</table>
+
+@code
+{
+    [Parameter]
+    public Form1 F1 { get; set; } = new();
+
+    private event Action? fieldChanged;
+
+    protected override void OnInitialized()
+    {
+        fieldChanged = () => StateHasChanged();
+        F1.OnChange += fieldChanged;
+        base.OnInitialized();
+    }
+
+    public void Dispose() => F1.OnChange -= fieldChanged;
+}

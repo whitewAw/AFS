@@ -1,0 +1,12 @@
+﻿<TdComponent Align="MR">@Constraints.RoundStr(Item.BaseYear, Digits)</TdComponent>
+<TdComponent Align="MR">@Constraints.RoundStr(Item.CurrentYear, Digits)</TdComponent>
+<TdComponent Align="MR">@Constraints.RoundStr(Item.Deviations, Digits)</TdComponent>
+<TdComponent Align="MR">@Constraints.RoundStr(Item.GrowthRate, Digits)</TdComponent>
+
+@code {
+    [Parameter]
+    public TwoYearsCalculationData Item { get; set; } = new();
+
+    [Parameter]
+    public int Digits { get; set; } = 1;
+}

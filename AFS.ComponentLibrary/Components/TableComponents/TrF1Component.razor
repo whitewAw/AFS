@@ -1,0 +1,35 @@
+﻿@implements IDisposable
+
+<tr>
+    <TdComponent Align="ML" Spacing=@Spacing>@FieldName</TdComponent>
+    <TdComponent>@FieldNumber</TdComponent>
+    <TdComponent Align="MR">
+        <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@Field.Begin Class="w-100" />
+    </TdComponent>
+    <TdComponent Align="MR">
+        <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@Field.End Class="w-100" />
+    </TdComponent>
+</tr>
+
+@code {
+
+    [Parameter]
+    public BeginEnd Field { get; set; } = new();
+    [Parameter]
+    public string? FieldNumber { get; set; }
+    [Parameter]
+    public string? FieldName { get; set; }
+    [Parameter]
+    public string Spacing { get; set; } = String.Empty;
+
+    private event Action? fieldChanged;
+
+    protected override void OnInitialized()
+    {
+        fieldChanged = () => StateHasChanged();
+        Field.OnChange += fieldChanged;
+        base.OnInitialized();
+    }
+
+    public void Dispose() => Field.OnChange -= fieldChanged;
+}

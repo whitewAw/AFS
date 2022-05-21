@@ -6,17 +6,17 @@
         <RadzenTabsItem class="align-middle text-center" Text="@ResLoc["GeneralInformation"]">
             <GeneralInformationComponent />
         </RadzenTabsItem>
-        <RadzenTabsItem class="align-middle text-center" Text="@currentYearF1">
-            <Form1Current />
-        </RadzenTabsItem>
         <RadzenTabsItem class="align-middle text-center" Text="@baseYearF1">
-            <Form1Base />
+            <Form1Component F1="@MainModel.F1Base" />
+        </RadzenTabsItem>
+        <RadzenTabsItem class="align-middle text-center" Text="@currentYearF1">
+            <Form1Component F1="@MainModel.F1Current" />
+        </RadzenTabsItem>
+       <RadzenTabsItem class="align-middle text-center" Text="@baseYearF2">
+            <Form2Component F2="@MainModel.F2Base" />
         </RadzenTabsItem>
         <RadzenTabsItem class="align-middle text-center" Text="@currentYearF2">
-            <Form2Current />
-        </RadzenTabsItem>
-        <RadzenTabsItem class="align-middle text-center" Text="@baseYearF2">
-            <Form2Base />
+            <Form2Component F2="@MainModel.F2Current" />
         </RadzenTabsItem>
     </Tabs>
 </RadzenTabs>
@@ -53,5 +53,3 @@
         MainModel.UnSubscribeOnChange(fieldChanged);
     }
 }
-
-

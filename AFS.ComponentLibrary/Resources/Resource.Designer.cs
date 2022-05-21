@@ -1168,6 +1168,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Відстрочені податкові активи.
+        /// </summary>
+        internal static string PostponedTaxAssets {
+            get {
+                return ResourceManager.GetString("PostponedTaxAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to виробничі запаси.
         /// </summary>
         internal static string productionStocks {

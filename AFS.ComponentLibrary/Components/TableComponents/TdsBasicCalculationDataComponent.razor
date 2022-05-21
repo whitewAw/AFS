@@ -1,0 +1,21 @@
+﻿<TdComponent Align="MR">@Constraints.RoundStr(Item.BeginningOfyear)</TdComponent>
+<TdComponent Align="MR">@Constraints.RoundStr(Item.EndOfYear)</TdComponent>
+<TdComponent Align="MR">@Constraints.RoundStr(Item.Deviations)</TdComponent>
+<TdComponent Align="MR">@GetGrowthRateText()</TdComponent>
+
+@code {
+    [Parameter]
+    public BasicCalculationData Item { get; set; } = new();
+
+    [Parameter]
+    public bool IsShowGrowthRate { get; set; } = true;
+
+    private string GetGrowthRateText()
+    {
+        if (IsShowGrowthRate == false)
+        {
+            return "x";
+        }
+        return Constraints.RoundStr(Item.GrowthRate);
+    }
+}

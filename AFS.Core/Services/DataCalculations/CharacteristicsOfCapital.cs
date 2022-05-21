@@ -36,11 +36,11 @@ namespace AFS.Core.Services.DataCalculations
 
         public void Init(AFSModel model)
         {
-            Base.BeginningOfyear = model.F1Base.F1300begin;
-            Base.EndOfYear = model.F1Base.F1300end;
+            Base.BeginningOfyear = model.F1Base.GetF1300Begin();
+            Base.EndOfYear = model.F1Base.GetF1300End();
 
-            Current.BeginningOfyear = model.F1Current.F1300begin;
-            Current.EndOfYear = model.F1Current.F1300end;
+            Current.BeginningOfyear = model.F1Current.GetF1300Begin();
+            Current.EndOfYear = model.F1Current.GetF1300End();
         }
     }
 
@@ -53,17 +53,17 @@ namespace AFS.Core.Services.DataCalculations
 
         public void Init(AFSModel model)
         {
-            Base.BeginningOfyear = model.F1Base.F1095begin;
-            Base.EndOfYear = model.F1Base.F1095end;
+            Base.BeginningOfyear = model.F1Base.GetF1095Begin();
+            Base.EndOfYear = model.F1Base.GetF1095End();
 
-            Current.BeginningOfyear = model.F1Current.F1095begin;
-            Current.EndOfYear = model.F1Current.F1095end;
+            Current.BeginningOfyear = model.F1Current.GetF1095Begin();
+            Current.EndOfYear = model.F1Current.GetF1095End();
 
-            InPercentageOfAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.F1300begin * 100;
-            InPercentageOfAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.F1300end * 100;
+            InPercentageOfAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.GetF1300Begin() * 100;
+            InPercentageOfAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.GetF1300End() * 100;
 
-            InPercentageOfAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.F1300begin * 100;
-            InPercentageOfAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.F1300end * 100;
+            InPercentageOfAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.GetF1300Begin() * 100;
+            InPercentageOfAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.GetF1300End() * 100;
         }
     }
     public class CurrentMobileAssets
@@ -75,17 +75,17 @@ namespace AFS.Core.Services.DataCalculations
 
         public void Init(AFSModel model)
         {
-            Base.BeginningOfyear = model.F1Base.F1195begin;
-            Base.EndOfYear = model.F1Base.F1195end;
+            Base.BeginningOfyear = model.F1Base.GetF1195Begin();
+            Base.EndOfYear = model.F1Base.GetF1195End();
 
-            Current.BeginningOfyear = model.F1Current.F1195begin;
-            Current.EndOfYear = model.F1Current.F1195end;
+            Current.BeginningOfyear = model.F1Current.GetF1195Begin();
+            Current.EndOfYear = model.F1Current.GetF1195End();
 
-            InPercentageOfAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.F1300begin * 100;
-            InPercentageOfAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.F1300end * 100;
+            InPercentageOfAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.GetF1300Begin() * 100;
+            InPercentageOfAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.GetF1300End() * 100;
 
-            InPercentageOfAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.F1300begin * 100;
-            InPercentageOfAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.F1300end * 100;
+            InPercentageOfAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.GetF1300Begin() * 100;
+            InPercentageOfAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.GetF1300End() * 100;
         }
     }
     public class LiabilitiesRelatedNonCurrentAssetsHeldForSale
@@ -97,17 +97,17 @@ namespace AFS.Core.Services.DataCalculations
 
         public void Init(AFSModel model)
         {
-            Base.BeginningOfyear = model.F1Base.F1200begin;
-            Base.EndOfYear = model.F1Base.F1200end;
+            Base.BeginningOfyear = model.F1Base.F1200.Begin;
+            Base.EndOfYear = model.F1Base.F1200.End;
 
-            Current.BeginningOfyear = model.F1Current.F1200begin;
-            Current.EndOfYear = model.F1Current.F1200end;
+            Current.BeginningOfyear = model.F1Current.F1200.Begin;
+            Current.EndOfYear = model.F1Current.F1200.End;
 
-            InPercentageOfAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.F1300begin * 100;
-            InPercentageOfAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.F1300end * 100;
+            InPercentageOfAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.GetF1300Begin() * 100;
+            InPercentageOfAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.GetF1300End() * 100;
 
-            InPercentageOfAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.F1300begin * 100;
-            InPercentageOfAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.F1300end * 100;
+            InPercentageOfAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.GetF1300Begin() * 100;
+            InPercentageOfAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.GetF1300End() * 100;
         }
     }
     public class TangibleCurrentAssets
@@ -119,17 +119,17 @@ namespace AFS.Core.Services.DataCalculations
 
         public void Init(AFSModel model)
         {
-            Base.BeginningOfyear = model.F1Base.F1100begin + model.F1Base.F1110begin;
-            Base.EndOfYear = model.F1Base.F1100end + model.F1Base.F1110end;
+            Base.BeginningOfyear = model.F1Base.GetAccountsTangibleAssets(true);
+            Base.EndOfYear = model.F1Base.GetAccountsTangibleAssets(false);
 
-            Current.BeginningOfyear = model.F1Current.F1100begin + model.F1Current.F1110begin;
-            Current.EndOfYear = model.F1Current.F1100end + model.F1Current.F1110end;
+            Current.BeginningOfyear = model.F1Current.GetAccountsTangibleAssets(true);
+            Current.EndOfYear = model.F1Current.GetAccountsTangibleAssets(false);
 
-            InPercentageOfCurrentAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.F1195begin * 100;
-            InPercentageOfCurrentAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.F1195end * 100;
+            InPercentageOfCurrentAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.GetF1195Begin() * 100;
+            InPercentageOfCurrentAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.GetF1195End() * 100;
 
-            InPercentageOfCurrentAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.F1195begin * 100;
-            InPercentageOfCurrentAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.F1195end * 100;
+            InPercentageOfCurrentAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.GetF1195Begin() * 100;
+            InPercentageOfCurrentAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.GetF1195End() * 100;
         }
     }
     public class FutureExpenses
@@ -141,17 +141,17 @@ namespace AFS.Core.Services.DataCalculations
 
         public void Init(AFSModel model)
         {
-            Base.BeginningOfyear = model.F1Base.F1170begin;
-            Base.EndOfYear = model.F1Base.F1170end;
+            Base.BeginningOfyear = model.F1Base.F1170.Begin;
+            Base.EndOfYear = model.F1Base.F1170.End;
 
-            Current.BeginningOfyear = model.F1Current.F1170begin;
-            Current.EndOfYear = model.F1Current.F1170end;
+            Current.BeginningOfyear = model.F1Current.F1170.Begin;
+            Current.EndOfYear = model.F1Current.F1170.End;
 
-            InPercentageOfCurrentAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.F1195begin * 100;
-            InPercentageOfCurrentAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.F1195end * 100;
+            InPercentageOfCurrentAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.GetF1195Begin() * 100;
+            InPercentageOfCurrentAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.GetF1195End() * 100;
 
-            InPercentageOfCurrentAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.F1195begin * 100;
-            InPercentageOfCurrentAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.F1195end * 100;
+            InPercentageOfCurrentAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.GetF1195Begin() * 100;
+            InPercentageOfCurrentAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.GetF1195End() * 100;
         }
     }
     public class CashCurrentFinancialInvestments
@@ -163,17 +163,17 @@ namespace AFS.Core.Services.DataCalculations
 
         public void Init(AFSModel model)
         {
-            Base.BeginningOfyear = model.F1Base.F1160begin + model.F1Base.F1165begin;
-            Base.EndOfYear = model.F1Base.F1160end + model.F1Base.F1165end;
+            Base.BeginningOfyear = model.F1Base.GetAccountsMoney(true);
+            Base.EndOfYear = model.F1Base.GetAccountsMoney(false);
 
-            Current.BeginningOfyear = model.F1Current.F1160begin + model.F1Current.F1165begin;
-            Current.EndOfYear = model.F1Current.F1160end + model.F1Current.F1165end;
+            Current.BeginningOfyear = model.F1Current.GetAccountsMoney(true);
+            Current.EndOfYear = model.F1Current.GetAccountsMoney(false);
 
-            InPercentageOfCurrentAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.F1195begin * 100;
-            InPercentageOfCurrentAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.F1195end * 100;
+            InPercentageOfCurrentAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.GetF1195Begin() * 100;
+            InPercentageOfCurrentAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.GetF1195End() * 100;
 
-            InPercentageOfCurrentAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.F1195begin * 100;
-            InPercentageOfCurrentAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.F1195end * 100;
+            InPercentageOfCurrentAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.GetF1195Begin() * 100;
+            InPercentageOfCurrentAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.GetF1195End() * 100;
         }
     }
     public class OtherCurrentAssets
@@ -185,17 +185,17 @@ namespace AFS.Core.Services.DataCalculations
 
         public void Init(AFSModel model)
         {
-            Base.BeginningOfyear = model.F1Base.F1190begin;
-            Base.EndOfYear = model.F1Base.F1190end;
+            Base.BeginningOfyear = model.F1Base.F1190.Begin;
+            Base.EndOfYear = model.F1Base.F1190.End;
 
-            Current.BeginningOfyear = model.F1Current.F1190begin;
-            Current.EndOfYear = model.F1Current.F1190end;
+            Current.BeginningOfyear = model.F1Current.F1190.Begin;
+            Current.EndOfYear = model.F1Current.F1190.End;
 
-            InPercentageOfCurrentAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.F1195begin * 100;
-            InPercentageOfCurrentAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.F1195end * 100;
+            InPercentageOfCurrentAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.GetF1195Begin() * 100;
+            InPercentageOfCurrentAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.GetF1195End() * 100;
 
-            InPercentageOfCurrentAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.F1195begin * 100;
-            InPercentageOfCurrentAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.F1195end * 100;
+            InPercentageOfCurrentAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.GetF1195Begin() * 100;
+            InPercentageOfCurrentAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.GetF1195End() * 100;
         }
     }
     public class AccountsReceivable
@@ -207,17 +207,17 @@ namespace AFS.Core.Services.DataCalculations
 
         public void Init(AFSModel model)
         {
-            Base.BeginningOfyear = model.F1Base.AccountsReceivable(true);
-            Base.EndOfYear = model.F1Base.AccountsReceivable(false);
+            Base.BeginningOfyear = model.F1Base.GetAccountsReceivable(true);
+            Base.EndOfYear = model.F1Base.GetAccountsReceivable(false);
 
-            Current.BeginningOfyear = model.F1Current.AccountsReceivable(true);
-            Current.EndOfYear = model.F1Current.AccountsReceivable(false);
+            Current.BeginningOfyear = model.F1Current.GetAccountsReceivable(true);
+            Current.EndOfYear = model.F1Current.GetAccountsReceivable(false);
 
-            InPercentageOfCurrentAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.F1195begin * 100;
-            InPercentageOfCurrentAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.F1195end * 100;
+            InPercentageOfCurrentAssetsBase.BeginningOfyear = Base.BeginningOfyear / model.F1Base.GetF1195Begin() * 100;
+            InPercentageOfCurrentAssetsBase.EndOfYear = Base.EndOfYear / model.F1Base.GetF1195End() * 100;
 
-            InPercentageOfCurrentAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.F1195begin * 100;
-            InPercentageOfCurrentAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.F1195end * 100;
+            InPercentageOfCurrentAssetsCurrent.BeginningOfyear = Current.BeginningOfyear / model.F1Current.GetF1195Begin() * 100;
+            InPercentageOfCurrentAssetsCurrent.EndOfYear = Current.EndOfYear / model.F1Current.GetF1195End() * 100;
         }
     }
 }

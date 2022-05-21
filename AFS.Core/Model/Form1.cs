@@ -2,1387 +2,297 @@
 {
     public class Form1
     {
-        private double f1001begin;
-        private double f1002begin;
-        private double f1005begin;
-        private double f1011begin;
-        private double f1012begin;
-        private double f1015begin;
-        private double f1020begin;
-        private double f1030begin;
-        private double f1035begin;
-        private double f1040begin;
-        private double f1045begin;
-        private double f1090begin;
-        private double f1101begin;
-        private double f1102begin;
-        private double f1103begin;
-        private double f1104begin;
-        private double f1110begin;
-        private double f1120begin;
-        private double f1125begin;
-        private double f1130begin;
-        private double f1135begin;
-        private double f1136begin;
-        private double f1140begin;
-        private double f1145begin;
-        private double f1155begin;
-        private double f1160begin;
-        private double f1165begin;
-        private double f1170begin;
-        private double f1190begin;
-        private double f1200begin;
-        private double f1400begin;
-        private double f1405begin;
-        private double f1410begin;
-        private double f1415begin;
-        private double f1420begin;
-        private double f1425begin;
-        private double f1430begin;
-        private double f1500begin;
-        private double f1510begin;
-        private double f1515begin;
-        private double f1520begin;
-        private double f1525begin;
-        private double f1600begin;
-        private double f1605begin;
-        private double f1610begin;
-        private double f1615begin;
-        private double f1620begin;
-        private double f1621begin;
-        private double f1625begin;
-        private double f1630begin;
-        private double f1635begin;
-        private double f1640begin;
-        private double f1645begin;
-        private double f1660begin;
-        private double f1665begin;
-        private double f1690begin;
-        private double f1700begin;
-
-        private double f1001end;
-        private double f1002end;
-        private double f1005end;
-        private double f1011end;
-        private double f1012end;
-        private double f1015end;
-        private double f1020end;
-        private double f1030end;
-        private double f1035end;
-        private double f1040end;
-        private double f1045end;
-        private double f1090end;
-        private double f1101end;
-        private double f1102end;
-        private double f1103end;
-        private double f1104end;
-        private double f1110end;
-        private double f1120end;
-        private double f1125end;
-        private double f1130end;
-        private double f1135end;
-        private double f1136end;
-        private double f1140end;
-        private double f1145end;
-        private double f1155end;
-        private double f1160end;
-        private double f1165end;
-        private double f1170end;
-        private double f1190end;
-        private double f1200end;
-        private double f1400end;
-        private double f1405end;
-        private double f1410end;
-        private double f1415end;
-        private double f1420end;
-        private double f1425end;
-        private double f1430end;
-        private double f1500end;
-        private double f1510end;
-        private double f1515end;
-        private double f1520end;
-        private double f1525end;
-        private double f1600end;
-        private double f1605end;
-        private double f1610end;
-        private double f1615end;
-        private double f1620end;
-        private double f1621end;
-        private double f1625end;
-        private double f1630end;
-        private double f1635end;
-        private double f1640end;
-        private double f1645end;
-        private double f1660end;
-        private double f1665end;
-        private double f1690end;
-        private double f1700end;
-
         public event Action? OnChange;
 
-        public double F1000begin
-        {
-            get => F1001begin - F1002begin;
+        public BeginEnd F1001 { get; set; } = new();
+        public BeginEnd F1002 { get; set; } = new();
+        public BeginEnd F1005 { get; set; } = new(); 
+        public BeginEnd F1011 { get; set; } = new();
+        public BeginEnd F1012 { get; set; } = new();
+        public BeginEnd F1015 { get; set; } = new();
+        public BeginEnd F1020 { get; set; } = new();
+        public BeginEnd F1030 { get; set; } = new();
+        public BeginEnd F1035 { get; set; } = new();
+        public BeginEnd F1040 { get; set; } = new();
+        public BeginEnd F1045 { get; set; } = new();
+        public BeginEnd F1090 { get; set; } = new();
+        public BeginEnd F1101 { get; set; } = new();
+        public BeginEnd F1102 { get; set; } = new();
+        public BeginEnd F1103 { get; set; } = new();
+        public BeginEnd F1104 { get; set; } = new();
+        public BeginEnd F1110 { get; set; } = new();
+        public BeginEnd F1120 { get; set; } = new();
+        public BeginEnd F1125 { get; set; } = new();
+        public BeginEnd F1130 { get; set; } = new();
+        public BeginEnd F1135 { get; set; } = new();
+        public BeginEnd F1136 { get; set; } = new();
+        public BeginEnd F1140 { get; set; } = new();
+        public BeginEnd F1145 { get; set; } = new();
+        public BeginEnd F1155 { get; set; } = new();
+        public BeginEnd F1160 { get; set; } = new();
+        public BeginEnd F1165 { get; set; } = new();
+        public BeginEnd F1170 { get; set; } = new();
+        public BeginEnd F1190 { get; set; } = new();
+        public BeginEnd F1200 { get; set; } = new();
+        public BeginEnd F1400 { get; set; } = new();
+        public BeginEnd F1405 { get; set; } = new();
+        public BeginEnd F1410 { get; set; } = new();
+        public BeginEnd F1415 { get; set; } = new();
+        public BeginEnd F1420 { get; set; } = new();
+        public BeginEnd F1425 { get; set; } = new();
+        public BeginEnd F1430 { get; set; } = new();
+        public BeginEnd F1500 { get; set; } = new();
+        public BeginEnd F1510 { get; set; } = new();
+        public BeginEnd F1515 { get; set; } = new();
+        public BeginEnd F1520 { get; set; } = new();
+        public BeginEnd F1525 { get; set; } = new();
+        public BeginEnd F1600 { get; set; } = new();
+        public BeginEnd F1605 { get; set; } = new();
+        public BeginEnd F1610 { get; set; } = new();
+        public BeginEnd F1615 { get; set; } = new();
+        public BeginEnd F1620 { get; set; } = new();
+        public BeginEnd F1621 { get; set; } = new();
+        public BeginEnd F1625 { get; set; } = new();
+        public BeginEnd F1630 { get; set; } = new();
+        public BeginEnd F1635 { get; set; } = new();
+        public BeginEnd F1640 { get; set; } = new();
+        public BeginEnd F1645 { get; set; } = new();
+        public BeginEnd F1660 { get; set; } = new();
+        public BeginEnd F1665 { get; set; } = new();
+        public BeginEnd F1690 { get; set; } = new();
+        public BeginEnd F1700 { get; set; } = new();
 
-        }
-        public double F1001begin
-        {
-            get => f1001begin;
-            set
-            {
-                f1001begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1002begin
-        {
-            get => f1002begin;
-            set
-            {
-                f1002begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1005begin
-        {
-            get => f1005begin;
-            set
-            {
-                f1005begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1010begin
-        {
-            get => F1011begin - F1012begin;
-
-        }
-        public double F1011begin
-        {
-            get => f1011begin;
-            set
-            {
-                f1011begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1012begin
-        {
-            get => f1012begin;
-            set
-            {
-                f1012begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1015begin
-        {
-            get => f1015begin;
-            set
-            {
-                f1015begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1020begin
-        {
-            get => f1020begin;
-            set
-            {
-                f1020begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1030begin
-        {
-            get => f1030begin;
-            set
-            {
-                f1030begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1035begin
-        {
-            get => f1035begin;
-            set
-            {
-                f1035begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1040begin
-        {
-            get => f1040begin;
-            set
-            {
-                f1040begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1045begin
-        {
-            get => f1045begin;
-            set
-            {
-                f1045begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1090begin
-        {
-            get => f1090begin;
-            set
-            {
-                f1090begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1095begin
-        {
-            get => F1000begin + F1005begin + F1010begin + F1015begin + F1020begin + F1030begin + F1035begin + F1040begin + F1045begin + F1090begin;
-
-        }
-        public double F1100begin
-        {
-            get => F1101begin + F1102begin + F1103begin + F1104begin;
-        }
-        public double F1101begin
-        {
-            get => f1101begin;
-            set
-            {
-                f1101begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1102begin
-        {
-            get => f1102begin;
-            set
-            {
-                f1102begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1103begin
-        {
-            get => f1103begin;
-            set
-            {
-                f1103begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1104begin
-        {
-            get => f1104begin;
-            set
-            {
-                f1104begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-
-
-        public double F1110begin
-        {
-            get => f1110begin;
-            set
-            {
-                f1110begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1120begin
-        {
-            get => f1120begin;
-            set
-            {
-                f1120begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1125begin
-        {
-            get => f1125begin;
-            set
-            {
-                f1125begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1130begin
-        {
-            get => f1130begin;
-            set
-            {
-                f1130begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1135begin
-        {
-            get => f1135begin;
-            set
-            {
-                f1135begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1136begin
-        {
-            get => f1136begin;
-            set
-            {
-                f1136begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1140begin
-        {
-            get => f1140begin;
-            set
-            {
-                f1140begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1145begin
-        {
-            get => f1145begin;
-            set
-            {
-                f1145begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1155begin
-        {
-            get => f1155begin;
-            set
-            {
-                f1155begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1160begin
-        {
-            get => f1160begin;
-            set
-            {
-                f1160begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1165begin
-        {
-            get => f1165begin;
-            set
-            {
-                f1165begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1170begin
-        {
-            get => f1170begin;
-            set
-            {
-                f1170begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1190begin
-        {
-            get => f1190begin;
-            set
-            {
-                f1190begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1195begin
-        {
-            get => F1100begin + F1110begin + F1120begin + F1125begin + F1130begin + F1135begin + F1140begin + F1145begin + F1155begin + F1160begin + F1165begin + F1170begin + F1190begin;
-        }
-        public double F1200begin
-        {
-            get => f1200begin;
-            set
-            {
-                f1200begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1300begin
-        {
-            get => F1095begin + F1195begin + F1200begin;
-        }
-        public double F1400begin
-        {
-            get => f1400begin;
-            set
-            {
-                f1400begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1405begin
-        {
-            get => f1405begin;
-            set
-            {
-                f1405begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1410begin
-        {
-            get => f1410begin;
-            set
-            {
-                f1410begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1415begin
-        {
-            get => f1415begin;
-            set
-            {
-                f1415begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1420begin
-        {
-            get => f1420begin;
-            set
-            {
-                f1420begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1425begin
-        {
-            get => f1425begin;
-            set
-            {
-                f1425begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1430begin
-        {
-            get => f1430begin;
-            set
-            {
-                f1430begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1495begin
-        {
-            get => F1400begin + F1405begin + F1410begin + F1415begin + F1420begin - F1425begin - F1430begin;
-        }
-        public double F1500begin
-        {
-            get => f1500begin;
-            set
-            {
-                f1500begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1510begin
-        {
-            get => f1510begin;
-            set
-            {
-                f1510begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1515begin
-        {
-            get => f1515begin;
-            set
-            {
-                f1515begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1520begin
-        {
-            get => f1520begin;
-            set
-            {
-                f1520begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1525begin
-        {
-            get => f1525begin;
-            set
-            {
-                f1525begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1595begin
-        {
-            get => F1500begin + F1510begin + F1515begin + F1520begin + F1525begin;
-        }
-        public double F1600begin
-        {
-            get => f1600begin;
-            set
-            {
-                f1600begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1605begin
-        {
-            get => f1605begin;
-            set
-            {
-                f1605begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1610begin
-        {
-            get => f1610begin;
-            set
-            {
-                f1610begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1615begin
-        {
-            get => f1615begin;
-            set
-            {
-                f1615begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1620begin
-        {
-            get => f1620begin;
-            set
-            {
-                f1620begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1621begin
-        {
-            get => f1621begin;
-            set
-            {
-                f1621begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1625begin
-        {
-            get => f1625begin;
-            set
-            {
-                f1625begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1630begin
-        {
-            get => f1630begin;
-            set
-            {
-                f1630begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-
-        public double F1635begin
-        {
-            get => f1635begin;
-            set
-            {
-                f1635begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1640begin
-        {
-            get => f1640begin;
-            set
-            {
-                f1640begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1645begin
-        {
-            get => f1645begin;
-            set
-            {
-                f1645begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-
-
-        public double F1660begin
-        {
-            get => f1660begin;
-            set
-            {
-                f1660begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1665begin
-        {
-            get => f1665begin;
-            set
-            {
-                f1665begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1690begin
-        {
-            get => f1690begin;
-            set
-            {
-                f1690begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1695begin
-        {
-            get => F1600begin+ F1605begin + F1610begin + F1615begin + F1620begin + F1625begin + F1630begin + F1635begin + F1640begin + F1645begin + F1660begin + F1665begin + F1690begin;
-
-        }
-        public double F1700begin
-        {
-            get => f1700begin;
-            set
-            {
-                f1700begin = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1900begin
-        {
-            get => F1495begin + F1595begin + F1695begin + F1700begin;
-        }
-
-        public double F1000end
-        {
-            get => F1001end - F1002end;
-
-        }
-        public double F1001end
-        {
-            get => f1001end;
-            set
-            {
-                f1001end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1002end
-        {
-            get => f1002end;
-            set
-            {
-                f1002end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1005end
-        {
-            get => f1005end;
-            set
-            {
-                f1005end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1010end
-        {
-            get => F1011end - F1012end;
-
-        }
-        public double F1011end
-        {
-            get => f1011end;
-            set
-            {
-                f1011end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1012end
-        {
-            get => f1012end;
-            set
-            {
-                f1012end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1015end
-        {
-            get => f1015end;
-            set
-            {
-                f1015end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1020end
-        {
-            get => f1020end;
-            set
-            {
-                f1020end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1030end
-        {
-            get => f1030end;
-            set
-            {
-                f1030end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1035end
-        {
-            get => f1035end;
-            set
-            {
-                f1035end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1040end
-        {
-            get => f1040end;
-            set
-            {
-                f1040end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1045end
-        {
-            get => f1045end;
-            set
-            {
-                f1045end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1090end
-        {
-            get => f1090end;
-            set
-            {
-                f1090end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1095end
-        {
-            get => F1000end + F1005end + F1010end + F1015end + F1020end + F1030end + F1035end + F1040end + F1045end + F1090end;
-
-        }
-        public double F1100end
-        {
-            get => F1101end + F1102end + F1103end + F1104end;
-        }
-
-
-        public double F1101end
-        {
-            get => f1101end;
-            set
-            {
-                f1101end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-
-        public double F1102end
-        {
-            get => f1102end;
-            set
-            {
-                f1102end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-
-        public double F1103end
-        {
-            get => f1103end;
-            set
-            {
-                f1103end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-
-        public double F1104end
-        {
-            get => f1104end;
-            set
-            {
-                f1104end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1110end
-        {
-            get => f1110end;
-            set
-            {
-                f1110end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1120end
-        {
-            get => f1120end;
-            set
-            {
-                f1120end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1125end
-        {
-            get => f1125end;
-            set
-            {
-                f1125end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1130end
-        {
-            get => f1130end;
-            set
-            {
-                f1130end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1135end
-        {
-            get => f1135end;
-            set
-            {
-                f1135end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1136end
-        {
-            get => f1136end;
-            set
-            {
-                f1136end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1140end
-        {
-            get => f1140end;
-            set
-            {
-                f1140end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1145end
-        {
-            get => f1145end;
-            set
-            {
-                f1145end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1155end
-        {
-            get => f1155end;
-            set
-            {
-                f1155end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1160end
-        {
-            get => f1160end;
-            set
-            {
-                f1160end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1165end
-        {
-            get => f1165end;
-            set
-            {
-                f1165end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1170end
-        {
-            get => f1170end;
-            set
-            {
-                f1170end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1190end
-        {
-            get => f1190end;
-            set
-            {
-                f1190end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1195end
-        {
-            get => F1100end + F1110end + F1120end + F1125end + F1130end + F1135end + F1140end + F1145end + F1155end + F1160end + F1165end + F1170end + F1190end;
-        }
-        public double F1200end
-        {
-            get => f1200end;
-            set
-            {
-                f1200end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1300end
-        {
-            get => F1095end + F1195end + F1200end;
-        }
-        public double F1400end
-        {
-            get => f1400end;
-            set
-            {
-                f1400end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1405end
-        {
-            get => f1405end;
-            set
-            {
-                f1405end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1410end
-        {
-            get => f1410end;
-            set
-            {
-                f1410end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1415end
-        {
-            get => f1415end;
-            set
-            {
-                f1415end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1420end
-        {
-            get => f1420end;
-            set
-            {
-                f1420end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1425end
-        {
-            get => f1425end;
-            set
-            {
-                f1425end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1430end
-        {
-            get => f1430end;
-            set
-            {
-                f1430end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1495end
-        {
-            get => F1400end + F1405end + F1410end + F1415end + F1420end - F1425end - F1430end;
-        }
-        public double F1500end
-        {
-            get => f1500end;
-            set
-            {
-                f1500end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1510end
-        {
-            get => f1510end;
-            set
-            {
-                f1510end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1515end
-        {
-            get => f1515end;
-            set
-            {
-                f1515end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1520end
-        {
-            get => f1520end;
-            set
-            {
-                f1520end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1525end
-        {
-            get => f1525end;
-            set
-            {
-                f1525end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1595end
-        {
-            get => F1500end + F1510end + F1515end + F1520end + F1525end;
-        }
-        public double F1600end
-        {
-            get => f1600end;
-            set
-            {
-                f1600end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1605end
-        {
-            get => f1605end;
-            set
-            {
-                f1605end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1610end
-        {
-            get => f1610end;
-            set
-            {
-                f1610end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1615end
-        {
-            get => f1615end;
-            set
-            {
-                f1615end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1620end
-        {
-            get => f1620end;
-            set
-            {
-                f1620end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1621end
-        {
-            get => f1621end;
-            set
-            {
-                f1621end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1625end
-        {
-            get => f1625end;
-            set
-            {
-                f1625end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1630end
-        {
-            get => f1630end;
-            set
-            {
-                f1630end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1635end
-        {
-            get => f1635end;
-            set
-            {
-                f1635end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1640end
-        {
-            get => f1640end;
-            set
-            {
-                f1640end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1645end
-        {
-            get => f1645end;
-            set
-            {
-                f1645end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-
-        public double F1660end
-        {
-            get => f1660end;
-            set
-            {
-                f1660end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1665end
-        {
-            get => f1665end;
-            set
-            {
-                f1665end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1690end
-        {
-            get => f1690end;
-            set
-            {
-                f1690end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1695end
-        {
-            get => F1600end+ F1605end + F1610end + F1615end + F1620end + F1625end + F1630end + F1635end + F1640end + F1645end + F1660end + F1665end + F1690end;
-
-        }
-        public double F1700end
-        {
-            get => f1700end;
-            set
-            {
-                f1700end = Round(value);
-                NotifyStateChanged();
-            }
-        }
-        public double F1900end
-        {
-            get => F1495end + F1595end + F1695end + F1700end;
-        }
-        private static double Round(double value)
-        {
-            return AFSConstraints.RoundStat(value);
-        }
-
-        private void NotifyStateChanged()
-        {
-            OnChange?.Invoke();
-        }
+        private void NotifyStateChanged() => OnChange?.Invoke();
 
         internal void Init(Form1 form1)
         {
-            f1001begin = form1.F1001begin;
-            f1002begin = form1.F1002begin;
-            f1005begin = form1.F1005begin;
-            f1011begin = form1.F1011begin;
-            f1012begin = form1.F1012begin;
-            f1015begin = form1.F1015begin;
-            f1020begin = form1.F1020begin;
-            f1030begin = form1.F1030begin;
-            f1035begin = form1.F1035begin;
-            f1040begin = form1.F1040begin;
-            f1045begin = form1.F1045begin;
-            f1090begin = form1.F1090begin;
-            f1101begin = form1.F1101begin;
-            f1102begin = form1.F1102begin;
-            f1103begin = form1.F1103begin;
-            f1104begin = form1.F1104begin;
-            f1110begin = form1.F1110begin;
-            f1120begin = form1.F1120begin;
-            f1125begin = form1.F1125begin;
-            f1130begin = form1.F1130begin;
-            f1135begin = form1.F1135begin;
-            f1136begin = form1.F1136begin;
-            f1140begin = form1.F1140begin;
-            f1145begin = form1.F1145begin;
-            f1155begin = form1.F1155begin;
-            f1160begin = form1.F1160begin;
-            f1165begin = form1.F1165begin;
-            f1170begin = form1.F1170begin;
-            f1190begin = form1.F1190begin;
-            f1200begin = form1.F1200begin;
-            f1400begin = form1.F1400begin;
-            f1405begin = form1.F1405begin;
-            f1410begin = form1.F1410begin;
-            f1415begin = form1.F1415begin;
-            f1420begin = form1.F1420begin;
-            f1425begin = form1.F1425begin;
-            f1430begin = form1.F1430begin;
-            f1500begin = form1.F1500begin;
-            f1510begin = form1.F1510begin;
-            f1515begin = form1.F1515begin;
-            f1520begin = form1.F1520begin;
-            f1525begin = form1.F1525begin;
-            f1600begin = form1.F1600begin;
-            f1605begin = form1.F1605begin;
-            f1610begin = form1.F1610begin;
-            f1615begin = form1.F1615begin;
-            f1620begin = form1.F1620begin;
-            f1621begin = form1.F1621begin;
-            f1625begin = form1.F1625begin;
-            f1630begin = form1.F1630begin;
-            f1635begin = form1.F1635begin;
-            f1640begin = form1.F1640begin;
-            f1645begin = form1.F1645begin;
-            f1660begin = form1.F1660begin;
-            f1665begin = form1.F1665begin;
-            f1690begin = form1.F1690begin;
-            f1700begin = form1.F1700begin;
-
-            f1001end = form1.F1001end;
-            f1002end = form1.F1002end;
-            f1005end = form1.F1005end;
-            f1011end = form1.F1011end;
-            f1012end = form1.F1012end;
-            f1015end = form1.F1015end;
-            f1020end = form1.F1020end;
-            f1030end = form1.F1030end;
-            f1035end = form1.F1035end;
-            f1040end = form1.F1040end;
-            f1045end = form1.F1045end;
-            f1090end = form1.F1090end;
-            f1101end = form1.F1101end;
-            f1102end = form1.F1102end;
-            f1103end = form1.F1103end;
-            f1104end = form1.F1104end;
-            f1110end = form1.F1110end;
-            f1120end = form1.F1120end;
-            f1125end = form1.F1125end;
-            f1130end = form1.F1130end;
-            f1135end = form1.F1135end;
-            f1136end = form1.F1136end;
-            f1140end = form1.F1140end;
-            f1145end = form1.F1145end;
-            f1155end = form1.F1155end;
-            f1160end = form1.F1160end;
-            f1165end = form1.F1165end;
-            f1170end = form1.F1170end;
-            f1190end = form1.F1190end;
-            f1200end = form1.F1200end;
-            f1400end = form1.F1400end;
-            f1405end = form1.F1405end;
-            f1410end = form1.F1410end;
-            f1415end = form1.F1415end;
-            f1420end = form1.F1420end;
-            f1425end = form1.F1425end;
-            f1430end = form1.F1430end;
-            f1500end = form1.F1500end;
-            f1510end = form1.F1510end;
-            f1515end = form1.F1515end;
-            f1520end = form1.F1520end;
-            f1525end = form1.F1525end;
-            f1600end = form1.F1600end;
-            f1605end = form1.F1605end;
-            f1610end = form1.F1610end;
-            f1615end = form1.F1615end;
-            f1620end = form1.F1620end;
-            f1621end = form1.F1621end;
-            f1625end = form1.F1625end;
-            f1630end = form1.F1630end;
-            f1635end = form1.F1635end;
-            f1640end = form1.F1640end;
-            f1645end = form1.F1645end;
-            f1660end = form1.F1660end;
-            f1665end = form1.F1665end;
-            f1690end = form1.F1690end;
-            f1700end = form1.F1700end;
+            F1001.Init(form1.F1001);
+            F1002.Init(form1.F1002);
+            F1005.Init(form1.F1005);
+            F1011.Init(form1.F1011);
+            F1012.Init(form1.F1012);
+            F1015.Init(form1.F1015);
+            F1020.Init(form1.F1020);
+            F1030.Init(form1.F1030);
+            F1035.Init(form1.F1035);
+            F1040.Init(form1.F1040);
+            F1045.Init(form1.F1045);
+            F1090.Init(form1.F1090);
+            F1101.Init(form1.F1101);
+            F1102.Init(form1.F1102);
+            F1103.Init(form1.F1103);
+            F1104.Init(form1.F1104);
+            F1110.Init(form1.F1110);
+            F1120.Init(form1.F1120);
+            F1125.Init(form1.F1125);
+            F1130.Init(form1.F1130);
+            F1135.Init(form1.F1135);
+            F1136.Init(form1.F1136);
+            F1140.Init(form1.F1140);
+            F1145.Init(form1.F1145);
+            F1155.Init(form1.F1155);
+            F1160.Init(form1.F1160);
+            F1165.Init(form1.F1165);
+            F1170.Init(form1.F1170);
+            F1190.Init(form1.F1190);
+            F1200.Init(form1.F1200);
+            F1400.Init(form1.F1400);
+            F1405.Init(form1.F1405);
+            F1410.Init(form1.F1410);
+            F1415.Init(form1.F1415);
+            F1420.Init(form1.F1420);
+            F1425.Init(form1.F1425);
+            F1430.Init(form1.F1430);
+            F1500.Init(form1.F1500);
+            F1510.Init(form1.F1510);
+            F1515.Init(form1.F1515);
+            F1520.Init(form1.F1520);
+            F1525.Init(form1.F1525);
+            F1600.Init(form1.F1600);
+            F1605.Init(form1.F1605);
+            F1610.Init(form1.F1610);
+            F1615.Init(form1.F1615);
+            F1620.Init(form1.F1620);
+            F1621.Init(form1.F1621);
+            F1625.Init(form1.F1625);
+            F1630.Init(form1.F1630);
+            F1635.Init(form1.F1635);
+            F1640.Init(form1.F1640);
+            F1645.Init(form1.F1645);
+            F1660.Init(form1.F1660);
+            F1665.Init(form1.F1665);
+            F1690.Init(form1.F1690);
+            F1700.Init(form1.F1700);
 
             NotifyStateChanged();
         }
-        public double AccountsReceivable(bool begin)
+
+        internal void SubscribeOnChange(Action onChange)
+        {
+            F1001.OnChange += onChange;
+            F1002.OnChange += onChange;
+            F1005.OnChange += onChange;
+            F1011.OnChange += onChange;
+            F1012.OnChange += onChange;
+            F1015.OnChange += onChange;
+            F1020.OnChange += onChange;
+            F1030.OnChange += onChange;
+            F1035.OnChange += onChange;
+            F1040.OnChange += onChange;
+            F1045.OnChange += onChange;
+            F1090.OnChange += onChange;
+            F1101.OnChange += onChange;
+            F1102.OnChange += onChange;
+            F1103.OnChange += onChange;
+            F1104.OnChange += onChange;
+            F1110.OnChange += onChange;
+            F1120.OnChange += onChange;
+            F1125.OnChange += onChange;
+            F1130.OnChange += onChange;
+            F1135.OnChange += onChange;
+            F1136.OnChange += onChange;
+            F1140.OnChange += onChange;
+            F1145.OnChange += onChange;
+            F1155.OnChange += onChange;
+            F1160.OnChange += onChange;
+            F1165.OnChange += onChange;
+            F1170.OnChange += onChange;
+            F1190.OnChange += onChange;
+            F1200.OnChange += onChange;
+            F1400.OnChange += onChange;
+            F1405.OnChange += onChange;
+            F1410.OnChange += onChange;
+            F1415.OnChange += onChange;
+            F1420.OnChange += onChange;
+            F1425.OnChange += onChange;
+            F1430.OnChange += onChange;
+            F1500.OnChange += onChange;
+            F1510.OnChange += onChange;
+            F1515.OnChange += onChange;
+            F1520.OnChange += onChange;
+            F1525.OnChange += onChange;
+            F1600.OnChange += onChange;
+            F1605.OnChange += onChange;
+            F1610.OnChange += onChange;
+            F1615.OnChange += onChange;
+            F1620.OnChange += onChange;
+            F1621.OnChange += onChange;
+            F1625.OnChange += onChange;
+            F1630.OnChange += onChange;
+            F1635.OnChange += onChange;
+            F1640.OnChange += onChange;
+            F1645.OnChange += onChange;
+            F1660.OnChange += onChange;
+            F1665.OnChange += onChange;
+            F1690.OnChange += onChange;
+            F1700.OnChange += onChange;
+        }
+
+        internal void UnSubscribeOnChange(Action onChange)
+        {
+            F1001.OnChange -= onChange;
+            F1002.OnChange -= onChange;
+            F1005.OnChange -= onChange;
+            F1011.OnChange -= onChange;
+            F1012.OnChange -= onChange;
+            F1015.OnChange -= onChange;
+            F1020.OnChange -= onChange;
+            F1030.OnChange -= onChange;
+            F1035.OnChange -= onChange;
+            F1040.OnChange -= onChange;
+            F1045.OnChange -= onChange;
+            F1090.OnChange -= onChange;
+            F1101.OnChange -= onChange;
+            F1102.OnChange -= onChange;
+            F1103.OnChange -= onChange;
+            F1104.OnChange -= onChange;
+            F1110.OnChange -= onChange;
+            F1120.OnChange -= onChange;
+            F1125.OnChange -= onChange;
+            F1130.OnChange -= onChange;
+            F1135.OnChange -= onChange;
+            F1136.OnChange -= onChange;
+            F1140.OnChange -= onChange;
+            F1145.OnChange -= onChange;
+            F1155.OnChange -= onChange;
+            F1160.OnChange -= onChange;
+            F1165.OnChange -= onChange;
+            F1170.OnChange -= onChange;
+            F1190.OnChange -= onChange;
+            F1200.OnChange -= onChange;
+            F1400.OnChange -= onChange;
+            F1405.OnChange -= onChange;
+            F1410.OnChange -= onChange;
+            F1415.OnChange -= onChange;
+            F1420.OnChange -= onChange;
+            F1425.OnChange -= onChange;
+            F1430.OnChange -= onChange;
+            F1500.OnChange -= onChange;
+            F1510.OnChange -= onChange;
+            F1515.OnChange -= onChange;
+            F1520.OnChange -= onChange;
+            F1525.OnChange -= onChange;
+            F1600.OnChange -= onChange;
+            F1605.OnChange -= onChange;
+            F1610.OnChange -= onChange;
+            F1615.OnChange -= onChange;
+            F1620.OnChange -= onChange;
+            F1621.OnChange -= onChange;
+            F1625.OnChange -= onChange;
+            F1630.OnChange -= onChange;
+            F1635.OnChange -= onChange;
+            F1640.OnChange -= onChange;
+            F1645.OnChange -= onChange;
+            F1660.OnChange -= onChange;
+            F1665.OnChange -= onChange;
+            F1690.OnChange -= onChange;
+            F1700.OnChange -= onChange;
+        }
+
+        public double GetF1000Begin() => F1001.Begin - F1002.Begin;
+        public double GetF1000End() => F1001.End - F1002.End;
+        public double GetF1010Begin() => F1011.Begin - F1012.Begin;
+        public double GetF1010End() => F1011.End - F1012.End;
+        public double GetF1095Begin() => GetF1000Begin() + F1005.Begin + GetF1010Begin() + F1015.Begin + F1020.Begin + F1030.Begin + F1035.Begin + F1040.Begin + F1045.Begin + F1090.Begin;
+        public double GetF1095End() => GetF1000End() + F1005.End + GetF1010End() + F1015.End + F1020.End + F1030.End + F1035.End + F1040.End + F1045.End + F1090.End;
+        public double GetF1100Begin() => F1101.Begin + F1102.Begin + F1103.Begin + F1104.Begin;
+        public double GetF1100End() => F1101.End + F1102.End + F1103.End + F1104.End;
+        public double GetF1195Begin() => GetF1100Begin() + F1110.Begin + F1120.Begin + F1125.Begin + F1130.Begin + F1135.Begin + F1140.Begin + F1145.Begin + F1155.Begin + F1160.Begin + F1165.Begin + F1170.Begin + F1190.Begin;
+        public double GetF1195End() => GetF1100End() + F1110.End + F1120.End + F1125.End + F1130.End + F1135.End + F1140.End + F1145.End + F1155.End + F1160.End + F1165.End + F1170.End + F1190.End;
+        public double GetF1300Begin() => GetF1095Begin() + GetF1195Begin() + F1200.Begin;
+        public double GetF1300End() => GetF1095End() + GetF1195End() + F1200.End;
+        public double GetF1495Begin() => F1400.Begin + F1405.Begin + F1410.Begin + F1415.Begin + F1420.Begin - F1425.Begin - F1430.Begin;
+        public double GetF1495End() => F1400.End + F1405.End + F1410.End + F1415.End + F1420.End - F1425.End - F1430.End;
+        public double GetF1595Begin() => F1500.Begin + F1510.Begin + F1515.Begin + F1520.Begin + F1525.Begin;
+        public double GetF1595End() => F1500.End + F1510.End + F1515.End + F1520.End + F1525.End;
+        public double GetF1695Begin() => F1600.Begin + F1605.Begin + F1610.Begin + F1615.Begin + F1620.Begin + F1625.Begin + F1630.Begin + F1635.Begin + F1640.Begin + F1645.Begin + F1660.Begin + F1665.Begin + F1690.Begin;
+        public double GetF1695End() => F1600.End + F1605.End + F1610.End + F1615.End + F1620.End + F1625.End + F1630.End + F1635.End + F1640.End + F1645.End + F1660.End + F1665.End + F1690.End;
+        public double GetF1900Begin() => GetF1495Begin() + GetF1595Begin() + GetF1695Begin() + F1700.Begin;
+        public double GetF1900End() => GetF1495End() + GetF1595End() + GetF1695End() + F1700.End;
+
+        internal double GetAccountsTangibleAssets(bool begin)
         {
             if (begin)
             {
-                return F1120begin + F1125begin + F1130begin + F1135begin + F1140begin + F1145begin + F1155begin;
+                return GetF1100Begin() + F1110.Begin;
             }
-            return F1120end + F1125end + F1130end + F1135end + F1140end + F1145end + F1155end;
+            return GetF1100End() + F1110.End;
+        }
+        internal double GetAccountsReceivable(bool begin)
+        {
+            if (begin)
+            {
+                return F1120.Begin + F1125.Begin + F1130.Begin + F1135.Begin + F1140.Begin + F1145.Begin + F1155.Begin;
+            }
+            return F1120.End + F1125.End + F1130.End + F1135.End + F1140.End + F1145.End + F1155.End;
+        }
+        internal double GetAccountsMoney(bool begin)
+        {
+            if (begin)
+            {
+                return F1160.Begin + F1165.Begin;
+            }
+            return F1160.End + F1165.End;
         }
     }
 }

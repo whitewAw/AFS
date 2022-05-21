@@ -1,0 +1,163 @@
+﻿@implements IDisposable
+
+<table class="table table-bordered py-0 table-sm">
+    <thead>
+        <tr>
+            <ThComponent>@ResLoc["Article"]</ThComponent>
+            <ThComponent>@ResLoc["LineСode"]</ThComponent>
+            <ThComponent>@ResLoc["ForReportingPeriod"]</ThComponent>
+            <ThComponent>@ResLoc["ForSamePeriodLastYear"]</ThComponent>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <TdComponent>1</TdComponent>
+            <TdComponent>2</TdComponent>
+            <TdComponent>3</TdComponent>
+            <TdComponent>4</TdComponent>
+        </tr>
+        <tr>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">I. @ResLoc["FinancialResults"]</ThComponent>
+        </tr>
+        <TrF2Component Field=@F2.F2000 FieldNumber="2000" FieldName=@ResLoc["NetIncomeFromSalesOfProducts"] />
+        <TrF2Component Field=@F2.F2050 FieldNumber="2050" FieldName=@ResLoc["CostOfGoodsSold"] />
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["Gross"]):</TdComponent>
+            <TdComponent Rowspan="2">2090</TdComponent>
+            <TdComponent Rowspan="2" Align="MR" Spacing="pr-4">@F2.GetF2090Curent()</TdComponent>
+            <TdComponent Rowspan="2" Align="MR" Spacing="pr-4">@F2.GetF2090Previous()</TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["profit"])</TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@ResLoc["loss"]</TdComponent>
+            <TdComponent>2095</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F2.GetF2095Curent()</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F2.GetF2095Previous()</TdComponent>
+        </tr>
+        <TrF2Component Field=@F2.F2120 FieldNumber="2120" FieldName=@ResLoc["OtherOperatingIncome"] />
+        <TrF2Component Field=@F2.F2130 FieldNumber="2130" FieldName=@ResLoc["AdministrativeExpenses"] />
+        <TrF2Component Field=@F2.F2150 FieldNumber="2150" FieldName=@ResLoc["SellingExpenses"] />
+        <TrF2Component Field=@F2.F2180 FieldNumber="2180" FieldName=@ResLoc["OtherOperatingExpenses"] />
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["FinancialResultFromOperatingActivities"]):</TdComponent>
+            <TdComponent Rowspan="2">2190</TdComponent>
+            <TdComponent Rowspan="2" Align="MR" Spacing="pr-4">@F2.GetF2190Curent()</TdComponent>
+            <TdComponent Rowspan="2" Align="MR" Spacing="pr-4">@F2.GetF2190Previous()</TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["profit"])</TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@ResLoc["loss"]</TdComponent>
+            <TdComponent>2195</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F2.GetF2195Curent()</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F2.GetF2195Previous()</TdComponent>
+        </tr>
+        <TrF2Component Field=@F2.F2200 FieldNumber="2200" FieldName=@ResLoc["IncomeFromEquityParticipation"] />
+        <TrF2Component Field=@F2.F2220 FieldNumber="2220" FieldName=@ResLoc["OtherFinancialIncome"] />
+        <TrF2Component Field=@F2.F2240 FieldNumber="2240" FieldName=@ResLoc["OtherIncome"] />
+        <TrF2Component Field=@F2.F2250 FieldNumber="2250" FieldName=@ResLoc["FinancialExpenses"] />
+        <TrF2Component Field=@F2.F2255 FieldNumber="2255" FieldName=@ResLoc["LossesFromEquityParticipation"] />
+        <TrF2Component Field=@F2.F2270 FieldNumber="2270" FieldName=@ResLoc["OtherExpenses"] />
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["FinancialResultBeforeTax"]):</TdComponent>
+            <TdComponent Rowspan="2">2290</TdComponent>
+            <TdComponent Rowspan="2" Align="MR" Spacing="pr-4">@F2.GetF2290Curent()</TdComponent>
+            <TdComponent Rowspan="2" Align="MR" Spacing="pr-4">@F2.GetF2290Previous()</TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["profit"])</TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@ResLoc["loss"]</TdComponent>
+            <TdComponent>2295</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F2.GetF2295Curent()</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F2.GetF2295Previous()</TdComponent>
+        </tr>
+        <TrF2Component Field=@F2.F2300 FieldNumber="2300" FieldName=@ResLoc["ExpensesIncomeFromIncomeTax"] />
+        <TrF2Component Field=@F2.F2305 FieldNumber="2305" FieldName=@ResLoc["ProfitLossFromDiscontinuedOperationsAfterTax"] />
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["NetFinancialResult"]):</TdComponent>
+            <TdComponent Rowspan="2">2350</TdComponent>
+            <TdComponent Rowspan="2" Align="MR" Spacing="pr-4">@F2.GetF2350Curent()</TdComponent>
+            <TdComponent Rowspan="2" Align="MR" Spacing="pr-4">@F2.GetF2350Previous()</TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@(ResLoc["profit"])</TdComponent>
+        </tr>
+        <tr>
+            <TdComponent Align="ML">@ResLoc["loss"]</TdComponent>
+            <TdComponent>2355</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F2.GetF2355Curent()</TdComponent>
+            <TdComponent Align="MR" Spacing="pr-4">@F2.GetF2355Previous()</TdComponent>
+        </tr>
+        <tr>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">II. @ResLoc["ComprehensiveIncome"]</ThComponent>
+        </tr>
+        <TrF2Component Field=@F2.F2400 FieldNumber="2400" FieldName=@ResLoc["RevaluationDepreciationNonCurrentAssets"] />
+        <TrF2Component Field=@F2.F2405 FieldNumber="2405" FieldName=@ResLoc["RevaluationDepreciationFinancialInstruments"] />
+        <TrF2Component Field=@F2.F2410 FieldNumber="2410" FieldName=@ResLoc["AccumulatedExchangeRateDifferences"] />
+        <TrF2Component Field=@F2.F2415 FieldNumber="2415" FieldName=@ResLoc["ShareOtherComprehensiveIncome"] />
+        <TrF2Component Field=@F2.F2445 FieldNumber="2445" FieldName=@ResLoc["OtherTotalIncome"] />
+        <tr>
+            <ThComponent Align="ML">@(ResLoc["OtherAggregatePreTaxIncome"])</ThComponent>
+            <ThComponent>2450</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F2.GetF2450Curent()</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F2.GetF2450Previous()</ThComponent>
+        </tr>
+        <TrF2Component Field=@F2.F2455 FieldNumber="2455" FieldName=@ResLoc["IncomeTaxRelatedOtherComprehensiveIncome"] />
+        <tr>
+            <ThComponent Align="ML">@(ResLoc["OtherAggregateIncomeAfterTax"])</ThComponent>
+            <ThComponent>2460</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F2.GetF2460Curent()</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F2.GetF2460Previous()</ThComponent>
+        </tr>
+        <tr>
+            <ThComponent Align="ML">@(ResLoc["TotalIncome"])</ThComponent>
+            <ThComponent>2465</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F2.GetF2465Curent()</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F2.GetF2465Previous()</ThComponent>
+        </tr>
+        <tr>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">III. @ResLoc["ElementsOperatingCosts"]</ThComponent>
+        </tr>
+        <TrF2Component Field=@F2.F2500 FieldNumber="2500" FieldName=@ResLoc["MaterialCosts"] />
+        <TrF2Component Field=@F2.F2505 FieldNumber="2505" FieldName=@ResLoc["SalaryExpenses"] />
+        <TrF2Component Field=@F2.F2510 FieldNumber="2510" FieldName=@ResLoc["DeductionsSocialEvents"] />
+        <TrF2Component Field=@F2.F2515 FieldNumber="2515" FieldName=@ResLoc["Amortization"] />
+        <TrF2Component Field=@F2.F2520 FieldNumber="2520" FieldName=@ResLoc["OtherOperatingExpenses"] />
+        <tr>
+            <ThComponent Align="ML">@(ResLoc["Total"])</ThComponent>
+            <ThComponent>2550</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F2.GetF2550Curent()</ThComponent>
+            <ThComponent Align="MR" Spacing="pr-4">@F2.GetF2550Previous()</ThComponent>
+        </tr>
+        <tr>
+            <ThComponent Colspan=4 Align="ML" Spacing="pl-5">ІV. @ResLoc["CalculationStockProfitabilityIndicators"]</ThComponent>
+        </tr>
+        <TrF2Component Field=@F2.F2600 FieldNumber="2600" FieldName=@ResLoc["AverageNumberOrdinaryShares"] />
+        <TrF2Component Field=@F2.F2605 FieldNumber="2605" FieldName=@ResLoc["AdjustedAverageNumberOrdinaryShares"] />
+        <TrF2Component Field=@F2.F2610 FieldNumber="2610" FieldName=@ResLoc["NetProfitLossPerOrdinaryShare"] />
+        <TrF2Component Field=@F2.F2615 FieldNumber="2615" FieldName=@ResLoc["AdjustedNetProfitLossPerOrdinaryShare"] />
+        <TrF2Component Field=@F2.F2650 FieldNumber="2650" FieldName=@ResLoc["DividendsPerSimpleShare"] />
+    </tbody>
+</table>
+
+@code
+{
+    [Parameter]
+    public Form2 F2 { get; set; } = new();
+
+    private event Action? fieldChanged;
+
+    protected override void OnInitialized()
+    {
+        fieldChanged = () => StateHasChanged();
+        MainModel.F2Base.OnChange += fieldChanged;
+        base.OnInitialized();
+    }
+
+    public void Dispose() => MainModel.F2Base.OnChange += fieldChanged;
+}
