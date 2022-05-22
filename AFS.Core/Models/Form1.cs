@@ -6,7 +6,7 @@
 
         public BeginEnd F1001 { get; set; } = new();
         public BeginEnd F1002 { get; set; } = new();
-        public BeginEnd F1005 { get; set; } = new(); 
+        public BeginEnd F1005 { get; set; } = new();
         public BeginEnd F1011 { get; set; } = new();
         public BeginEnd F1012 { get; set; } = new();
         public BeginEnd F1015 { get; set; } = new();

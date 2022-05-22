@@ -1,16 +1,17 @@
-﻿@using AFS.ComponentLibrary.Resources
-@using AFS.Core.Interfaces
+﻿@using Radzen
+@using Radzen.Blazor
+@using Blazored.LocalStorage;
+@using Microsoft.AspNetCore.Components.Routing
 @using Microsoft.AspNetCore.Components.Web
 @using Microsoft.Extensions.Localization
 @using Microsoft.JSInterop
+@using AFS.Core.Interfaces
 @using AFS.Core.Model
+@using AFS.Core.Models.TablsModels
 @using AFS.Core.Services.DataCalculations;
-@using Radzen
-@using Radzen.Blazor
 @using AFS.ComponentLibrary.Components.YearSelectComponents
 @using AFS.ComponentLibrary.Components.TableComponents
-@using Blazored.LocalStorage;
-@using Microsoft.AspNetCore.Components.Routing
+@using AFS.ComponentLibrary.Resources
 
 @inject AFSModel MainModel
 @inject IStringLocalizer<Resource> ResLoc

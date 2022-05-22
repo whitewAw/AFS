@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.JSInterop;
+﻿using Microsoft.JSInterop;
 
 namespace AFS.Core.Services
 {
@@ -33,6 +32,6 @@ namespace AFS.Core.Services
             var module = await moduleTask.Value;
             await module.InvokeVoidAsync("triggerClick", id);
         }
-        
+
     }
 }

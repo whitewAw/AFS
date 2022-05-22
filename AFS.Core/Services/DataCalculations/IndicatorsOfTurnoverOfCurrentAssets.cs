@@ -1,4 +1,5 @@
 ﻿using AFS.Core.Model;
+using AFS.Core.Models.TablsModels;
 
 namespace AFS.Core.Services.DataCalculations
 {
@@ -7,7 +8,7 @@ namespace AFS.Core.Services.DataCalculations
         public TwoYearsCalculationData AverageWorkingCapitalBalances { get; private set; } = new();
         public TwoYearsCalculationData AverageFromMoney { get; private set; } = new();
         public TwoYearsCalculationData AverageFromReceivables { get; private set; } = new();
-        public TwoYearsCalculationData AverageFromTangibleAssets { get; private set; } = new();
+        public TwoYearsCalculationData AverageFromMaterialValues { get; private set; } = new();
         public TwoYearsCalculationData NetIncomeFromSales { get; private set; } = new();
         public TwoYearsCalculationData OneDaySalesRevenue { get; private set; } = new();
         public TwoYearsCalculationData TurnoverOfWorkingCapital { get; private set; } = new();
@@ -60,8 +61,8 @@ namespace AFS.Core.Services.DataCalculations
         }
         private void AverageFromTangibleAssetsInit(AFSModel model)
         {
-            AverageFromTangibleAssets.BaseYear = (model.F1Base.GetAccountsTangibleAssets(true) + model.F1Base.GetAccountsTangibleAssets(false)) / 2;
-            AverageFromTangibleAssets.CurrentYear = (model.F1Current.GetF1100Begin() + model.F1Current.F1110.Begin+ model.F1Current.GetF1100End() + model.F1Current.F1110.End) / 2;
+            AverageFromMaterialValues.BaseYear = (model.F1Base.GetAccountsTangibleAssets(true) + model.F1Base.GetAccountsTangibleAssets(false)) / 2;
+            AverageFromMaterialValues.CurrentYear = (model.F1Current.GetF1100Begin() + model.F1Current.F1110.Begin + model.F1Current.GetF1100End() + model.F1Current.F1110.End) / 2;
         }
         private void NetIncomeFromSalesInit(AFSModel model)
         {
@@ -70,7 +71,7 @@ namespace AFS.Core.Services.DataCalculations
         }
         private void OneDaySalesRevenueInit()
         {
-            OneDaySalesRevenue.BaseYear = NetIncomeFromSales.BaseYear/ AFSConstraints.DurationOAnalyzedPeriod;
+            OneDaySalesRevenue.BaseYear = NetIncomeFromSales.BaseYear / AFSConstraints.DurationOAnalyzedPeriod;
             OneDaySalesRevenue.CurrentYear = NetIncomeFromSales.CurrentYear / AFSConstraints.DurationOAnalyzedPeriod;
         }
         private void TurnoverOfWorkingCapitalInit()
@@ -90,8 +91,8 @@ namespace AFS.Core.Services.DataCalculations
         }
         private void MaterialValuesTurnoverInit()
         {
-            MaterialValuesTurnover.BaseYear = AverageFromTangibleAssets.BaseYear / OneDaySalesRevenue.BaseYear;
-            MaterialValuesTurnover.CurrentYear = AverageFromTangibleAssets.CurrentYear / OneDaySalesRevenue.CurrentYear;
+            MaterialValuesTurnover.BaseYear = AverageFromMaterialValues.BaseYear / OneDaySalesRevenue.BaseYear;
+            MaterialValuesTurnover.CurrentYear = AverageFromMaterialValues.CurrentYear / OneDaySalesRevenue.CurrentYear;
         }
         private void NumberOfRevolutionsOfCurrentAssetsInit()
         {
@@ -110,8 +111,8 @@ namespace AFS.Core.Services.DataCalculations
         }
         private void RevolutionsFromTangibleAssetsInit()
         {
-            RevolutionsFromTangibleAssets.BaseYear = NetIncomeFromSales.BaseYear / AverageFromTangibleAssets.BaseYear;
-            RevolutionsFromTangibleAssets.CurrentYear = NetIncomeFromSales.CurrentYear / AverageFromTangibleAssets.CurrentYear;
+            RevolutionsFromTangibleAssets.BaseYear = NetIncomeFromSales.BaseYear / AverageFromMaterialValues.BaseYear;
+            RevolutionsFromTangibleAssets.CurrentYear = NetIncomeFromSales.CurrentYear / AverageFromMaterialValues.CurrentYear;
         }
         private void FixingRatioOfCurrentAssetsInit()
         {

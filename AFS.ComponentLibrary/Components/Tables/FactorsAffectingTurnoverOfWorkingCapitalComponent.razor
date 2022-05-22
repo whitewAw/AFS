@@ -1,0 +1,55 @@
+﻿@inject FactorsAffectingTurnoverOfWorkingCapital FactorsAffectingTurnoverOfWorkingCapital
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <thead>
+            <tr>
+                <ThComponent Rowspan=3>@ResLoc["NumberInOrder"]</ThComponent>
+                <ThComponent Rowspan=3>@ResLoc["TypesOfCurrentAssets"]</ThComponent>
+                <ThComponent Colspan=3>@ResLoc["Turnover"], @ResLoc["days"]</ThComponent>
+                <ThComponent Colspan=3>@ResLoc["Deviation_"] (+,-)</ThComponent>
+            </tr>
+            <tr>
+                <ThComponent Rowspan=2>@MainModel.BaseYear  @ResLoc["year"]</ThComponent>
+                <ThComponent Rowspan=2>@MainModel.CurrentYear  @ResLoc["year"]</ThComponent>
+                <ThComponent Rowspan=2>@ResLoc["adjustedIndicator"]</ThComponent>
+                <ThComponent Rowspan=2>@ResLoc["total_"]</ThComponent>
+                <ThComponent Colspan=2>@ResLoc["includingDueTo"]</ThComponent>
+            </tr>
+            <tr>
+                <ThComponent>@ResLoc["revenue"]</ThComponent>
+                <ThComponent>@ResLoc["averageBalances"]</ThComponent>
+            </tr>
+        </thead>
+        <tbody>
+            <TrFactorsAffectingTurnoverOfWorkingCapitalComponent FieldNumber="1."
+                                                                 FieldName=@ResLoc["MoneyAndTheirEquivalents"] Item=@FactorsAffectingTurnoverOfWorkingCapital.Money />
+            <TrFactorsAffectingTurnoverOfWorkingCapitalComponent FieldNumber="2."
+                                                                 FieldName=@ResLoc["AccountsReceivable"] Item=@FactorsAffectingTurnoverOfWorkingCapital.Receivables />
+            <TrFactorsAffectingTurnoverOfWorkingCapitalComponent FieldNumber="3."
+                                                                 FieldName=@ResLoc["Tangibles"] Item=@FactorsAffectingTurnoverOfWorkingCapital.MaterialValues />
+            <TrFactorsAffectingTurnoverOfWorkingCapitalComponent FieldNumber="4."
+                                                                 FieldName=@ResLoc["TotalWorkingCapital"] Item=@FactorsAffectingTurnoverOfWorkingCapital.TotalWorkingCapital />
+            <tr>
+                <TdComponent Align="ML">5.</TdComponent>
+                <TdComponent Align="ML">@ResLoc["OneDaySalesRevenue"]</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(FactorsAffectingTurnoverOfWorkingCapital.OneDaySalesRevenue.BaseYear,2)</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(FactorsAffectingTurnoverOfWorkingCapital.OneDaySalesRevenue.CurrentYear,2)</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">x</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(FactorsAffectingTurnoverOfWorkingCapital.OneDaySalesRevenue.Total,2)</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">x</TdComponent>
+                <TdComponent Align="MR" Spacing="pr-2">x</TdComponent>
+            </tr>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+
+    protected override void OnInitialized()
+    {
+        tableName = String.Format(ResLoc["FactorsAffectingTurnoverOfWorkingCapitalTablName"], 3, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear);
+        base.OnInitialized();
+    }
+}

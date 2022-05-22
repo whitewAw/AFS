@@ -115,6 +115,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to скоригований показник.
+        /// </summary>
+        internal static string adjustedIndicator {
+            get {
+                return ResourceManager.GetString("adjustedIndicator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Скоригований чистий прибуток (збиток) на одну просту акцію.
         /// </summary>
         internal static string AdjustedNetProfitLossPerOrdinaryShare {
@@ -201,6 +210,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string atEndOfYear {
             get {
                 return ResourceManager.GetString("atEndOfYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to середніх залишків.
+        /// </summary>
+        internal static string averageBalances {
+            get {
+                return ResourceManager.GetString("averageBalances", resourceCulture);
             }
         }
         
@@ -493,6 +511,24 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Фактори, що впливають на оборотність оборотних засобів.
+        /// </summary>
+        internal static string FactorsAffectingTurnoverOfWorkingCapital {
+            get {
+                return ResourceManager.GetString("FactorsAffectingTurnoverOfWorkingCapital", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Таблиця {0}. Фактори, що впливають на оборотність оборотних засобів {1} за {2}-{3} роки.
+        /// </summary>
+        internal static string FactorsAffectingTurnoverOfWorkingCapitalTablName {
+            get {
+                return ResourceManager.GetString("FactorsAffectingTurnoverOfWorkingCapitalTablName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Фінансові витрати.
         /// </summary>
         internal static string FinancialExpenses {
@@ -678,6 +714,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string in_toCurrentMobileAssets {
             get {
                 return ResourceManager.GetString("in%toCurrentMobileAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to у тому числі за рахунок.
+        /// </summary>
+        internal static string includingDueTo {
+            get {
+                return ResourceManager.GetString("includingDueTo", resourceCulture);
             }
         }
         
@@ -1294,6 +1339,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to виручки.
+        /// </summary>
+        internal static string revenue {
+            get {
+                return ResourceManager.GetString("revenue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Витрати на оплату праці.
         /// </summary>
         internal static string SalaryExpenses {
@@ -1411,6 +1465,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Матеріальні цінності.
+        /// </summary>
+        internal static string Tangibles {
+            get {
+                return ResourceManager.GetString("Tangibles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Цільове фінансування.
         /// </summary>
         internal static string TargetedFinancing {
@@ -1447,6 +1510,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to усього.
+        /// </summary>
+        internal static string total_ {
+            get {
+                return ResourceManager.GetString("total_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Усього капіталу (активів).
         /// </summary>
         internal static string TotalAssets {
@@ -1474,11 +1546,38 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Усього оборотних засобів.
+        /// </summary>
+        internal static string TotalWorkingCapital {
+            get {
+                return ResourceManager.GetString("TotalWorkingCapital", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оборотність.
+        /// </summary>
+        internal static string Turnover {
+            get {
+                return ResourceManager.GetString("Turnover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Оборотність оборотних засобів.
         /// </summary>
         internal static string TurnoverOfWorkingCapital {
             get {
                 return ResourceManager.GetString("TurnoverOfWorkingCapital", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Види оборотних засобів.
+        /// </summary>
+        internal static string TypesOfCurrentAssets {
+            get {
+                return ResourceManager.GetString("TypesOfCurrentAssets", resourceCulture);
             }
         }
         

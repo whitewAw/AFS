@@ -1,4 +1,6 @@
-﻿namespace AFS.Core.Model
+﻿using AFS.Core.Model;
+
+namespace AFS.Core.Models.TablsModels
 {
     public class TwoYearsCalculationData
     {

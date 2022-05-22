@@ -135,6 +135,9 @@
   <data name="AdjustedAverageNumberOrdinaryShares" xml:space="preserve">
     <value>Скоригована середньорічна кількість простих акцій</value>
   </data>
+  <data name="adjustedIndicator" xml:space="preserve">
+    <value>скоригований показник</value>
+  </data>
   <data name="AdjustedNetProfitLossPerOrdinaryShare" xml:space="preserve">
     <value>Скоригований чистий прибуток (збиток) на одну просту акцію</value>
   </data>
@@ -164,6 +167,9 @@
   </data>
   <data name="atEndOfYear" xml:space="preserve">
     <value>на кінець року</value>
+  </data>
+  <data name="averageBalances" xml:space="preserve">
+    <value>середніх залишків</value>
   </data>
   <data name="AverageNumberOrdinaryShares" xml:space="preserve">
     <value>Середньорічна кількість простих акцій</value>
@@ -261,6 +267,12 @@
   <data name="ExpensesIncomeFromIncomeTax" xml:space="preserve">
     <value>Витрати (дохід) з податку на прибуток</value>
   </data>
+  <data name="FactorsAffectingTurnoverOfWorkingCapital" xml:space="preserve">
+    <value>Фактори, що впливають на оборотність оборотних засобів</value>
+  </data>
+  <data name="FactorsAffectingTurnoverOfWorkingCapitalTablName" xml:space="preserve">
+    <value>Таблиця {0}. Фактори, що впливають на оборотність оборотних засобів {1} за {2}-{3} роки</value>
+  </data>
   <data name="FinancialExpenses" xml:space="preserve">
     <value>Фінансові витрати</value>
   </data>
@@ -323,6 +335,9 @@
   </data>
   <data name="in%toCurrentMobileAssets" xml:space="preserve">
     <value>в %  до оборотних засобів</value>
+  </data>
+  <data name="includingDueTo" xml:space="preserve">
+    <value>у тому числі за рахунок</value>
   </data>
   <data name="includingIncomeTax" xml:space="preserve">
     <value>у тому числі з податку на прибуток</value>
@@ -528,6 +543,9 @@
   <data name="RevaluationDepreciationNonCurrentAssets" xml:space="preserve">
     <value>Дооцінка (уцінка) необоротних активів</value>
   </data>
+  <data name="revenue" xml:space="preserve">
+    <value>виручки</value>
+  </data>
   <data name="SalaryExpenses" xml:space="preserve">
     <value>Витрати на оплату праці</value>
   </data>
@@ -567,6 +585,9 @@
   <data name="TangibleCurrentAssets" xml:space="preserve">
     <value>Матеріальні оборотні засоби</value>
   </data>
+  <data name="Tangibles" xml:space="preserve">
+    <value>Матеріальні цінності</value>
+  </data>
   <data name="TargetedFinancing" xml:space="preserve">
     <value>Цільове фінансування</value>
   </data>
@@ -588,8 +609,20 @@
   <data name="TotalSection" xml:space="preserve">
     <value>Усього за розділом</value>
   </data>
+  <data name="TotalWorkingCapital" xml:space="preserve">
+    <value>Усього оборотних засобів</value>
+  </data>
+  <data name="total_" xml:space="preserve">
+    <value>усього</value>
+  </data>
+  <data name="Turnover" xml:space="preserve">
+    <value>Оборотність</value>
+  </data>
   <data name="TurnoverOfWorkingCapital" xml:space="preserve">
     <value>Оборотність оборотних засобів</value>
+  </data>
+  <data name="TypesOfCurrentAssets" xml:space="preserve">
+    <value>Види оборотних засобів</value>
   </data>
   <data name="unfinishedProduction" xml:space="preserve">
     <value>незавершене виробництво</value>

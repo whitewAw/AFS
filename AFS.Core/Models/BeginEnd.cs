@@ -27,8 +27,8 @@
 
         internal void Init(BeginEnd fild)
         {
-            begin=fild.Begin;
-            end=fild.End;
+            begin = fild.Begin;
+            end = fild.End;
         }
 
         private void NotifyStateChanged() => OnChange?.Invoke();
