@@ -20,6 +20,7 @@
             {
                 1 => "0.0",
                 2 => "0.00",
+                3 => "0.000",
                 4 => "0.0000",
                 _ => throw new ArgumentException("Invalid enum value for command", nameof(RoundStrStat)),
             };

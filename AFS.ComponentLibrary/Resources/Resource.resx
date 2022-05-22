@@ -354,6 +354,12 @@
   <data name="Indicators" xml:space="preserve">
     <value>Показники</value>
   </data>
+  <data name="IndicatorsOfEfficiencyOfWorkingCapital" xml:space="preserve">
+    <value>Показники ефективності використання оборотних засобів</value>
+  </data>
+  <data name="IndicatorsOfEfficiencyOfWorkingCapitalTablName" xml:space="preserve">
+    <value>Таблиця {0}. Показники ефективності використання оборотних засобів {1} за {2}-{3} роки</value>
+  </data>
   <data name="IndicatorsOfTurnoverOfCurrentAssets" xml:space="preserve">
     <value>Показники оборотності оборотних засобів</value>
   </data>
@@ -368,6 +374,9 @@
   </data>
   <data name="IntangibleAssets" xml:space="preserve">
     <value>Нематеріальні активи</value>
+  </data>
+  <data name="IntegratedIndicatorOfEfficiencyOfCurrentAssets" xml:space="preserve">
+    <value>Інтегральний показник ефективності використання оборотних засобів</value>
   </data>
   <data name="InvestmentProperty" xml:space="preserve">
     <value>Інвестиційна нерухомість</value>
@@ -428,6 +437,9 @@
   </data>
   <data name="NetIncomeFromSalesOfProducts" xml:space="preserve">
     <value>Чистий дохід від реалізації продукції (товарів, робіт, послуг)</value>
+  </data>
+  <data name="NetProfit" xml:space="preserve">
+    <value>Чистий прибуток</value>
   </data>
   <data name="NetProfitLossPerOrdinaryShare" xml:space="preserve">
     <value>Чистий прибуток (збиток) на одну просту акцію</value>
@@ -509,6 +521,9 @@
   </data>
   <data name="profit" xml:space="preserve">
     <value>прибуток</value>
+  </data>
+  <data name="ProfitabilityOfCurrentAssets" xml:space="preserve">
+    <value>Рентабельність оборотних засобів</value>
   </data>
   <data name="ProfitLossFromDiscontinuedOperationsAfterTax" xml:space="preserve">
     <value>Прибуток (збиток) від припиненої діяльності після оподаткування</value>
@@ -617,6 +632,9 @@
   </data>
   <data name="Turnover" xml:space="preserve">
     <value>Оборотність</value>
+  </data>
+  <data name="TurnoverOfCurrentAssets" xml:space="preserve">
+    <value>Оборотність оборотних засобів</value>
   </data>
   <data name="TurnoverOfWorkingCapital" xml:space="preserve">
     <value>Оборотність оборотних засобів</value>

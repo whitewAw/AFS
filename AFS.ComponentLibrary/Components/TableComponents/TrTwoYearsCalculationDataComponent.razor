@@ -4,7 +4,7 @@
     <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.BaseYear, Digits)</TdComponent>
     <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.CurrentYear, Digits)</TdComponent>
     <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.Deviations, Digits)</TdComponent>
-    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.GrowthRate, Digits)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@GetGrowthRate()</TdComponent>
 </tr>
 
 @code {
@@ -18,4 +18,15 @@
     public RenderFragment? ChildContent { get; set; }
     [Parameter]
     public string? Spacing { get; set; } = String.Empty;
+    [Parameter]
+    public bool? IsShowGrowthRate { get; set; } = true;
+
+    private string GetGrowthRate()
+    {
+        if (IsShowGrowthRate == false)
+        {
+            return "x";
+        }
+        return Constraints.RoundStr(Item.GrowthRate, Digits);
+    }
 }

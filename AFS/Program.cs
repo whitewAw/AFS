@@ -25,6 +25,7 @@ builder.Services.AddScoped<JsInterop>();
 builder.Services.AddTransient<CharacteristicsOfCapital>();
 builder.Services.AddTransient<IndicatorsOfTurnoverOfCurrentAssets>();
 builder.Services.AddTransient<FactorsAffectingTurnoverOfWorkingCapital>();
+builder.Services.AddTransient<IndicatorsOfEfficiencyOfWorkingCapital>();
 
 builder.Logging.SetMinimumLevel(LogLevel.Warning);
 

@@ -772,6 +772,24 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Показники ефективності використання оборотних засобів.
+        /// </summary>
+        internal static string IndicatorsOfEfficiencyOfWorkingCapital {
+            get {
+                return ResourceManager.GetString("IndicatorsOfEfficiencyOfWorkingCapital", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Таблиця {0}. Показники ефективності використання оборотних засобів {1} за {2}-{3} роки.
+        /// </summary>
+        internal static string IndicatorsOfEfficiencyOfWorkingCapitalTablName {
+            get {
+                return ResourceManager.GetString("IndicatorsOfEfficiencyOfWorkingCapitalTablName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Показники оборотності оборотних засобів.
         /// </summary>
         internal static string IndicatorsOfTurnoverOfCurrentAssets {
@@ -813,6 +831,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string IntangibleAssets {
             get {
                 return ResourceManager.GetString("IntangibleAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Інтегральний показник ефективності використання оборотних засобів.
+        /// </summary>
+        internal static string IntegratedIndicatorOfEfficiencyOfCurrentAssets {
+            get {
+                return ResourceManager.GetString("IntegratedIndicatorOfEfficiencyOfCurrentAssets", resourceCulture);
             }
         }
         
@@ -993,6 +1020,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string NetIncomeFromSalesOfProducts {
             get {
                 return ResourceManager.GetString("NetIncomeFromSalesOfProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Чистий прибуток.
+        /// </summary>
+        internal static string NetProfit {
+            get {
+                return ResourceManager.GetString("NetProfit", resourceCulture);
             }
         }
         
@@ -1236,6 +1272,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string profit {
             get {
                 return ResourceManager.GetString("profit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Рентабельність оборотних засобів.
+        /// </summary>
+        internal static string ProfitabilityOfCurrentAssets {
+            get {
+                return ResourceManager.GetString("ProfitabilityOfCurrentAssets", resourceCulture);
             }
         }
         
@@ -1560,6 +1605,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string Turnover {
             get {
                 return ResourceManager.GetString("Turnover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оборотність оборотних засобів.
+        /// </summary>
+        internal static string TurnoverOfCurrentAssets {
+            get {
+                return ResourceManager.GetString("TurnoverOfCurrentAssets", resourceCulture);
             }
         }
         
