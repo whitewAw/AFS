@@ -79,6 +79,24 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Сума нарахованого зносу на початок року.
+        /// </summary>
+        internal static string AccruedDepreciationAtBegin {
+            get {
+                return ResourceManager.GetString("AccruedDepreciationAtBegin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сума нарахованого зносу на кінець року.
+        /// </summary>
+        internal static string AccruedDepreciationAtEnd {
+            get {
+                return ResourceManager.GetString("AccruedDepreciationAtEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to накопичена амортизація.
         /// </summary>
         internal static string accumulatedDepreciation {
@@ -412,6 +430,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Вартість вибулих основних фондів.
+        /// </summary>
+        internal static string CostOfLeftFixedAssets {
+            get {
+                return ResourceManager.GetString("CostOfLeftFixedAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Поточна кредиторська заборгованість за.
         /// </summary>
         internal static string CurrentAccountsPayableFor {
@@ -511,6 +538,24 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт зносу основних засобів на початок року.
+        /// </summary>
+        internal static string DepreciationRateOfFixedAssetAtBegin {
+            get {
+                return ResourceManager.GetString("DepreciationRateOfFixedAssetAtBegin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт зносу основних засобів на кінець року.
+        /// </summary>
+        internal static string DepreciationRateOfFixedAssetAtEnd {
+            get {
+                return ResourceManager.GetString("DepreciationRateOfFixedAssetAtEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to відхилення.
         /// </summary>
         internal static string deviation {
@@ -525,6 +570,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string Deviation_ {
             get {
                 return ResourceManager.GetString("Deviation_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт вибуття.
+        /// </summary>
+        internal static string DisposalRate {
+            get {
+                return ResourceManager.GetString("DisposalRate", resourceCulture);
             }
         }
         
@@ -880,6 +934,24 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Показники стану та руху основних засобів.
+        /// </summary>
+        internal static string IndicatorsOfStateAndMovementOfFixedAssets {
+            get {
+                return ResourceManager.GetString("IndicatorsOfStateAndMovementOfFixedAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Таблиця {0}. Показники стану та руху основних засобів {1} за {2}-{3} роки.
+        /// </summary>
+        internal static string IndicatorsOfStateAndMovementOfFixedAssetsTablName {
+            get {
+                return ResourceManager.GetString("IndicatorsOfStateAndMovementOfFixedAssetsTablName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Показники оборотності оборотних засобів.
         /// </summary>
         internal static string IndicatorsOfTurnoverOfCurrentAssets {
@@ -903,6 +975,24 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string initialCost {
             get {
                 return ResourceManager.GetString("initialCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Первісна вартість основних засобів на початок періоду.
+        /// </summary>
+        internal static string InitialCostOfFixedAssetsAtBegin {
+            get {
+                return ResourceManager.GetString("InitialCostOfFixedAssetsAtBegin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Первісна вартість основних засобів на кінець періоду.
+        /// </summary>
+        internal static string InitialCostOfFixedAssetsAtEndOfPeriod {
+            get {
+                return ResourceManager.GetString("InitialCostOfFixedAssetsAtEndOfPeriod", resourceCulture);
             }
         }
         
@@ -1456,6 +1546,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт відновлення.
+        /// </summary>
+        internal static string RecoveryRate {
+            get {
+                return ResourceManager.GetString("RecoveryRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Зареєстрований (пайовий) капітал.
         /// </summary>
         internal static string RegisteredСapital {
@@ -1627,6 +1726,24 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт придатності на початок року.
+        /// </summary>
+        internal static string SuitabilityRatioForBegin {
+            get {
+                return ResourceManager.GetString("SuitabilityRatioForBegin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт придатності на кінець року.
+        /// </summary>
+        internal static string SuitabilityRatioForEnd {
+            get {
+                return ResourceManager.GetString("SuitabilityRatioForEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Таблиця.
         /// </summary>
         internal static string Table {
@@ -1659,6 +1776,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string TargetedFinancing {
             get {
                 return ResourceManager.GetString("TargetedFinancing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вартість уведених в дію нових основних фондів.
+        /// </summary>
+        internal static string TheCostOfNewFixedAssets {
+            get {
+                return ResourceManager.GetString("TheCostOfNewFixedAssets", resourceCulture);
             }
         }
         

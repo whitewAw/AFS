@@ -21,7 +21,7 @@ namespace AFS.Core.Model
         public Form2 F2Base { get; set; } = new();
         public Form2 F2Current { get; set; } = new();
         public AdditionalCompanyInfo AdditionalInfo { get; set; } = new();
-        
+
         public string CompanyName
         {
             get => companyName ?? string.Empty;

@@ -1,0 +1,57 @@
+﻿@inject IndicatorsOfStateAndMovementOfFixedAssets IndicatorsOfStateAndMovementOfFixedAssets
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <h5 class="text-end">(@ResLoc["thousandUAH"])</h5>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <THeadCommonComponent />
+        <tbody>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfStateAndMovementOfFixedAssets.CostOfNewFixedAssets>
+                @ResLoc["TheCostOfNewFixedAssets"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfStateAndMovementOfFixedAssets.InitialCostOfFixedAssetsAtEnd>
+                @ResLoc["InitialCostOfFixedAssetsAtEndOfPeriod"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfStateAndMovementOfFixedAssets.RecoveryRate Digits=4 IsShowGrowthRate=false>
+                @ResLoc["RecoveryRate"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfStateAndMovementOfFixedAssets.CostOfLeftFixedAssets>
+                @ResLoc["CostOfLeftFixedAssets"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfStateAndMovementOfFixedAssets.InitialCostOfFixedAssetsAtBegin>
+                @ResLoc["InitialCostOfFixedAssetsAtBegin"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfStateAndMovementOfFixedAssets.DisposalRate Digits=4 IsShowGrowthRate=false>
+                @ResLoc["DisposalRate"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfStateAndMovementOfFixedAssets.AccruedDepreciationAtBegin>
+                @ResLoc["AccruedDepreciationAtBegin"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfStateAndMovementOfFixedAssets.AccruedDepreciationAtEnd>
+                @ResLoc["AccruedDepreciationAtEnd"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfStateAndMovementOfFixedAssets.DepreciationRateOfFixedAssetAtBegin Digits=4 IsShowGrowthRate=false>
+                @ResLoc["DepreciationRateOfFixedAssetAtBegin"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfStateAndMovementOfFixedAssets.DepreciationRateOfFixedAssetAtEnd Digits=4 IsShowGrowthRate=false>
+                @ResLoc["DepreciationRateOfFixedAssetAtEnd"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfStateAndMovementOfFixedAssets.SuitabilityRatioForBegin Digits=4 IsShowGrowthRate=false>
+                @ResLoc["SuitabilityRatioForBegin"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfStateAndMovementOfFixedAssets.SuitabilityRatioForEnd Digits=4 IsShowGrowthRate=false>
+                @ResLoc["SuitabilityRatioForEnd"]
+            </TrTwoYearsCalculationDataComponent>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+
+    protected override void OnInitialized()
+    {
+        tableName = String.Format(ResLoc["IndicatorsOfStateAndMovementOfFixedAssetsTablName"], 6, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear);
+        base.OnInitialized();
+    }
+}

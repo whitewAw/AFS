@@ -123,6 +123,12 @@
   <data name="AccountsReceivableForDebts" xml:space="preserve">
     <value>Дебіторська заборгованість за розрахунками</value>
   </data>
+  <data name="AccruedDepreciationAtBegin" xml:space="preserve">
+    <value>Сума нарахованого зносу на початок року</value>
+  </data>
+  <data name="AccruedDepreciationAtEnd" xml:space="preserve">
+    <value>Сума нарахованого зносу на кінець року</value>
+  </data>
   <data name="accumulatedDepreciation" xml:space="preserve">
     <value>накопичена амортизація</value>
   </data>
@@ -234,6 +240,9 @@
   <data name="CostOfGoodsSold" xml:space="preserve">
     <value>Собівартість реалізованої продукції (товарів, робіт, послуг)</value>
   </data>
+  <data name="CostOfLeftFixedAssets" xml:space="preserve">
+    <value>Вартість вибулих основних фондів</value>
+  </data>
   <data name="CurrentAccountsPayableFor" xml:space="preserve">
     <value>Поточна кредиторська заборгованість за</value>
   </data>
@@ -267,11 +276,20 @@
   <data name="DeferredTaxLiabilities" xml:space="preserve">
     <value>Відстрочені податкові зобов'язання</value>
   </data>
+  <data name="DepreciationRateOfFixedAssetAtBegin" xml:space="preserve">
+    <value>Коефіцієнт зносу основних засобів на початок року</value>
+  </data>
+  <data name="DepreciationRateOfFixedAssetAtEnd" xml:space="preserve">
+    <value>Коефіцієнт зносу основних засобів на кінець року</value>
+  </data>
   <data name="deviation" xml:space="preserve">
     <value>відхилення</value>
   </data>
   <data name="Deviation_" xml:space="preserve">
     <value>Відхилення</value>
+  </data>
+  <data name="DisposalRate" xml:space="preserve">
+    <value>Коефіцієнт вибуття</value>
   </data>
   <data name="DividendsPerSimpleShare" xml:space="preserve">
     <value>Дивіденди на одну просту акцію</value>
@@ -390,6 +408,12 @@
   <data name="IndicatorsOfEfficiencyOfWorkingCapitalTablName" xml:space="preserve">
     <value>Таблиця {0}. Показники ефективності використання оборотних засобів {1} за {2}-{3} роки</value>
   </data>
+  <data name="IndicatorsOfStateAndMovementOfFixedAssets" xml:space="preserve">
+    <value>Показники стану та руху основних засобів</value>
+  </data>
+  <data name="IndicatorsOfStateAndMovementOfFixedAssetsTablName" xml:space="preserve">
+    <value>Таблиця {0}. Показники стану та руху основних засобів {1} за {2}-{3} роки</value>
+  </data>
   <data name="IndicatorsOfTurnoverOfCurrentAssets" xml:space="preserve">
     <value>Показники оборотності оборотних засобів</value>
   </data>
@@ -398,6 +422,12 @@
   </data>
   <data name="initialCost" xml:space="preserve">
     <value>первісна вартість</value>
+  </data>
+  <data name="InitialCostOfFixedAssetsAtBegin" xml:space="preserve">
+    <value>Первісна вартість основних засобів на початок періоду</value>
+  </data>
+  <data name="InitialCostOfFixedAssetsAtEndOfPeriod" xml:space="preserve">
+    <value>Первісна вартість основних засобів на кінець періоду</value>
   </data>
   <data name="InputData" xml:space="preserve">
     <value>Вхідні дані</value>
@@ -582,6 +612,9 @@
   <data name="ReceivedForReportingPeriod" xml:space="preserve">
     <value>Надійшло за звітний період</value>
   </data>
+  <data name="RecoveryRate" xml:space="preserve">
+    <value>Коефіцієнт відновлення</value>
+  </data>
   <data name="RegisteredСapital" xml:space="preserve">
     <value>Зареєстрований (пайовий) капітал</value>
   </data>
@@ -639,6 +672,12 @@
   <data name="Stocks" xml:space="preserve">
     <value>Запаси</value>
   </data>
+  <data name="SuitabilityRatioForBegin" xml:space="preserve">
+    <value>Коефіцієнт придатності на початок року</value>
+  </data>
+  <data name="SuitabilityRatioForEnd" xml:space="preserve">
+    <value>Коефіцієнт придатності на кінець року</value>
+  </data>
   <data name="Table" xml:space="preserve">
     <value>Таблиця</value>
   </data>
@@ -650,6 +689,9 @@
   </data>
   <data name="TargetedFinancing" xml:space="preserve">
     <value>Цільове фінансування</value>
+  </data>
+  <data name="TheCostOfNewFixedAssets" xml:space="preserve">
+    <value>Вартість уведених в дію нових основних фондів</value>
   </data>
   <data name="thousandUAH" xml:space="preserve">
     <value>тис.грн.</value>
