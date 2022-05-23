@@ -6,6 +6,6 @@ namespace AFS.Core.Interfaces
     {
         Task ExportAsync(AFSModel model);
         Task<AFSModel?> ImportAsync(Stream inputStream);
-        void InitializeModelAsync(AFSModel? model);
+        void InitializeModel(AFSModel? model);
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace AFS.Core.Model
+﻿using AFS.Core.Models;
+
+namespace AFS.Core.Model
 {
     public class AFSModel
     {
@@ -18,6 +20,8 @@
         public Form1 F1Current { get; set; } = new();
         public Form2 F2Base { get; set; } = new();
         public Form2 F2Current { get; set; } = new();
+        public AdditionalCompanyInfo AdditionalInfo { get; set; } = new();
+        
         public string CompanyName
         {
             get => companyName ?? string.Empty;
@@ -27,7 +31,6 @@
                 NotifyStateChanged();
             }
         }
-
         public int BaseYear
         {
             get => baseYear;
@@ -56,6 +59,7 @@
             F1Current.Init(readModel.F1Current);
             F2Base.Init(readModel.F2Base);
             F2Current.Init(readModel.F2Current);
+            AdditionalInfo.Init(readModel.AdditionalInfo);
 
             NotifyStateChanged();
         }
@@ -66,10 +70,13 @@
             F1Current.OnChange += onChange;
             F2Base.OnChange += onChange;
             F2Current.OnChange += onChange;
+            AdditionalInfo.OnChange += onChange;
             F1Base.SubscribeOnChange(onChange);
             F1Current.SubscribeOnChange(onChange);
             F2Base.SubscribeOnChange(onChange);
             F2Current.SubscribeOnChange(onChange);
+            AdditionalInfo.SubscribeOnChange(onChange);
+
         }
         public void UnSubscribeOnChange(Action? onChange)
         {
@@ -80,10 +87,12 @@
                 F1Current.OnChange -= OnChange;
                 F2Base.OnChange -= OnChange;
                 F2Current.OnChange -= OnChange;
+                AdditionalInfo.OnChange -= onChange;
                 F1Base.UnSubscribeOnChange(onChange);
                 F1Current.UnSubscribeOnChange(onChange);
                 F2Base.UnSubscribeOnChange(onChange);
                 F2Current.UnSubscribeOnChange(onChange);
+                AdditionalInfo.UnSubscribeOnChange(onChange);
             }
         }
         private void NotifyStateChanged() => OnChange?.Invoke();

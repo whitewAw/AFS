@@ -1,5 +1,5 @@
 ﻿<tr>
-    <TdComponent Align="ML">@FieldNumber</TdComponent>
+    <TdComponent Align="ML">@Item.Number</TdComponent>
     <TdComponent Align="ML">@FieldName</TdComponent>
     <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.BaseYear, Digits)</TdComponent>
     <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.CurrentYear, Digits)</TdComponent>
@@ -14,8 +14,6 @@
     public FactorsAffectingTurnover Item { get; set; } = new();
     [Parameter]
     public int Digits { get; set; } = 2;
-    [Parameter]
-    public string? FieldNumber { get; set; }
     [Parameter]
     public string? FieldName { get; set; }
 }

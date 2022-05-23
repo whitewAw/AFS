@@ -4,36 +4,36 @@
     {
         public event Action? OnChange;
 
-        public CurentPrevious F2000 { get; set; } = new();
-        public CurentPrevious F2050 { get; set; } = new();
-        public CurentPrevious F2120 { get; set; } = new();
-        public CurentPrevious F2130 { get; set; } = new();
-        public CurentPrevious F2150 { get; set; } = new();
-        public CurentPrevious F2180 { get; set; } = new();
-        public CurentPrevious F2200 { get; set; } = new();
-        public CurentPrevious F2220 { get; set; } = new();
-        public CurentPrevious F2240 { get; set; } = new();
-        public CurentPrevious F2250 { get; set; } = new();
-        public CurentPrevious F2255 { get; set; } = new();
-        public CurentPrevious F2270 { get; set; } = new();
-        public CurentPrevious F2300 { get; set; } = new();
-        public CurentPrevious F2305 { get; set; } = new();
-        public CurentPrevious F2400 { get; set; } = new();
-        public CurentPrevious F2405 { get; set; } = new();
-        public CurentPrevious F2410 { get; set; } = new();
-        public CurentPrevious F2415 { get; set; } = new();
-        public CurentPrevious F2445 { get; set; } = new();
-        public CurentPrevious F2455 { get; set; } = new();
-        public CurentPrevious F2500 { get; set; } = new();
-        public CurentPrevious F2505 { get; set; } = new();
-        public CurentPrevious F2510 { get; set; } = new();
-        public CurentPrevious F2515 { get; set; } = new();
-        public CurentPrevious F2520 { get; set; } = new();
-        public CurentPrevious F2600 { get; set; } = new();
-        public CurentPrevious F2605 { get; set; } = new();
-        public CurentPrevious F2610 { get; set; } = new();
-        public CurentPrevious F2615 { get; set; } = new();
-        public CurentPrevious F2650 { get; set; } = new();
+        public CurrentPrevious F2000 { get; set; } = new();
+        public CurrentPrevious F2050 { get; set; } = new();
+        public CurrentPrevious F2120 { get; set; } = new();
+        public CurrentPrevious F2130 { get; set; } = new();
+        public CurrentPrevious F2150 { get; set; } = new();
+        public CurrentPrevious F2180 { get; set; } = new();
+        public CurrentPrevious F2200 { get; set; } = new();
+        public CurrentPrevious F2220 { get; set; } = new();
+        public CurrentPrevious F2240 { get; set; } = new();
+        public CurrentPrevious F2250 { get; set; } = new();
+        public CurrentPrevious F2255 { get; set; } = new();
+        public CurrentPrevious F2270 { get; set; } = new();
+        public CurrentPrevious F2300 { get; set; } = new();
+        public CurrentPrevious F2305 { get; set; } = new();
+        public CurrentPrevious F2400 { get; set; } = new();
+        public CurrentPrevious F2405 { get; set; } = new();
+        public CurrentPrevious F2410 { get; set; } = new();
+        public CurrentPrevious F2415 { get; set; } = new();
+        public CurrentPrevious F2445 { get; set; } = new();
+        public CurrentPrevious F2455 { get; set; } = new();
+        public CurrentPrevious F2500 { get; set; } = new();
+        public CurrentPrevious F2505 { get; set; } = new();
+        public CurrentPrevious F2510 { get; set; } = new();
+        public CurrentPrevious F2515 { get; set; } = new();
+        public CurrentPrevious F2520 { get; set; } = new();
+        public CurrentPrevious F2600 { get; set; } = new();
+        public CurrentPrevious F2605 { get; set; } = new();
+        public CurrentPrevious F2610 { get; set; } = new();
+        public CurrentPrevious F2615 { get; set; } = new();
+        public CurrentPrevious F2650 { get; set; } = new();
 
         private void NotifyStateChanged() => OnChange?.Invoke();
 
@@ -142,12 +142,12 @@
 
         }
 
-        public double GetF2090Curent() => F2000.Curent > F2050.Curent ? F2000.Curent - F2050.Curent : 0;
+        public double GetF2090Current() => F2000.Current > F2050.Current ? F2000.Current - F2050.Current : 0;
         public double GetF2090Previous() => F2000.Previous > F2050.Previous ? F2000.Previous - F2050.Previous : 0;
-        public double GetF2095Curent() => F2000.Curent < F2050.Curent ? F2000.Curent - F2050.Curent : 0;
+        public double GetF2095Current() => F2000.Current < F2050.Current ? F2000.Current - F2050.Current : 0;
         public double GetF2095Previous() => F2000.Previous < F2050.Previous ? F2000.Previous - F2050.Previous : 0;
 
-        public double GetF2190Curent()
+        public double GetF2190Current()
         {
             double res = FinancialResultFromOperatingActivities(true);
             return res > 0 ? res : 0;
@@ -157,7 +157,7 @@
             double res = FinancialResultFromOperatingActivities(false);
             return res > 0 ? res : 0;
         }
-        public double GetF2195Curent()
+        public double GetF2195Current()
         {
 
             double res = FinancialResultFromOperatingActivities(true);
@@ -169,7 +169,7 @@
             double res = FinancialResultFromOperatingActivities(false);
             return res < 0 ? res : 0;
         }
-        public double GetF2290Curent()
+        public double GetF2290Current()
         {
             double res = FinancialResultBeforeTax(true);
             return res > 0 ? res : 0;
@@ -179,7 +179,7 @@
             double res = FinancialResultBeforeTax(false);
             return res > 0 ? res : 0;
         }
-        public double GetF2295Curent()
+        public double GetF2295Current()
         {
             double res = FinancialResultBeforeTax(true);
             return res < 0 ? res : 0;
@@ -189,7 +189,7 @@
             double res = FinancialResultBeforeTax(false);
             return res < 0 ? res : 0;
         }
-        public double GetF2350Curent()
+        public double GetF2350Current()
         {
             double res = NetFinancialResult(true);
             return res > 0 ? res : 0;
@@ -199,7 +199,7 @@
             double res = NetFinancialResult(false);
             return res > 0 ? res : 0;
         }
-        public double GetF2355Curent()
+        public double GetF2355Current()
         {
             double res = NetFinancialResult(true);
             return res < 0 ? res : 0;
@@ -209,46 +209,46 @@
             double res = NetFinancialResult(false);
             return res < 0 ? res : 0;
         }
-        public double GetF2450Curent() => OtherAggregatePreTaxIncome(true);
+        public double GetF2450Current() => OtherAggregatePreTaxIncome(true);
         public double GetF2450Previous() => OtherAggregatePreTaxIncome(false);
-        public double GetF2460Curent() => GetF2450Curent() - F2455.Curent;
+        public double GetF2460Current() => GetF2450Current() - F2455.Current;
         public double GetF2460Previous() => GetF2450Previous() - F2455.Previous;
-        public double GetF2465Curent() => GetF2350Curent() + GetF2355Curent() + GetF2460Curent();
+        public double GetF2465Current() => GetF2350Current() + GetF2355Current() + GetF2460Current();
         public double GetF2465Previous() => GetF2350Previous() + GetF2355Previous() + GetF2460Previous();
-        public double GetF2550Curent() => F2500.Curent + F2505.Curent + F2510.Curent + F2515.Curent + F2520.Curent;
+        public double GetF2550Current() => F2500.Current + F2505.Current + F2510.Current + F2515.Current + F2520.Current;
         public double GetF2550Previous() => F2500.Previous + F2505.Previous + F2510.Previous + F2515.Previous + F2520.Previous;
 
-        private double FinancialResultFromOperatingActivities(bool Curent)
+        private double FinancialResultFromOperatingActivities(bool Current)
         {
-            if (Curent)
+            if (Current)
             {
-                return GetF2090Curent() + GetF2095Curent() + F2120.Curent - F2130.Curent - F2150.Curent - F2180.Curent;
+                return GetF2090Current() + GetF2095Current() + F2120.Current - F2130.Current - F2150.Current - F2180.Current;
             }
             return GetF2090Previous() + GetF2095Previous() + F2120.Previous - F2130.Previous - F2150.Previous - F2180.Previous;
         }
 
-        private double FinancialResultBeforeTax(bool Curent)
+        private double FinancialResultBeforeTax(bool Current)
         {
-            if (Curent)
+            if (Current)
             {
-                return GetF2190Curent() + GetF2195Curent() + F2200.Curent + F2220.Curent + F2240.Curent - F2250.Curent - F2255.Curent - F2270.Curent;
+                return GetF2190Current() + GetF2195Current() + F2200.Current + F2220.Current + F2240.Current - F2250.Current - F2255.Current - F2270.Current;
             }
             return GetF2190Previous() + GetF2195Previous() + F2200.Previous + F2220.Previous + F2240.Previous - F2250.Previous - F2255.Previous - F2270.Previous;
         }
 
-        private double NetFinancialResult(bool Curent)
+        private double NetFinancialResult(bool Current)
         {
-            if (Curent)
+            if (Current)
             {
-                return GetF2290Curent() + GetF2295Curent() - F2300.Curent + F2305.Curent;
+                return GetF2290Current() + GetF2295Current() - F2300.Current + F2305.Current;
             }
             return GetF2290Previous() + GetF2295Previous() - F2300.Previous + F2305.Previous;
         }
-        private double OtherAggregatePreTaxIncome(bool Curent)
+        private double OtherAggregatePreTaxIncome(bool Current)
         {
-            if (Curent)
+            if (Current)
             {
-                return F2400.Curent + F2405.Curent + F2410.Curent + F2415.Curent + F2445.Curent;
+                return F2400.Current + F2405.Current + F2410.Current + F2415.Current + F2445.Current;
             }
             return F2400.Previous + F2405.Previous + F2410.Previous + F2415.Previous + F2445.Previous;
         }

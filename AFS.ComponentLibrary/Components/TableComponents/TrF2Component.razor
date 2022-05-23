@@ -4,7 +4,7 @@
     <TdComponent Align="ML">@FieldName</TdComponent>
     <TdComponent>@FieldNumber</TdComponent>
     <TdComponent Align="MR">
-        <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@Field.Curent Class="w-100" />
+        <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@Field.Current Class="w-100" />
     </TdComponent>
     <TdComponent Align="MR">
         <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@Field.Previous Class="w-100" />
@@ -13,7 +13,7 @@
 
 @code {
     [Parameter]
-    public CurentPrevious Field { get; set; } = new();
+    public CurrentPrevious Field { get; set; } = new();
     [Parameter]
     public string? FieldNumber { get; set; }
     [Parameter]

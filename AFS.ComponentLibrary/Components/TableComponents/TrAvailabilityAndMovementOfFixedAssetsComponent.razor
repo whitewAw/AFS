@@ -1,0 +1,17 @@
+﻿<tr>
+    <TdComponent Align="ML">@ChildContent</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.BalanceAtBeginInitialCost)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.Received)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.ReceivedNew)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.Left)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.Liquidated)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.BalanceAtEndInitialCost)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.BalanceAtEndMinusDepreciation)</TdComponent>
+</tr>
+
+@code {
+    [Parameter]
+    public FixedAssets Item { get; set; } = new();
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

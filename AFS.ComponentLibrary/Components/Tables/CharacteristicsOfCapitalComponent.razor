@@ -28,7 +28,7 @@
                 Current=@CharacteristicsOfCapital.TotalAssets.Current Colspan=2 FieldName=@ResLoc["TotalAssets"] />
             </tr>
             <tr>
-                <TdComponent Rowspan="2" Align="ML">1.</TdComponent>
+                <TdComponent Rowspan="2" Align="ML">@CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Number</TdComponent>
                 <TdsCharacteristicsOfCapitalComponent Base=@CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Base
                 Current=@CharacteristicsOfCapital.NonCurrentImmobilizedFunds.Current FieldName=@ResLoc["NonCurrentImmobilizedAssets"] />
             </tr>
@@ -37,7 +37,7 @@
                 Current=@CharacteristicsOfCapital.NonCurrentImmobilizedFunds.InPercentageOfAssetsCurrent IsShowGrowthRate="false" FieldName=@ResLoc["Samein%OfAssets"] />
             </tr>
             <tr>
-                <TdComponent Rowspan="2" Align="ML">2.</TdComponent>
+                <TdComponent Rowspan="2" Align="ML">@CharacteristicsOfCapital.CurrentMobileAssets.Number</TdComponent>
                 <TdsCharacteristicsOfCapitalComponent Base=@CharacteristicsOfCapital.CurrentMobileAssets.Base
                 Current=@CharacteristicsOfCapital.CurrentMobileAssets.Current FieldName=@ResLoc["CurrentMobileAssets"] />
             </tr>
@@ -46,7 +46,7 @@
                 Current=@CharacteristicsOfCapital.CurrentMobileAssets.InPercentageOfAssetsCurrent IsShowGrowthRate="false" FieldName=@ResLoc["Samein%OfAssets"] />
             </tr>
             <tr>
-                <TdComponent Rowspan="2" Align="ML">2.1.</TdComponent>
+                <TdComponent Rowspan="2" Align="ML">@CharacteristicsOfCapital.TangibleCurrentAssets.Number</TdComponent>
                 <TdsCharacteristicsOfCapitalComponent Base=@CharacteristicsOfCapital.TangibleCurrentAssets.Base
                 Current=@CharacteristicsOfCapital.TangibleCurrentAssets.Current Spacing="pl-3" FieldName=@ResLoc["TangibleCurrentAssets"] />
             </tr>
@@ -55,7 +55,7 @@
                 Current=@CharacteristicsOfCapital.TangibleCurrentAssets.InPercentageOfCurrentAssetsCurrent IsShowGrowthRate="false" Spacing="pl-3" FieldName=@ResLoc["in%toCurrentMobileAssets"] />
             </tr>
             <tr>
-                <TdComponent Rowspan="2" Align="ML">2.2.</TdComponent>
+                <TdComponent Rowspan="2" Align="ML">@CharacteristicsOfCapital.AccountsReceivable.Number</TdComponent>
                 <TdsCharacteristicsOfCapitalComponent Base=@CharacteristicsOfCapital.AccountsReceivable.Base
                 Current=@CharacteristicsOfCapital.AccountsReceivable.Current Spacing="pl-3" FieldName=@ResLoc["AccountsReceivable"] />
             </tr>
@@ -64,7 +64,7 @@
                 Current=@CharacteristicsOfCapital.AccountsReceivable.InPercentageOfCurrentAssetsCurrent IsShowGrowthRate="false" Spacing="pl-3" FieldName=@ResLoc["in%toCurrentMobileAssets"] />
             </tr>
             <tr>
-                <TdComponent Rowspan="2" Align="ML">2.3.</TdComponent>
+                <TdComponent Rowspan="2" Align="ML">@CharacteristicsOfCapital.CashCurrentFinancialInvestments.Number</TdComponent>
                 <TdsCharacteristicsOfCapitalComponent Base=@CharacteristicsOfCapital.CashCurrentFinancialInvestments.Base 
                 Current=@CharacteristicsOfCapital.CashCurrentFinancialInvestments.Current Spacing="pl-3" FieldName=@ResLoc["CashCurrentFinancialInvestments"] />
             </tr>
@@ -73,7 +73,7 @@
                 Current=@CharacteristicsOfCapital.CashCurrentFinancialInvestments.InPercentageOfCurrentAssetsCurrent IsShowGrowthRate="false" Spacing="pl-3" FieldName=@ResLoc["in%toCurrentMobileAssets"] />
             </tr>
             <tr>
-                <TdComponent Rowspan="2" Align="ML">2.4.</TdComponent>
+                <TdComponent Rowspan="2" Align="ML">@CharacteristicsOfCapital.OtherCurrentAssets.Number</TdComponent>
                 <TdsCharacteristicsOfCapitalComponent Base=@CharacteristicsOfCapital.OtherCurrentAssets.Base
                 Current=@CharacteristicsOfCapital.OtherCurrentAssets.Current Spacing="pl-3" FieldName=@ResLoc["OtherCurrentAssets"] />
             </tr>
@@ -82,7 +82,7 @@
                 Current=@CharacteristicsOfCapital.OtherCurrentAssets.InPercentageOfCurrentAssetsCurrent IsShowGrowthRate="false" Spacing="pl-3" FieldName=@ResLoc["in%toCurrentMobileAssets"] />
             </tr>
             <tr>
-                <TdComponent Rowspan="2" Align="ML">2.5.</TdComponent>
+                <TdComponent Rowspan="2" Align="ML">@CharacteristicsOfCapital.FutureExpenses.Number</TdComponent>
                 <TdsCharacteristicsOfCapitalComponent Base=@CharacteristicsOfCapital.FutureExpenses.Base
                 Current=@CharacteristicsOfCapital.FutureExpenses.Current Spacing="pl-3" FieldName=@ResLoc["FutureExpenses"] />
             </tr>
@@ -91,7 +91,7 @@
                 Current=@CharacteristicsOfCapital.FutureExpenses.InPercentageOfCurrentAssetsCurrent IsShowGrowthRate="false" Spacing="pl-3" FieldName=@ResLoc["in%toCurrentMobileAssets"] />
             </tr>
             <tr>
-                <TdComponent Rowspan="2" Align="ML">3.</TdComponent>
+                <TdComponent Rowspan="2" Align="ML">@CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Number</TdComponent>
                 <TdsCharacteristicsOfCapitalComponent Base=@CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Base
                 Current=@CharacteristicsOfCapital.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Current FieldName=@ResLoc["LiabilitiesRelatedNonCurrentAssetsHeldForSale"]/>
             </tr>

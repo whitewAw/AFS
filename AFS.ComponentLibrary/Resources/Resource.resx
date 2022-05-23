@@ -132,6 +132,9 @@
   <data name="AdditionalCapital" xml:space="preserve">
     <value>Додатковий капітал</value>
   </data>
+  <data name="AdditionalInfo" xml:space="preserve">
+    <value>Додаткова інформація</value>
+  </data>
   <data name="AdjustedAverageNumberOrdinaryShares" xml:space="preserve">
     <value>Скоригована середньорічна кількість простих акцій</value>
   </data>
@@ -168,8 +171,17 @@
   <data name="atEndOfYear" xml:space="preserve">
     <value>на кінець року</value>
   </data>
+  <data name="AvailabilityAndMovementOfFixedAssets" xml:space="preserve">
+    <value>Наявність та рух основних засобів</value>
+  </data>
+  <data name="AvailabilityAndMovementOfFixedAssetsTablName" xml:space="preserve">
+    <value>Таблиця {0}. Наявність та рух основних засобів {1} за {2}-{3} роки</value>
+  </data>
   <data name="averageBalances" xml:space="preserve">
     <value>середніх залишків</value>
+  </data>
+  <data name="AverageNumberOfEmployees" xml:space="preserve">
+    <value>Середньоспискова чисельність працівників</value>
   </data>
   <data name="AverageNumberOrdinaryShares" xml:space="preserve">
     <value>Середньорічна кількість простих акцій</value>
@@ -179,6 +191,15 @@
   </data>
   <data name="Balance" xml:space="preserve">
     <value>Баланс</value>
+  </data>
+  <data name="BalanceAtBeginOfYearAtOriginalCost" xml:space="preserve">
+    <value>Залишок на початок року за первісною вартістю</value>
+  </data>
+  <data name="BalanceAtEndOfYearAtOriginalBalanceAtEndOfYearAtOriginalCost" xml:space="preserve">
+    <value>Залишок на кінець року за первісною вартістю</value>
+  </data>
+  <data name="BalanceAtEndOfYearMinusDepreciation" xml:space="preserve">
+    <value>Залишок на кінець року за мінусом зносу</value>
   </data>
   <data name="BaseYear" xml:space="preserve">
     <value>Базовий рік</value>
@@ -264,6 +285,9 @@
   <data name="Equity" xml:space="preserve">
     <value>Власний капітал</value>
   </data>
+  <data name="EraseData" xml:space="preserve">
+    <value>Стерти дані</value>
+  </data>
   <data name="ExpensesIncomeFromIncomeTax" xml:space="preserve">
     <value>Витрати (дохід) з податку на прибуток</value>
   </data>
@@ -339,8 +363,14 @@
   <data name="includingDueTo" xml:space="preserve">
     <value>у тому числі за рахунок</value>
   </data>
+  <data name="includingEliminated" xml:space="preserve">
+    <value>у т.ч.  ліквідовано</value>
+  </data>
   <data name="includingIncomeTax" xml:space="preserve">
     <value>у тому числі з податку на прибуток</value>
+  </data>
+  <data name="includingNew" xml:space="preserve">
+    <value>у т.ч. нові</value>
   </data>
   <data name="IncomeFromEquityParticipation" xml:space="preserve">
     <value>Дохід від участі в капіталі</value>
@@ -513,6 +543,12 @@
   <data name="OtherTotalIncome" xml:space="preserve">
     <value>Інший сукупний дохід</value>
   </data>
+  <data name="people" xml:space="preserve">
+    <value>чол.</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Період</value>
+  </data>
   <data name="PostponedTaxAssets" xml:space="preserve">
     <value>Відстрочені податкові активи</value>
   </data>
@@ -540,6 +576,12 @@
   <data name="receivablesTurnover" xml:space="preserve">
     <value>оборотність дебіторської заборгованості</value>
   </data>
+  <data name="ReceivedFixedAssets" xml:space="preserve">
+    <value>Надійшло основні засоби</value>
+  </data>
+  <data name="ReceivedForReportingPeriod" xml:space="preserve">
+    <value>Надійшло за звітний період</value>
+  </data>
   <data name="RegisteredСapital" xml:space="preserve">
     <value>Зареєстрований (пайовий) капітал</value>
   </data>
@@ -551,6 +593,9 @@
   </data>
   <data name="RetainedEarnings" xml:space="preserve">
     <value>Нерозподілений прибуток (непокритий збиток)</value>
+  </data>
+  <data name="RetiredFixedAssets" xml:space="preserve">
+    <value>Виведені з експлуатації основні засоби</value>
   </data>
   <data name="RevaluationDepreciationFinancialInstruments" xml:space="preserve">
     <value>Дооцінка (уцінка) фінансових інструментів</value>
@@ -662,6 +707,9 @@
   </data>
   <data name="WithdrawnCapital" xml:space="preserve">
     <value>Вилучений капітал</value>
+  </data>
+  <data name="WithdrewInReportingPeriod" xml:space="preserve">
+    <value>Вибуло в звітному періоді</value>
   </data>
   <data name="year" xml:space="preserve">
     <value>рік</value>

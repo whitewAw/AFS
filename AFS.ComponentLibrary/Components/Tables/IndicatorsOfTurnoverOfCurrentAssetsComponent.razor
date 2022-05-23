@@ -3,47 +3,37 @@
 <RadzenCard Style="width: 100%;">
     <h2 class="text-center">@tableName</h2>
     <table class="table table-bordered py-0 table-sm table-striped">
-        <thead>
-            <tr>
-                <ThComponent>@ResLoc["NumberInOrder"]</ThComponent>
-                <ThComponent>@ResLoc["Indicators"]</ThComponent>
-                <ThComponent>@MainModel.BaseYear  @ResLoc["year"]</ThComponent>
-                <ThComponent>@MainModel.CurrentYear  @ResLoc["year"]</ThComponent>
-                <ThComponent>@ResLoc["Deviation_"] (+,-)</ThComponent>
-                <ThComponent>@ResLoc["Dynamics"], %</ThComponent>
-            </tr>
-        </thead>
+        <THeadCommonComponent/>
         <tbody>
-            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.AverageWorkingCapitalBalances
-                                                FieldNumber="1.">@ResLoc["AverageWorkingCapitalBalances"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.AverageWorkingCapitalBalances>@ResLoc["AverageWorkingCapitalBalances"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.AverageFromMoney
-                                                FieldNumber="1.1." Spacing="pl-3">- @ResLoc["fromMoney"]</TrTwoYearsCalculationDataComponent>
+                                                Spacing="pl-3">- @ResLoc["fromMoney"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.AverageFromReceivables
-                                                FieldNumber="1.2." Spacing="pl-3">- @ResLoc["fromReceivables"]</TrTwoYearsCalculationDataComponent>
+                                                Spacing="pl-3">- @ResLoc["fromReceivables"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.AverageFromMaterialValues
-                                                FieldNumber="1.3." Spacing="pl-3">- @ResLoc["fromTangibleAssets"]</TrTwoYearsCalculationDataComponent>
-            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.NetIncomeFromSales
-                                                FieldNumber="2.">@ResLoc["NetIncomeFromSales"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
-            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.OneDaySalesRevenue Digits="2"
-                                                FieldNumber="2.1.">@ResLoc["OneDaySalesRevenue"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
-            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.TurnoverOfWorkingCapital Digits=2
-                                                FieldNumber="3.">@ResLoc["TurnoverOfWorkingCapital"], @ResLoc["days"]</TrTwoYearsCalculationDataComponent>
-            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.MoneyTurnover Digits=2
-                                                FieldNumber="3.1." Spacing="pl-3">- @ResLoc["moneyTurnover"]</TrTwoYearsCalculationDataComponent>
+                                                Spacing="pl-3">- @ResLoc["fromTangibleAssets"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.NetIncomeFromSales>@ResLoc["NetIncomeFromSales"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.OneDaySalesRevenue
+                                                Digits="2">@ResLoc["OneDaySalesRevenue"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.TurnoverOfWorkingCapital
+                                                Digits=2>@ResLoc["TurnoverOfWorkingCapital"], @ResLoc["days"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.MoneyTurnover
+                                                Digits=2
+                                                Spacing="pl-3">- @ResLoc["moneyTurnover"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.ReceivablesTurnover Digits=2
-                                                FieldNumber="3.2." Spacing="pl-3">- @ResLoc["receivablesTurnover"]</TrTwoYearsCalculationDataComponent>
+                                                Spacing="pl-3">- @ResLoc["receivablesTurnover"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.MaterialValuesTurnover Digits=2
-                                                FieldNumber="3.3." Spacing="pl-3">- @ResLoc["materialValuesTurnover"]</TrTwoYearsCalculationDataComponent>
-            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.NumberOfRevolutionsOfCurrentAssets Digits=2
-                                                FieldNumber="4.">@ResLoc["NumberOfRevolutionsOfCurrentAssets"], @ResLoc["times"]</TrTwoYearsCalculationDataComponent>
+                                                Spacing="pl-3">- @ResLoc["materialValuesTurnover"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.NumberOfRevolutionsOfCurrentAssets
+                                                Digits=2>@ResLoc["NumberOfRevolutionsOfCurrentAssets"], @ResLoc["times"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromMoney Digits=2
-                                                FieldNumber="4.1." Spacing="pl-3">- @ResLoc["fromMoney"]</TrTwoYearsCalculationDataComponent>
+                                                Spacing="pl-3">- @ResLoc["fromMoney"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromReceivables Digits=2
-                                                FieldNumber="4.2." Spacing="pl-3">- @ResLoc["fromReceivables"]</TrTwoYearsCalculationDataComponent>
+                                                Spacing="pl-3">- @ResLoc["fromReceivables"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.RevolutionsFromTangibleAssets Digits=2
-                                                FieldNumber="4.3." Spacing="pl-3">- @ResLoc["fromTangibleAssets"]</TrTwoYearsCalculationDataComponent>
+                                                Spacing="pl-3">- @ResLoc["fromTangibleAssets"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfTurnoverOfCurrentAssets.FixingRatioOfCurrentAssets Digits=4
-                                                FieldNumber="5" IsShowGrowthRate=false>@ResLoc["FixingRatioOfCurrentAssets"]</TrTwoYearsCalculationDataComponent>
+                                                IsShowGrowthRate=false>@ResLoc["FixingRatioOfCurrentAssets"]</TrTwoYearsCalculationDataComponent>
             <tr>
                 <TdComponent Align="ML">6.</TdComponent>
                 <TdComponent Align="ML">@ResLoc["ReleaseOrLackOfCurrentAssetsDueTurnover"]</TdComponent>

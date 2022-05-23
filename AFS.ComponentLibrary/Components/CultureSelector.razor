@@ -7,7 +7,7 @@
                 Data="@suportCulture.Select(c=> new{Value = c, Text = c.NativeName})"
                 TextProperty="Text"
                 ValueProperty="Value"
-                @bind-Value="@curentCulture"
+                @bind-Value="@currentCulture"
                 Change="CultureChanged" />
 
 @code {
@@ -18,7 +18,7 @@
             //new CultureInfo("en-Us")
     };
 
-    private CultureInfo? curentCulture = CultureInfo.DefaultThreadCurrentCulture;
+    private CultureInfo? currentCulture = CultureInfo.DefaultThreadCurrentCulture;
 
     private async Task CultureChanged(object param)
     {

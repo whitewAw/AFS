@@ -3,29 +3,16 @@
 <RadzenCard Style="width: 100%;">
     <h2 class="text-center">@tableName</h2>
     <table class="table table-bordered py-0 table-sm table-striped">
-        <thead>
-            <tr>
-                <ThComponent>@ResLoc["NumberInOrder"]</ThComponent>
-                <ThComponent>@ResLoc["Indicators"]</ThComponent>
-                <ThComponent>@MainModel.BaseYear  @ResLoc["year"]</ThComponent>
-                <ThComponent>@MainModel.CurrentYear  @ResLoc["year"]</ThComponent>
-                <ThComponent>@ResLoc["Deviation_"] (+,-)</ThComponent>
-                <ThComponent>@ResLoc["Dynamics"], %</ThComponent>
-            </tr>
-        </thead>
+        <THeadCommonComponent/>
         <tbody>
-            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfEfficiencyOfWorkingCapital.NetIncomeFromSales
-                                                FieldNumber="1.">@ResLoc["NetIncomeFromSales"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
-            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfEfficiencyOfWorkingCapital.AverageWorkingCapitalBalances
-                                                FieldNumber="2.">@ResLoc["AverageWorkingCapitalBalances"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
-            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfEfficiencyOfWorkingCapital.NetProfit
-                                                FieldNumber="3.">@ResLoc["NetProfit"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
-            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfEfficiencyOfWorkingCapital.NumberOfRevolutionsOfCurrentAssets Digits=2
-                                                FieldNumber="4.">@ResLoc["TurnoverOfCurrentAssets"], @ResLoc["times"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfEfficiencyOfWorkingCapital.NetIncomeFromSales>@ResLoc["NetIncomeFromSales"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfEfficiencyOfWorkingCapital.AverageWorkingCapitalBalances>@ResLoc["AverageWorkingCapitalBalances"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfEfficiencyOfWorkingCapital.NetProfit>@ResLoc["NetProfit"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfEfficiencyOfWorkingCapital.NumberOfRevolutionsOfCurrentAssets Digits=2>@ResLoc["TurnoverOfCurrentAssets"], @ResLoc["times"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfEfficiencyOfWorkingCapital.ProfitabilityOfCurrentAssets Digits=2
-                                                FieldNumber="5." IsShowGrowthRate=false>@ResLoc["ProfitabilityOfCurrentAssets"] %</TrTwoYearsCalculationDataComponent>
+                                                IsShowGrowthRate=false>@ResLoc["ProfitabilityOfCurrentAssets"] %</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfEfficiencyOfWorkingCapital.IntegratedIndicatorOfEfficiencyOfCurrentAssets Digits=3
-                                                FieldNumber="6." IsShowGrowthRate=false>@ResLoc["IntegratedIndicatorOfEfficiencyOfCurrentAssets"]</TrTwoYearsCalculationDataComponent>
+                                                IsShowGrowthRate=false>@ResLoc["IntegratedIndicatorOfEfficiencyOfCurrentAssets"]</TrTwoYearsCalculationDataComponent>
         </tbody>
     </table>
 </RadzenCard>

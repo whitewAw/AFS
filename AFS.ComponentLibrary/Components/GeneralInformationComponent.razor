@@ -6,15 +6,7 @@
             <RadzenLabel Text="@ResLoc["CompanyName"]" />
         </div>
         <div class="col">
-            <RadzenTextBox @bind-Value="@MainModel.CompanyName" Class="w-100" />
-        </div>
-    </div>
-    <div class="row mb-2">
-        <div class="col-md-2" style="align-self: center;">
-            <RadzenLabel Text="@ResLoc["CurrentYear"]" />
-        </div>
-        <div class="col">
-            <YearSelectCurrent />
+            <RadzenTextBox @bind-Value="@MainModel.CompanyName" MaxLength="40" Class="w-100" />
         </div>
     </div>
     <div class="row mb-2">
@@ -25,9 +17,15 @@
             <YearSelectBase />
         </div>
     </div>
+    <div class="row mb-2">
+        <div class="col-md-2" style="align-self: center;">
+            <RadzenLabel Text="@ResLoc["CurrentYear"]" />
+        </div>
+        <div class="col">
+            <YearSelectCurrent />
+        </div>
+    </div>
 </RadzenCard>
-
-<SaveLoadComponent/>
 
 @code {
     private event Action? fieldChanged;

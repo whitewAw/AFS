@@ -28,31 +28,37 @@ namespace AFS.Core.Services.DataCalculations
 
         private void NetIncomeFromSalesInit(AFSModel model)
         {
-            NetIncomeFromSales.BaseYear = model.F2Base.F2000.Curent;
-            NetIncomeFromSales.CurrentYear = model.F2Current.F2000.Curent;
+            NetIncomeFromSales.Number = "1.";
+            NetIncomeFromSales.BaseYear = model.F2Base.F2000.Current;
+            NetIncomeFromSales.CurrentYear = model.F2Current.F2000.Current;
         }
         private void AverageWorkingCapitalBalancesInit(IndicatorsOfTurnoverOfCurrentAssets iTCA)
         {
+            AverageWorkingCapitalBalances.Number = "2.";
             AverageWorkingCapitalBalances.BaseYear = iTCA.AverageWorkingCapitalBalances.BaseYear;
             AverageWorkingCapitalBalances.CurrentYear = iTCA.AverageWorkingCapitalBalances.CurrentYear;
         }
         private void NetProfitInit(AFSModel model)
         {
-            NetProfit.BaseYear = model.F2Base.GetF2465Curent();
-            NetProfit.CurrentYear = model.F2Current.GetF2465Curent();
+            NetProfit.Number = "3.";
+            NetProfit.BaseYear = model.F2Base.GetF2465Current();
+            NetProfit.CurrentYear = model.F2Current.GetF2465Current();
         }
         private void TurnoverOfWorkingCapitalTimesInit(IndicatorsOfTurnoverOfCurrentAssets iTCA)
         {
+            NumberOfRevolutionsOfCurrentAssets.Number = "4.";
             NumberOfRevolutionsOfCurrentAssets.BaseYear = iTCA.NumberOfRevolutionsOfCurrentAssets.BaseYear;
             NumberOfRevolutionsOfCurrentAssets.CurrentYear = iTCA.NumberOfRevolutionsOfCurrentAssets.CurrentYear;
         }
         private void ProfitabilityOfCurrentAssetsInit()
         {
+            ProfitabilityOfCurrentAssets.Number = "5.";
             ProfitabilityOfCurrentAssets.BaseYear = NetProfit.BaseYear / AverageWorkingCapitalBalances.BaseYear * 100;
             ProfitabilityOfCurrentAssets.CurrentYear = NetProfit.CurrentYear / AverageWorkingCapitalBalances.CurrentYear * 100;
         }
         private void IntegratedIndicatorOfEfficiencyOfCurrentAssetsInit()
         {
+            IntegratedIndicatorOfEfficiencyOfCurrentAssets.Number = "6.";
             if (ProfitabilityOfCurrentAssets.BaseYear == 0)
             {
                 IntegratedIndicatorOfEfficiencyOfCurrentAssets.BaseYear = Math.Sqrt(NumberOfRevolutionsOfCurrentAssets.BaseYear / 100);

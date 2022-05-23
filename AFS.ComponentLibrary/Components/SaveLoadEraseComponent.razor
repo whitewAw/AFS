@@ -6,9 +6,9 @@
 
 <div class="row mb-4 align-middle text-right">
     <div class="col">
-
-        <RadzenButton Icon="save" BusyText="Saving ..." IsBusy=@isSave Click=@OnLoadClick Text="@ResLoc["SaveToFile"]" ButtonStyle="ButtonStyle.Primary" />
+        <RadzenButton Icon="save" BusyText="Saving ..." IsBusy=@isSave Click=@OnLoadClick Text="@ResLoc["SaveToFile"]" ButtonStyle="ButtonStyle.Success" />
         <RadzenButton Icon="upload_file" BusyText="Uploading ..." IsBusy=@isUpload Click=@OnUploadClick Text="@ResLoc["UploadFromFile"]" ButtonStyle="ButtonStyle.Secondary" />
+        <RadzenButton Icon="delete_forever" BusyText="Erasing ..." IsBusy=@isErase Click=@OnEraseClick Text="@ResLoc["EraseData"]" ButtonStyle="ButtonStyle.Primary" />
         <InputFile id="@filePickerId" accept="@Constraints.FileExtension" OnChange="@LoadFiles" hidden />
     </div>
 </div>
@@ -17,6 +17,7 @@
 
     bool isSave;
     bool isUpload;
+    bool isErase;
 
     string filePickerId = "filePickerId";
 
@@ -39,8 +40,17 @@
             isUpload = true;
             using var stream = file.File.OpenReadStream();
             AFSModel? model = await ExportImportHandler.ImportAsync(stream);
-            ExportImportHandler.InitializeModelAsync(model);
+            ExportImportHandler.InitializeModel(model);
             isUpload = false;
         }
+    }
+
+    async Task OnEraseClick()
+    {
+        isErase = true;
+        await Task.Delay(1);
+        AFSModel model = new();
+        ExportImportHandler.InitializeModel(model);
+        isErase = false;
     }
 }

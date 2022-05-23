@@ -1,17 +1,17 @@
 ﻿namespace AFS.Core.Model
 {
-    public class CurentPrevious
+    public class CurrentPrevious
     {
-        private double curent;
+        private double current;
         private double previous;
 
         public event Action? OnChange;
-        public double Curent
+        public double Current
         {
-            get => curent;
+            get => current;
             set
             {
-                curent = AFSConstraints.RoundStat(value);
+                current = AFSConstraints.RoundStat(value);
                 NotifyStateChanged();
             }
         }
@@ -25,9 +25,9 @@
             }
         }
 
-        internal void Init(CurentPrevious fild)
+        internal void Init(CurrentPrevious fild)
         {
-            curent = fild.Curent;
+            current = fild.Current;
             previous = fild.Previous;
         }
 

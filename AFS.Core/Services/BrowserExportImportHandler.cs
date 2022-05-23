@@ -45,7 +45,7 @@ namespace AFS.Core.Services
             return null;
         }
 
-        public void InitializeModelAsync(AFSModel? model)
+        public void InitializeModel(AFSModel? model)
         {
             if (model != null)
             {

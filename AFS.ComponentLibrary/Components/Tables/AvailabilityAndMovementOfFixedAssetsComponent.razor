@@ -1,0 +1,42 @@
+﻿@inject AvailabilityAndMovementOfFixedAssets AvailabilityAndMovementOfFixedAssets
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <h5 class="text-end">(@ResLoc["thousandUAH"])</h5>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <thead>
+            <tr>
+                <ThComponent Rowspan=2>@ResLoc["Period"]</ThComponent>
+                <ThComponent Rowspan=2>@ResLoc["BalanceAtBeginOfYearAtOriginalCost"]</ThComponent>
+                <ThComponent Colspan=2>@ResLoc["ReceivedForReportingPeriod"]</ThComponent>
+                <ThComponent Colspan=2>@ResLoc["WithdrewInReportingPeriod"]</ThComponent>
+                <ThComponent Rowspan=2>@ResLoc["BalanceAtEndOfYearAtOriginalBalanceAtEndOfYearAtOriginalCost"]</ThComponent>
+                <ThComponent Rowspan=2>@ResLoc["BalanceAtEndOfYearMinusDepreciation"]</ThComponent>
+            </tr>
+            <tr>
+                <ThComponent>@ResLoc["total_"]</ThComponent>
+                <ThComponent>@ResLoc["includingNew"]</ThComponent>
+                <ThComponent>@ResLoc["total_"]</ThComponent>
+                <ThComponent>@ResLoc["includingEliminated"]</ThComponent>
+            </tr>
+        </thead>
+        <tbody>
+            <TrAvailabilityAndMovementOfFixedAssetsComponent Item=@AvailabilityAndMovementOfFixedAssets.Base>
+                @MainModel.BaseYear&nbsp;@ResLoc["year"]
+            </TrAvailabilityAndMovementOfFixedAssetsComponent>
+             <TrAvailabilityAndMovementOfFixedAssetsComponent Item=@AvailabilityAndMovementOfFixedAssets.Current>
+                @MainModel.CurrentYear&nbsp;@ResLoc["year"]
+            </TrAvailabilityAndMovementOfFixedAssetsComponent>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+
+    protected override void OnInitialized()
+    {
+        tableName = String.Format(ResLoc["AvailabilityAndMovementOfFixedAssetsTablName"], 5, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear);
+        base.OnInitialized();
+    }
+}

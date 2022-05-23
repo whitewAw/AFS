@@ -1,0 +1,86 @@
+﻿@implements IDisposable
+
+<RadzenCard Style="width: 100%;">
+    <h3 class="h5">@ResLoc["AdditionalInfo"]</h3>
+    <table class="table table-bordered py-0 table-sm">
+        <thead>
+            <tr>
+                <ThComponent />
+                <ThComponent>@MainModel.BaseYear @ResLoc["year"]</ThComponent>
+                <ThComponent>@MainModel.CurrentYear @ResLoc["year"]</ThComponent>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <TdComponent>@ResLoc["AverageNumberOfEmployees"], @ResLoc["people"]</TdComponent>
+                <TdComponent Align="MR">
+                    <RadzenNumeric TValue="int" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.AverageNumberOfEmployeesBase Class="w-100" />
+                </TdComponent>
+                <TdComponent Align="MR">
+                    <RadzenNumeric TValue="int" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.AverageNumberOfEmployeesCurrent Class="w-100" />
+                </TdComponent>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-bordered py-0 table-sm">
+        <thead>
+            <tr>
+                <ThComponent Rowspan=2 />
+                <ThComponent Colspan=2>@ResLoc["ReceivedFixedAssets"]</ThComponent>
+                <ThComponent Colspan=2>@ResLoc["RetiredFixedAssets"]</ThComponent>
+            </tr>
+            <tr>
+                <ThComponent>@ResLoc["total_"]</ThComponent>
+                <ThComponent>@ResLoc["includingNew"]</ThComponent>
+                <ThComponent>@ResLoc["total_"]</ThComponent>
+                <ThComponent>@ResLoc["includingEliminated"]</ThComponent>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <TdComponent>@MainModel.BaseYear&nbsp;@ResLoc["year"]</TdComponent>
+                <TdComponent Align="MR">
+                    <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.FixedAssetsInfoBase.ReceivedFixedAssets Class="w-100" />
+                </TdComponent>
+                <TdComponent Align="MR">
+                    <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.FixedAssetsInfoBase.ReceivedNewFixedAssets Class="w-100" />
+                </TdComponent>
+                <TdComponent Align="MR">
+                    <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.FixedAssetsInfoBase.LeftFixedAssets Class="w-100" />
+                </TdComponent>
+                <TdComponent Align="MR">
+                    <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.FixedAssetsInfoBase.LiquidatedFixedAssets Class="w-100" />
+                </TdComponent>
+            </tr>
+            <tr>
+                <TdComponent>@MainModel.CurrentYear&nbsp;@ResLoc["year"]</TdComponent>
+                <TdComponent Align="MR">
+                    <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.FixedAssetsInfoCurrent.ReceivedFixedAssets Class="w-100" />
+                </TdComponent>
+                <TdComponent Align="MR">
+                    <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.FixedAssetsInfoCurrent.ReceivedNewFixedAssets Class="w-100" />
+                </TdComponent>
+                <TdComponent Align="MR">
+                    <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.FixedAssetsInfoCurrent.LeftFixedAssets Class="w-100" />
+                </TdComponent>
+                <TdComponent Align="MR">
+                    <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.FixedAssetsInfoCurrent.LiquidatedFixedAssets Class="w-100" />
+                </TdComponent>
+            </tr>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+
+    private event Action? fieldChanged;
+
+    protected override void OnInitialized()
+    {
+        fieldChanged = () => StateHasChanged();
+        MainModel.OnChange += fieldChanged;
+        base.OnInitialized();
+    }
+
+    public void Dispose() => MainModel.OnChange -= fieldChanged;
+}

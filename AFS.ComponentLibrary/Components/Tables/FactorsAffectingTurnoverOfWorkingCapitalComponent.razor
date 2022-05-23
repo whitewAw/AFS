@@ -22,16 +22,12 @@
             </tr>
         </thead>
         <tbody>
-            <TrFactorsAffectingTurnoverOfWorkingCapitalComponent FieldNumber="1."
-                                                                 FieldName=@ResLoc["MoneyAndTheirEquivalents"] Item=@FactorsAffectingTurnoverOfWorkingCapital.Money />
-            <TrFactorsAffectingTurnoverOfWorkingCapitalComponent FieldNumber="2."
-                                                                 FieldName=@ResLoc["AccountsReceivable"] Item=@FactorsAffectingTurnoverOfWorkingCapital.Receivables />
-            <TrFactorsAffectingTurnoverOfWorkingCapitalComponent FieldNumber="3."
-                                                                 FieldName=@ResLoc["Tangibles"] Item=@FactorsAffectingTurnoverOfWorkingCapital.MaterialValues />
-            <TrFactorsAffectingTurnoverOfWorkingCapitalComponent FieldNumber="4."
-                                                                 FieldName=@ResLoc["TotalWorkingCapital"] Item=@FactorsAffectingTurnoverOfWorkingCapital.TotalWorkingCapital />
+            <TrFactorsAffectingTurnoverOfWorkingCapitalComponent FieldName=@ResLoc["MoneyAndTheirEquivalents"] Item=@FactorsAffectingTurnoverOfWorkingCapital.Money />
+            <TrFactorsAffectingTurnoverOfWorkingCapitalComponent FieldName=@ResLoc["AccountsReceivable"] Item=@FactorsAffectingTurnoverOfWorkingCapital.Receivables />
+            <TrFactorsAffectingTurnoverOfWorkingCapitalComponent FieldName=@ResLoc["Tangibles"] Item=@FactorsAffectingTurnoverOfWorkingCapital.MaterialValues />
+            <TrFactorsAffectingTurnoverOfWorkingCapitalComponent FieldName=@ResLoc["TotalWorkingCapital"] Item=@FactorsAffectingTurnoverOfWorkingCapital.TotalWorkingCapital />
             <tr>
-                <TdComponent Align="ML">5.</TdComponent>
+                <TdComponent Align="ML">@FactorsAffectingTurnoverOfWorkingCapital.OneDaySalesRevenue.Number</TdComponent>
                 <TdComponent Align="ML">@ResLoc["OneDaySalesRevenue"]</TdComponent>
                 <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(FactorsAffectingTurnoverOfWorkingCapital.OneDaySalesRevenue.BaseYear,2)</TdComponent>
                 <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(FactorsAffectingTurnoverOfWorkingCapital.OneDaySalesRevenue.CurrentYear,2)</TdComponent>
