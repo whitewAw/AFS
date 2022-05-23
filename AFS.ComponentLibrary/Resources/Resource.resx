@@ -183,6 +183,9 @@
   <data name="AvailabilityAndMovementOfFixedAssetsTablName" xml:space="preserve">
     <value>Таблиця {0}. Наявність та рух основних засобів {1} за {2}-{3} роки</value>
   </data>
+  <data name="AverageAnnualCostOfFixedAssets" xml:space="preserve">
+    <value>Середньорічна вартість основних засобів</value>
+  </data>
   <data name="averageBalances" xml:space="preserve">
     <value>середніх залишків</value>
   </data>
@@ -213,6 +216,12 @@
   <data name="bySettlementsWithParticipants" xml:space="preserve">
     <value>за розрахунками з учасниками</value>
   </data>
+  <data name="CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssets" xml:space="preserve">
+    <value>Розрахунок узагальнюючих показників ефективності використання основних засобів</value>
+  </data>
+  <data name="CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssetsTablName" xml:space="preserve">
+    <value>Таблиця {0}. Розрахунок узагальнюючих показників ефективності використання основних засобів {1} за {2}-{3} роки</value>
+  </data>
   <data name="CalculationStockProfitabilityIndicators" xml:space="preserve">
     <value>Розрахунок показників прибутковості акцій</value>
   </data>
@@ -242,6 +251,9 @@
   </data>
   <data name="CostOfLeftFixedAssets" xml:space="preserve">
     <value>Вартість вибулих основних фондів</value>
+  </data>
+  <data name="currency" xml:space="preserve">
+    <value>грн.</value>
   </data>
   <data name="CurrentAccountsPayableFor" xml:space="preserve">
     <value>Поточна кредиторська заборгованість за</value>
@@ -438,6 +450,9 @@
   <data name="IntegratedIndicatorOfEfficiencyOfCurrentAssets" xml:space="preserve">
     <value>Інтегральний показник ефективності використання оборотних засобів</value>
   </data>
+  <data name="IntegratedIndicatorOnFixedAssets" xml:space="preserve">
+    <value>Інтегральний показник ефективності використання основних засобів</value>
+  </data>
   <data name="InvestmentProperty" xml:space="preserve">
     <value>Інвестиційна нерухомість</value>
   </data>
@@ -528,9 +543,6 @@
   <data name="onReceivedAdvances" xml:space="preserve">
     <value>за одержаними авансами</value>
   </data>
-  <data name="Other expenses" xml:space="preserve">
-    <value>Other expenses</value>
-  </data>
   <data name="OtherAggregateIncomeAfterTax" xml:space="preserve">
     <value>Інший сукупний дохід після оподаткування</value>
   </data>
@@ -582,6 +594,9 @@
   <data name="PostponedTaxAssets" xml:space="preserve">
     <value>Відстрочені податкові активи</value>
   </data>
+  <data name="ProceedsFromSales" xml:space="preserve">
+    <value>Виручка від реалізації продукції</value>
+  </data>
   <data name="productionStocks" xml:space="preserve">
     <value>виробничі запаси</value>
   </data>
@@ -590,6 +605,12 @@
   </data>
   <data name="ProfitabilityOfCurrentAssets" xml:space="preserve">
     <value>Рентабельність оборотних засобів</value>
+  </data>
+  <data name="ProfitabilityOnFixedAssets" xml:space="preserve">
+    <value>Рентабельність основних засобів</value>
+  </data>
+  <data name="ProfitFromOperatingActivities" xml:space="preserve">
+    <value>Прибуток від операційної діяльності</value>
   </data>
   <data name="ProfitLossFromDiscontinuedOperationsAfterTax" xml:space="preserve">
     <value>Прибуток (збиток) від припиненої діяльності після оподаткування</value>
@@ -629,6 +650,9 @@
   </data>
   <data name="RetiredFixedAssets" xml:space="preserve">
     <value>Виведені з експлуатації основні засоби</value>
+  </data>
+  <data name="ReturnOnFixedAssets" xml:space="preserve">
+    <value>Фондовіддача основних засобів</value>
   </data>
   <data name="RevaluationDepreciationFinancialInstruments" xml:space="preserve">
     <value>Дооцінка (уцінка) фінансових інструментів</value>

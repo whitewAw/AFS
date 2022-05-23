@@ -1,0 +1,39 @@
+﻿@inject CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssets CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssets
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <h5 class="text-end">(@ResLoc["thousandUAH"])</h5>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <THeadCommonComponent />
+        <tbody>
+            <TrTwoYearsCalculationDataComponent Item=@CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssets.ProceedsFromSales>
+                @ResLoc["ProceedsFromSales"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssets.ProfitFromOperatingActivities>
+                @ResLoc["ProfitFromOperatingActivities"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssets.AverageAnnualCostOfFixedAssets>
+                @ResLoc["AverageAnnualCostOfFixedAssets"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssets.ReturnOnFixedAssets Digits=2>
+                @ResLoc["ReturnOnFixedAssets"], @ResLoc["currency"]
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssets.ProfitabilityOnFixedAssets IsShowGrowthRate=false>
+                @ResLoc["ProfitabilityOnFixedAssets"], %
+            </TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssets.IntegratedIndicatorOnFixedAssets Digits=2 IsShowGrowthRate=false>
+                @ResLoc["IntegratedIndicatorOnFixedAssets"]
+            </TrTwoYearsCalculationDataComponent>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+
+    protected override void OnInitialized()
+    {
+        tableName = String.Format(ResLoc["CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssetsTablName"], 7, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear);
+        base.OnInitialized();
+    }
+}
