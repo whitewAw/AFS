@@ -29,6 +29,7 @@ builder.Services.AddTransient<IndicatorsOfEfficiencyOfWorkingCapital>();
 builder.Services.AddTransient<AvailabilityAndMovementOfFixedAssets>();
 builder.Services.AddTransient<IndicatorsOfStateAndMovementOfFixedAssets>();
 builder.Services.AddTransient<CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssets>();
+builder.Services.AddTransient<FactorAnalysisOfFixedAssets>();
 
 builder.Logging.SetMinimumLevel(LogLevel.Warning);
 

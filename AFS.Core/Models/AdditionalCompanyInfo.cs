@@ -5,15 +5,15 @@ namespace AFS.Core.Models
     public class AdditionalCompanyInfo
     {
 
-        private int averageNumberOfEmployeesBase;
-        private int averageNumberOfEmployeesCurrent;
+        private double averageNumberOfEmployeesBase;
+        private double averageNumberOfEmployeesCurrent;
 
         public event Action? OnChange;
 
         public FixedAssetsInfo FixedAssetsInfoBase { get; set; } = new();
         public FixedAssetsInfo FixedAssetsInfoCurrent { get; set; } = new();
 
-        public int AverageNumberOfEmployeesBase
+        public double AverageNumberOfEmployeesBase
         {
             get => averageNumberOfEmployeesBase;
             set
@@ -22,7 +22,7 @@ namespace AFS.Core.Models
                 NotifyStateChanged();
             }
         }
-        public int AverageNumberOfEmployeesCurrent
+        public double AverageNumberOfEmployeesCurrent
         {
             get => averageNumberOfEmployeesCurrent;
             set

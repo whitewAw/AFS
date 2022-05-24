@@ -3,7 +3,7 @@
 <RadzenCard Style="width: 100%;">
     <h2 class="text-center">@tableName</h2>
     <table class="table table-bordered py-0 table-sm table-striped">
-        <THeadCommonComponent/>
+        <THeadCommonComponent />
         <tbody>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfEfficiencyOfWorkingCapital.NetIncomeFromSales>@ResLoc["NetIncomeFromSales"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
             <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfEfficiencyOfWorkingCapital.AverageWorkingCapitalBalances>@ResLoc["AverageWorkingCapitalBalances"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
@@ -22,7 +22,10 @@
 
     protected override void OnInitialized()
     {
-        tableName = String.Format(ResLoc["IndicatorsOfEfficiencyOfWorkingCapitalTablName"], 4, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear);
+        string name = ResLoc["IndicatorsOfEfficiencyOfWorkingCapital"];
+        int number = 4;
+
+        tableName = String.Format("{0} {1}. {2} {3} {4}-{5} {6}", ResLoc["Table"], number, name, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear, ResLoc["years"]);
         base.OnInitialized();
     }
 }

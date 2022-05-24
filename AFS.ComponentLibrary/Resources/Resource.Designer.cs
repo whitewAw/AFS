@@ -250,15 +250,6 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Таблиця {0}. Наявність та рух основних засобів {1} за {2}-{3} роки.
-        /// </summary>
-        internal static string AvailabilityAndMovementOfFixedAssetsTablName {
-            get {
-                return ResourceManager.GetString("AvailabilityAndMovementOfFixedAssetsTablName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Середньорічна вартість основних засобів.
         /// </summary>
         internal static string AverageAnnualCostOfFixedAssets {
@@ -417,15 +408,6 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string CharacteristicsOfCapital {
             get {
                 return ResourceManager.GetString("CharacteristicsOfCapital", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Таблиця {0}. Характеристика капіталу {1} за {2}-{3} роки.
-        /// </summary>
-        internal static string CharacteristicsOfCapitalTablName {
-            get {
-                return ResourceManager.GetString("CharacteristicsOfCapitalTablName", resourceCulture);
             }
         }
         
@@ -673,20 +655,20 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Факторний аналіз фондовіддачі основних засобів.
+        /// </summary>
+        internal static string FactorAnalysisOfFixedAssets {
+            get {
+                return ResourceManager.GetString("FactorAnalysisOfFixedAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Фактори, що впливають на оборотність оборотних засобів.
         /// </summary>
         internal static string FactorsAffectingTurnoverOfWorkingCapital {
             get {
                 return ResourceManager.GetString("FactorsAffectingTurnoverOfWorkingCapital", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Таблиця {0}. Фактори, що впливають на оборотність оборотних засобів {1} за {2}-{3} роки.
-        /// </summary>
-        internal static string FactorsAffectingTurnoverOfWorkingCapitalTablName {
-            get {
-                return ResourceManager.GetString("FactorsAffectingTurnoverOfWorkingCapitalTablName", resourceCulture);
             }
         }
         
@@ -961,15 +943,6 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Таблиця {0}. Показники ефективності використання оборотних засобів {1} за {2}-{3} роки.
-        /// </summary>
-        internal static string IndicatorsOfEfficiencyOfWorkingCapitalTablName {
-            get {
-                return ResourceManager.GetString("IndicatorsOfEfficiencyOfWorkingCapitalTablName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Показники стану та руху основних засобів.
         /// </summary>
         internal static string IndicatorsOfStateAndMovementOfFixedAssets {
@@ -979,29 +952,11 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Таблиця {0}. Показники стану та руху основних засобів {1} за {2}-{3} роки.
-        /// </summary>
-        internal static string IndicatorsOfStateAndMovementOfFixedAssetsTablName {
-            get {
-                return ResourceManager.GetString("IndicatorsOfStateAndMovementOfFixedAssetsTablName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Показники оборотності оборотних засобів.
         /// </summary>
         internal static string IndicatorsOfTurnoverOfCurrentAssets {
             get {
                 return ResourceManager.GetString("IndicatorsOfTurnoverOfCurrentAssets", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Таблиця {0}. Показники оборотності оборотних засобів {1} за {2}-{3} роки.
-        /// </summary>
-        internal static string IndicatorsOfTurnoverOfCurrentAssetsTablName {
-            get {
-                return ResourceManager.GetString("IndicatorsOfTurnoverOfCurrentAssetsTablName", resourceCulture);
             }
         }
         
@@ -1074,6 +1029,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string InvestmentProperty {
             get {
                 return ResourceManager.GetString("InvestmentProperty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Фондоозброєність праці одного середньоспискового працівника.
+        /// </summary>
+        internal static string LaborCapitalOfOneAverageEmployee {
+            get {
+                return ResourceManager.GetString("LaborCapitalOfOneAverageEmployee", resourceCulture);
             }
         }
         
@@ -1506,6 +1470,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string productionStocks {
             get {
                 return ResourceManager.GetString("productionStocks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Продуктивність праці одного середньоспискового працівника.
+        /// </summary>
+        internal static string ProductivityOfOneAverageEmployee {
+            get {
+                return ResourceManager.GetString("ProductivityOfOneAverageEmployee", resourceCulture);
             }
         }
         
@@ -2046,6 +2019,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string year {
             get {
                 return ResourceManager.GetString("year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to роки.
+        /// </summary>
+        internal static string years {
+            get {
+                return ResourceManager.GetString("years", resourceCulture);
             }
         }
     }

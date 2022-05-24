@@ -24,7 +24,7 @@
             <TrAvailabilityAndMovementOfFixedAssetsComponent Item=@AvailabilityAndMovementOfFixedAssets.Base>
                 @MainModel.BaseYear&nbsp;@ResLoc["year"]
             </TrAvailabilityAndMovementOfFixedAssetsComponent>
-             <TrAvailabilityAndMovementOfFixedAssetsComponent Item=@AvailabilityAndMovementOfFixedAssets.Current>
+            <TrAvailabilityAndMovementOfFixedAssetsComponent Item=@AvailabilityAndMovementOfFixedAssets.Current>
                 @MainModel.CurrentYear&nbsp;@ResLoc["year"]
             </TrAvailabilityAndMovementOfFixedAssetsComponent>
         </tbody>
@@ -36,7 +36,10 @@
 
     protected override void OnInitialized()
     {
-        tableName = String.Format(ResLoc["AvailabilityAndMovementOfFixedAssetsTablName"], 5, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear);
+        string name = ResLoc["AvailabilityAndMovementOfFixedAssets"];
+        int number = 5;
+
+        tableName = String.Format("{0} {1}. {2} {3} {4}-{5} {6}", ResLoc["Table"], number, name, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear, ResLoc["years"]);
         base.OnInitialized();
     }
 }
