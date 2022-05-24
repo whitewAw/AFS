@@ -183,6 +183,9 @@
   <data name="AverageAnnualCostOfFixedAssets" xml:space="preserve">
     <value>Середньорічна вартість основних засобів</value>
   </data>
+  <data name="AverageAnnualCostOfIntangibleAssets" xml:space="preserve">
+    <value>Середньорічна вартість нематеріальних активів</value>
+  </data>
   <data name="averageBalances" xml:space="preserve">
     <value>середніх залишків</value>
   </data>
@@ -224,6 +227,9 @@
   </data>
   <data name="CapitalInRevaluations" xml:space="preserve">
     <value>Капітал у дооцінках</value>
+  </data>
+  <data name="CapitalIntensityOfProducts" xml:space="preserve">
+    <value>Фондоємкість продукції</value>
   </data>
   <data name="cargo" xml:space="preserve">
     <value>товари</value>
@@ -407,6 +413,9 @@
   </data>
   <data name="Indicators" xml:space="preserve">
     <value>Показники</value>
+  </data>
+  <data name="IndicatorsOfEfficiencyOfUseOfIntangibleAssets" xml:space="preserve">
+    <value>Показники ефективності використання нематеріальних активів</value>
   </data>
   <data name="IndicatorsOfEfficiencyOfWorkingCapital" xml:space="preserve">
     <value>Показники ефективності використання оборотних засобів</value>
@@ -644,6 +653,9 @@
   </data>
   <data name="ReturnOnFixedAssets" xml:space="preserve">
     <value>Фондовіддача основних засобів</value>
+  </data>
+  <data name="ReturnOnIntangibleAssets" xml:space="preserve">
+    <value>Фондовіддача нематеріальних активів</value>
   </data>
   <data name="RevaluationDepreciationFinancialInstruments" xml:space="preserve">
     <value>Дооцінка (уцінка) фінансових інструментів</value>

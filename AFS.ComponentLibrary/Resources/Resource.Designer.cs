@@ -259,6 +259,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Середньорічна вартість нематеріальних активів.
+        /// </summary>
+        internal static string AverageAnnualCostOfIntangibleAssets {
+            get {
+                return ResourceManager.GetString("AverageAnnualCostOfIntangibleAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to середніх залишків.
         /// </summary>
         internal static string averageBalances {
@@ -381,6 +390,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string CapitalInRevaluations {
             get {
                 return ResourceManager.GetString("CapitalInRevaluations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Фондоємкість продукції.
+        /// </summary>
+        internal static string CapitalIntensityOfProducts {
+            get {
+                return ResourceManager.GetString("CapitalIntensityOfProducts", resourceCulture);
             }
         }
         
@@ -930,6 +948,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string Indicators {
             get {
                 return ResourceManager.GetString("Indicators", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Показники ефективності використання нематеріальних активів.
+        /// </summary>
+        internal static string IndicatorsOfEfficiencyOfUseOfIntangibleAssets {
+            get {
+                return ResourceManager.GetString("IndicatorsOfEfficiencyOfUseOfIntangibleAssets", resourceCulture);
             }
         }
         
@@ -1641,6 +1668,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string ReturnOnFixedAssets {
             get {
                 return ResourceManager.GetString("ReturnOnFixedAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Фондовіддача нематеріальних активів.
+        /// </summary>
+        internal static string ReturnOnIntangibleAssets {
+            get {
+                return ResourceManager.GetString("ReturnOnIntangibleAssets", resourceCulture);
             }
         }
         

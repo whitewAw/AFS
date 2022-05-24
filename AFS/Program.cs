@@ -30,6 +30,7 @@ builder.Services.AddTransient<AvailabilityAndMovementOfFixedAssets>();
 builder.Services.AddTransient<IndicatorsOfStateAndMovementOfFixedAssets>();
 builder.Services.AddTransient<CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAssets>();
 builder.Services.AddTransient<FactorAnalysisOfFixedAssets>();
+builder.Services.AddTransient<IndicatorsOfEfficiencyOfUseOfIntangibleAssets>();
 
 builder.Logging.SetMinimumLevel(LogLevel.Warning);
 
