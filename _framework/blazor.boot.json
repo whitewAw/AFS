@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "AFS.ComponentLibrary.dll": "sha256-qKBt9T8LSF058Ixdj04strbm7ZgjQvsOhIS9tuP9pN0=",
+      "AFS.ComponentLibrary.dll": "sha256-78SYxo0q+HI+AIxMhySgFUBaouAkRcO4l2XupWtFthw=",
       "AFS.Core.dll": "sha256-kZfvR+0gwwo5btUyaI9vRMht6+QVSTFocfondgCBUl4=",
       "AFS.dll": "sha256-CD89kKRo5xfXJTLKmXWji9ySEduryWNQE++uFzrLTNM=",
       "Blazored.LocalStorage.dll": "sha256-6RRoYeDP3d0xabXmcCMF66wXeJlXVPem28Trs8sQiis=",
@@ -74,7 +74,7 @@
     "runtime": {
       "dotnet.6.0.5.nxg8l9q1gg.js": "sha256-LLKWgVKi4D4rA35AfoV\/AKO8mPRrW9HfsD271wOAXw0=",
       "dotnet.timezones.blat": "sha256-vRU6+wGzQ3FJ0JtyPJtipblPe9MvJf+qKY20xZhuyKQ=",
-      "dotnet.wasm": "sha256-t25BcG2V8kLKF1LPVdmO2sf3PWpBkKEnNWpJoFSWfPE=",
+      "dotnet.wasm": "sha256-ekdcT7ltnMIcEkdP3irsIP+aQnVtC+BnThZJE2BIexg=",
       "icudt_CJK.dat": "sha256-WPyI4hWDPnOw62Nr27FkzGjdbucZnQD+Ph+GOPhAedw=",
       "icudt_EFIGS.dat": "sha256-4RwaPx87Z4dvn77ie\/ro3\/QzyS+\/gGmO3Y\/0CSAXw4k=",
       "icudt_no_CJK.dat": "sha256-OxylFgLJlFqixsj+nLxYVsv5iZLvfIKMpLf9hrWaChA=",
