@@ -1,5 +1,5 @@
-# AFS
-Assessment of Financial Statements
+# UFIN
+Assessment of Ukrainian financial statements
 
 
 ##  ASP.NET Blazor WebAssembly PWA to GitHub Pages example
