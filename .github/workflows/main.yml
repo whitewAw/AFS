@@ -25,9 +25,9 @@ jobs:
     
     # changes the base-tag in index.html from '/' to 'AFS' to match GitHub Pages repository subdirectory
     - name: Change base-tag in index.html from / to AFS
-      run: sed -i 's/<base href="\/" \/>/<base href="\/AFS\/" \/>/g' release/wwwroot/index.html
+      run: sed -i 's/<base href="\/" \/>/<base href="\/UFIN\/" \/>/g' release/wwwroot/index.html
 
-    # changes the base-tag in index.html from '/' to 'AFS' to match GitHub Pages repository subdirectory
+    # changes the base-tag in index.html from '/' to 'UFIN' to match GitHub Pages repository subdirectory
     - name: Fix service-worker-assets.js hashes
       working-directory: release/wwwroot
       run: |
