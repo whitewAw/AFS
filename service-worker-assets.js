@@ -61,11 +61,11 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-7TVBXSg8PEw1aAE5BoYc8xUeh5xMELdQV7jdMQvtswg=",
+      "hash": "sha256-b6YzmzQ+DzFaxeyMruMwmYqrQ17dyAAXVquSIgk07ok=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-jnw1Dk13G\/+reuOorILNh6jbpfQouG12fimmwmcBO4c=",
+      "hash": "sha256-WhwfJs4t5dJPckomi8\/7HoI9\/TO1oScleXpYcGBuVw8=",
       "url": "manifest.json"
     },
     {
@@ -465,5 +465,5 @@
       "url": "_content\/AFS.ComponentLibrary\/AFS.ComponentLibrary.bundle.scp.css"
     }
   ],
-  "version": "pOUy6l4I"
+  "version": "bt6bIh2m"
 };
