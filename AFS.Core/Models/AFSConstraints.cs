@@ -9,7 +9,7 @@
         public static string LangCultureName { get; private set; } = "langCulture";
         public static string ModelJsonName { get; private set; } = "modelJson";
         public static int DurationOAnalyzedPeriod { get; private set; } = 360;
-        public static double RoundStat(double value, int digits = 1) => Math.Round(value, digits, MidpointRounding.AwayFromZero);
+        public static double RoundStat(double value, int digits = 1) => Math.Round(value, digits, MidpointRounding.ToEven);
         public static string RoundStrStat(double value, int digits = 1)
         {
             if (value == 0 || Double.IsNaN(value) || Double.IsInfinity(value))
