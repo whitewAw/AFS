@@ -50,8 +50,8 @@ namespace AFS.Core.Services.DataCalculations
         private void ProfitabilityOnFixedAssetsInit()
         {
             ProfitabilityOnFixedAssets.Number = "5.";
-            ProfitabilityOnFixedAssets.BaseYear = ProfitFromOperatingActivities.BaseYear / AverageAnnualCostOfFixedAssets.BaseYear*100;
-            ProfitabilityOnFixedAssets.CurrentYear = ProfitFromOperatingActivities.CurrentYear / AverageAnnualCostOfFixedAssets.CurrentYear*100;
+            ProfitabilityOnFixedAssets.BaseYear = ProfitFromOperatingActivities.BaseYear / AverageAnnualCostOfFixedAssets.BaseYear * 100;
+            ProfitabilityOnFixedAssets.CurrentYear = ProfitFromOperatingActivities.CurrentYear / AverageAnnualCostOfFixedAssets.CurrentYear * 100;
         }
 
         private void IntegratedIndicatorOnFixedAssetsInit()

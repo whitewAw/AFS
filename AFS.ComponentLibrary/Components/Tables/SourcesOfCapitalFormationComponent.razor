@@ -1,0 +1,136 @@
+﻿@inject SourcesOfCapitalFormation SourcesOfCapitalFormation
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <h5 class="text-end">(@ResLoc["thousandUAH"])</h5>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <thead>
+            <tr>
+                <ThComponent Rowspan=2>@ResLoc["NumberInOrder"]</ThComponent>
+                <ThComponent Rowspan=2>@ResLoc["Indicators"]</ThComponent>
+                <ThComponent Colspan=4>@MainModel.BaseYear  @ResLoc["year"]</ThComponent>
+                <ThComponent Colspan=4>@MainModel.CurrentYear  @ResLoc["year"]</ThComponent>
+            </tr>
+            <tr>
+                <ThComponent>@ResLoc["atBeginOfYear"]</ThComponent>
+                <ThComponent>@ResLoc["atEndOfYear"]</ThComponent>
+                <ThComponent>@ResLoc["deviation"] (+,-)</ThComponent>
+                <ThComponent>@ResLoc["growthRate"], %</ThComponent>
+                <ThComponent>@ResLoc["atBeginOfYear"]</ThComponent>
+                <ThComponent>@ResLoc["atEndOfYear"]</ThComponent>
+                <ThComponent>@ResLoc["deviation"] (+,-)</ThComponent>
+                <ThComponent>@ResLoc["growthRate"], %</ThComponent>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.TotalSourcesOfCapital.Base
+                                                      Current=@SourcesOfCapitalFormation.TotalSourcesOfCapital.Current Colspan=2 FieldName=@ResLoc["TotalSourcesOfCapital"] />
+            </tr>
+            <tr>
+                <TdComponent Rowspan="2" Align="ML">@SourcesOfCapitalFormation.Equity.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.Equity.Base
+                                                      Current=@SourcesOfCapitalFormation.Equity.Current FieldName=@ResLoc["Equity"] />
+            </tr>
+            <tr>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.Equity.InPercentageOfAssetsBase
+                                                      Current=@SourcesOfCapitalFormation.Equity.InPercentageOfAssetsCurrent IsShowGrowthRate="false" FieldName=@ResLoc["in%toSourcesOfCapital"] />
+            </tr>
+            <tr>
+                <TdComponent Rowspan="2" Align="ML">@SourcesOfCapitalFormation.OwnCurrentAssets.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.OwnCurrentAssets.Base
+                                                      Current=@SourcesOfCapitalFormation.OwnCurrentAssets.Current Spacing="pl-3" FieldName=@ResLoc["OwnCurrentAssets"] />
+            </tr>
+            <tr>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.OwnCurrentAssets.InPercentageOfEquityBase
+                                                      Current=@SourcesOfCapitalFormation.OwnCurrentAssets.InPercentageOfEquityCurrent IsShowGrowthRate="false" Spacing="pl-3" FieldName=@ResLoc["in%ToEquity"] />
+            </tr>
+            <tr>
+                <TdComponent Rowspan="2" Align="ML">@SourcesOfCapitalFormation.RaisedCapital.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.RaisedCapital.Base
+                                                      Current=@SourcesOfCapitalFormation.RaisedCapital.Current FieldName=@ResLoc["RaisedCapital"] />
+            </tr>
+            <tr>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.RaisedCapital.InPercentageOfAssetsBase
+                                                      Current=@SourcesOfCapitalFormation.RaisedCapital.InPercentageOfAssetsCurrent IsShowGrowthRate="false" FieldName=@ResLoc["in%toSourcesOfCapital"] />
+            </tr>
+            <tr>
+                <TdComponent Rowspan="2" Align="ML">@SourcesOfCapitalFormation.LongTermLiabilities.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.LongTermLiabilities.Base
+                                                      Current=@SourcesOfCapitalFormation.LongTermLiabilities.Current Spacing="pl-3" FieldName=@ResLoc["LongTermLiabilities_"] />
+            </tr>
+            <tr>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.LongTermLiabilities.InPercentageOfBorrowedCapitalBase
+                                                      Current=@SourcesOfCapitalFormation.LongTermLiabilities.InPercentageOfBorrowedCapitalCurrent IsShowGrowthRate="false" Spacing="pl-3" FieldName=@ResLoc["in%OfBorrowedCapital"] />
+            </tr>
+            <tr>
+                <TdComponent Rowspan="2" Align="ML">@SourcesOfCapitalFormation.ShortTermLoans.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.ShortTermLoans.Base
+                                                      Current=@SourcesOfCapitalFormation.ShortTermLoans.Current Spacing="pl-3" FieldName=@ResLoc["ShortTermLoans"] />
+            </tr>
+            <tr>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.ShortTermLoans.InPercentageOfBorrowedCapitalBase
+                                                      Current=@SourcesOfCapitalFormation.ShortTermLoans.InPercentageOfBorrowedCapitalCurrent IsShowGrowthRate="false" Spacing="pl-3" FieldName=@ResLoc["in%OfBorrowedCapital"] />
+            </tr>
+
+            <tr>
+                <TdComponent Rowspan="2" Align="ML">@SourcesOfCapitalFormation.AccountsPayable.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.AccountsPayable.Base
+                                                      Current=@SourcesOfCapitalFormation.AccountsPayable.Current Spacing="pl-3" FieldName=@ResLoc["AccountsPayable"] />
+            </tr>
+            <tr>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.AccountsPayable.InPercentageOfBorrowedCapitalBase
+                                                      Current=@SourcesOfCapitalFormation.AccountsPayable.InPercentageOfBorrowedCapitalCurrent IsShowGrowthRate="false" Spacing="pl-3" FieldName=@ResLoc["in%OfBorrowedCapital"] />
+            </tr>
+            <tr>
+                <TdComponent Rowspan="2" Align="ML">@SourcesOfCapitalFormation.OtherCurrentLiabilities.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.OtherCurrentLiabilities.Base
+                                                      Current=@SourcesOfCapitalFormation.OtherCurrentLiabilities.Current Spacing="pl-3" FieldName=@ResLoc["OtherCurrentLiabilities"] />
+            </tr>
+            <tr>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.OtherCurrentLiabilities.InPercentageOfBorrowedCapitalBase
+                                                      Current=@SourcesOfCapitalFormation.OtherCurrentLiabilities.InPercentageOfBorrowedCapitalCurrent IsShowGrowthRate="false" Spacing="pl-3" FieldName=@ResLoc["in%OfBorrowedCapital"] />
+            </tr>
+            <tr>
+                <TdComponent Rowspan="2" Align="ML">@SourcesOfCapitalFormation.FutureIncome.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.FutureIncome.Base
+                                                      Current=@SourcesOfCapitalFormation.FutureIncome.Current Spacing="pl-3" FieldName=@ResLoc["FutureIncome"] />
+            </tr>
+            <tr>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.FutureIncome.InPercentageOfBorrowedCapitalBase
+                                                      Current=@SourcesOfCapitalFormation.FutureIncome.InPercentageOfBorrowedCapitalCurrent IsShowGrowthRate="false" Spacing="pl-3" FieldName=@ResLoc["in%OfBorrowedCapital"] />
+            </tr>
+            <tr>
+                <TdComponent Rowspan="2" Align="ML">@SourcesOfCapitalFormation.CurrentSupplies.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.CurrentSupplies.Base
+                                                      Current=@SourcesOfCapitalFormation.CurrentSupplies.Current Spacing="pl-3" FieldName=@ResLoc["CurrentSupplies"] />
+            </tr>
+            <tr>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.CurrentSupplies.InPercentageOfBorrowedCapitalBase
+                                                      Current=@SourcesOfCapitalFormation.CurrentSupplies.InPercentageOfBorrowedCapitalCurrent IsShowGrowthRate="false" Spacing="pl-3" FieldName=@ResLoc["in%OfBorrowedCapital"] />
+            </tr>
+            <tr>
+                <TdComponent Rowspan="2" Align="ML">@SourcesOfCapitalFormation.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Base
+                                                      Current=@SourcesOfCapitalFormation.LiabilitiesRelatedNonCurrentAssetsHeldForSale.Current FieldName=@ResLoc["LiabilitiesRelatedNonCurrentAssetsHeldForSale"] />
+            </tr>
+            <tr>
+                <TdsCharacteristicsOfCapitalComponent Base=@SourcesOfCapitalFormation.LiabilitiesRelatedNonCurrentAssetsHeldForSale.InPercentageOfAssetsBase
+                                                      Current=@SourcesOfCapitalFormation.LiabilitiesRelatedNonCurrentAssetsHeldForSale.InPercentageOfAssetsCurrent IsShowGrowthRate="false" FieldName=@ResLoc["in%toSourcesOfCapital"] />
+            </tr>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+
+    protected override void OnInitialized()
+    {
+        string name = ResLoc["SourcesOfCapitalFormation"];
+        int number = 10;
+
+        tableName = String.Format("{0} {1}. {2} {3} {4}-{5} {6}", ResLoc["Table"], number, name, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear, ResLoc["years"]);
+        base.OnInitialized();
+    }
+}

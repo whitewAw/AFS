@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AccountsPayable" xml:space="preserve">
+    <value>Кредиторська заборгованість</value>
+  </data>
   <data name="AccountsReceivable" xml:space="preserve">
     <value>Дебіторська заборгованість</value>
   </data>
@@ -387,8 +390,17 @@
   <data name="growthRate" xml:space="preserve">
     <value>темп роста</value>
   </data>
+  <data name="in%OfBorrowedCapital" xml:space="preserve">
+    <value>То же в %  до залученого капіталу</value>
+  </data>
   <data name="in%toCurrentMobileAssets" xml:space="preserve">
     <value>в %  до оборотних засобів</value>
+  </data>
+  <data name="in%ToEquity" xml:space="preserve">
+    <value>То же в % до власного капіталу</value>
+  </data>
+  <data name="in%toSourcesOfCapital" xml:space="preserve">
+    <value>То же в % до джерел капіталу</value>
   </data>
   <data name="includingDueTo" xml:space="preserve">
     <value>у тому числі за рахунок</value>
@@ -476,6 +488,9 @@
   </data>
   <data name="LongTermLiabilitiesAndCollateral" xml:space="preserve">
     <value>Довгострокові зобов'язання і забезпечення</value>
+  </data>
+  <data name="LongTermLiabilities_" xml:space="preserve">
+    <value>Довгострокові зобов`язання</value>
   </data>
   <data name="LongTermLoans" xml:space="preserve">
     <value>Довгострокові забезпечення</value>
@@ -582,6 +597,9 @@
   <data name="OtherTotalIncome" xml:space="preserve">
     <value>Інший сукупний дохід</value>
   </data>
+  <data name="OwnCurrentAssets" xml:space="preserve">
+    <value>Власні оборотні засоби</value>
+  </data>
   <data name="people" xml:space="preserve">
     <value>чол.</value>
   </data>
@@ -620,6 +638,9 @@
   </data>
   <data name="PromissoryNotesReceived" xml:space="preserve">
     <value>Векселі одержані</value>
+  </data>
+  <data name="RaisedCapital" xml:space="preserve">
+    <value>Залучений капітал</value>
   </data>
   <data name="ReceivablesForProducts" xml:space="preserve">
     <value>Дебіторська заборгованість за продукцію, товари, роботи, послуги</value>
@@ -693,6 +714,12 @@
   <data name="ShortTermBankCredits" xml:space="preserve">
     <value>Короткострокові кредити банків</value>
   </data>
+  <data name="ShortTermLoans" xml:space="preserve">
+    <value>Короткострокові кредити</value>
+  </data>
+  <data name="SourcesOfCapitalFormation" xml:space="preserve">
+    <value>Джерела формування капіталу</value>
+  </data>
   <data name="StatementOfFinancialPerformance" xml:space="preserve">
     <value>Звіт про фінансові результати (Звіт про сукупний дохід)</value>
   </data>
@@ -737,6 +764,9 @@
   </data>
   <data name="TotalSection" xml:space="preserve">
     <value>Усього за розділом</value>
+  </data>
+  <data name="TotalSourcesOfCapital" xml:space="preserve">
+    <value>Усього джерел капіталу</value>
   </data>
   <data name="TotalWorkingCapital" xml:space="preserve">
     <value>Усього оборотних засобів</value>

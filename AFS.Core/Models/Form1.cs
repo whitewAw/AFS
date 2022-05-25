@@ -294,5 +294,21 @@
             }
             return F1160.End + F1165.End;
         }
+        internal double GetProvisionOfNextCostsAndPayments(bool begin)
+        {
+            if (begin)
+            {
+                return F1520.Begin + F1525.Begin;
+            }
+            return F1520.End + F1525.End;
+        }
+        internal double GetAccountsPayable(bool begin)
+        {
+            if (begin)
+            {
+                return F1605.Begin + F1615.Begin + F1620.Begin + F1625.Begin + F1630.Begin + F1635.Begin + F1640.Begin + F1645.Begin;
+            }
+            return F1605.End + F1615.End + F1620.End + F1625.End + F1630.End + F1635.End + F1640.End + F1645.End;
+        }
     }
 }
