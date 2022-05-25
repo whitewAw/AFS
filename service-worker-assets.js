@@ -49,15 +49,15 @@
       "url": "css\/open-iconic\/README.md"
     },
     {
-      "hash": "sha256-JTriPUm1pHV6RusyJHm\/gZaSNRAli6XSCnaCST75YnI=",
+      "hash": "sha256-8g7hmXioL+3whsz2+jxnwscWL6pNry14wEaonadrhus=",
       "url": "favicon.ico"
     },
     {
-      "hash": "sha256-ukkzkpIMJfNsDY1oe8z\/PwFrE5e+xqZP7q5SSQ4AQz0=",
+      "hash": "sha256-5X0bw2QDgiqGpc6Lb0Hyb1zQvLg6B59GXgJPO9vh5MI=",
       "url": "icon-192.png"
     },
     {
-      "hash": "sha256-2I2uIYLxWfE\/TeeKjz9ACG8CSPFXN+f9Atze7Dd5+r4=",
+      "hash": "sha256-udhNW0OF55mfBicASHcR+XrjVFp+z13aFSEpdeWL2PU=",
       "url": "icon-512.png"
     },
     {
@@ -465,5 +465,5 @@
       "url": "_content\/AFS.ComponentLibrary\/AFS.ComponentLibrary.bundle.scp.css"
     }
   ],
-  "version": "UfGyG3kK"
+  "version": "PH0aqCeo"
 };
