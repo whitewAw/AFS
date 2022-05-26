@@ -39,15 +39,12 @@
         if (file.File.Size < Constraints.MaxFileSize)
         {
             isUpload = true;
-            InvokeAsync(async () =>
-                {
-                    await Task.Delay(50);
-                    using var stream = file.File.OpenReadStream();
-                    AFSModel? model = await ExportImportHandler.ImportAsync(stream);
-                    ExportImportHandler.InitializeModel(model);
-                    DialogService.Close();
-                });
-            await UploadingDialog();
+            UploadingDialog();
+            await Task.Delay(100);
+            using var stream = file.File.OpenReadStream();
+            AFSModel? model = await ExportImportHandler.ImportAsync(stream);
+            ExportImportHandler.InitializeModel(model);
+            DialogService.Close();
             isUpload = false;
         }
     }
@@ -63,9 +60,9 @@
         isErase = false;
     }
 
-    async Task UploadingDialog()
+    void UploadingDialog()
     {
-        await DialogService.OpenAsync("", ds =>
+        DialogService.Open("", ds =>
             @<div>
                 <div class="row">
                     <div class="col text-center p-5">
