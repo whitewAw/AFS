@@ -35,6 +35,7 @@ builder.Services.AddTransient<FactorAnalysisOfFixedAssets>();
 builder.Services.AddTransient<IndicatorsOfEfficiencyOfUseOfIntangibleAssets>();
 builder.Services.AddTransient<SourcesOfCapitalFormation>();
 builder.Services.AddTransient<AssessmentOfReceivableAndPayable>();
+builder.Services.AddTransient<IndicatorsOfBusinessActivity>();
 
 builder.Logging.SetMinimumLevel(LogLevel.Warning);
 

@@ -1,0 +1,41 @@
+﻿@inject IndicatorsOfBusinessActivity IndicatorsOfBusinessActivity
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <THeadCommonComponent />
+        <tbody>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.GrossProfitPerSoldProducts Digits=2>@ResLoc["GrossProfitPerSoldProducts"], @ResLoc["currency"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.CoefficientOfBusinessActivity Digits=2 IsShowGrowthRate=false>@ResLoc["CoefficientOfBusinessActivity"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.CoefficientOfEfficiencFinancialResources Digits=2 IsShowGrowthRate=false>@ResLoc["CoefficientOfEfficiencFinancialResources"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.CoefficientOfOwnFundsUtilization Digits=2 IsShowGrowthRate=false>@ResLoc["CoefficientOfOwnFundsUtilization"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.ProfitabilityRatioOfEnterprise Digits=2 IsShowGrowthRate=false>@ResLoc["ProfitabilityRatioOfEnterprise"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.ProductivityOfOneAverageEmployee Digits=2>@ResLoc["LaborProductivity"], @ResLoc["thousandUAH"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.ReturnOnFixedAssets Digits=2>@ResLoc["ReturnOnFixedAssets"], @ResLoc["currency"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.RevolutionsFromReceivables Digits=2>@ResLoc["TurnoverInSettlements"], @ResLoc["revolutions"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.ReceivablesTurnover Digits=2>@ResLoc["TurnoverInSettlements"], @ResLoc["days"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.TurnoverOfInventoriesRevolutions Digits=2>@ResLoc["TurnoverOfInventories"], @ResLoc["revolutions"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.TurnoverOfInventoriesDays Digits=2>@ResLoc["TurnoverOfInventories"], @ResLoc["days"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.OperatingCycleDuration Digits=2>@ResLoc["OperatingCycleDuration"], @ResLoc["days"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.NumberOfRevolutionsOfCurrentAssets Digits=2>@ResLoc["TurnoverOfCurrentAssets"], @ResLoc["revolutions"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.TurnoverOfWorkingCapital Digits=2>@ResLoc["TurnoverOfCurrentAssets"], @ResLoc["days"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.TurnoverOfEquity Digits=2>@ResLoc["TurnoverOfEquity"], @ResLoc["revolutions"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.TurnoverOfTotalCapital Digits=2>@ResLoc["TurnoverOfTotalCapital"], @ResLoc["revolutions"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.CoefficientOfStabilityOfEconomicGrowth Digits=2 IsShowGrowthRate=false>@ResLoc["CoefficientOfStabilityOfEconomicGrowth"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Item=@IndicatorsOfBusinessActivity.ReturnOnEquityPeriod Digits=2>@ResLoc["ReturnOnEquityPeriod"], @ResLoc["years"]</TrTwoYearsCalculationDataComponent>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+
+    protected override void OnInitialized()
+    {
+        string name = ResLoc["IndicatorsOfBusinessActivity"];
+        int number = 12;
+
+        tableName = String.Format("{0} {1}. {2} {3} {4}-{5} {6}", ResLoc["Table"], number, name, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear, ResLoc["years"]);
+        base.OnInitialized();
+    }
+}

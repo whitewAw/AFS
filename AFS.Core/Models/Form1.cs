@@ -274,9 +274,9 @@
         {
             if (begin)
             {
-                return GetF1100Begin() + F1110.Begin;
+                return GetF1100Begin() + F1110.Begin + F1200.Begin;
             }
-            return GetF1100End() + F1110.End;
+            return GetF1100End() + F1110.End + F1200.End;
         }
         internal double GetAccountsReceivable(bool begin)
         {

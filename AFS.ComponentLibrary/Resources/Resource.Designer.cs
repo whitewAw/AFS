@@ -466,6 +466,42 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт ділової активності.
+        /// </summary>
+        internal static string CoefficientOfBusinessActivity {
+            get {
+                return ResourceManager.GetString("CoefficientOfBusinessActivity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт ефективності використання фінансових ресурсів.
+        /// </summary>
+        internal static string CoefficientOfEfficiencFinancialResources {
+            get {
+                return ResourceManager.GetString("CoefficientOfEfficiencFinancialResources", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт використання власних коштів.
+        /// </summary>
+        internal static string CoefficientOfOwnFundsUtilization {
+            get {
+                return ResourceManager.GetString("CoefficientOfOwnFundsUtilization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт стійкості економічного росту.
+        /// </summary>
+        internal static string CoefficientOfStabilityOfEconomicGrowth {
+            get {
+                return ResourceManager.GetString("CoefficientOfStabilityOfEconomicGrowth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Назва компанії.
         /// </summary>
         internal static string CompanyName {
@@ -925,6 +961,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Валовий прибуток на 1 грн. реалізованої продукції.
+        /// </summary>
+        internal static string GrossProfitPerSoldProducts {
+            get {
+                return ResourceManager.GetString("GrossProfitPerSoldProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to темп роста.
         /// </summary>
         internal static string growthRate {
@@ -1042,6 +1087,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Показники ділової активності.
+        /// </summary>
+        internal static string IndicatorsOfBusinessActivity {
+            get {
+                return ResourceManager.GetString("IndicatorsOfBusinessActivity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Показники ефективності використання нематеріальних активів.
         /// </summary>
         internal static string IndicatorsOfEfficiencyOfUseOfIntangibleAssets {
@@ -1155,6 +1209,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string LaborCapitalOfOneAverageEmployee {
             get {
                 return ResourceManager.GetString("LaborCapitalOfOneAverageEmployee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Продуктивність праці.
+        /// </summary>
+        internal static string LaborProductivity {
+            get {
+                return ResourceManager.GetString("LaborProductivity", resourceCulture);
             }
         }
         
@@ -1447,6 +1510,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Тривалість операційного циклу.
+        /// </summary>
+        internal static string OperatingCycleDuration {
+            get {
+                return ResourceManager.GetString("OperatingCycleDuration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Інший сукупний дохід після оподаткування.
         /// </summary>
         internal static string OtherAggregateIncomeAfterTax {
@@ -1663,6 +1735,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт вигідності підприємства.
+        /// </summary>
+        internal static string ProfitabilityRatioOfEnterprise {
+            get {
+                return ResourceManager.GetString("ProfitabilityRatioOfEnterprise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Прибуток від операційної діяльності.
         /// </summary>
         internal static string ProfitFromOperatingActivities {
@@ -1807,6 +1888,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Період окупності власного капіталу.
+        /// </summary>
+        internal static string ReturnOnEquityPeriod {
+            get {
+                return ResourceManager.GetString("ReturnOnEquityPeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Фондовіддача основних засобів.
         /// </summary>
         internal static string ReturnOnFixedAssets {
@@ -1848,6 +1938,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string revenue {
             get {
                 return ResourceManager.GetString("revenue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to оборотів.
+        /// </summary>
+        internal static string revolutions {
+            get {
+                return ResourceManager.GetString("revolutions", resourceCulture);
             }
         }
         
@@ -2140,11 +2239,47 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Оборотність коштів у розрахунках.
+        /// </summary>
+        internal static string TurnoverInSettlements {
+            get {
+                return ResourceManager.GetString("TurnoverInSettlements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Оборотність оборотних засобів.
         /// </summary>
         internal static string TurnoverOfCurrentAssets {
             get {
                 return ResourceManager.GetString("TurnoverOfCurrentAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оборотність власного капіталу.
+        /// </summary>
+        internal static string TurnoverOfEquity {
+            get {
+                return ResourceManager.GetString("TurnoverOfEquity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оборотність виробничих запасів.
+        /// </summary>
+        internal static string TurnoverOfInventories {
+            get {
+                return ResourceManager.GetString("TurnoverOfInventories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оборотність всього капіталу.
+        /// </summary>
+        internal static string TurnoverOfTotalCapital {
+            get {
+                return ResourceManager.GetString("TurnoverOfTotalCapital", resourceCulture);
             }
         }
         

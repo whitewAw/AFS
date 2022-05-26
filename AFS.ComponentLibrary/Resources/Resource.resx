@@ -879,4 +879,49 @@
   <data name="Yes" xml:space="preserve">
     <value>Так</value>
   </data>
+  <data name="IndicatorsOfBusinessActivity" xml:space="preserve">
+    <value>Показники ділової активності</value>
+  </data>
+  <data name="CoefficientOfBusinessActivity" xml:space="preserve">
+    <value>Коефіцієнт ділової активності</value>
+  </data>
+  <data name="CoefficientOfEfficiencFinancialResources" xml:space="preserve">
+    <value>Коефіцієнт ефективності використання фінансових ресурсів</value>
+  </data>
+  <data name="CoefficientOfOwnFundsUtilization" xml:space="preserve">
+    <value>Коефіцієнт використання власних коштів</value>
+  </data>
+  <data name="GrossProfitPerSoldProducts" xml:space="preserve">
+    <value>Валовий прибуток на 1 грн. реалізованої продукції</value>
+  </data>
+  <data name="LaborProductivity" xml:space="preserve">
+    <value>Продуктивність праці</value>
+  </data>
+  <data name="ProfitabilityRatioOfEnterprise" xml:space="preserve">
+    <value>Коефіцієнт вигідності підприємства</value>
+  </data>
+  <data name="revolutions" xml:space="preserve">
+    <value>оборотів</value>
+  </data>
+  <data name="TurnoverInSettlements" xml:space="preserve">
+    <value>Оборотність коштів у розрахунках</value>
+  </data>
+  <data name="OperatingCycleDuration" xml:space="preserve">
+    <value>Тривалість операційного циклу</value>
+  </data>
+  <data name="TurnoverOfInventories" xml:space="preserve">
+    <value>Оборотність виробничих запасів</value>
+  </data>
+  <data name="CoefficientOfStabilityOfEconomicGrowth" xml:space="preserve">
+    <value>Коефіцієнт стійкості економічного росту</value>
+  </data>
+  <data name="ReturnOnEquityPeriod" xml:space="preserve">
+    <value>Період окупності власного капіталу</value>
+  </data>
+  <data name="TurnoverOfEquity" xml:space="preserve">
+    <value>Оборотність власного капіталу</value>
+  </data>
+  <data name="TurnoverOfTotalCapital" xml:space="preserve">
+    <value>Оборотність всього капіталу</value>
+  </data>
 </root>

@@ -47,8 +47,8 @@ namespace AFS.Core.Services.DataCalculations
         private void IndicatorsOfTurnoverOfCurrentAssetsInit(AFSModel model)
         {
             AverageWorkingCapitalBalances.Number = "1.";
-            AverageWorkingCapitalBalances.BaseYear = (model.F1Base.GetF1195Begin() + model.F1Base.GetF1195End()) / 2;
-            AverageWorkingCapitalBalances.CurrentYear = (model.F1Current.GetF1195Begin() + model.F1Current.GetF1195End()) / 2;
+            AverageWorkingCapitalBalances.BaseYear = (model.F1Base.GetF1195Begin() + model.F1Base.GetF1195End() - model.F1Base.F1170.Begin - model.F1Base.F1170.End + model.F1Base.F1200.Begin + model.F1Base.F1200.End) / 2;
+            AverageWorkingCapitalBalances.CurrentYear = (model.F1Current.GetF1195Begin() + model.F1Current.GetF1195End() - model.F1Current.F1170.Begin - model.F1Current.F1170.End + model.F1Current.F1200.Begin + model.F1Current.F1200.End) / 2;
         }
         private void AverageFromMoneyInit(AFSModel model)
         {
