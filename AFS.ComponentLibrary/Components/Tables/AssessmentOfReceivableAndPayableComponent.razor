@@ -1,0 +1,90 @@
+﻿@inject AssessmentOfReceivableAndPayable AssessmentOfReceivableAndPayable
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <h5 class="text-end">(@ResLoc["thousandUAH"])</h5>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <thead>
+            <tr>
+                <ThComponent Rowspan=3>@ResLoc["NumberInOrder"]</ThComponent>
+                <ThComponent Rowspan=3>@ResLoc["Settlements"]</ThComponent>
+                <ThComponent Colspan=2>@ResLoc["AccountsReceivable"]</ThComponent>
+                <ThComponent Colspan=2>@ResLoc["AccountsPayable"]</ThComponent>
+                <ThComponent Colspan=4>@ResLoc["ExcessOfDebt"]</ThComponent>
+            </tr>
+            <tr>
+                <ThComponent Rowspan=2>@MainModel.BaseYear  @ResLoc["year"]</ThComponent>
+                <ThComponent Rowspan=2>@MainModel.CurrentYear  @ResLoc["year"]</ThComponent>
+                <ThComponent Rowspan=2>@MainModel.BaseYear  @ResLoc["year"]</ThComponent>
+                <ThComponent Rowspan=2>@MainModel.CurrentYear  @ResLoc["year"]</ThComponent>
+                <ThComponent Colspan=2>@ResLoc["accounts"]</ThComponent>
+                <ThComponent Colspan=2>@ResLoc["receivable"]</ThComponent>
+            </tr>
+            <tr>
+                <ThComponent>@MainModel.BaseYear  @ResLoc["year"]</ThComponent>
+                <ThComponent>@MainModel.CurrentYear  @ResLoc["year"]</ThComponent>
+                <ThComponent>@MainModel.BaseYear  @ResLoc["year"]</ThComponent>
+                <ThComponent>@MainModel.CurrentYear  @ResLoc["year"]</ThComponent>
+            </tr>
+        </thead>
+        <tbody>
+            <TrAssessmentOfReceivableAndPayableComponent Item=AssessmentOfReceivableAndPayable.WithBuyersOrSuppliers>
+                @ResLoc["WithBuyersOrSuppliers"]
+            </TrAssessmentOfReceivableAndPayableComponent>
+            <TrAssessmentOfReceivableAndPayableComponent Item=AssessmentOfReceivableAndPayable.WithLongTermLiabilities>
+                @ResLoc["WithLongTermLiabilities"]
+            </TrAssessmentOfReceivableAndPayableComponent>
+            <TrAssessmentOfReceivableAndPayableComponent Item=AssessmentOfReceivableAndPayable.ForBills>
+                @ResLoc["ForBills"]
+            </TrAssessmentOfReceivableAndPayableComponent>
+            <TrAssessmentOfReceivableAndPayableComponent Item=AssessmentOfReceivableAndPayable.FromInsurance>
+                @ResLoc["FromInsurance"]
+            </TrAssessmentOfReceivableAndPayableComponent>
+            <TrAssessmentOfReceivableAndPayableComponent Item=AssessmentOfReceivableAndPayable.WithBudgetAndExtraBudgetaryFunds>
+                @ResLoc["WithBudgetAndExtraBudgetaryFunds"]
+            </TrAssessmentOfReceivableAndPayableComponent>
+            <TrAssessmentOfReceivableAndPayableComponent Item=AssessmentOfReceivableAndPayable.WithAccruedIncome>
+                @ResLoc["WithAccruedIncome"]
+            </TrAssessmentOfReceivableAndPayableComponent>
+            <TrAssessmentOfReceivableAndPayableComponent Item=AssessmentOfReceivableAndPayable.WithPayroll>
+                @ResLoc["WithPayroll"]
+            </TrAssessmentOfReceivableAndPayableComponent>
+            <TrAssessmentOfReceivableAndPayableComponent Item=AssessmentOfReceivableAndPayable.WithAdvances>
+                @ResLoc["WithAdvances"]
+            </TrAssessmentOfReceivableAndPayableComponent>
+            <TrAssessmentOfReceivableAndPayableComponent Item=AssessmentOfReceivableAndPayable.WithParticipants>
+                @ResLoc["WithParticipants"]
+            </TrAssessmentOfReceivableAndPayableComponent>
+            <TrAssessmentOfReceivableAndPayableComponent Item=AssessmentOfReceivableAndPayable.WithInternalCashSettlements>
+                @ResLoc["WithInternalCashSettlements"]
+            </TrAssessmentOfReceivableAndPayableComponent>
+            <TrAssessmentOfReceivableAndPayableComponent Item=AssessmentOfReceivableAndPayable.WithOther>
+                @ResLoc["WithOther"]
+            </TrAssessmentOfReceivableAndPayableComponent>
+            <tr>
+                <ThComponent Align="ML" Colspan=2>@ResLoc["Total"]</ThComponent>
+                <ThComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(AssessmentOfReceivableAndPayable.Total.ReceivableBase)</ThComponent>
+                <ThComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(AssessmentOfReceivableAndPayable.Total.ReceivableCurrent)</ThComponent>
+                <ThComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(AssessmentOfReceivableAndPayable.Total.PayableBase)</ThComponent>
+                <ThComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(AssessmentOfReceivableAndPayable.Total.PayableCurrent)</ThComponent>
+                <ThComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(AssessmentOfReceivableAndPayable.Total.ExceedingReceivableBase)</ThComponent>
+                <ThComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(AssessmentOfReceivableAndPayable.Total.ExceedingReceivableCurrent)</ThComponent>
+                <ThComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(AssessmentOfReceivableAndPayable.Total.ExceedingPayableBase)</ThComponent>
+                <ThComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(AssessmentOfReceivableAndPayable.Total.ExceedingPayableCurrent)</ThComponent>
+            </tr>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+
+    protected override void OnInitialized()
+    {
+        string name = ResLoc["AssessmentOfReceivableAndPayable"];
+        int number = 11;
+
+        tableName = String.Format("{0} {1}. {2} {3} {4}-{5} {6}", ResLoc["Table"], number, name, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear, ResLoc["years"]);
+        base.OnInitialized();
+    }
+}

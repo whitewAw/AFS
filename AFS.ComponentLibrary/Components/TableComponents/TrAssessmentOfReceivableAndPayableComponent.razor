@@ -1,0 +1,19 @@
+﻿<tr>
+    <TdComponent Align="ML">@Item.Number</TdComponent>
+    <TdComponent Align="ML">@ChildContent</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.ReceivableBase)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.ReceivableCurrent)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.PayableBase)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.PayableCurrent)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.ExceedingReceivableBase)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.ExceedingReceivableCurrent)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.ExceedingPayableBase)</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Constraints.RoundStr(Item.ExceedingPayableCurrent)</TdComponent>
+</tr>
+
+@code {
+    [Parameter]
+    public AssessmentOfReceivableAndPayableRow Item { get; set; } = new();
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

@@ -6,6 +6,7 @@ using AFS.Core.Services.DataCalculations;
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Radzen;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -21,6 +22,7 @@ builder.Services.AddScoped<ICultureStorageHandler, LocalStorageCultureHandler>()
 builder.Services.AddScoped<IModelStorageHandler, LocalStorageModelHandler>();
 builder.Services.AddScoped<IModelExportImportHandler, BrowserExportImportHandler>();
 builder.Services.AddScoped<JsInterop>();
+builder.Services.AddScoped<DialogService>();
 
 builder.Services.AddTransient<CharacteristicsOfCapital>();
 builder.Services.AddTransient<IndicatorsOfTurnoverOfCurrentAssets>();
@@ -32,6 +34,7 @@ builder.Services.AddTransient<CalculationOfIndicatorsOfEfficiencyOfUseOfFixedAss
 builder.Services.AddTransient<FactorAnalysisOfFixedAssets>();
 builder.Services.AddTransient<IndicatorsOfEfficiencyOfUseOfIntangibleAssets>();
 builder.Services.AddTransient<SourcesOfCapitalFormation>();
+builder.Services.AddTransient<AssessmentOfReceivableAndPayable>();
 
 builder.Logging.SetMinimumLevel(LogLevel.Warning);
 

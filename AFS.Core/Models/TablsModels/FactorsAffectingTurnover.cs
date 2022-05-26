@@ -2,7 +2,7 @@
 {
     public class FactorsAffectingTurnover
     {
-        public string Number { get; set; }
+        public string? Number { get; set; }
         public double BaseYear { get; set; }
         public double CurrentYear { get; set; }
         public double AdjustedIndicator { get; set; }

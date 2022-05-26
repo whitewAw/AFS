@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="accounts" xml:space="preserve">
+    <value>дебіторської</value>
+  </data>
   <data name="AccountsPayable" xml:space="preserve">
     <value>Кредиторська заборгованість</value>
   </data>
@@ -161,6 +164,9 @@
   </data>
   <data name="Article" xml:space="preserve">
     <value>Стаття</value>
+  </data>
+  <data name="AssessmentOfReceivableAndPayable" xml:space="preserve">
+    <value>Порівняльна оцінка дебіторської та кредиторської заборгованості</value>
   </data>
   <data name="AssessmentOfFinancialStatements" xml:space="preserve">
     <value>Оцінка фінансової звітності</value>
@@ -320,6 +326,9 @@
   </data>
   <data name="EraseData" xml:space="preserve">
     <value>Стерти дані</value>
+  </data>
+  <data name="ExcessOfDebt" xml:space="preserve">
+    <value>Перевищення заборгованості</value>
   </data>
   <data name="ExpensesIncomeFromIncomeTax" xml:space="preserve">
     <value>Витрати (дохід) з податку на прибуток</value>
@@ -642,6 +651,9 @@
   <data name="RaisedCapital" xml:space="preserve">
     <value>Залучений капітал</value>
   </data>
+  <data name="receivable" xml:space="preserve">
+    <value>кредиторської</value>
+  </data>
   <data name="ReceivablesForProducts" xml:space="preserve">
     <value>Дебіторська заборгованість за продукцію, товари, роботи, послуги</value>
   </data>
@@ -698,6 +710,9 @@
   </data>
   <data name="SellingExpenses" xml:space="preserve">
     <value>Витрати на збут</value>
+  </data>
+  <data name="Settlements" xml:space="preserve">
+    <value>Розрахунки</value>
   </data>
   <data name="settlementsWithBudget" xml:space="preserve">
     <value>розрахунками з бюджетом</value>
@@ -815,5 +830,53 @@
   </data>
   <data name="years" xml:space="preserve">
     <value>роки</value>
+  </data>
+  <data name="ForBills" xml:space="preserve">
+    <value>За векселями</value>
+  </data>
+  <data name="FromInsurance" xml:space="preserve">
+    <value>Зі страхування</value>
+  </data>
+  <data name="WithAccruedIncome" xml:space="preserve">
+    <value>З нарахованих доходів</value>
+  </data>
+  <data name="WithAdvances" xml:space="preserve">
+    <value>По авансах</value>
+  </data>
+  <data name="WithBudgetAndExtraBudgetaryFunds" xml:space="preserve">
+    <value>З бюджетом та позабюджетними фондами</value>
+  </data>
+  <data name="WithBuyersOrSuppliers" xml:space="preserve">
+    <value>З покупцями або постачальниками</value>
+  </data>
+  <data name="WithInternalCashSettlements" xml:space="preserve">
+    <value>Із внутрішніх розрахунків</value>
+  </data>
+  <data name="WithLongTermLiabilities" xml:space="preserve">
+    <value>З довгостроковими зобов'язаннями</value>
+  </data>
+  <data name="WithOther" xml:space="preserve">
+    <value>З іншими</value>
+  </data>
+  <data name="WithParticipants" xml:space="preserve">
+    <value>З учасниками</value>
+  </data>
+  <data name="WithPayroll" xml:space="preserve">
+    <value>З оплати праці</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Ви впевнені?</value>
+  </data>
+  <data name="LoadingPleaseWait" xml:space="preserve">
+    <value>Завантажується, зачекайте...</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ні</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>Стерти дані</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Так</value>
   </data>
 </root>

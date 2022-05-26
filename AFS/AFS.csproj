@@ -23,4 +23,8 @@
 	  <ProjectReference Include="..\AFS.Core\AFS.Core.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="wwwroot\images\" />
+	</ItemGroup>
+
 </Project>

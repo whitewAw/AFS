@@ -3,6 +3,7 @@
 @using System.Text
 @inject IModelExportImportHandler ExportImportHandler
 @inject JsInterop JsInterop
+@inject DialogService DialogService
 
 <div class="row mb-4 align-middle text-right">
     <div class="col">
@@ -38,9 +39,15 @@
         if (file.File.Size < Constraints.MaxFileSize)
         {
             isUpload = true;
-            using var stream = file.File.OpenReadStream();
-            AFSModel? model = await ExportImportHandler.ImportAsync(stream);
-            ExportImportHandler.InitializeModel(model);
+            InvokeAsync(async () =>
+                {
+                    await Task.Delay(50);
+                    using var stream = file.File.OpenReadStream();
+                    AFSModel? model = await ExportImportHandler.ImportAsync(stream);
+                    ExportImportHandler.InitializeModel(model);
+                    DialogService.Close();
+                });
+            await UploadingDialog();
             isUpload = false;
         }
     }
@@ -48,9 +55,24 @@
     async Task OnEraseClick()
     {
         isErase = true;
-        await Task.Delay(1);
-        AFSModel model = new();
-        ExportImportHandler.InitializeModel(model);
+        var res = await DialogService.Confirm(ResLoc["AreYouSure"], ResLoc["EraseData"], new ConfirmOptions() { OkButtonText = ResLoc["Yes"], CancelButtonText = ResLoc["No"] });
+        if (res == true)
+        {
+            ExportImportHandler.InitializeModel(new());
+        }
         isErase = false;
+    }
+
+    async Task UploadingDialog()
+    {
+        await DialogService.OpenAsync("", ds =>
+            @<div>
+                <div class="row">
+                    <div class="col text-center p-5">
+                        <RadzenImage Path="images/community.svg" Style="display: block; width: 200px; margin-bottom: 40px;" />
+                        <b>@ResLoc["LoadingPleaseWait"]</b>
+                    </div>
+                </div>
+            </div>, new DialogOptions() { ShowTitle = false, Style = "min-height:auto;min-width:auto;width:auto", CloseDialogOnEsc = false });
     }
 }
