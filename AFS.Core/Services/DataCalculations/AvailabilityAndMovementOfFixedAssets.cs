@@ -5,8 +5,8 @@ namespace AFS.Core.Services.DataCalculations
 {
     public class AvailabilityAndMovementOfFixedAssets
     {
-        public FixedAssets Base { get; set; } = new();
-        public FixedAssets Current { get; set; } = new();
+        public FixedAssets Base { get; private set; } = new();
+        public FixedAssets Current { get; private set; } = new();
         public AvailabilityAndMovementOfFixedAssets(AFSModel model) => Init(model);
 
         private void Init(AFSModel model)

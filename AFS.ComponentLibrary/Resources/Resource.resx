@@ -966,4 +966,25 @@
   <data name="TurnoverOfTotalCapital" xml:space="preserve">
     <value>Оборотність всього капіталу</value>
   </data>
+  <data name="AbsoluteLiquidityRatio" xml:space="preserve">
+    <value>Коефіцієнт абсолютної ліквідності</value>
+  </data>
+  <data name="CurrentLiquidityFactor" xml:space="preserve">
+    <value>Коефіцієнт поточної ліквідності</value>
+  </data>
+  <data name="IntermediateCoverageRatio" xml:space="preserve">
+    <value>Проміжний коефіцієнт покриття</value>
+  </data>
+  <data name="OverallLiquidityRatio" xml:space="preserve">
+    <value>Загальний показник ліквідності</value>
+  </data>
+  <data name="SolvencyLossRatio" xml:space="preserve">
+    <value>Коефіцієнт втрати платоспроможності</value>
+  </data>
+  <data name="SolvencyRatios" xml:space="preserve">
+    <value>Показники платоспроможності</value>
+  </data>
+  <data name="SolvencyRecoveryRatio" xml:space="preserve">
+    <value>Коефіцієнт відновлення платоспроможності</value>
+  </data>
 </root>

@@ -5,21 +5,20 @@ namespace AFS.Core.Services.DataCalculations
 {
     public class AssessmentOfReceivableAndPayable
     {
-        public AssessmentOfReceivableAndPayableRow WithBuyersOrSuppliers { get; set; } = new();
-        public AssessmentOfReceivableAndPayableRow WithLongTermLiabilities { get; set; } = new();
-        public AssessmentOfReceivableAndPayableRow ForBills { get; set; } = new();
-        public AssessmentOfReceivableAndPayableRow FromInsurance { get; set; } = new();
-        public AssessmentOfReceivableAndPayableRow WithBudgetAndExtraBudgetaryFunds { get; set; } = new();
-        public AssessmentOfReceivableAndPayableRow WithAccruedIncome { get; set; } = new();
-        public AssessmentOfReceivableAndPayableRow WithPayroll { get; set; } = new();
-        public AssessmentOfReceivableAndPayableRow WithAdvances { get; set; } = new();
-        public AssessmentOfReceivableAndPayableRow WithParticipants { get; set; } = new();
-        public AssessmentOfReceivableAndPayableRow WithInternalCashSettlements { get; set; } = new();
-        public AssessmentOfReceivableAndPayableRow WithOther { get; set; } = new();
-        public AssessmentOfReceivableAndPayableRow Total { get; set; } = new();
+        public AssessmentOfReceivableAndPayableRow WithBuyersOrSuppliers { get; private set; } = new();
+        public AssessmentOfReceivableAndPayableRow WithLongTermLiabilities { get; private set; } = new();
+        public AssessmentOfReceivableAndPayableRow ForBills { get; private set; } = new();
+        public AssessmentOfReceivableAndPayableRow FromInsurance { get; private set; } = new();
+        public AssessmentOfReceivableAndPayableRow WithBudgetAndExtraBudgetaryFunds { get; private set; } = new();
+        public AssessmentOfReceivableAndPayableRow WithAccruedIncome { get; private set; } = new();
+        public AssessmentOfReceivableAndPayableRow WithPayroll { get; private set; } = new();
+        public AssessmentOfReceivableAndPayableRow WithAdvances { get; private set; } = new();
+        public AssessmentOfReceivableAndPayableRow WithParticipants { get; private set; } = new();
+        public AssessmentOfReceivableAndPayableRow WithInternalCashSettlements { get; private set; } = new();
+        public AssessmentOfReceivableAndPayableRow WithOther { get; private set; } = new();
+        public AssessmentOfReceivableAndPayableRow Total { get; private set; } = new();
 
         public AssessmentOfReceivableAndPayable(AFSModel model) => Init(model);
-
         private void Init(AFSModel model)
         {
             WithBuyersOrSuppliersInit(model);

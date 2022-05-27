@@ -1,0 +1,61 @@
+﻿@inject SolvencyRatios SolvencyRatios
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <thead>
+            <tr>
+                <ThComponent Rowspan=2>@ResLoc["NumberInOrder"]</ThComponent>
+                <ThComponent Rowspan=2>@ResLoc["Indicators"]</ThComponent>
+                <ThComponent Colspan=2>@MainModel.BaseYear  @ResLoc["year"]</ThComponent>
+                <ThComponent Colspan=2>@MainModel.CurrentYear  @ResLoc["year"]</ThComponent>
+                <ThComponent Colspan=2>@ResLoc["Deviation_"] (+,-)</ThComponent>
+            </tr>
+            <tr>
+                <ThComponent>@ResLoc["atBeginOfYear"]</ThComponent>
+                <ThComponent>@ResLoc["atEndOfYear"]</ThComponent>
+                <ThComponent>@ResLoc["atBeginOfYear"]</ThComponent>
+                <ThComponent>@ResLoc["atEndOfYear"]</ThComponent>
+                <ThComponent>@MainModel.BaseYear  @ResLoc["year"]</ThComponent>
+                <ThComponent>@MainModel.CurrentYear  @ResLoc["year"]</ThComponent>
+            </tr>
+        </thead>
+        <tbody>
+            <TrSolvencyRatiosComponent Item=SolvencyRatios.OverallLiquidityRatio>@ResLoc["OverallLiquidityRatio"]</TrSolvencyRatiosComponent>
+            <TrSolvencyRatiosComponent Item=SolvencyRatios.AbsoluteLiquidityRatio>@ResLoc["AbsoluteLiquidityRatio"]</TrSolvencyRatiosComponent>
+            <TrSolvencyRatiosComponent Item=SolvencyRatios.IntermediateCoverageRatio>@ResLoc["IntermediateCoverageRatio"]</TrSolvencyRatiosComponent>
+            <TrSolvencyRatiosComponent Item=SolvencyRatios.CurrentLiquidityFactor>@ResLoc["CurrentLiquidityFactor"]</TrSolvencyRatiosComponent>
+            <tr>
+                <TdComponent Align="ML">@SolvencyRatios.SolvencyRecoveryRatio.Number</TdComponent>
+                <TdComponent Align="ML">@ResLoc["SolvencyRecoveryRatio"]</TdComponent>
+                <TdComponent Spacing="pr-2" Colspan=2>@Constraints.RoundStr(SolvencyRatios.SolvencyRecoveryRatio.BaseEnd, 3)</TdComponent>
+                <TdComponent Spacing="pr-2" Colspan=2>@Constraints.RoundStr(SolvencyRatios.SolvencyRecoveryRatio.CurrentEnd,3)</TdComponent>
+                <TdComponent Spacing="pr-2" Colspan=2>@Constraints.RoundStr(GetDifference(SolvencyRatios.SolvencyRecoveryRatio),3)</TdComponent>
+            </tr>
+            <tr>
+                <TdComponent Align="ML">@SolvencyRatios.SolvencyLossRatio.Number</TdComponent>
+                <TdComponent Align="ML">@ResLoc["SolvencyLossRatio"]</TdComponent>
+                <TdComponent Spacing="pr-2" Colspan=2>@Constraints.RoundStr(SolvencyRatios.SolvencyLossRatio.BaseEnd, 3)</TdComponent>
+                <TdComponent Spacing="pr-2" Colspan=2>@Constraints.RoundStr(SolvencyRatios.SolvencyLossRatio.CurrentEnd,3)</TdComponent>
+                <TdComponent Spacing="pr-2" Colspan=2>@Constraints.RoundStr(GetDifference(SolvencyRatios.SolvencyLossRatio),3)</TdComponent>
+            </tr>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+
+    protected override void OnInitialized()
+    {
+        string name = ResLoc["SolvencyRatios"];
+        int number = 14;
+
+        tableName = String.Format("{0} {1}. {2} {3} {4}-{5} {6}", ResLoc["Table"], number, name, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear, ResLoc["years"]);
+        base.OnInitialized();
+    }
+    private double GetDifference(SolvencyRatiosRow item)
+    {
+        return item.CurrentEnd - item.BaseEnd;
+    }
+}

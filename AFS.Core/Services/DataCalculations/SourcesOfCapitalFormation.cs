@@ -5,15 +5,15 @@ namespace AFS.Core.Services.DataCalculations
 {
     public class SourcesOfCapitalFormation
     {
-        public TotalSourcesOfCapital TotalSourcesOfCapital { get; set; } = new();
-        public Equity Equity { get; set; } = new();
-        public OwnCurrentAssets OwnCurrentAssets { get; set; } = new();
-        public RaisedCapital RaisedCapital { get; set; } = new();
+        public TotalSourcesOfCapital TotalSourcesOfCapital { get; private set; } = new();
+        public Equity Equity { get; private set; } = new();
+        public OwnCurrentAssets OwnCurrentAssets { get; private set; } = new();
+        public RaisedCapital RaisedCapital { get; private set; } = new();
         public LongTermLiabilities LongTermLiabilities { get; private set; } = new();
         public ShortTermLoans ShortTermLoans { get; private set; } = new();
         public AccountsPayable AccountsPayable { get; private set; } = new();
         public OtherCurrentLiabilities OtherCurrentLiabilities { get; private set; } = new();
-        public LiabilitiesRelatedNonCurrentAssetsHeldForSale LiabilitiesRelatedNonCurrentAssetsHeldForSale { get; set; } = new();
+        public LiabilitiesRelatedNonCurrentAssetsHeldForSale LiabilitiesRelatedNonCurrentAssetsHeldForSale { get; private set; } = new();
         public FutureIncome FutureIncome { get; private set; } = new();
 
         public SourcesOfCapitalFormation(AFSModel model) => Init(model);
@@ -31,7 +31,6 @@ namespace AFS.Core.Services.DataCalculations
             FutureIncome.Init(model);
         }
     }
-
     public class TotalSourcesOfCapital
     {
         public CharacteristicsOfCapitalCalculationRow Base { get; private set; } = new();

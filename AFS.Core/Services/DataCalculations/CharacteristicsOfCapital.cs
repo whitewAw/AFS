@@ -5,15 +5,15 @@ namespace AFS.Core.Services.DataCalculations
 {
     public class CharacteristicsOfCapital
     {
-        public TotalAssets TotalAssets { get; set; } = new();
-        public NonCurrentImmobilizedFunds NonCurrentImmobilizedFunds { get; set; } = new();
-        public CurrentMobileAssets CurrentMobileAssets { get; set; } = new();
-        public TangibleCurrentAssets TangibleCurrentAssets { get; set; } = new();
-        public AccountsReceivable AccountsReceivable { get; set; } = new();
-        public CashCurrentFinancialInvestments CashCurrentFinancialInvestments { get; set; } = new();
-        public OtherCurrentAssets OtherCurrentAssets { get; set; } = new();
-        public NonCurrentAssetsHeldForSale NonCurrentAssetsHeldForSale { get; set; } = new();
-        public FutureExpenses FutureExpenses { get; set; } = new();
+        public TotalAssets TotalAssets { get; private set; } = new();
+        public NonCurrentImmobilizedFunds NonCurrentImmobilizedFunds { get; private set; } = new();
+        public CurrentMobileAssets CurrentMobileAssets { get; private set; } = new();
+        public TangibleCurrentAssets TangibleCurrentAssets { get; private set; } = new();
+        public AccountsReceivable AccountsReceivable { get; private set; } = new();
+        public CashCurrentFinancialInvestments CashCurrentFinancialInvestments { get; private set; } = new();
+        public OtherCurrentAssets OtherCurrentAssets { get; private set; } = new();
+        public NonCurrentAssetsHeldForSale NonCurrentAssetsHeldForSale { get; private set; } = new();
+        public FutureExpenses FutureExpenses { get; private set; } = new();
 
         public CharacteristicsOfCapital(AFSModel model) => Init(model);
         private void Init(AFSModel model)

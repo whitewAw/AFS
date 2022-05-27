@@ -35,15 +35,15 @@ namespace AFS.Core.Services.DataCalculations
         {
             A1P1Bace.ABegin = model.F1Base.F1160.Begin + model.F1Base.F1165.Begin;
             A1P1Bace.AEnd = model.F1Base.F1160.End + model.F1Base.F1165.End;
-            A1P1Bace.PBegin = model.F1Base.GetF1695Begin() + model.F1Base.F1700.Begin - model.F1Base.F1600.Begin - model.F1Base.F1610.Begin- model.F1Base.F1660.Begin;
-            A1P1Bace.PEnd = model.F1Base.GetF1695End() + model.F1Base.F1700.End - model.F1Base.F1600.End - model.F1Base.F1610.End - model.F1Base.F1660.End; 
+            A1P1Bace.PBegin = model.F1Base.GetF1695Begin() + model.F1Base.F1700.Begin - model.F1Base.F1600.Begin - model.F1Base.F1610.Begin - model.F1Base.F1660.Begin;
+            A1P1Bace.PEnd = model.F1Base.GetF1695End() + model.F1Base.F1700.End - model.F1Base.F1600.End - model.F1Base.F1610.End - model.F1Base.F1660.End;
         }
         private void A2P2BaceInit(AFSModel model)
         {
             A2P2Bace.ABegin = model.F1Base.GetAccountsReceivable(true) + model.F1Base.F1190.Begin;
             A2P2Bace.AEnd = model.F1Base.GetAccountsReceivable(false) + model.F1Base.F1190.End;
             A2P2Bace.PBegin = model.F1Base.F1600.Begin + model.F1Base.F1610.Begin + model.F1Base.F1660.Begin;
-            A2P2Bace.PEnd =  model.F1Base.F1600.End + model.F1Base.F1610.End + model.F1Base.F1660.End;
+            A2P2Bace.PEnd = model.F1Base.F1600.End + model.F1Base.F1610.End + model.F1Base.F1660.End;
         }
         private void A3P3BaceInit(AFSModel model)
         {

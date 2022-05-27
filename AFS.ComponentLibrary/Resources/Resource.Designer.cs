@@ -61,6 +61,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт абсолютної ліквідності.
+        /// </summary>
+        internal static string AbsoluteLiquidityRatio {
+            get {
+                return ResourceManager.GetString("AbsoluteLiquidityRatio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to дебіторської.
         /// </summary>
         internal static string accounts {
@@ -606,6 +615,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string CurrentLiabilitiesAndProvisions {
             get {
                 return ResourceManager.GetString("CurrentLiabilitiesAndProvisions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт поточної ліквідності.
+        /// </summary>
+        internal static string CurrentLiquidityFactor {
+            get {
+                return ResourceManager.GetString("CurrentLiquidityFactor", resourceCulture);
             }
         }
         
@@ -1240,6 +1258,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Проміжний коефіцієнт покриття.
+        /// </summary>
+        internal static string IntermediateCoverageRatio {
+            get {
+                return ResourceManager.GetString("IntermediateCoverageRatio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Інвестиційна нерухомість.
         /// </summary>
         internal static string InvestmentProperty {
@@ -1726,6 +1753,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Загальний показник ліквідності.
+        /// </summary>
+        internal static string OverallLiquidityRatio {
+            get {
+                return ResourceManager.GetString("OverallLiquidityRatio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Власні оборотні засоби.
         /// </summary>
         internal static string OwnCurrentAssets {
@@ -2172,6 +2208,33 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string SlowSellingAssets {
             get {
                 return ResourceManager.GetString("SlowSellingAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт втрати платоспроможності.
+        /// </summary>
+        internal static string SolvencyLossRatio {
+            get {
+                return ResourceManager.GetString("SolvencyLossRatio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Показники платоспроможності.
+        /// </summary>
+        internal static string SolvencyRatios {
+            get {
+                return ResourceManager.GetString("SolvencyRatios", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коефіцієнт відновлення платоспроможності.
+        /// </summary>
+        internal static string SolvencyRecoveryRatio {
+            get {
+                return ResourceManager.GetString("SolvencyRecoveryRatio", resourceCulture);
             }
         }
         
