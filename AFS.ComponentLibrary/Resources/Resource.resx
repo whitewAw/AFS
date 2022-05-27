@@ -912,11 +912,53 @@
   <data name="TurnoverOfInventories" xml:space="preserve">
     <value>Оборотність виробничих запасів</value>
   </data>
+  <data name="BalanceIsLiquid" xml:space="preserve">
+    <value>Баланс ліквідний</value>
+  </data>
+  <data name="BalanceIsNotLiquid" xml:space="preserve">
+    <value>Баланс неліквідний</value>
+  </data>
   <data name="CoefficientOfStabilityOfEconomicGrowth" xml:space="preserve">
     <value>Коефіцієнт стійкості економічного росту</value>
   </data>
+  <data name="EstimationOfBalanceLiquidityAtBegin" xml:space="preserve">
+    <value>Оцінка ліквідності балансу {0} на початок {1} року</value>
+  </data>
+  <data name="EstimationOfBalanceLiquidityAtEnd" xml:space="preserve">
+    <value>Оцінка ліквідності балансу {0} на кінець {1} року</value>
+  </data>
+  <data name="HardToSellAssets" xml:space="preserve">
+    <value>Важкореалізуємі активи (А4)</value>
+  </data>
+  <data name="LiquidityIndicatorsOfBalance" xml:space="preserve">
+    <value>Показники ліквідності балансу</value>
+  </data>
+  <data name="LongTermLiabilitiesP" xml:space="preserve">
+    <value>Довготермінові пасиви (П3)</value>
+  </data>
+  <data name="MostLiquidAssets" xml:space="preserve">
+    <value>Найбільш ліквідні активи (А1)</value>
+  </data>
+  <data name="MostUrgentCommitments" xml:space="preserve">
+    <value>Найбільш термінові зобов'язання (П1)</value>
+  </data>
+  <data name="PaymentSurplusOrShortage" xml:space="preserve">
+    <value>Платіжний лишок (+) чи нестача (-)</value>
+  </data>
+  <data name="PermanentLiabilities" xml:space="preserve">
+    <value>Постійні пасиви (П4)</value>
+  </data>
+  <data name="QuickSellingAssets" xml:space="preserve">
+    <value>Швидкореалізуємі активи (А2)</value>
+  </data>
   <data name="ReturnOnEquityPeriod" xml:space="preserve">
     <value>Період окупності власного капіталу</value>
+  </data>
+  <data name="ShortTermLiabilities" xml:space="preserve">
+    <value>Короткотермінові пасиви (П2)</value>
+  </data>
+  <data name="SlowSellingAssets" xml:space="preserve">
+    <value>Повільнореалізуємі активи (А3)</value>
   </data>
   <data name="TurnoverOfEquity" xml:space="preserve">
     <value>Оборотність власного капіталу</value>

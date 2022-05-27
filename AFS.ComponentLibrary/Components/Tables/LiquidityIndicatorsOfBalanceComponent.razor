@@ -1,0 +1,123 @@
+﻿@inject LiquidityIndicatorsOfBalance LiquidityIndicatorsOfBalance
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <h5 class="text-end">(@ResLoc["thousandUAH"])</h5>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <thead>
+            <tr>
+                <ThComponent Rowspan=2>@ResLoc["Asset"]</ThComponent>
+                <ThComponent Rowspan=2>@ResLoc["AtBeginningReportingPeriod"]</ThComponent>
+                <ThComponent Rowspan=2>@ResLoc["AtEndingReportingPeriod"]</ThComponent>
+                <ThComponent Rowspan=2>@ResLoc["Liabilities"]</ThComponent>
+                <ThComponent Rowspan=2>@ResLoc["AtBeginningReportingPeriod"]</ThComponent>
+                <ThComponent Rowspan=2>@ResLoc["AtEndingReportingPeriod"]</ThComponent>
+                <ThComponent Colspan=2>@ResLoc["PaymentSurplusOrShortage"]</ThComponent>
+            </tr>
+            <tr>
+                <ThComponent>@ResLoc["AtBeginningReportingPeriod"]</ThComponent>
+                <ThComponent>@ResLoc["AtEndingReportingPeriod"]</ThComponent>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <ThComponent Colspan=8>@MainModel.BaseYear&nbsp;@ResLoc["year"]</ThComponent>
+            </tr>
+            <TrLiquidityIndicatorsOfBalanceComponent AName=@ResLoc["MostLiquidAssets"] PName=@ResLoc["MostUrgentCommitments"]
+                                                     Item=LiquidityIndicatorsOfBalance.A1P1Bace />
+            <TrLiquidityIndicatorsOfBalanceComponent AName=@ResLoc["QuickSellingAssets"] PName=@ResLoc["ShortTermLiabilities"]
+                                                     Item=LiquidityIndicatorsOfBalance.A2P2Bace />
+            <TrLiquidityIndicatorsOfBalanceComponent AName=@ResLoc["SlowSellingAssets"] PName=@ResLoc["LongTermLiabilitiesP"]
+                                                     Item=LiquidityIndicatorsOfBalance.A3P3Bace />
+            <TrLiquidityIndicatorsOfBalanceComponent AName=@ResLoc["HardToSellAssets"] PName=@ResLoc["PermanentLiabilities"]
+                                                     Item=LiquidityIndicatorsOfBalance.A4P4Bace />
+            <TrLiquidityIndicatorsOfBalanceComponent AName=@ResLoc["Balance"] PName=@ResLoc["Balance"]
+                                                     Item=LiquidityIndicatorsOfBalance.TotalBace />
+            <tr>
+                <ThComponent Colspan=8>@MainModel.CurrentYear&nbsp;@ResLoc["year"]</ThComponent>
+            </tr>
+            <TrLiquidityIndicatorsOfBalanceComponent AName=@ResLoc["MostLiquidAssets"] PName=@ResLoc["MostUrgentCommitments"]
+                                                     Item=LiquidityIndicatorsOfBalance.A1P1Current />
+            <TrLiquidityIndicatorsOfBalanceComponent AName=@ResLoc["QuickSellingAssets"] PName=@ResLoc["ShortTermLiabilities"]
+                                                     Item=LiquidityIndicatorsOfBalance.A2P2Current />
+            <TrLiquidityIndicatorsOfBalanceComponent AName=@ResLoc["SlowSellingAssets"] PName=@ResLoc["LongTermLiabilitiesP"]
+                                                     Item=LiquidityIndicatorsOfBalance.A3P3Current />
+            <TrLiquidityIndicatorsOfBalanceComponent AName=@ResLoc["HardToSellAssets"] PName=@ResLoc["PermanentLiabilities"]
+                                                     Item=LiquidityIndicatorsOfBalance.A4P4Current />
+            <TrLiquidityIndicatorsOfBalanceComponent AName=@ResLoc["Balance"] PName=@ResLoc["Balance"]
+                                                     Item=LiquidityIndicatorsOfBalance.TotalCurrent />
+        </tbody>
+    </table>
+
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <tbody>
+            <tr>
+                <TdComponent>@EstimationOfBalanceLiquidityAtBeginBase</TdComponent>
+            </tr>
+            <tr>
+                <ThComponent>@GetLiquidity(LiquidityIndicatorsOfBalance.A1P1Bace, LiquidityIndicatorsOfBalance.A2P2Bace, LiquidityIndicatorsOfBalance.A3P3Bace, LiquidityIndicatorsOfBalance.A4P4Bace, true)</ThComponent>
+            </tr>
+            <tr>
+                <TdComponent>@EstimationOfBalanceLiquidityAtEndBase</TdComponent>
+            </tr>
+            <tr>
+                <ThComponent>@GetLiquidity(LiquidityIndicatorsOfBalance.A1P1Bace, LiquidityIndicatorsOfBalance.A2P2Bace, LiquidityIndicatorsOfBalance.A3P3Bace, LiquidityIndicatorsOfBalance.A4P4Bace, false)</ThComponent>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <tbody>
+            <tr>
+                <TdComponent>@EstimationOfBalanceLiquidityAtBeginCurrent</TdComponent>
+            </tr>
+            <tr>
+                <ThComponent>@GetLiquidity(LiquidityIndicatorsOfBalance.A1P1Current, LiquidityIndicatorsOfBalance.A2P2Current, LiquidityIndicatorsOfBalance.A3P3Current, LiquidityIndicatorsOfBalance.A4P4Current, true)</ThComponent>
+            </tr>
+            <tr>
+                <TdComponent>@EstimationOfBalanceLiquidityAtEndCurrent</TdComponent>
+            </tr>
+            <tr>
+                <ThComponent>@GetLiquidity(LiquidityIndicatorsOfBalance.A1P1Current, LiquidityIndicatorsOfBalance.A2P2Current, LiquidityIndicatorsOfBalance.A3P3Current, LiquidityIndicatorsOfBalance.A4P4Current, false)</ThComponent>
+            </tr>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+    private string? EstimationOfBalanceLiquidityAtBeginBase;
+    private string? EstimationOfBalanceLiquidityAtEndBase;
+    private string? EstimationOfBalanceLiquidityAtBeginCurrent;
+    private string? EstimationOfBalanceLiquidityAtEndCurrent;
+
+    protected override void OnInitialized()
+    {
+        string name = ResLoc["LiquidityIndicatorsOfBalance"];
+        int number = 13;
+
+        tableName = String.Format("{0} {1}. {2} {3} {4}-{5} {6}", ResLoc["Table"], number, name, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear, ResLoc["years"]);
+
+        EstimationOfBalanceLiquidityAtBeginBase = String.Format(ResLoc["EstimationOfBalanceLiquidityAtBegin"], MainModel.CompanyName, MainModel.BaseYear);
+        EstimationOfBalanceLiquidityAtEndBase = String.Format(ResLoc["EstimationOfBalanceLiquidityAtEnd"], MainModel.CompanyName, MainModel.BaseYear);
+
+        EstimationOfBalanceLiquidityAtBeginCurrent = String.Format(ResLoc["EstimationOfBalanceLiquidityAtBegin"], MainModel.CompanyName, MainModel.CurrentYear);
+        EstimationOfBalanceLiquidityAtEndCurrent = String.Format(ResLoc["EstimationOfBalanceLiquidityAtEnd"], MainModel.CompanyName, MainModel.CurrentYear);
+        base.OnInitialized();
+    }
+    private string GetLiquidity(LiquidityIndicatorsOfBalanceRow A1P1, LiquidityIndicatorsOfBalanceRow A2P2, LiquidityIndicatorsOfBalanceRow A3P3, LiquidityIndicatorsOfBalanceRow A4P4, bool beginOfYear)
+    {
+        if (beginOfYear == true)
+        {
+            if (A1P1.ABegin >= A1P1.PBegin && A2P2.ABegin >= A2P2.PBegin && A3P3.ABegin >= A3P3.PBegin && A4P4.ABegin <= A4P4.PBegin)
+            {
+                return ResLoc["BalanceIsLiquid"];
+            }
+            return ResLoc["BalanceIsNotLiquid"];
+        }
+        if (A1P1.AEnd >= A1P1.PEnd && A2P2.AEnd >= A2P2.PEnd && A3P3.AEnd >= A3P3.PEnd && A4P4.AEnd <= A4P4.PEnd)
+        {
+            return ResLoc["BalanceIsLiquid"];
+        }
+        return ResLoc["BalanceIsNotLiquid"];
+    }
+}

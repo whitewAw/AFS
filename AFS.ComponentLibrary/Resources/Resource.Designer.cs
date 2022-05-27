@@ -376,6 +376,24 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Баланс ліквідний.
+        /// </summary>
+        internal static string BalanceIsLiquid {
+            get {
+                return ResourceManager.GetString("BalanceIsLiquid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Баланс неліквідний.
+        /// </summary>
+        internal static string BalanceIsNotLiquid {
+            get {
+                return ResourceManager.GetString("BalanceIsNotLiquid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Базовий рік.
         /// </summary>
         internal static string BaseYear {
@@ -736,6 +754,24 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Оцінка ліквідності балансу {0} на початок {1} року.
+        /// </summary>
+        internal static string EstimationOfBalanceLiquidityAtBegin {
+            get {
+                return ResourceManager.GetString("EstimationOfBalanceLiquidityAtBegin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оцінка ліквідності балансу {0} на кінець {1} року.
+        /// </summary>
+        internal static string EstimationOfBalanceLiquidityAtEnd {
+            get {
+                return ResourceManager.GetString("EstimationOfBalanceLiquidityAtEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Перевищення заборгованості.
         /// </summary>
         internal static string ExcessOfDebt {
@@ -975,6 +1011,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string growthRate {
             get {
                 return ResourceManager.GetString("growthRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Важкореалізуємі активи (А4).
+        /// </summary>
+        internal static string HardToSellAssets {
+            get {
+                return ResourceManager.GetString("HardToSellAssets", resourceCulture);
             }
         }
         
@@ -1249,6 +1294,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Показники ліквідності балансу.
+        /// </summary>
+        internal static string LiquidityIndicatorsOfBalance {
+            get {
+                return ResourceManager.GetString("LiquidityIndicatorsOfBalance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Завантажується, зачекайте....
         /// </summary>
         internal static string LoadingPleaseWait {
@@ -1308,6 +1362,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string LongTermLiabilitiesAndCollateral {
             get {
                 return ResourceManager.GetString("LongTermLiabilitiesAndCollateral", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Довготермінові пасиви (П3).
+        /// </summary>
+        internal static string LongTermLiabilitiesP {
+            get {
+                return ResourceManager.GetString("LongTermLiabilitiesP", resourceCulture);
             }
         }
         
@@ -1380,6 +1443,24 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string moneyTurnover {
             get {
                 return ResourceManager.GetString("moneyTurnover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Найбільш ліквідні активи (А1).
+        /// </summary>
+        internal static string MostLiquidAssets {
+            get {
+                return ResourceManager.GetString("MostLiquidAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Найбільш термінові зобов&apos;язання (П1).
+        /// </summary>
+        internal static string MostUrgentCommitments {
+            get {
+                return ResourceManager.GetString("MostUrgentCommitments", resourceCulture);
             }
         }
         
@@ -1654,6 +1735,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Платіжний лишок (+) чи нестача (-).
+        /// </summary>
+        internal static string PaymentSurplusOrShortage {
+            get {
+                return ResourceManager.GetString("PaymentSurplusOrShortage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to чол..
         /// </summary>
         internal static string people {
@@ -1668,6 +1758,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string Period {
             get {
                 return ResourceManager.GetString("Period", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Постійні пасиви (П4).
+        /// </summary>
+        internal static string PermanentLiabilities {
+            get {
+                return ResourceManager.GetString("PermanentLiabilities", resourceCulture);
             }
         }
         
@@ -1776,6 +1875,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string PromissoryNotesReceived {
             get {
                 return ResourceManager.GetString("PromissoryNotesReceived", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Швидкореалізуємі активи (А2).
+        /// </summary>
+        internal static string QuickSellingAssets {
+            get {
+                return ResourceManager.GetString("QuickSellingAssets", resourceCulture);
             }
         }
         
@@ -2041,11 +2149,29 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Короткотермінові пасиви (П2).
+        /// </summary>
+        internal static string ShortTermLiabilities {
+            get {
+                return ResourceManager.GetString("ShortTermLiabilities", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Короткострокові кредити.
         /// </summary>
         internal static string ShortTermLoans {
             get {
                 return ResourceManager.GetString("ShortTermLoans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Повільнореалізуємі активи (А3).
+        /// </summary>
+        internal static string SlowSellingAssets {
+            get {
+                return ResourceManager.GetString("SlowSellingAssets", resourceCulture);
             }
         }
         

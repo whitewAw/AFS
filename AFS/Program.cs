@@ -36,6 +36,7 @@ builder.Services.AddTransient<IndicatorsOfEfficiencyOfUseOfIntangibleAssets>();
 builder.Services.AddTransient<SourcesOfCapitalFormation>();
 builder.Services.AddTransient<AssessmentOfReceivableAndPayable>();
 builder.Services.AddTransient<IndicatorsOfBusinessActivity>();
+builder.Services.AddTransient<LiquidityIndicatorsOfBalance>();
 
 builder.Logging.SetMinimumLevel(LogLevel.Warning);
 
