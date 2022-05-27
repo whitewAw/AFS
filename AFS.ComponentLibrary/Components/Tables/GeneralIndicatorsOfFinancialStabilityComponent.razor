@@ -1,0 +1,59 @@
+﻿@inject GeneralIndicatorsOfFinancialStability GeneralIndicatorsOfFinancialStability
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <h5 class="text-end">(@ResLoc["thousandUAH"])</h5>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <THeadTwoYearsDetail />
+        <tbody>
+            <tr>
+                <TdComponent Align="ML">@GeneralIndicatorsOfFinancialStability.AvailabilityOfWorkingCapitalForFormationOfStocks.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@GeneralIndicatorsOfFinancialStability.AvailabilityOfWorkingCapitalForFormationOfStocks.Base
+                                                      Current=@GeneralIndicatorsOfFinancialStability.AvailabilityOfWorkingCapitalForFormationOfStocks.Current FieldName=@ResLoc["AvailabilityOfWorkingCapitalForFormationOfStocks"] />
+            </tr>
+            <tr>
+                <TdComponent Align="ML">@GeneralIndicatorsOfFinancialStability.AvailabilityOfOwnCurrentAndLongTermBorrowedForStocks.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@GeneralIndicatorsOfFinancialStability.AvailabilityOfOwnCurrentAndLongTermBorrowedForStocks.Base
+                                                      Current=@GeneralIndicatorsOfFinancialStability.AvailabilityOfOwnCurrentAndLongTermBorrowedForStocks.Current FieldName=@ResLoc["AvailabilityOfWorkingCapitalForFormationOfStocks"] />
+            </tr>
+            <tr>
+                <TdComponent Align="ML">@GeneralIndicatorsOfFinancialStability.AvailabilityForStockFormation.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@GeneralIndicatorsOfFinancialStability.AvailabilityForStockFormation.Base
+                                                      Current=@GeneralIndicatorsOfFinancialStability.AvailabilityForStockFormation.Current FieldName=@ResLoc["AvailabilityOfWorkingCapitalForFormationOfStocks"] />
+            </tr>
+            <tr>
+                <TdComponent Align="ML">@GeneralIndicatorsOfFinancialStability.Stocks.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@GeneralIndicatorsOfFinancialStability.Stocks.Base
+                                                      Current=@GeneralIndicatorsOfFinancialStability.Stocks.Current FieldName=@ResLoc["Stocks"] />
+            </tr>
+            <tr>
+                <TdComponent Align="ML">@GeneralIndicatorsOfFinancialStability.ExcessLackOfWorkingCapitalForStocks.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@GeneralIndicatorsOfFinancialStability.ExcessLackOfWorkingCapitalForStocks.Base
+                                                      Current=@GeneralIndicatorsOfFinancialStability.ExcessLackOfWorkingCapitalForStocks.Current FieldName=@ResLoc["ExcessLackOfWorkingCapitalForStocks"] />
+            </tr>
+            <tr>
+                <TdComponent Align="ML">@GeneralIndicatorsOfFinancialStability.ExcessLackOfWorkingCapitalAndLongTermForStocks.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@GeneralIndicatorsOfFinancialStability.ExcessLackOfWorkingCapitalAndLongTermForStocks.Base
+                                                      Current=@GeneralIndicatorsOfFinancialStability.ExcessLackOfWorkingCapitalAndLongTermForStocks.Current FieldName=@ResLoc["ExcessLackOfWorkingCapitalAndLongTermForStocks"] />
+            </tr>
+            <tr>
+                <TdComponent Align="ML">@GeneralIndicatorsOfFinancialStability.ExcessLackOfWorkingCapitalAndLongTermAndShortTermForStocks.Number</TdComponent>
+                <TdsCharacteristicsOfCapitalComponent Base=@GeneralIndicatorsOfFinancialStability.ExcessLackOfWorkingCapitalAndLongTermAndShortTermForStocks.Base
+                                                      Current=@GeneralIndicatorsOfFinancialStability.ExcessLackOfWorkingCapitalAndLongTermAndShortTermForStocks.Current FieldName=@ResLoc["ExcessLackOfWorkingCapitalAndLongTermAndShortTermForStocks"] />
+            </tr>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+
+    protected override void OnInitialized()
+    {
+        string name = ResLoc["GeneralIndicatorsOfFinancialStability"];
+        int number = 15;
+
+        tableName = String.Format("{0} {1}. {2} {3} {4}-{5} {6}", ResLoc["Table"], number, name, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear, ResLoc["years"]);
+        base.OnInitialized();
+    }
+}

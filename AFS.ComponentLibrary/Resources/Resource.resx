@@ -969,8 +969,29 @@
   <data name="AbsoluteLiquidityRatio" xml:space="preserve">
     <value>Коефіцієнт абсолютної ліквідності</value>
   </data>
+  <data name="AvailabilityForStockFormation" xml:space="preserve">
+    <value>Наявність власних оборотних, довгострокових і короткострокових залучених засобів для формування запасів</value>
+  </data>
+  <data name="AvailabilityOfOwnCurrentAndLongTermBorrowedForStocks" xml:space="preserve">
+    <value>Наявність власних оборотних та довгострокових залучених засобів для формування запасів</value>
+  </data>
+  <data name="AvailabilityOfWorkingCapitalForFormationOfStocks" xml:space="preserve">
+    <value>Наявність власних оборотних засобів для формування запасів</value>
+  </data>
   <data name="CurrentLiquidityFactor" xml:space="preserve">
     <value>Коефіцієнт поточної ліквідності</value>
+  </data>
+  <data name="ExcessLackOfWorkingCapitalAndLongTermAndShortTermForStocks" xml:space="preserve">
+    <value>Надлишок (+), нестача (-) власних оборотних засобів, довгострокових і короткострокових залучених засобів для формування запасів</value>
+  </data>
+  <data name="ExcessLackOfWorkingCapitalAndLongTermForStocks" xml:space="preserve">
+    <value>Надлишок (+), нестача (-) власних оборотних засобів та довгострокових залучених засобів для формування запасів</value>
+  </data>
+  <data name="ExcessLackOfWorkingCapitalForStocks" xml:space="preserve">
+    <value>Надлишок (+), нестача (-) власних оборотних засобів для формування запасів</value>
+  </data>
+  <data name="GeneralIndicatorsOfFinancialStability" xml:space="preserve">
+    <value>Загальні показники фінансової стійкості</value>
   </data>
   <data name="IntermediateCoverageRatio" xml:space="preserve">
     <value>Проміжний коефіцієнт покриття</value>

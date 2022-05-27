@@ -295,6 +295,33 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Наявність власних оборотних, довгострокових і короткострокових залучених засобів для формування запасів.
+        /// </summary>
+        internal static string AvailabilityForStockFormation {
+            get {
+                return ResourceManager.GetString("AvailabilityForStockFormation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Наявність власних оборотних та довгострокових залучених засобів для формування запасів.
+        /// </summary>
+        internal static string AvailabilityOfOwnCurrentAndLongTermBorrowedForStocks {
+            get {
+                return ResourceManager.GetString("AvailabilityOfOwnCurrentAndLongTermBorrowedForStocks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Наявність власних оборотних засобів для формування запасів.
+        /// </summary>
+        internal static string AvailabilityOfWorkingCapitalForFormationOfStocks {
+            get {
+                return ResourceManager.GetString("AvailabilityOfWorkingCapitalForFormationOfStocks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Середньорічна вартість основних засобів.
         /// </summary>
         internal static string AverageAnnualCostOfFixedAssets {
@@ -790,6 +817,33 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Надлишок (+), нестача (-) власних оборотних засобів, довгострокових і короткострокових залучених засобів для формування запасів.
+        /// </summary>
+        internal static string ExcessLackOfWorkingCapitalAndLongTermAndShortTermForStocks {
+            get {
+                return ResourceManager.GetString("ExcessLackOfWorkingCapitalAndLongTermAndShortTermForStocks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Надлишок (+), нестача (-) власних оборотних засобів та довгострокових залучених засобів для формування запасів.
+        /// </summary>
+        internal static string ExcessLackOfWorkingCapitalAndLongTermForStocks {
+            get {
+                return ResourceManager.GetString("ExcessLackOfWorkingCapitalAndLongTermForStocks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Надлишок (+), нестача (-) власних оборотних засобів для формування запасів.
+        /// </summary>
+        internal static string ExcessLackOfWorkingCapitalForStocks {
+            get {
+                return ResourceManager.GetString("ExcessLackOfWorkingCapitalForStocks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Перевищення заборгованості.
         /// </summary>
         internal static string ExcessOfDebt {
@@ -984,6 +1038,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string FutureIncome {
             get {
                 return ResourceManager.GetString("FutureIncome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Загальні показники фінансової стійкості.
+        /// </summary>
+        internal static string GeneralIndicatorsOfFinancialStability {
+            get {
+                return ResourceManager.GetString("GeneralIndicatorsOfFinancialStability", resourceCulture);
             }
         }
         

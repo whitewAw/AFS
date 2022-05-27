@@ -38,6 +38,7 @@ builder.Services.AddTransient<AssessmentOfReceivableAndPayable>();
 builder.Services.AddTransient<IndicatorsOfBusinessActivity>();
 builder.Services.AddTransient<LiquidityIndicatorsOfBalance>();
 builder.Services.AddTransient<SolvencyRatios>();
+builder.Services.AddTransient<GeneralIndicatorsOfFinancialStability>();
 
 builder.Logging.SetMinimumLevel(LogLevel.Warning);
 

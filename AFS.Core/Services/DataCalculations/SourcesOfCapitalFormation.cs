@@ -79,7 +79,7 @@ namespace AFS.Core.Services.DataCalculations
         public void Init(AFSModel model, Equity equity)
         {
             Base.BeginningOfyear = equity.Base.BeginningOfyear - model.F1Base.GetF1095Begin();
-            Base.EndOfYear = equity.Current.EndOfYear - model.F1Base.GetF1095End();
+            Base.EndOfYear = equity.Base.EndOfYear - model.F1Base.GetF1095End();
 
             Current.BeginningOfyear = equity.Current.BeginningOfyear - model.F1Current.GetF1095Begin();
             Current.EndOfYear = equity.Current.EndOfYear - model.F1Current.GetF1095End();
@@ -230,7 +230,6 @@ namespace AFS.Core.Services.DataCalculations
             InPercentageOfBorrowedCapitalCurrent.EndOfYear = Current.EndOfYear / raisedCapital.Current.EndOfYear * 100;
         }
     }
-
     public class FutureIncome
     {
         public string Number { get; private set; } = "3.";

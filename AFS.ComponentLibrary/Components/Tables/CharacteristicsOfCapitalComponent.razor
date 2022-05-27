@@ -4,24 +4,7 @@
     <h2 class="text-center">@tableName</h2>
     <h5 class="text-end">(@ResLoc["thousandUAH"])</h5>
     <table class="table table-bordered py-0 table-sm table-striped">
-        <thead>
-            <tr>
-                <ThComponent Rowspan=2>@ResLoc["NumberInOrder"]</ThComponent>
-                <ThComponent Rowspan=2>@ResLoc["Indicators"]</ThComponent>
-                <ThComponent Colspan=4>@MainModel.BaseYear  @ResLoc["year"]</ThComponent>
-                <ThComponent Colspan=4>@MainModel.CurrentYear  @ResLoc["year"]</ThComponent>
-            </tr>
-            <tr>
-                <ThComponent>@ResLoc["atBeginOfYear"]</ThComponent>
-                <ThComponent>@ResLoc["atEndOfYear"]</ThComponent>
-                <ThComponent>@ResLoc["deviation"] (+,-)</ThComponent>
-                <ThComponent>@ResLoc["growthRate"], %</ThComponent>
-                <ThComponent>@ResLoc["atBeginOfYear"]</ThComponent>
-                <ThComponent>@ResLoc["atEndOfYear"]</ThComponent>
-                <ThComponent>@ResLoc["deviation"] (+,-)</ThComponent>
-                <ThComponent>@ResLoc["growthRate"], %</ThComponent>
-            </tr>
-        </thead>
+        <THeadTwoYearsDetail />
         <tbody>
             <tr>
                 <TdsCharacteristicsOfCapitalComponent Base=@CharacteristicsOfCapital.TotalAssets.Base
