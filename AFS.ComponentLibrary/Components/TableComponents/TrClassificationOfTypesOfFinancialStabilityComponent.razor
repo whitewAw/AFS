@@ -1,0 +1,28 @@
+﻿<tr>
+    <TdComponent Rowspan=2 Align="ML">@Item.Number</TdComponent>
+    <TdComponent Rowspan=2 Align="ML">@Name</TdComponent>
+    <TdComponent Colspan=2>@CName</TdComponent>
+    <TdComponent Colspan=2>@ShortName</TdComponent>
+    <TdComponent Colspan=2>@LongName</TdComponent>
+</tr>
+<tr>
+    <TdComponent Align="MR" Spacing="pr-2">@Item.CurrentBVal</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Item.CurrentCVal</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Item.ShortBVal</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Item.ShortCVal</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Item.LongBVal</TdComponent>
+    <TdComponent Align="MR" Spacing="pr-2">@Item.LongCVal</TdComponent>
+</tr>
+
+@code {
+    [Parameter]
+    public ClassificationOfTypesOfFinancialStabilityRow Item { get; set; } = new();
+    [Parameter]
+    public string? Name { get; set; }
+    [Parameter]
+    public string? CName { get; set; }
+    [Parameter]
+    public string? ShortName { get; set; }
+    [Parameter]
+    public string? LongName { get; set; }
+}

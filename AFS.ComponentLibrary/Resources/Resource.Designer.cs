@@ -61,6 +61,123 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to А1+A2+A3&lt;П1.
+        /// </summary>
+        internal static string A1A2A3_P1 {
+            get {
+                return ResourceManager.GetString("A1A2A3<P1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to А1+A2+A3&lt;П1+П2.
+        /// </summary>
+        internal static string A1A2A3_P1P2 {
+            get {
+                return ResourceManager.GetString("A1A2A3<P1P2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to А1+A2 +A3&lt;П1+П2+П3.
+        /// </summary>
+        internal static string A1A2A3_P1P2P3 {
+            get {
+                return ResourceManager.GetString("A1A2A3<P1P2P3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to А1+A2+A3&gt;=П1.
+        /// </summary>
+        internal static string A1A2A3P1 {
+            get {
+                return ResourceManager.GetString("A1A2A3P1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to А1+A2+A3&gt;=П1+П2.
+        /// </summary>
+        internal static string A1A2A3P1P2 {
+            get {
+                return ResourceManager.GetString("A1A2A3P1P2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to А1+A2 +A3&gt;=П1+П2+П3.
+        /// </summary>
+        internal static string A1A2A3P1P2P3 {
+            get {
+                return ResourceManager.GetString("A1A2A3P1P2P3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to А1+A2&gt;=П1.
+        /// </summary>
+        internal static string A1A2P1 {
+            get {
+                return ResourceManager.GetString("A1A2P1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to А1+A2&gt;=П1+П2.
+        /// </summary>
+        internal static string A1A2P1P2 {
+            get {
+                return ResourceManager.GetString("A1A2P1P2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to А1+A2&gt;=П1+П2+П3.
+        /// </summary>
+        internal static string A1A2P1P2P3 {
+            get {
+                return ResourceManager.GetString("A1A2P1P2P3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to А1&gt;=П1.
+        /// </summary>
+        internal static string A1P1 {
+            get {
+                return ResourceManager.GetString("A1P1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to А1&gt;=П1+П2.
+        /// </summary>
+        internal static string A1P1P2 {
+            get {
+                return ResourceManager.GetString("A1P1P2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to А1&gt;=П1+П2+П3.
+        /// </summary>
+        internal static string A1P1P2P3 {
+            get {
+                return ResourceManager.GetString("A1P1P2P3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Абсолютна фінансова стійкість.
+        /// </summary>
+        internal static string AbsoluteFinancialStabilityInit {
+            get {
+                return ResourceManager.GetString("AbsoluteFinancialStabilityInit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Коефіцієнт абсолютної ліквідності.
         /// </summary>
         internal static string AbsoluteLiquidityRatio {
@@ -273,6 +390,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string AtEndingReportingPeriod {
             get {
                 return ResourceManager.GetString("AtEndingReportingPeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to на кінець {0} року.
+        /// </summary>
+        internal static string atEndOf {
+            get {
+                return ResourceManager.GetString("atEndOf", resourceCulture);
             }
         }
         
@@ -520,6 +646,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Класифікація типів фінансової стійкості виходячи із ступеню ліквідності оборотних коштів.
+        /// </summary>
+        internal static string ClassificationOfTypesOfFinancialStability {
+            get {
+                return ResourceManager.GetString("ClassificationOfTypesOfFinancialStability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Коефіцієнт ділової активності.
         /// </summary>
         internal static string CoefficientOfBusinessActivity {
@@ -592,11 +727,29 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Кризова фінансова стійкість.
+        /// </summary>
+        internal static string CrisisFinancialStability {
+            get {
+                return ResourceManager.GetString("CrisisFinancialStability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to грн..
         /// </summary>
         internal static string currency {
             get {
                 return ResourceManager.GetString("currency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Поточна.
+        /// </summary>
+        internal static string Current {
+            get {
+                return ResourceManager.GetString("Current", resourceCulture);
             }
         }
         
@@ -1285,11 +1438,29 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to В довгостроковій перспективі.
+        /// </summary>
+        internal static string InLongTerm {
+            get {
+                return ResourceManager.GetString("InLongTerm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Вхідні дані.
         /// </summary>
         internal static string InputData {
             get {
                 return ResourceManager.GetString("InputData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В короткостроковій перспективі.
+        /// </summary>
+        internal static string InShortTerm {
+            get {
+                return ResourceManager.GetString("InShortTerm", resourceCulture);
             }
         }
         
@@ -1636,6 +1807,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Нормальна фінансова стійкість.
+        /// </summary>
+        internal static string NormalFinancialStability {
+            get {
+                return ResourceManager.GetString("NormalFinancialStability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to № п/п.
         /// </summary>
         internal static string NumberInOrder {
@@ -1875,6 +2055,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string PostponedTaxAssets {
             get {
                 return ResourceManager.GetString("PostponedTaxAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Передкризова фінансова стійкість.
+        /// </summary>
+        internal static string PreCrisisFinancialStability {
+            get {
+                return ResourceManager.GetString("PreCrisisFinancialStability", resourceCulture);
             }
         }
         
@@ -2307,6 +2496,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string SourcesOfCapitalFormation {
             get {
                 return ResourceManager.GetString("SourcesOfCapitalFormation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Тип стійкості.
+        /// </summary>
+        internal static string StabilityType {
+            get {
+                return ResourceManager.GetString("StabilityType", resourceCulture);
             }
         }
         

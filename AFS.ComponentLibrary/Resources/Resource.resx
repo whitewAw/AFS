@@ -966,8 +966,23 @@
   <data name="TurnoverOfTotalCapital" xml:space="preserve">
     <value>Оборотність всього капіталу</value>
   </data>
+  <data name="A1P1" xml:space="preserve">
+    <value>А1&gt;=П1</value>
+  </data>
+  <data name="A1P1P2" xml:space="preserve">
+    <value>А1&gt;=П1+П2</value>
+  </data>
+  <data name="A1P1P2P3" xml:space="preserve">
+    <value>А1&gt;=П1+П2+П3</value>
+  </data>
+  <data name="AbsoluteFinancialStabilityInit" xml:space="preserve">
+    <value>Абсолютна фінансова стійкість</value>
+  </data>
   <data name="AbsoluteLiquidityRatio" xml:space="preserve">
     <value>Коефіцієнт абсолютної ліквідності</value>
+  </data>
+  <data name="atEndOf" xml:space="preserve">
+    <value>на кінець {0} року</value>
   </data>
   <data name="AvailabilityForStockFormation" xml:space="preserve">
     <value>Наявність власних оборотних, довгострокових і короткострокових залучених засобів для формування запасів</value>
@@ -977,6 +992,12 @@
   </data>
   <data name="AvailabilityOfWorkingCapitalForFormationOfStocks" xml:space="preserve">
     <value>Наявність власних оборотних засобів для формування запасів</value>
+  </data>
+  <data name="ClassificationOfTypesOfFinancialStability" xml:space="preserve">
+    <value>Класифікація типів фінансової стійкості виходячи із ступеню ліквідності оборотних коштів</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Поточна</value>
   </data>
   <data name="CurrentLiquidityFactor" xml:space="preserve">
     <value>Коефіцієнт поточної ліквідності</value>
@@ -993,6 +1014,12 @@
   <data name="GeneralIndicatorsOfFinancialStability" xml:space="preserve">
     <value>Загальні показники фінансової стійкості</value>
   </data>
+  <data name="InLongTerm" xml:space="preserve">
+    <value>В довгостроковій перспективі</value>
+  </data>
+  <data name="InShortTerm" xml:space="preserve">
+    <value>В короткостроковій перспективі</value>
+  </data>
   <data name="IntermediateCoverageRatio" xml:space="preserve">
     <value>Проміжний коефіцієнт покриття</value>
   </data>
@@ -1007,5 +1034,44 @@
   </data>
   <data name="SolvencyRecoveryRatio" xml:space="preserve">
     <value>Коефіцієнт відновлення платоспроможності</value>
+  </data>
+  <data name="StabilityType" xml:space="preserve">
+    <value>Тип стійкості</value>
+  </data>
+  <data name="A1A2A3&lt;P1" xml:space="preserve">
+    <value>А1+A2+A3&lt;П1</value>
+  </data>
+  <data name="A1A2A3&lt;P1P2" xml:space="preserve">
+    <value>А1+A2+A3&lt;П1+П2</value>
+  </data>
+  <data name="A1A2A3&lt;P1P2P3" xml:space="preserve">
+    <value>А1+A2 +A3&lt;П1+П2+П3</value>
+  </data>
+  <data name="A1A2A3P1" xml:space="preserve">
+    <value>А1+A2+A3&gt;=П1</value>
+  </data>
+  <data name="A1A2A3P1P2" xml:space="preserve">
+    <value>А1+A2+A3&gt;=П1+П2</value>
+  </data>
+  <data name="A1A2A3P1P2P3" xml:space="preserve">
+    <value>А1+A2 +A3&gt;=П1+П2+П3</value>
+  </data>
+  <data name="A1A2P1" xml:space="preserve">
+    <value>А1+A2&gt;=П1</value>
+  </data>
+  <data name="A1A2P1P2" xml:space="preserve">
+    <value>А1+A2&gt;=П1+П2</value>
+  </data>
+  <data name="A1A2P1P2P3" xml:space="preserve">
+    <value>А1+A2&gt;=П1+П2+П3</value>
+  </data>
+  <data name="CrisisFinancialStability" xml:space="preserve">
+    <value>Кризова фінансова стійкість</value>
+  </data>
+  <data name="NormalFinancialStability" xml:space="preserve">
+    <value>Нормальна фінансова стійкість</value>
+  </data>
+  <data name="PreCrisisFinancialStability" xml:space="preserve">
+    <value>Передкризова фінансова стійкість</value>
   </data>
 </root>
