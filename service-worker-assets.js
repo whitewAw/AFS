@@ -101,19 +101,19 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-zqfJ5PhycrL2x+MncsWrwLWppur5f23xWgDS\/owv2p8=",
+      "hash": "sha256-vgpw99n\/hk5Lz8KlY+2kjSRJ5OpR9QEbdsCKWXGj0iY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-Lx7aTjyCyHHULRUo9zPfMm2C9iCji9pNWwpCzVq5OGw=",
+      "hash": "sha256-tY6x2fByVknI0EYdUEMdaPGnCGuc4xxN1dSHUVUByo0=",
       "url": "_framework\/AFS.ComponentLibrary.dll"
     },
     {
-      "hash": "sha256-dvL4yLpQiiqBmx9fsKp6OVEA7GcPiAqc\/V5uGLoujfI=",
+      "hash": "sha256-4zhnBan+MWA2sxR\/yL0woWOu5a1q9sFdNBKUaJPNcBA=",
       "url": "_framework\/AFS.Core.dll"
     },
     {
-      "hash": "sha256-L20rvtwayRYoWNpwbtwBq5Dc3rjm6geC2AjlpTaDWNU=",
+      "hash": "sha256-kLH0y3W6R9f16yfibauVX864K9rTcawb1wG+j2lg1c8=",
       "url": "_framework\/AFS.dll"
     },
     {
@@ -193,7 +193,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-Y8QWigYfH1SkbMtpR4VYQCdvbgOIhOfeVjWvY97b7TA=",
+      "hash": "sha256-Hbo8QZXtdQdqPnISLqoD4kMClg6ZMxhucuQLLA7ieOc=",
       "url": "_framework\/Radzen.Blazor.dll"
     },
     {
@@ -213,7 +213,7 @@
       "url": "_framework\/System.Collections.Specialized.dll"
     },
     {
-      "hash": "sha256-3dCP2kSNvJkJXnyDZOJwnDY4prgO+SL57gz9l4OF\/P0=",
+      "hash": "sha256-F7xS3JFkVQnh7e+8dOmUuCoCUfXhr7uvjATEZBhXwlc=",
       "url": "_framework\/System.ComponentModel.Annotations.dll"
     },
     {
@@ -341,11 +341,11 @@
       "url": "_framework\/System.Xml.XDocument.dll"
     },
     {
-      "hash": "sha256-SaT\/XMfS9O0DwUzkZCTmQl\/57khIJJhcFlqZgzXREqA=",
+      "hash": "sha256-KcptulWnz9wnQ940WOgjgbtFRSO7xJ+E4Y1tB+PhV2g=",
       "url": "_framework\/dotnet.6.0.5.g3naxzves8.js"
     },
     {
-      "hash": "sha256-DblQTkImNq1\/RCDi74TOEoK8GSrX8cn8T1RA1tTXyfw=",
+      "hash": "sha256-0ypWjc6dnuxL5vhf3t6C611bSzkox+\/T6LiGlkXHkCk=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -469,5 +469,5 @@
       "url": "_content\/AFS.ComponentLibrary\/AFS.ComponentLibrary.bundle.scp.css"
     }
   ],
-  "version": "gqwDJEra"
+  "version": "W6acDtri"
 };
