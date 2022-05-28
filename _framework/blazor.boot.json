@@ -7,9 +7,9 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "AFS.ComponentLibrary.dll": "sha256-tY6x2fByVknI0EYdUEMdaPGnCGuc4xxN1dSHUVUByo0=",
-      "AFS.Core.dll": "sha256-4zhnBan+MWA2sxR\/yL0woWOu5a1q9sFdNBKUaJPNcBA=",
-      "AFS.dll": "sha256-kLH0y3W6R9f16yfibauVX864K9rTcawb1wG+j2lg1c8=",
+      "AFS.ComponentLibrary.dll": "sha256-rKL2vS3S745LF8na\/+EpFwlqjRMJXDQMIKSfu\/OZHQg=",
+      "AFS.Core.dll": "sha256-mlMGS0QC95Q1elYW34d6QNL8QRIJlMAVGliZ9lxOY4Y=",
+      "AFS.dll": "sha256-ZWqFHld4KqEeGhpefwED2TcEyl6NqXx+7YJAzktwASg=",
       "Blazored.LocalStorage.dll": "sha256-6RRoYeDP3d0xabXmcCMF66wXeJlXVPem28Trs8sQiis=",
       "Microsoft.AspNetCore.Components.dll": "sha256-snCTA8gk0YAnOcbpXBbw+GRjeTd6mVOEop6Mvxa\/eHg=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-LVNT6y1ANDBu3PAQoOOHLVCqULwxs8HnvE5zTy608Uw=",
@@ -72,9 +72,9 @@
     "libraryInitializers": null,
     "pdb": null,
     "runtime": {
-      "dotnet.6.0.5.g3naxzves8.js": "sha256-KcptulWnz9wnQ940WOgjgbtFRSO7xJ+E4Y1tB+PhV2g=",
+      "dotnet.6.0.5.g3naxzves8.js": "sha256-nmWIQXL9uQhDPacExUmj4Ios+iHLioKbYDCrI+nIGyw=",
       "dotnet.timezones.blat": "sha256-vRU6+wGzQ3FJ0JtyPJtipblPe9MvJf+qKY20xZhuyKQ=",
-      "dotnet.wasm": "sha256-0ypWjc6dnuxL5vhf3t6C611bSzkox+\/T6LiGlkXHkCk=",
+      "dotnet.wasm": "sha256-6zxv7uaSOYONqHldKoMOolBTzji8x+TjDmr8dVzmHJA=",
       "icudt_CJK.dat": "sha256-WPyI4hWDPnOw62Nr27FkzGjdbucZnQD+Ph+GOPhAedw=",
       "icudt_EFIGS.dat": "sha256-4RwaPx87Z4dvn77ie\/ro3\/QzyS+\/gGmO3Y\/0CSAXw4k=",
       "icudt_no_CJK.dat": "sha256-OxylFgLJlFqixsj+nLxYVsv5iZLvfIKMpLf9hrWaChA=",
