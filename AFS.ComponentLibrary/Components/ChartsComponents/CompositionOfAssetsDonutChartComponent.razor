@@ -1,0 +1,38 @@
+﻿@using AFS.Core.Models
+<RadzenChart>
+    <RadzenDonutSeries Data="@Assets" Title=@ResLoc["Value"] CategoryProperty="Item" ValueProperty="Value">
+        <TitleTemplate>
+            <div class="rz-donut-content">
+                <div>@Period</div>
+            </div>
+        </TitleTemplate>
+    </RadzenDonutSeries>
+    <RadzenValueAxis FormatString=@valueformat />
+    <RadzenCategoryAxis Formatter="@FormatCategory"/>
+
+</RadzenChart>
+
+@code {
+
+    [Parameter]
+    public string? Period { get; set; }
+
+    [Parameter]
+    public List<ChartDataItem> Assets { get; set; } = new();
+
+    string? valueformat { get; set; }
+
+    protected override void OnInitialized()
+    {
+        valueformat = "{0} " + @ResLoc["thousandUAH"];
+        base.OnInitialized();
+    }
+    string FormatCategory(object value)
+    {
+        if (value is string srt)
+        {
+            return @ResLoc[srt];
+        }
+        return String.Empty;
+    }
+}

@@ -556,6 +556,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to базовий період.
+        /// </summary>
+        internal static string basePeriod {
+            get {
+                return ResourceManager.GetString("basePeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Базовий рік.
         /// </summary>
         internal static string BaseYear {
@@ -763,6 +772,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Склад активів.
+        /// </summary>
+        internal static string CompositionOfAssets {
+            get {
+                return ResourceManager.GetString("CompositionOfAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Сукупний дохід.
         /// </summary>
         internal static string ComprehensiveIncome {
@@ -876,6 +894,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string CurrentMobileAssets {
             get {
                 return ResourceManager.GetString("CurrentMobileAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to звітний період.
+        /// </summary>
+        internal static string currentPeriod {
+            get {
+                return ResourceManager.GetString("currentPeriod", resourceCulture);
             }
         }
         
@@ -2892,6 +2919,15 @@ namespace AFS.ComponentLibrary.Resources {
         internal static string UploadFromFile {
             get {
                 return ResourceManager.GetString("UploadFromFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Значення.
+        /// </summary>
+        internal static string Value {
+            get {
+                return ResourceManager.GetString("Value", resourceCulture);
             }
         }
         

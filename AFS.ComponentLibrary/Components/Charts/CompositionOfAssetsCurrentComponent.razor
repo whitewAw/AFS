@@ -1,0 +1,27 @@
+﻿@using AFS.Core.Models
+@inject CompositionOfAssets CompositionOfAssets
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+       <CompositionOfAssetsDonutChartComponent Period=@ResLoc["atBeginOfYear"] Assets=@baseList />
+    <CompositionOfAssetsDonutChartComponent Period=@ResLoc["atEndOfYear"] Assets=@currentList/>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+    List<ChartDataItem>? baseList;
+    List<ChartDataItem>? currentList;
+
+    protected override void OnInitialized()
+    {
+        string name = ResLoc["CompositionOfAssets"];
+        string number = "B.";
+
+        tableName = $"{number} {ResLoc["CompositionOfAssets"]} - {MainModel.CurrentYear} {@ResLoc["year"]}";
+        
+        baseList = CompositionOfAssets.GetDataItem(false, true);
+        currentList= CompositionOfAssets.GetDataItem(false, false);
+
+        base.OnInitialized();
+    }
+}

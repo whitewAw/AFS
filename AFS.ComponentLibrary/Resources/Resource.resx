@@ -1113,4 +1113,16 @@
   <data name="TotalReturnOnAssets" xml:space="preserve">
     <value>Загальна капіталовіддача всього майна</value>
   </data>
+  <data name="CompositionOfAssets" xml:space="preserve">
+    <value>Склад активів</value>
+  </data>
+  <data name="basePeriod" xml:space="preserve">
+    <value>базовий період</value>
+  </data>
+  <data name="currentPeriod" xml:space="preserve">
+    <value>звітний період</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Значення</value>
+  </data>
 </root>
