@@ -5,10 +5,10 @@ namespace AFS.Core.Services.DataCalculations
 {
     public class CompositionOfAssets
     {
-        public CharacteristicsOfCapital CharacteristicsOfCapital { get; private set; }
+        CharacteristicsOfCapital? CharacteristicsOfCapital { get; set; }
 
         public CompositionOfAssets(AFSModel model) => Init(model);
-        
+
         private void Init(AFSModel model)
         {
             CharacteristicsOfCapital = new(model);
@@ -24,7 +24,7 @@ namespace AFS.Core.Services.DataCalculations
             });
             assets.Add(new ChartDataItem
             {
-                Item ="TangibleCurrentAssets",
+                Item = "TangibleCurrentAssets",
                 Value = GetTangibleCurrentAssets(baseYear, begin)
             });
             assets.Add(new ChartDataItem

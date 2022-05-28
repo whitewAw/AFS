@@ -3058,6 +3058,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Час обороту оборотних засобів.
+        /// </summary>
+        internal static string WorkingCapitalTurnoverTime {
+            get {
+                return ResourceManager.GetString("WorkingCapitalTurnoverTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to рік.
         /// </summary>
         internal static string year {

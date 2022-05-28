@@ -17,7 +17,7 @@
         string name = ResLoc["CompositionOfAssets"];
         string number = "A.";
 
-        tableName = $"{number} {ResLoc["CompositionOfAssets"]} - {MainModel.BaseYear} {ResLoc["year"]}";
+        tableName = $"{number} {name} - {MainModel.BaseYear} {ResLoc["year"]}";
 
         baseList = CompositionOfAssets.GetDataItem(true, true);
         currentList= CompositionOfAssets.GetDataItem(true, false);

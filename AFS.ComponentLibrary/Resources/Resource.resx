@@ -1125,4 +1125,7 @@
   <data name="Value" xml:space="preserve">
     <value>Значення</value>
   </data>
+  <data name="WorkingCapitalTurnoverTime" xml:space="preserve">
+    <value>Час обороту оборотних засобів</value>
+  </data>
 </root>

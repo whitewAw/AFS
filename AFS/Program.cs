@@ -42,7 +42,7 @@ builder.Services.AddTransient<GeneralIndicatorsOfFinancialStability>();
 builder.Services.AddTransient<ClassificationOfTypesOfFinancialStability>();
 builder.Services.AddTransient<IndicatorsOfFinancialStability>();
 builder.Services.AddTransient<CompositionOfAssets>();
-
+builder.Services.AddTransient<WorkingCapitalTurnoverTime>();
 
 builder.Logging.SetMinimumLevel(LogLevel.Warning);
 

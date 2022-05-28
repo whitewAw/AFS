@@ -1,0 +1,47 @@
+﻿@using AFS.Core.Models
+@inject WorkingCapitalTurnoverTime WorkingCapitalTurnoverTime
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <RadzenChart>
+        <RadzenLineSeries Data="@money" CategoryProperty="Date" Title=@ResLoc["MoneyAndTheirEquivalents"] LineType="LineType.Dashed" ValueProperty="Value">
+            <RadzenMarkers MarkerType="MarkerType.Square" />
+        </RadzenLineSeries>
+        <RadzenLineSeries Data="@receivables" CategoryProperty="Date" Title="@ResLoc["AccountsReceivable"]" ValueProperty="Value">
+            <RadzenMarkers MarkerType="MarkerType.Circle" />
+        </RadzenLineSeries>
+         <RadzenLineSeries Data="@materialValues" CategoryProperty="Date" Title="@ResLoc["Tangibles"]" ValueProperty="Value">
+            <RadzenMarkers MarkerType="MarkerType.Triangle" />
+        </RadzenLineSeries>
+        <RadzenCategoryAxis FormatString="{0:MM/yyyy}" />
+        <RadzenValueAxis>
+            <RadzenGridLines Visible="true" />
+            <RadzenAxisTitle Text=@ResLoc["days"] />
+        </RadzenValueAxis>
+        <RadzenLineSeries Visible=false Data="@money" CategoryProperty="Date" Title="asasdasdasdasdasdasdsdasd" LineType="LineType.Dashed" ValueProperty="Value">
+            <RadzenMarkers MarkerType="MarkerType.Square" />
+        </RadzenLineSeries>
+    </RadzenChart>
+ </RadzenCard>
+
+@code {
+    private string? tableName;
+
+    List<ChartDateTimeItem>? money;
+    List<ChartDateTimeItem>? receivables;
+    List<ChartDateTimeItem>? materialValues;
+
+    protected override void OnInitialized()
+    {
+        string name = ResLoc["WorkingCapitalTurnoverTime"];
+        string number = "C.";
+
+        tableName = $"{number} {name}";
+
+        money = WorkingCapitalTurnoverTime.GetMoney();
+        receivables= WorkingCapitalTurnoverTime.GetReceivables();
+        materialValues= WorkingCapitalTurnoverTime.GetMaterialValues();
+
+        base.OnInitialized();
+    }
+}
