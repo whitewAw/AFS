@@ -25,6 +25,6 @@
         {
             return "x";
         }
-        return Constraints.RoundStr(Item.GrowthRate, Digits);
+        return Constraints.RoundStr(Item.GrowthRate, Digits > 2 ? 2 : Digits);
     }
 }

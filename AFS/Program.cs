@@ -40,6 +40,7 @@ builder.Services.AddTransient<LiquidityIndicatorsOfBalance>();
 builder.Services.AddTransient<SolvencyRatios>();
 builder.Services.AddTransient<GeneralIndicatorsOfFinancialStability>();
 builder.Services.AddTransient<ClassificationOfTypesOfFinancialStability>();
+builder.Services.AddTransient<IndicatorsOfFinancialStability>();
 
 builder.Logging.SetMinimumLevel(LogLevel.Warning);
 

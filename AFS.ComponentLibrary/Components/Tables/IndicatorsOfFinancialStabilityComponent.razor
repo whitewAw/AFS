@@ -1,0 +1,36 @@
+﻿@inject IndicatorsOfFinancialStability IndicatorsOfFinancialStability
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <table class="table table-bordered py-0 table-sm table-striped">
+        <THeadCommonComponent />
+        <tbody>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.TotalReturnOnAssets>@ResLoc["TotalReturnOnAssets"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.CoefficientOfIndependence>@ResLoc["CoefficientOfIndependence"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.CoefficientOfFinancialDependence>@ResLoc["CoefficientOfFinancialDependence"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.CoefficientOfFinancialStability>@ResLoc["CoefficientOfFinancialStability"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.CoefficientOfManeuverabilityOfEquity>@ResLoc["CoefficientOfManeuverabilityOfEquity"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.CoefficientOfConcentrationOfBorrowedCapital>@ResLoc["CoefficientOfConcentrationOfBorrowedCapital"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.CoefficientOfStructureOfLongTermInvestments>@ResLoc["CoefficientOfStructureOfLongTermInvestments"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.CoefficientOfLongevityOfBorrowedFunds>@ResLoc["CoefficientOfLongevityOfBorrowedFunds"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.RatedCapitalStructureRatio>@ResLoc["RatedCapitalStructureRatio"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.RatioOfBorrowedCapitalAndEquity>@ResLoc["RatioOfBorrowedCapitalAndEquity"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.RatioOfOwnAndLongTermBorrowedFundsInInventories>@ResLoc["RatioOfOwnAndLongTermBorrowedFundsInInventories"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.RatioOfMobileToImmobilized>@ResLoc["RatioOfMobileToImmobilized"]</TrTwoYearsCalculationDataComponent>
+            <TrTwoYearsCalculationDataComponent Digits=4 Item=@IndicatorsOfFinancialStability.TotalCoverageRatio>@ResLoc["TotalCoverageRatio"]</TrTwoYearsCalculationDataComponent>
+        </tbody>
+    </table>
+</RadzenCard>
+
+@code {
+    private string? tableName;
+
+    protected override void OnInitialized()
+    {
+        string name = ResLoc["IndicatorsOfFinancialStability"];
+        int number = 17;
+
+        tableName = String.Format("{0} {1}. {2} {3} {4}-{5} {6}", ResLoc["Table"], number, name, MainModel.CompanyName, MainModel.BaseYear, MainModel.CurrentYear, ResLoc["years"]);
+        base.OnInitialized();
+    }
+}

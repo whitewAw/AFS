@@ -967,13 +967,13 @@
     <value>Оборотність всього капіталу</value>
   </data>
   <data name="A1P1" xml:space="preserve">
-    <value>А1&gt;=П1</value>
+    <value>А1 &gt;= П1</value>
   </data>
   <data name="A1P1P2" xml:space="preserve">
-    <value>А1&gt;=П1+П2</value>
+    <value>А1 &gt;= П1+П2</value>
   </data>
   <data name="A1P1P2P3" xml:space="preserve">
-    <value>А1&gt;=П1+П2+П3</value>
+    <value>А1 &gt;= П1+П2+П3</value>
   </data>
   <data name="AbsoluteFinancialStabilityInit" xml:space="preserve">
     <value>Абсолютна фінансова стійкість</value>
@@ -1039,31 +1039,31 @@
     <value>Тип стійкості</value>
   </data>
   <data name="A1A2A3&lt;P1" xml:space="preserve">
-    <value>А1+A2+A3&lt;П1</value>
+    <value>А1+A2+A3 &lt; П1</value>
   </data>
   <data name="A1A2A3&lt;P1P2" xml:space="preserve">
-    <value>А1+A2+A3&lt;П1+П2</value>
+    <value>А1+A2+A3 &lt; П1+П2</value>
   </data>
   <data name="A1A2A3&lt;P1P2P3" xml:space="preserve">
-    <value>А1+A2 +A3&lt;П1+П2+П3</value>
+    <value>А1+A2 +A3 &lt; П1+П2+П3</value>
   </data>
   <data name="A1A2A3P1" xml:space="preserve">
-    <value>А1+A2+A3&gt;=П1</value>
+    <value>А1+A2+A3 &gt;= П1</value>
   </data>
   <data name="A1A2A3P1P2" xml:space="preserve">
-    <value>А1+A2+A3&gt;=П1+П2</value>
+    <value>А1+A2+A3 &gt;= П1+П2</value>
   </data>
   <data name="A1A2A3P1P2P3" xml:space="preserve">
-    <value>А1+A2 +A3&gt;=П1+П2+П3</value>
+    <value>А1+A2 +A3 &gt;= П1+П2+П3</value>
   </data>
   <data name="A1A2P1" xml:space="preserve">
-    <value>А1+A2&gt;=П1</value>
+    <value>А1+A2 &gt;= П1</value>
   </data>
   <data name="A1A2P1P2" xml:space="preserve">
-    <value>А1+A2&gt;=П1+П2</value>
+    <value>А1+A2 &gt;= П1+П2</value>
   </data>
   <data name="A1A2P1P2P3" xml:space="preserve">
-    <value>А1+A2&gt;=П1+П2+П3</value>
+    <value>А1+A2 &gt;= П1+П2+П3</value>
   </data>
   <data name="CrisisFinancialStability" xml:space="preserve">
     <value>Кризова фінансова стійкість</value>
@@ -1073,5 +1073,44 @@
   </data>
   <data name="PreCrisisFinancialStability" xml:space="preserve">
     <value>Передкризова фінансова стійкість</value>
+  </data>
+  <data name="CoefficientOfConcentrationOfBorrowedCapital" xml:space="preserve">
+    <value>Коефіцієнт концентрації залученого капіталу</value>
+  </data>
+  <data name="CoefficientOfFinancialDependence" xml:space="preserve">
+    <value>Коефіцієнт фінансової залежності</value>
+  </data>
+  <data name="CoefficientOfFinancialStability" xml:space="preserve">
+    <value>Коефіцієнт фінансової стійкості</value>
+  </data>
+  <data name="CoefficientOfIndependence" xml:space="preserve">
+    <value>Коефіцієнт незалежності (концентрації власного капіталу)</value>
+  </data>
+  <data name="CoefficientOfLongevityOfBorrowedFunds" xml:space="preserve">
+    <value>Коефіцієнт довготривалості залучення позикових коштів</value>
+  </data>
+  <data name="CoefficientOfManeuverabilityOfEquity" xml:space="preserve">
+    <value>Коефіцієнт маневреності власного капіталу</value>
+  </data>
+  <data name="CoefficientOfStructureOfLongTermInvestments" xml:space="preserve">
+    <value>Коефіцієнт структури довготермінових вкладень</value>
+  </data>
+  <data name="IndicatorsOfFinancialStability" xml:space="preserve">
+    <value>Показники фінансової стійкості</value>
+  </data>
+  <data name="RatedCapitalStructureRatio" xml:space="preserve">
+    <value>Коефіцієнт структури залученого капіталу</value>
+  </data>
+  <data name="RatioOfBorrowedCapitalAndEquity" xml:space="preserve">
+    <value>Коефіцієнт співвідношення залученого і власного капіталу</value>
+  </data>
+  <data name="RatioOfMobileToImmobilized" xml:space="preserve">
+    <value>Коефіцієнт співвідношення мобільних засобів до іммобілізованих</value>
+  </data>
+  <data name="TotalCoverageRatio" xml:space="preserve">
+    <value>Загальний коефіцієнт покриття</value>
+  </data>
+  <data name="TotalReturnOnAssets" xml:space="preserve">
+    <value>Загальна капіталовіддача всього майна</value>
   </data>
 </root>
