@@ -1,0 +1,31 @@
+﻿@using AFS.Core.Models
+<RadzenChart>
+    <RadzenPieSeries Data="@Assets" Title=@ResLoc["Value"] CategoryProperty="Item" ValueProperty="Value"/>
+    <RadzenValueAxis FormatString=@valueformat />
+    <RadzenCategoryAxis Formatter="@FormatCategory" />
+</RadzenChart>
+
+@code {
+
+    [Parameter]
+    public string? Period { get; set; }
+
+    [Parameter]
+    public List<ChartDataItem> Assets { get; set; } = new();
+
+    string? valueformat { get; set; }
+
+    protected override void OnInitialized()
+    {
+        valueformat = "{0}%";
+        base.OnInitialized();
+    }
+    string FormatCategory(object value)
+    {
+        if (value is string srt)
+        {
+            return @ResLoc[srt];
+        }
+        return String.Empty;
+    }
+}

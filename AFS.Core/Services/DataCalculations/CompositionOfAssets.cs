@@ -32,7 +32,6 @@ namespace AFS.Core.Services.DataCalculations
                 Item = "AccountsReceivable",
                 Value = GetAccountsReceivable(baseYear, begin)
             });
-
             assets.Add(new ChartDataItem
             {
                 Item = "CashCurrentFinancialInvestments",
@@ -53,7 +52,7 @@ namespace AFS.Core.Services.DataCalculations
                 Item = "FutureExpenses",
                 Value = GetFutureExpenses(baseYear, begin)
             });
-            return assets;
+            return assets.OrderByDescending(item => item.Value).ToList();
         }
 
 

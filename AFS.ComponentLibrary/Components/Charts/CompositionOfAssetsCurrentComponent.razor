@@ -3,8 +3,8 @@
 
 <RadzenCard Style="width: 100%;">
     <h2 class="text-center">@tableName</h2>
-       <CompositionOfAssetsDonutChartComponent Period=@ResLoc["atBeginOfYear"] Assets=@baseList />
-    <CompositionOfAssetsDonutChartComponent Period=@ResLoc["atEndOfYear"] Assets=@currentList/>
+    <CompositionOfAssetsDonutChartComponent Period=@ResLoc["atBeginOfYear"] Assets=@baseList />
+    <CompositionOfAssetsDonutChartComponent Period=@ResLoc["atEndOfYear"] Assets=@currentList />
 </RadzenCard>
 
 @code {
@@ -15,12 +15,12 @@
     protected override void OnInitialized()
     {
         string name = ResLoc["CompositionOfAssets"];
-        string number = "B.";
+        string number = "II.";
 
         tableName = $"{number} {name} - {MainModel.CurrentYear} {@ResLoc["year"]}";
-        
+
         baseList = CompositionOfAssets.GetDataItem(false, true);
-        currentList= CompositionOfAssets.GetDataItem(false, false);
+        currentList = CompositionOfAssets.GetDataItem(false, false);
 
         base.OnInitialized();
     }

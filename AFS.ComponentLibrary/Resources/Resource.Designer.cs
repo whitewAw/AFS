@@ -1645,6 +1645,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Зобов&apos;язання, пов&apos;язані з необоротними активами для продажу.
+        /// </summary>
+        internal static string LiabilitiesRelatedToNonCurrentAssetsForSale {
+            get {
+                return ResourceManager.GetString("LiabilitiesRelatedToNonCurrentAssetsForSale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Код рядка.
         /// </summary>
         internal static string LineСode {

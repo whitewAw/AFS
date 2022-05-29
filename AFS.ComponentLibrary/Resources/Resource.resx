@@ -1128,4 +1128,7 @@
   <data name="WorkingCapitalTurnoverTime" xml:space="preserve">
     <value>Час обороту оборотних засобів</value>
   </data>
+  <data name="LiabilitiesRelatedToNonCurrentAssetsForSale" xml:space="preserve">
+    <value>Зобов'язання, пов'язані з необоротними активами для продажу</value>
+  </data>
 </root>

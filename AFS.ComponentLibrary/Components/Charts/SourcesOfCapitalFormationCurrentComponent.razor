@@ -1,0 +1,23 @@
+﻿@using AFS.Core.Models
+@inject SourcesOfCapitalFormationChart SourcesOfCapitalFormationChart
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <PieSeriesComponent Assets=@baseList />
+</RadzenCard>
+
+@code {
+    private string? tableName;
+    List<ChartDataItem>? baseList;
+
+    protected override void OnInitialized()
+    {
+        string name = ResLoc["SourcesOfCapitalFormation"];
+        string number = "V.";
+
+        tableName = $"{number} {name} - {MainModel.CurrentYear} {ResLoc["year"]}";
+        baseList = SourcesOfCapitalFormationChart.GetDataItem(false);
+
+        base.OnInitialized();
+    }
+}
