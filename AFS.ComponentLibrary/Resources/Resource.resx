@@ -1131,4 +1131,7 @@
   <data name="LiabilitiesRelatedToNonCurrentAssetsForSale" xml:space="preserve">
     <value>Зобов'язання, пов'язані з необоротними активами для продажу</value>
   </data>
+  <data name="StructureOfAccountsPayable" xml:space="preserve">
+    <value>Структура кредиторської заборгованості</value>
+  </data>
 </root>

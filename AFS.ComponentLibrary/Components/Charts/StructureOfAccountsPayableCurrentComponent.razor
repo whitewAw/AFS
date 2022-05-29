@@ -1,0 +1,23 @@
+﻿@using AFS.Core.Models
+@inject StructureOfAccountsPayableChart StructureOfAccountsPayableChart
+
+<RadzenCard Style="width: 100%;">
+    <h2 class="text-center">@tableName</h2>
+    <PieSeriesComponent Assets=@baseList />
+</RadzenCard>
+
+@code {
+    private string? tableName;
+    List<ChartDataItem>? baseList;
+
+    protected override void OnInitialized()
+    {
+        string name = ResLoc["StructureOfAccountsPayable"];
+        string number = "VII.";
+
+        tableName = $"{number} {name} - {MainModel.CurrentYear} {ResLoc["year"]}";
+        baseList = StructureOfAccountsPayableChart.GetDataItem(false);
+
+        base.OnInitialized();
+    }
+}

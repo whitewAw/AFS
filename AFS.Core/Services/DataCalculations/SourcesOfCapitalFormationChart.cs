@@ -12,41 +12,71 @@ namespace AFS.Core.Services.DataCalculations
         public List<ChartDataItem> GetDataItem(bool baseYear)
         {
             List<ChartDataItem> assets = new();
-            assets.Add(new ChartDataItem
+
+            var equityValue = GetEquity(baseYear).GetValueOrDefault(0);
+            if (equityValue != 0)
             {
-                Item = "Equity",
-                Value = GetEquity(baseYear)
-            });
-            assets.Add(new ChartDataItem
+                assets.Add(new ChartDataItem
+                {
+                    Item = "Equity",
+                    Value = equityValue
+                });
+            }
+            var longTermLiabilitiesValue = GetLongTermLiabilities(baseYear).GetValueOrDefault(0);
+            if (longTermLiabilitiesValue != 0)
             {
-                Item = "LongTermLiabilities_",
-                Value = GetLongTermLiabilities(baseYear)
-            });
-            assets.Add(new ChartDataItem
+                assets.Add(new ChartDataItem
+                {
+                    Item = "LongTermLiabilities_",
+                    Value = longTermLiabilitiesValue
+                });
+            }
+            var shortTermLoansValue = GetShortTermLoans(baseYear).GetValueOrDefault(0);
+            if (shortTermLoansValue != 0)
             {
-                Item = "ShortTermLoans",
-                Value = GetShortTermLoans(baseYear)
-            });
-            assets.Add(new ChartDataItem
+                assets.Add(new ChartDataItem
+                {
+                    Item = "ShortTermLoans",
+                    Value = shortTermLoansValue
+                });
+            }
+            var accountsPayableValue = GetAccountsPayable(baseYear).GetValueOrDefault(0);
+            if (accountsPayableValue != 0)
             {
-                Item = "AccountsPayable",
-                Value = GetAccountsPayable(baseYear)
-            });
-            assets.Add(new ChartDataItem
+                assets.Add(new ChartDataItem
+                {
+                    Item = "AccountsPayable",
+                    Value = accountsPayableValue
+                });
+            }
+            var otherCurrentLiabilitiesValue = GetOtherCurrentLiabilities(baseYear).GetValueOrDefault(0);
+            if (otherCurrentLiabilitiesValue != 0)
             {
-                Item = "OtherCurrentLiabilities",
-                Value = GetOtherCurrentLiabilities(baseYear)
-            });
-            assets.Add(new ChartDataItem
+                assets.Add(new ChartDataItem
+                {
+                    Item = "OtherCurrentLiabilities",
+                    Value = otherCurrentLiabilitiesValue
+                });
+            }
+            var liabilitiesRelatedToNonCurrentAssetsForSaleValue = GetLiabilitiesRelatedNonCurrentAssetsHeldForSale(baseYear).GetValueOrDefault(0);
+            if (liabilitiesRelatedToNonCurrentAssetsForSaleValue != 0)
             {
-                Item = "LiabilitiesRelatedToNonCurrentAssetsForSale",
-                Value = GetLiabilitiesRelatedNonCurrentAssetsHeldForSale(baseYear)
-            });
-            assets.Add(new ChartDataItem
+                assets.Add(new ChartDataItem
+                {
+                    Item = "LiabilitiesRelatedToNonCurrentAssetsForSale",
+                    Value = liabilitiesRelatedToNonCurrentAssetsForSaleValue
+                });
+            }
+            var futureIncomeValue = GetFutureIncome(baseYear).GetValueOrDefault(0);
+            if (futureIncomeValue != 0)
             {
-                Item = "FutureIncome",
-                Value = GetFutureIncome(baseYear)
-            });
+                assets.Add(new ChartDataItem
+                {
+                    Item = "FutureIncome",
+                    Value = futureIncomeValue
+                });
+            }
+
             return assets.OrderByDescending(item => item.Value).ToList();
         }
         private double? GetEquity(bool baseYear)

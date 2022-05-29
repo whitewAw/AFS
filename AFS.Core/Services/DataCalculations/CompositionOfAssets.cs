@@ -17,41 +17,71 @@ namespace AFS.Core.Services.DataCalculations
         public List<ChartDataItem> GetDataItem(bool baseYear, bool begin)
         {
             List<ChartDataItem> assets = new();
-            assets.Add(new ChartDataItem
+
+            var nonCurrentImmobilizedAssetsValue = GetNonCurrentImmobilizedFunds(baseYear, begin).GetValueOrDefault(0);
+            if (nonCurrentImmobilizedAssetsValue != 0)
             {
-                Item = "NonCurrentImmobilizedAssets",
-                Value = GetNonCurrentImmobilizedFunds(baseYear, begin)
-            });
-            assets.Add(new ChartDataItem
+                assets.Add(new ChartDataItem
+                {
+                    Item = "NonCurrentImmobilizedAssets",
+                    Value = nonCurrentImmobilizedAssetsValue
+                });
+            }
+            var tangibleCurrentAssetsValue = GetTangibleCurrentAssets(baseYear, begin).GetValueOrDefault(0);
+            if (tangibleCurrentAssetsValue != 0)
             {
-                Item = "TangibleCurrentAssets",
-                Value = GetTangibleCurrentAssets(baseYear, begin)
-            });
-            assets.Add(new ChartDataItem
+                assets.Add(new ChartDataItem
+                {
+                    Item = "TangibleCurrentAssets",
+                    Value = tangibleCurrentAssetsValue
+                });
+            }
+            var accountsReceivableValue = GetAccountsReceivable(baseYear, begin).GetValueOrDefault(0);
+            if (accountsReceivableValue != 0)
             {
-                Item = "AccountsReceivable",
-                Value = GetAccountsReceivable(baseYear, begin)
-            });
-            assets.Add(new ChartDataItem
+                assets.Add(new ChartDataItem
+                {
+                    Item = "AccountsReceivable",
+                    Value = accountsReceivableValue
+                });
+            }
+            var cashCurrentFinancialInvestmentsValue = GetCashCurrentFinancialInvestments(baseYear, begin).GetValueOrDefault(0);
+            if (cashCurrentFinancialInvestmentsValue != 0)
             {
-                Item = "CashCurrentFinancialInvestments",
-                Value = GetCashCurrentFinancialInvestments(baseYear, begin)
-            });
-            assets.Add(new ChartDataItem
+                assets.Add(new ChartDataItem
+                {
+                    Item = "CashCurrentFinancialInvestments",
+                    Value = cashCurrentFinancialInvestmentsValue
+                });
+            }
+            var otherCurrentAssetsValue = GetOtherCurrentAssets(baseYear, begin).GetValueOrDefault(0);
+            if (otherCurrentAssetsValue != 0)
             {
-                Item = "OtherCurrentAssets",
-                Value = GetOtherCurrentAssets(baseYear, begin)
-            });
-            assets.Add(new ChartDataItem
+                assets.Add(new ChartDataItem
+                {
+                    Item = "OtherCurrentAssets",
+                    Value = otherCurrentAssetsValue
+                });
+            }
+            var nonCurrentAssetsHeldForSaleValue = GetNonCurrentAssetsHeldForSale(baseYear, begin).GetValueOrDefault(0);
+            if (nonCurrentAssetsHeldForSaleValue != 0)
             {
-                Item = "NonCurrentAssetsHeldForSale",
-                Value = GetNonCurrentAssetsHeldForSale(baseYear, begin)
-            });
-            assets.Add(new ChartDataItem
+                assets.Add(new ChartDataItem
+                {
+                    Item = "NonCurrentAssetsHeldForSale",
+                    Value = nonCurrentAssetsHeldForSaleValue
+                });
+            }
+            var futureExpensesValue = GetFutureExpenses(baseYear, begin).GetValueOrDefault(0);
+            if (futureExpensesValue != 0)
             {
-                Item = "FutureExpenses",
-                Value = GetFutureExpenses(baseYear, begin)
-            });
+                assets.Add(new ChartDataItem
+                {
+                    Item = "FutureExpenses",
+                    Value = futureExpensesValue
+                });
+            }
+
             return assets.OrderByDescending(item => item.Value).ToList();
         }
 

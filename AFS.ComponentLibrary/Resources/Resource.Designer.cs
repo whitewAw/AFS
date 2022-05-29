@@ -2671,6 +2671,15 @@ namespace AFS.ComponentLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Структура кредиторської заборгованості.
+        /// </summary>
+        internal static string StructureOfAccountsPayable {
+            get {
+                return ResourceManager.GetString("StructureOfAccountsPayable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Коефіцієнт придатності на початок року.
         /// </summary>
         internal static string SuitabilityRatioForBegin {

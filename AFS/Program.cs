@@ -45,6 +45,7 @@ builder.Services.AddTransient<IndicatorsOfFinancialStability>();
 builder.Services.AddTransient<CompositionOfAssets>();
 builder.Services.AddTransient<WorkingCapitalTurnoverTime>();
 builder.Services.AddTransient<SourcesOfCapitalFormationChart>();
+builder.Services.AddTransient<StructureOfAccountsPayableChart>();
 
 builder.Logging.SetMinimumLevel(LogLevel.Warning);
 
