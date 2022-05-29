@@ -11,8 +11,11 @@
             get => current;
             set
             {
-                current = AFSConstraints.RoundStat(value);
-                NotifyStateChanged();
+                if (current != value)
+                {
+                    current = AFSConstraints.RoundStat(value);
+                    NotifyStateChanged();
+                }
             }
         }
         public double Previous
@@ -20,8 +23,11 @@
             get => previous;
             set
             {
-                previous = AFSConstraints.RoundStat(value);
-                NotifyStateChanged();
+                if (previous != value)
+                {
+                    previous = AFSConstraints.RoundStat(value);
+                    NotifyStateChanged();
+                }
             }
         }
 

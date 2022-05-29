@@ -36,8 +36,15 @@ namespace AFS.Core.Model
             get => baseYear;
             set
             {
-                baseYear = value;
-                NotifyStateChanged();
+                if (baseYear != value)
+                {
+                    baseYear = value;
+                    if (baseYear + 1 != CurrentYear)
+                    {
+                        CurrentYear = baseYear + 1;
+                    }
+                    NotifyStateChanged();
+                }
             }
         }
         public int CurrentYear
@@ -45,8 +52,15 @@ namespace AFS.Core.Model
             get => currentYear;
             set
             {
-                currentYear = value;
-                NotifyStateChanged();
+                if (currentYear != value)
+                {
+                    currentYear = value;
+                    if (currentYear - 1 != BaseYear)
+                    {
+                        BaseYear = currentYear - 1;
+                    }
+                    NotifyStateChanged();
+                }
             }
         }
         internal void Init(AFSModel readModel)

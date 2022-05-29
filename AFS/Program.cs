@@ -42,8 +42,8 @@ builder.Services.AddTransient<GeneralIndicatorsOfFinancialStability>();
 builder.Services.AddTransient<ClassificationOfTypesOfFinancialStability>();
 builder.Services.AddTransient<IndicatorsOfFinancialStability>();
 //Charts
-builder.Services.AddTransient<CompositionOfAssets>();
-builder.Services.AddTransient<WorkingCapitalTurnoverTime>();
+builder.Services.AddTransient<CompositionOfAssetsChart>();
+builder.Services.AddTransient<WorkingCapitalTurnoverTimeChart>();
 builder.Services.AddTransient<SourcesOfCapitalFormationChart>();
 builder.Services.AddTransient<StructureOfAccountsPayableChart>();
 

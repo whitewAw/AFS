@@ -14,7 +14,7 @@ namespace AFS.Core.Services.DataCalculations
             List<ChartDataItem> assets = new();
 
             var equityValue = GetEquity(baseYear).GetValueOrDefault(0);
-            if (equityValue != 0)
+            if (equityValue != 0 && !Double.IsNaN(equityValue) && !Double.IsInfinity(equityValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -23,7 +23,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var longTermLiabilitiesValue = GetLongTermLiabilities(baseYear).GetValueOrDefault(0);
-            if (longTermLiabilitiesValue != 0)
+            if (longTermLiabilitiesValue != 0 && !Double.IsNaN(longTermLiabilitiesValue) && !Double.IsInfinity(longTermLiabilitiesValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -32,7 +32,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var shortTermLoansValue = GetShortTermLoans(baseYear).GetValueOrDefault(0);
-            if (shortTermLoansValue != 0)
+            if (shortTermLoansValue != 0 && !Double.IsNaN(shortTermLoansValue) && !Double.IsInfinity(shortTermLoansValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -41,7 +41,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var accountsPayableValue = GetAccountsPayable(baseYear).GetValueOrDefault(0);
-            if (accountsPayableValue != 0)
+            if (accountsPayableValue != 0 && !Double.IsNaN(accountsPayableValue) && !Double.IsInfinity(accountsPayableValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -50,7 +50,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var otherCurrentLiabilitiesValue = GetOtherCurrentLiabilities(baseYear).GetValueOrDefault(0);
-            if (otherCurrentLiabilitiesValue != 0)
+            if (otherCurrentLiabilitiesValue != 0 && !Double.IsNaN(otherCurrentLiabilitiesValue) && !Double.IsInfinity(otherCurrentLiabilitiesValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -59,7 +59,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var liabilitiesRelatedToNonCurrentAssetsForSaleValue = GetLiabilitiesRelatedNonCurrentAssetsHeldForSale(baseYear).GetValueOrDefault(0);
-            if (liabilitiesRelatedToNonCurrentAssetsForSaleValue != 0)
+            if (liabilitiesRelatedToNonCurrentAssetsForSaleValue != 0 && !Double.IsNaN(liabilitiesRelatedToNonCurrentAssetsForSaleValue) && !Double.IsInfinity(liabilitiesRelatedToNonCurrentAssetsForSaleValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -68,7 +68,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var futureIncomeValue = GetFutureIncome(baseYear).GetValueOrDefault(0);
-            if (futureIncomeValue != 0)
+            if (futureIncomeValue != 0 && !Double.IsNaN(futureIncomeValue) && !Double.IsInfinity(futureIncomeValue))
             {
                 assets.Add(new ChartDataItem
                 {

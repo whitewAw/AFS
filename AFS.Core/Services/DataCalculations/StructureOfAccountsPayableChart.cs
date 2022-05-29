@@ -14,7 +14,7 @@ namespace AFS.Core.Services.DataCalculations
             List<ChartDataItem> assets = new();
 
             var withBuyersOrSuppliersValue = GetWithBuyersOrSuppliers(baseYear).GetValueOrDefault(0);
-            if (withBuyersOrSuppliersValue != 0)
+            if (withBuyersOrSuppliersValue != 0 && !Double.IsNaN(withBuyersOrSuppliersValue) && !Double.IsInfinity(withBuyersOrSuppliersValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -23,7 +23,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var withLongTermLiabilitiesValue = GetWithLongTermLiabilities(baseYear).GetValueOrDefault(0);
-            if (withLongTermLiabilitiesValue != 0)
+            if (withLongTermLiabilitiesValue != 0 && !Double.IsNaN(withLongTermLiabilitiesValue) && !Double.IsInfinity(withLongTermLiabilitiesValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -32,7 +32,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var forBillsValue = GetForBills(baseYear).GetValueOrDefault(0);
-            if (forBillsValue != 0)
+            if (forBillsValue != 0 && !Double.IsNaN(forBillsValue) && !Double.IsInfinity(forBillsValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -41,7 +41,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var fromInsuranceValue = GetFromInsurance(baseYear).GetValueOrDefault(0);
-            if (fromInsuranceValue != 0)
+            if (fromInsuranceValue != 0 && !Double.IsNaN(fromInsuranceValue) && !Double.IsInfinity(fromInsuranceValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -50,7 +50,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var withBudgetAndExtraBudgetaryFundsValue = GetWithBudgetAndExtraBudgetaryFunds(baseYear).GetValueOrDefault(0);
-            if (withBudgetAndExtraBudgetaryFundsValue != 0)
+            if (withBudgetAndExtraBudgetaryFundsValue != 0 && !Double.IsNaN(withBudgetAndExtraBudgetaryFundsValue) && !Double.IsInfinity(withBudgetAndExtraBudgetaryFundsValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -59,7 +59,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var withAccruedIncomeValue = GetWithAccruedIncome(baseYear).GetValueOrDefault(0);
-            if (withAccruedIncomeValue != 0)
+            if (withAccruedIncomeValue != 0 && !Double.IsNaN(withAccruedIncomeValue) && !Double.IsInfinity(withAccruedIncomeValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -68,7 +68,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var withPayrollValue = GetWithPayroll(baseYear).GetValueOrDefault(0);
-            if (withPayrollValue != 0)
+            if (withPayrollValue != 0 && !Double.IsNaN(withPayrollValue) && !Double.IsInfinity(withPayrollValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -77,7 +77,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var withAdvancesValue = GetWithAdvances(baseYear).GetValueOrDefault(0);
-            if (withAdvancesValue != 0)
+            if (withAdvancesValue != 0 && !Double.IsNaN(withAdvancesValue) && !Double.IsInfinity(withAdvancesValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -86,7 +86,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var withParticipantsValue = GetWithParticipants(baseYear).GetValueOrDefault(0);
-            if (withParticipantsValue != 0)
+            if (withParticipantsValue != 0 && !Double.IsNaN(withParticipantsValue) && !Double.IsInfinity(withParticipantsValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -95,7 +95,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var withInternalCashSettlementsValue = GetWithInternalCashSettlements(baseYear).GetValueOrDefault(0);
-            if (withInternalCashSettlementsValue != 0)
+            if (withInternalCashSettlementsValue != 0 && !Double.IsNaN(withInternalCashSettlementsValue) && !Double.IsInfinity(withInternalCashSettlementsValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -104,7 +104,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var withOtherValue = GetWithOther(baseYear).GetValueOrDefault(0);
-            if (withOtherValue != 0)
+            if (withOtherValue != 0 && !Double.IsNaN(withOtherValue) && !Double.IsInfinity(withOtherValue))
             {
                 assets.Add(new ChartDataItem
                 {

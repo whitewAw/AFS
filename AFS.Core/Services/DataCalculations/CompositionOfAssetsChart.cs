@@ -3,11 +3,11 @@ using AFS.Core.Models;
 
 namespace AFS.Core.Services.DataCalculations
 {
-    public class CompositionOfAssets
+    public class CompositionOfAssetsChart
     {
         CharacteristicsOfCapital? CharacteristicsOfCapital { get; set; }
 
-        public CompositionOfAssets(AFSModel model) => Init(model);
+        public CompositionOfAssetsChart(AFSModel model) => Init(model);
 
         private void Init(AFSModel model)
         {
@@ -19,7 +19,7 @@ namespace AFS.Core.Services.DataCalculations
             List<ChartDataItem> assets = new();
 
             var nonCurrentImmobilizedAssetsValue = GetNonCurrentImmobilizedFunds(baseYear, begin).GetValueOrDefault(0);
-            if (nonCurrentImmobilizedAssetsValue != 0)
+            if (nonCurrentImmobilizedAssetsValue != 0 && !Double.IsNaN(nonCurrentImmobilizedAssetsValue) && !Double.IsInfinity(nonCurrentImmobilizedAssetsValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -28,7 +28,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var tangibleCurrentAssetsValue = GetTangibleCurrentAssets(baseYear, begin).GetValueOrDefault(0);
-            if (tangibleCurrentAssetsValue != 0)
+            if (tangibleCurrentAssetsValue != 0 && !Double.IsNaN(tangibleCurrentAssetsValue) && !Double.IsInfinity(tangibleCurrentAssetsValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -37,7 +37,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var accountsReceivableValue = GetAccountsReceivable(baseYear, begin).GetValueOrDefault(0);
-            if (accountsReceivableValue != 0)
+            if (accountsReceivableValue != 0 && !Double.IsNaN(accountsReceivableValue) && !Double.IsInfinity(accountsReceivableValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -46,7 +46,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var cashCurrentFinancialInvestmentsValue = GetCashCurrentFinancialInvestments(baseYear, begin).GetValueOrDefault(0);
-            if (cashCurrentFinancialInvestmentsValue != 0)
+            if (cashCurrentFinancialInvestmentsValue != 0 && !Double.IsNaN(cashCurrentFinancialInvestmentsValue) && !Double.IsInfinity(cashCurrentFinancialInvestmentsValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -55,7 +55,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var otherCurrentAssetsValue = GetOtherCurrentAssets(baseYear, begin).GetValueOrDefault(0);
-            if (otherCurrentAssetsValue != 0)
+            if (otherCurrentAssetsValue != 0 && !Double.IsNaN(otherCurrentAssetsValue) && !Double.IsInfinity(otherCurrentAssetsValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -64,7 +64,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var nonCurrentAssetsHeldForSaleValue = GetNonCurrentAssetsHeldForSale(baseYear, begin).GetValueOrDefault(0);
-            if (nonCurrentAssetsHeldForSaleValue != 0)
+            if (nonCurrentAssetsHeldForSaleValue != 0 && !Double.IsNaN(nonCurrentAssetsHeldForSaleValue) && !Double.IsInfinity(nonCurrentAssetsHeldForSaleValue))
             {
                 assets.Add(new ChartDataItem
                 {
@@ -73,7 +73,7 @@ namespace AFS.Core.Services.DataCalculations
                 });
             }
             var futureExpensesValue = GetFutureExpenses(baseYear, begin).GetValueOrDefault(0);
-            if (futureExpensesValue != 0)
+            if (futureExpensesValue != 0 && !Double.IsNaN(futureExpensesValue) && !Double.IsInfinity(futureExpensesValue))
             {
                 assets.Add(new ChartDataItem
                 {

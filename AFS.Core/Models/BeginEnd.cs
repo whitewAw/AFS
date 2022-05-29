@@ -11,8 +11,11 @@
             get => begin;
             set
             {
-                begin = AFSConstraints.RoundStat(value);
-                NotifyStateChanged();
+                if (begin != value)
+                {
+                    begin = AFSConstraints.RoundStat(value);
+                    NotifyStateChanged();
+                }
             }
         }
         public double End
@@ -20,8 +23,11 @@
             get => end;
             set
             {
-                end = AFSConstraints.RoundStat(value);
-                NotifyStateChanged();
+                if (end != value)
+                {
+                    end = AFSConstraints.RoundStat(value);
+                    NotifyStateChanged();
+                }
             }
         }
 
