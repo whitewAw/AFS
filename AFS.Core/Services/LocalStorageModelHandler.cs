@@ -2,6 +2,7 @@
 using AFS.Core.Model;
 using Blazored.LocalStorage;
 using Microsoft.Extensions.Logging;
+using System.Net.Http.Json;
 using System.Text.Json;
 
 namespace AFS.Core.Services
@@ -11,12 +12,14 @@ namespace AFS.Core.Services
         private ILocalStorageService storage;
         private AFSModel model;
         private ILogger<LocalStorageModelHandler> logger;
+        private HttpClient http;
 
-        public LocalStorageModelHandler(ILocalStorageService storage, AFSModel model, ILoggerFactory loggerFactory)
+        public LocalStorageModelHandler(ILocalStorageService storage, AFSModel model, ILoggerFactory loggerFactory, HttpClient http)
         {
             this.storage = storage;
             this.model = model;
             logger = loggerFactory.CreateLogger<LocalStorageModelHandler>();
+            this.http = http;
         }
 
         public async Task InitializeModelAsync()
@@ -42,6 +45,14 @@ namespace AFS.Core.Services
                 {
                     logger.LogError(ex.Message);
                 }
+            }
+            try
+            {
+                return await http.GetFromJsonAsync<AFSModel>("PJSC_AZOVSTAL_IRON_2019_2020.json");
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message);
             }
             return null;
         }
