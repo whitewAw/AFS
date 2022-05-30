@@ -40,7 +40,7 @@
         {
             isUpload = true;
             UploadingDialog();
-            await Task.Delay(50);
+            await Task.Delay(250);
             using var stream = file.File.OpenReadStream();
             AFSModel? model = await ExportImportHandler.ImportAsync(stream);
             ExportImportHandler.InitializeModel(model);
