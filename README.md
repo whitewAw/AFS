@@ -38,8 +38,8 @@ jobs:
     - name: Publish .NET Core Project
       run: dotnet publish AFS.sln -c Release -o release --nologo
     
-    # changes the base-tag in index.html from '/' to 'AFS' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to AFS
+    # changes the base-tag in index.html from '/' to 'UFIN' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to UFIN
       run: sed -i 's/<base href="\/" \/>/<base href="\/UFIN\/" \/>/g' release/wwwroot/index.html
 
     # changes the base-tag in index.html from '/' to 'UFIN' to match GitHub Pages repository subdirectory
