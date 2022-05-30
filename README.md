@@ -8,7 +8,7 @@ Assessment of Ukrainian financial statements
 
 [![N|Solid](https://miro.medium.com/max/875/1*mNOKpf7lW6dQC8LvewtMdQ.jpeg)](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly)
 
-[Working instance of the application](https://whitewaw.github.io/AFS/).
+[Working instance of the application](https://whitewaw.github.io/UFIN/).
 
 You can integrate into your build process or continuous integration pipeline next script, as done in this GitHub Actions workflow:
 
