@@ -105,11 +105,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-KtfQL0hZpJST2KpMIR7rCswHE0hvYI+\/padJyycMge8=",
+      "hash": "sha256-1XYJv\/IlKUgW0JE2CKa0QLLeGEGTuNYA0UcdUL7zMSs=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-omLAdxRvlKJmRyMW2wRlCL6BMQzHAV\/wPaEWG4gPOM8=",
+      "hash": "sha256-23hZ2L73mnSk3E8+hA4DecYe9GXCM8+CeZF648Y1dZE=",
       "url": "_framework\/AFS.ComponentLibrary.dll"
     },
     {
@@ -477,5 +477,5 @@
       "url": "_content\/AFS.ComponentLibrary\/AFS.ComponentLibrary.bundle.scp.css"
     }
   ],
-  "version": "od4iHuNG"
+  "version": "hFqqudkl"
 };
