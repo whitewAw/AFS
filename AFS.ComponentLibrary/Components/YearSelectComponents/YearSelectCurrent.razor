@@ -1,5 +1,4 @@
-﻿@using System.ComponentModel
-@implements IDisposable
+﻿@implements IDisposable
 
 <RadzenDropDown TValue="int" Class="w-100"
                 Data=@YearList
@@ -7,7 +6,7 @@
 
 @code {
 
-    public event PropertyChangedEventHandler? fieldChanged;
+    public event Action? fieldChanged;
 
     List<int> YearList = new();
 
@@ -21,7 +20,7 @@
 
     protected override void OnInitialized()
     {
-        fieldChanged += async (sender, e) => await InvokeAsync(StateHasChanged);
+        fieldChanged += () => StateHasChanged();
         MainModel.PropertyChanged += fieldChanged;
         FillYearList();
         base.OnInitialized();

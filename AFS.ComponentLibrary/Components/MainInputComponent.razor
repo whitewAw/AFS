@@ -1,5 +1,4 @@
-﻿@using System.ComponentModel
-@inject IModelStorageHandler modelStorag
+﻿@inject IModelStorageHandler modelStorag
 @implements IDisposable
 
 <RadzenTabs TabPosition="0" RenderMode="TabRenderMode.Client">
@@ -35,12 +34,12 @@
 
     private string baseYearF2 => $"{ResLoc["StatementOfFinancialPerformance"]} ({MainModel.BaseYear})";
 
-    public event PropertyChangedEventHandler? fieldChanged;
+    public event Action? fieldChanged;
 
     protected override void OnInitialized()
     {
 
-        fieldChanged += async (sender, e) =>
+        fieldChanged += async () =>
         {
             StateHasChanged();
             await SaveModelToLocalStorage(MainModel);

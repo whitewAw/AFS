@@ -1,5 +1,4 @@
 ﻿using AFS.Core.Model;
-using System.ComponentModel;
 
 namespace AFS.Core.Models
 {
@@ -30,13 +29,13 @@ namespace AFS.Core.Models
             FixedAssetsInfoCurrent.Init(info.FixedAssetsInfoCurrent);
         }
 
-        public void SubscribeOnChange(PropertyChangedEventHandler propertyChanged)
+        public void SubscribeOnChange(Action propertyChanged)
         {
             PropertyChanged += propertyChanged;
             FixedAssetsInfoBase.PropertyChanged += propertyChanged;
             FixedAssetsInfoCurrent.PropertyChanged += propertyChanged;
         }
-        public void UnSubscribeOnChange(PropertyChangedEventHandler? propertyChanged)
+        public void UnSubscribeOnChange(Action propertyChanged)
         {
             if (propertyChanged != null)
             {

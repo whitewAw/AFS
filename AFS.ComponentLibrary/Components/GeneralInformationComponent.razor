@@ -1,5 +1,4 @@
-﻿@using System.ComponentModel
-@implements IDisposable
+﻿@implements IDisposable
 
 <RadzenCard Style="width: 100%;">
     <div class="row mb-2">
@@ -29,11 +28,11 @@
 </RadzenCard>
 
 @code {
-    public event PropertyChangedEventHandler? fieldChanged;
+    public event Action? fieldChanged;
 
     protected override void OnInitialized()
     {
-        fieldChanged += async (sender, e) => await InvokeAsync(StateHasChanged);
+        fieldChanged += () => StateHasChanged();
         MainModel.PropertyChanged += fieldChanged;
         base.OnInitialized();
     }
