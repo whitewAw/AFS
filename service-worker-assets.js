@@ -65,7 +65,7 @@
       "url": "images\/community.svg"
     },
     {
-      "hash": "sha256-Q+qQOY1TlOo6kv6DbZ1OctevJYqeUPlDsS/o0J0gNw8=",
+      "hash": "sha256-FexMR6JfS1qwISJGx+pJy6ONgSchOFyF/il7Rl2bj1Y=",
       "url": "index.html"
     },
     {
@@ -101,19 +101,19 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-g4SEIOwYDDjc3VVJnOkePZToEM09GWb9kW2oW6qWtXc=",
+      "hash": "sha256-ifcneOpngGTry30vhKI+0StwQMfib7c5nzURufLRsVc=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-bh8zU7CSY6uZXyzNK9ImrGqCnxqGTi4O\/MfAS2ABauQ=",
+      "hash": "sha256-gSlvlsUQgQmyBHN28jNvZTAWsWzIeVkY8u8qUx5udHQ=",
       "url": "_framework\/AFS.ComponentLibrary.dll"
     },
     {
-      "hash": "sha256-ElAcL6erQPturzdt33DndR9P5IZe84AySu87XboUCB0=",
+      "hash": "sha256-ylrbZUiYF3yqFCRo+IImKR100YAxMoJ63IL5enPa4\/8=",
       "url": "_framework\/AFS.Core.dll"
     },
     {
-      "hash": "sha256-Zwpe30mwi6U3vOhlZ\/vrtjeJim2+zQBiX301bfDo7YI=",
+      "hash": "sha256-TOHu3i\/GUUpA48n97s8YL6nvug+5j+Mo5xGFJW46E9Y=",
       "url": "_framework\/AFS.dll"
     },
     {
@@ -273,7 +273,7 @@
       "url": "_framework\/System.Net.Primitives.dll"
     },
     {
-      "hash": "sha256-Y4XxhRW9dTx311cUh69bb7\/A9g2fVtmZvEOnHOOicvs=",
+      "hash": "sha256-kqsjRYIwwb7Px96OL4z8AWcqjzD7zeF1IAExOZYTdzo=",
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
@@ -345,11 +345,11 @@
       "url": "_framework\/System.Xml.XDocument.dll"
     },
     {
-      "hash": "sha256-whsfG1Ozsh8Cc5kpqUWEVBkevkY0q6MNDLKHsqqdZ9Q=",
+      "hash": "sha256-tMlUEqW6iJg7uKpUkr1BJI9kvb4uZ\/4zO\/QwPjgOPTM=",
       "url": "_framework\/dotnet.6.0.5.g3naxzves8.js"
     },
     {
-      "hash": "sha256-xOFtNnyuwF1BHVdpmzSW0Ww5ww\/qlye+SwBXj1RMmn8=",
+      "hash": "sha256-ZL2fx8PXDaW5ig\/zlKEQhd6RPmBXE+eFzhww+gMWnV0=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -473,5 +473,5 @@
       "url": "_content\/AFS.ComponentLibrary\/AFS.ComponentLibrary.bundle.scp.css"
     }
   ],
-  "version": "dZXviBmq"
+  "version": "HAPBYqug"
 };
