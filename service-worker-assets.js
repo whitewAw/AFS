@@ -101,19 +101,19 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-OOj5mcQhVcCAZiA1Tp2quh2U\/pLQZ37W3lu0k9zTaFo=",
+      "hash": "sha256-g4SEIOwYDDjc3VVJnOkePZToEM09GWb9kW2oW6qWtXc=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-23hZ2L73mnSk3E8+hA4DecYe9GXCM8+CeZF648Y1dZE=",
+      "hash": "sha256-bh8zU7CSY6uZXyzNK9ImrGqCnxqGTi4O\/MfAS2ABauQ=",
       "url": "_framework\/AFS.ComponentLibrary.dll"
     },
     {
-      "hash": "sha256-8PIxW3N1cZqHdhdyM6D0uSQhzpZvHDoBaelYWBbIAnQ=",
+      "hash": "sha256-ElAcL6erQPturzdt33DndR9P5IZe84AySu87XboUCB0=",
       "url": "_framework\/AFS.Core.dll"
     },
     {
-      "hash": "sha256-pNo3zFRh\/ER66uD+U\/GHJm2vUfdxK4o9IpM7ERtSxlM=",
+      "hash": "sha256-Zwpe30mwi6U3vOhlZ\/vrtjeJim2+zQBiX301bfDo7YI=",
       "url": "_framework\/AFS.dll"
     },
     {
@@ -273,11 +273,11 @@
       "url": "_framework\/System.Net.Primitives.dll"
     },
     {
-      "hash": "sha256-kqsjRYIwwb7Px96OL4z8AWcqjzD7zeF1IAExOZYTdzo=",
+      "hash": "sha256-Y4XxhRW9dTx311cUh69bb7\/A9g2fVtmZvEOnHOOicvs=",
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-No4J+vDpM+L\/xGWDONJhgiZa\/ofppqxb98ACEgewG\/s=",
+      "hash": "sha256-uMyX0\/ovK58R5QJIamy+QER8Ey1MJhiOcPd8UZVZ0KQ=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -313,7 +313,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-k3wjQacdVBKNr415Jb\/bPhzrP89paY1bkHRgdI6Ap0Y=",
+      "hash": "sha256-RYjZaucD\/wf++l4wWYbrzGhZtE2zuvAFn9KucTYZLXs=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -345,11 +345,11 @@
       "url": "_framework\/System.Xml.XDocument.dll"
     },
     {
-      "hash": "sha256-4H+UuQOpKRaGTqD\/xY3uHxJtY1Erkd2XIW4jXN1Nlvc=",
+      "hash": "sha256-whsfG1Ozsh8Cc5kpqUWEVBkevkY0q6MNDLKHsqqdZ9Q=",
       "url": "_framework\/dotnet.6.0.5.g3naxzves8.js"
     },
     {
-      "hash": "sha256-VkOHEv4DpG5yD92ebna\/c5xrdWT5uYGsku6VsXGca3U=",
+      "hash": "sha256-xOFtNnyuwF1BHVdpmzSW0Ww5ww\/qlye+SwBXj1RMmn8=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -473,5 +473,5 @@
       "url": "_content\/AFS.ComponentLibrary\/AFS.ComponentLibrary.bundle.scp.css"
     }
   ],
-  "version": "RIz2I+xk"
+  "version": "dZXviBmq"
 };
