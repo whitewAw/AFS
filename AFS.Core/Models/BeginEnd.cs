@@ -1,34 +1,20 @@
-﻿namespace AFS.Core.Model
+﻿using AFS.Core.Models;
+
+namespace AFS.Core.Model
 {
-    public class BeginEnd
+    public class BeginEnd: TrackedEntity
     {
         private double begin;
         private double end;
-
-        public event Action? OnChange;
         public double Begin
         {
             get => begin;
-            set
-            {
-                if (begin != value)
-                {
-                    begin = AFSConstraints.RoundStat(value);
-                    NotifyStateChanged();
-                }
-            }
+            set => SetProperty(ref begin, AFSConstraints.RoundStat(value));
         }
         public double End
         {
             get => end;
-            set
-            {
-                if (end != value)
-                {
-                    end = AFSConstraints.RoundStat(value);
-                    NotifyStateChanged();
-                }
-            }
+            set => SetProperty(ref end, AFSConstraints.RoundStat(value));
         }
 
         internal void Init(BeginEnd fild)
@@ -36,7 +22,5 @@
             begin = fild.Begin;
             end = fild.End;
         }
-
-        private void NotifyStateChanged() => OnChange?.Invoke();
     }
 }

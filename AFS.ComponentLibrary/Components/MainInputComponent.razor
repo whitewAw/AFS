@@ -1,11 +1,12 @@
-﻿@inject IModelStorageHandler modelStorag
+﻿@using System.ComponentModel
+@inject IModelStorageHandler modelStorag
 @implements IDisposable
 
 <RadzenTabs TabPosition="0" RenderMode="TabRenderMode.Client">
     <Tabs>
         <RadzenTabsItem class="align-middle text-center" Text="@ResLoc["GeneralInformation"]">
             <GeneralInformationComponent />
-            <SaveLoadEraseComponent/>
+            <SaveLoadEraseComponent />
         </RadzenTabsItem>
         <RadzenTabsItem class="align-middle text-center" Text="@ResLoc["AdditionalInfo"]">
             <AdditionalInfoComponent />
@@ -16,7 +17,7 @@
         <RadzenTabsItem class="align-middle text-center" Text="@currentYearF1">
             <Form1Component F1="@MainModel.F1Current" />
         </RadzenTabsItem>
-       <RadzenTabsItem class="align-middle text-center" Text="@baseYearF2">
+        <RadzenTabsItem class="align-middle text-center" Text="@baseYearF2">
             <Form2Component F2="@MainModel.F2Base" />
         </RadzenTabsItem>
         <RadzenTabsItem class="align-middle text-center" Text="@currentYearF2">
@@ -34,26 +35,22 @@
 
     private string baseYearF2 => $"{ResLoc["StatementOfFinancialPerformance"]} ({MainModel.BaseYear})";
 
-    private event Action? fieldChanged;
+    public event PropertyChangedEventHandler? fieldChanged;
 
     protected override void OnInitialized()
     {
-        fieldChanged = async () =>
+
+        fieldChanged += async (sender, e) =>
         {
             StateHasChanged();
             await SaveModelToLocalStorage(MainModel);
         };
+
         MainModel.SubscribeOnChange(fieldChanged);
         base.OnInitialized();
     }
 
-    private async Task SaveModelToLocalStorage(AFSModel model)
-    {
-        await modelStorag.WriteModelAsync(model);
-    }
+    private async Task SaveModelToLocalStorage(AFSModel model) => await modelStorag.WriteModelAsync(model);
 
-    public void Dispose()
-    {
-        MainModel.UnSubscribeOnChange(fieldChanged);
-    }
+    public void Dispose()=> MainModel.UnSubscribeOnChange(fieldChanged);
 }

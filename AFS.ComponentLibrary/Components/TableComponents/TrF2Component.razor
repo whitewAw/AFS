@@ -1,6 +1,4 @@
-﻿@implements IDisposable
-
-<tr>
+﻿<tr>
     <TdComponent Align="ML">@FieldName</TdComponent>
     <TdComponent>@FieldNumber</TdComponent>
     <TdComponent Align="MR">
@@ -18,15 +16,4 @@
     public string? FieldNumber { get; set; }
     [Parameter]
     public string? FieldName { get; set; }
-
-    private event Action? fieldChanged;
-
-    protected override void OnInitialized()
-    {
-        fieldChanged = () => StateHasChanged();
-        Field.OnChange += fieldChanged;
-        base.OnInitialized();
-    }
-
-    public void Dispose() => Field.OnChange -= fieldChanged;
 }

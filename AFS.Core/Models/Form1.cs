@@ -1,9 +1,9 @@
-﻿namespace AFS.Core.Model
+﻿using System.ComponentModel;
+
+namespace AFS.Core.Model
 {
     public class Form1
     {
-        public event Action? OnChange;
-
         public BeginEnd F1001 { get; set; } = new();
         public BeginEnd F1002 { get; set; } = new();
         public BeginEnd F1005 { get; set; } = new();
@@ -61,8 +61,6 @@
         public BeginEnd F1665 { get; set; } = new();
         public BeginEnd F1690 { get; set; } = new();
         public BeginEnd F1700 { get; set; } = new();
-
-        private void NotifyStateChanged() => OnChange?.Invoke();
 
         internal void Init(Form1 form1)
         {
@@ -123,130 +121,130 @@
             F1665.Init(form1.F1665);
             F1690.Init(form1.F1690);
             F1700.Init(form1.F1700);
-
-            NotifyStateChanged();
+        }
+        internal void SubscribeOnChange(PropertyChangedEventHandler propertyChanged)
+        {
+            F1001.PropertyChanged += propertyChanged;
+            F1002.PropertyChanged += propertyChanged;
+            F1005.PropertyChanged += propertyChanged;
+            F1011.PropertyChanged += propertyChanged;
+            F1012.PropertyChanged += propertyChanged;
+            F1015.PropertyChanged += propertyChanged;
+            F1020.PropertyChanged += propertyChanged;
+            F1030.PropertyChanged += propertyChanged;
+            F1035.PropertyChanged += propertyChanged;
+            F1040.PropertyChanged += propertyChanged;
+            F1045.PropertyChanged += propertyChanged;
+            F1090.PropertyChanged += propertyChanged;
+            F1101.PropertyChanged += propertyChanged;
+            F1102.PropertyChanged += propertyChanged;
+            F1103.PropertyChanged += propertyChanged;
+            F1104.PropertyChanged += propertyChanged;
+            F1110.PropertyChanged += propertyChanged;
+            F1120.PropertyChanged += propertyChanged;
+            F1125.PropertyChanged += propertyChanged;
+            F1130.PropertyChanged += propertyChanged;
+            F1135.PropertyChanged += propertyChanged;
+            F1136.PropertyChanged += propertyChanged;
+            F1140.PropertyChanged += propertyChanged;
+            F1145.PropertyChanged += propertyChanged;
+            F1155.PropertyChanged += propertyChanged;
+            F1160.PropertyChanged += propertyChanged;
+            F1165.PropertyChanged += propertyChanged;
+            F1170.PropertyChanged += propertyChanged;
+            F1190.PropertyChanged += propertyChanged;
+            F1200.PropertyChanged += propertyChanged;
+            F1400.PropertyChanged += propertyChanged;
+            F1405.PropertyChanged += propertyChanged;
+            F1410.PropertyChanged += propertyChanged;
+            F1415.PropertyChanged += propertyChanged;
+            F1420.PropertyChanged += propertyChanged;
+            F1425.PropertyChanged += propertyChanged;
+            F1430.PropertyChanged += propertyChanged;
+            F1500.PropertyChanged += propertyChanged;
+            F1510.PropertyChanged += propertyChanged;
+            F1515.PropertyChanged += propertyChanged;
+            F1520.PropertyChanged += propertyChanged;
+            F1525.PropertyChanged += propertyChanged;
+            F1600.PropertyChanged += propertyChanged;
+            F1605.PropertyChanged += propertyChanged;
+            F1610.PropertyChanged += propertyChanged;
+            F1615.PropertyChanged += propertyChanged;
+            F1620.PropertyChanged += propertyChanged;
+            F1621.PropertyChanged += propertyChanged;
+            F1625.PropertyChanged += propertyChanged;
+            F1630.PropertyChanged += propertyChanged;
+            F1635.PropertyChanged += propertyChanged;
+            F1640.PropertyChanged += propertyChanged;
+            F1645.PropertyChanged += propertyChanged;
+            F1660.PropertyChanged += propertyChanged;
+            F1665.PropertyChanged += propertyChanged;
+            F1690.PropertyChanged += propertyChanged;
+            F1700.PropertyChanged += propertyChanged;
         }
 
-        internal void SubscribeOnChange(Action onChange)
+        internal void UnSubscribeOnChange(PropertyChangedEventHandler propertyChanged)
         {
-            F1001.OnChange += onChange;
-            F1002.OnChange += onChange;
-            F1005.OnChange += onChange;
-            F1011.OnChange += onChange;
-            F1012.OnChange += onChange;
-            F1015.OnChange += onChange;
-            F1020.OnChange += onChange;
-            F1030.OnChange += onChange;
-            F1035.OnChange += onChange;
-            F1040.OnChange += onChange;
-            F1045.OnChange += onChange;
-            F1090.OnChange += onChange;
-            F1101.OnChange += onChange;
-            F1102.OnChange += onChange;
-            F1103.OnChange += onChange;
-            F1104.OnChange += onChange;
-            F1110.OnChange += onChange;
-            F1120.OnChange += onChange;
-            F1125.OnChange += onChange;
-            F1130.OnChange += onChange;
-            F1135.OnChange += onChange;
-            F1136.OnChange += onChange;
-            F1140.OnChange += onChange;
-            F1145.OnChange += onChange;
-            F1155.OnChange += onChange;
-            F1160.OnChange += onChange;
-            F1165.OnChange += onChange;
-            F1170.OnChange += onChange;
-            F1190.OnChange += onChange;
-            F1200.OnChange += onChange;
-            F1400.OnChange += onChange;
-            F1405.OnChange += onChange;
-            F1410.OnChange += onChange;
-            F1415.OnChange += onChange;
-            F1420.OnChange += onChange;
-            F1425.OnChange += onChange;
-            F1430.OnChange += onChange;
-            F1500.OnChange += onChange;
-            F1510.OnChange += onChange;
-            F1515.OnChange += onChange;
-            F1520.OnChange += onChange;
-            F1525.OnChange += onChange;
-            F1600.OnChange += onChange;
-            F1605.OnChange += onChange;
-            F1610.OnChange += onChange;
-            F1615.OnChange += onChange;
-            F1620.OnChange += onChange;
-            F1621.OnChange += onChange;
-            F1625.OnChange += onChange;
-            F1630.OnChange += onChange;
-            F1635.OnChange += onChange;
-            F1640.OnChange += onChange;
-            F1645.OnChange += onChange;
-            F1660.OnChange += onChange;
-            F1665.OnChange += onChange;
-            F1690.OnChange += onChange;
-            F1700.OnChange += onChange;
-        }
-
-        internal void UnSubscribeOnChange(Action onChange)
-        {
-            F1001.OnChange -= onChange;
-            F1002.OnChange -= onChange;
-            F1005.OnChange -= onChange;
-            F1011.OnChange -= onChange;
-            F1012.OnChange -= onChange;
-            F1015.OnChange -= onChange;
-            F1020.OnChange -= onChange;
-            F1030.OnChange -= onChange;
-            F1035.OnChange -= onChange;
-            F1040.OnChange -= onChange;
-            F1045.OnChange -= onChange;
-            F1090.OnChange -= onChange;
-            F1101.OnChange -= onChange;
-            F1102.OnChange -= onChange;
-            F1103.OnChange -= onChange;
-            F1104.OnChange -= onChange;
-            F1110.OnChange -= onChange;
-            F1120.OnChange -= onChange;
-            F1125.OnChange -= onChange;
-            F1130.OnChange -= onChange;
-            F1135.OnChange -= onChange;
-            F1136.OnChange -= onChange;
-            F1140.OnChange -= onChange;
-            F1145.OnChange -= onChange;
-            F1155.OnChange -= onChange;
-            F1160.OnChange -= onChange;
-            F1165.OnChange -= onChange;
-            F1170.OnChange -= onChange;
-            F1190.OnChange -= onChange;
-            F1200.OnChange -= onChange;
-            F1400.OnChange -= onChange;
-            F1405.OnChange -= onChange;
-            F1410.OnChange -= onChange;
-            F1415.OnChange -= onChange;
-            F1420.OnChange -= onChange;
-            F1425.OnChange -= onChange;
-            F1430.OnChange -= onChange;
-            F1500.OnChange -= onChange;
-            F1510.OnChange -= onChange;
-            F1515.OnChange -= onChange;
-            F1520.OnChange -= onChange;
-            F1525.OnChange -= onChange;
-            F1600.OnChange -= onChange;
-            F1605.OnChange -= onChange;
-            F1610.OnChange -= onChange;
-            F1615.OnChange -= onChange;
-            F1620.OnChange -= onChange;
-            F1621.OnChange -= onChange;
-            F1625.OnChange -= onChange;
-            F1630.OnChange -= onChange;
-            F1635.OnChange -= onChange;
-            F1640.OnChange -= onChange;
-            F1645.OnChange -= onChange;
-            F1660.OnChange -= onChange;
-            F1665.OnChange -= onChange;
-            F1690.OnChange -= onChange;
-            F1700.OnChange -= onChange;
+            if (propertyChanged != null)
+            {
+                F1001.PropertyChanged -= propertyChanged;
+                F1002.PropertyChanged -= propertyChanged;
+                F1005.PropertyChanged -= propertyChanged;
+                F1011.PropertyChanged -= propertyChanged;
+                F1012.PropertyChanged -= propertyChanged;
+                F1015.PropertyChanged -= propertyChanged;
+                F1020.PropertyChanged -= propertyChanged;
+                F1030.PropertyChanged -= propertyChanged;
+                F1035.PropertyChanged -= propertyChanged;
+                F1040.PropertyChanged -= propertyChanged;
+                F1045.PropertyChanged -= propertyChanged;
+                F1090.PropertyChanged -= propertyChanged;
+                F1101.PropertyChanged -= propertyChanged;
+                F1102.PropertyChanged -= propertyChanged;
+                F1103.PropertyChanged -= propertyChanged;
+                F1104.PropertyChanged -= propertyChanged;
+                F1110.PropertyChanged -= propertyChanged;
+                F1120.PropertyChanged -= propertyChanged;
+                F1125.PropertyChanged -= propertyChanged;
+                F1130.PropertyChanged -= propertyChanged;
+                F1135.PropertyChanged -= propertyChanged;
+                F1136.PropertyChanged -= propertyChanged;
+                F1140.PropertyChanged -= propertyChanged;
+                F1145.PropertyChanged -= propertyChanged;
+                F1155.PropertyChanged -= propertyChanged;
+                F1160.PropertyChanged -= propertyChanged;
+                F1165.PropertyChanged -= propertyChanged;
+                F1170.PropertyChanged -= propertyChanged;
+                F1190.PropertyChanged -= propertyChanged;
+                F1200.PropertyChanged -= propertyChanged;
+                F1400.PropertyChanged -= propertyChanged;
+                F1405.PropertyChanged -= propertyChanged;
+                F1410.PropertyChanged -= propertyChanged;
+                F1415.PropertyChanged -= propertyChanged;
+                F1420.PropertyChanged -= propertyChanged;
+                F1425.PropertyChanged -= propertyChanged;
+                F1430.PropertyChanged -= propertyChanged;
+                F1500.PropertyChanged -= propertyChanged;
+                F1510.PropertyChanged -= propertyChanged;
+                F1515.PropertyChanged -= propertyChanged;
+                F1520.PropertyChanged -= propertyChanged;
+                F1525.PropertyChanged -= propertyChanged;
+                F1600.PropertyChanged -= propertyChanged;
+                F1605.PropertyChanged -= propertyChanged;
+                F1610.PropertyChanged -= propertyChanged;
+                F1615.PropertyChanged -= propertyChanged;
+                F1620.PropertyChanged -= propertyChanged;
+                F1621.PropertyChanged -= propertyChanged;
+                F1625.PropertyChanged -= propertyChanged;
+                F1630.PropertyChanged -= propertyChanged;
+                F1635.PropertyChanged -= propertyChanged;
+                F1640.PropertyChanged -= propertyChanged;
+                F1645.PropertyChanged -= propertyChanged;
+                F1660.PropertyChanged -= propertyChanged;
+                F1665.PropertyChanged -= propertyChanged;
+                F1690.PropertyChanged -= propertyChanged;
+                F1700.PropertyChanged -= propertyChanged;
+            }
         }
 
         public double GetF1000Begin() => F1001.Begin - F1002.Begin;

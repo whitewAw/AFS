@@ -1,6 +1,4 @@
-﻿@implements IDisposable
-
-<table class="table table-bordered py-0 table-sm">
+﻿<table class="table table-bordered py-0 table-sm">
     <thead>
         <tr>
             <ThComponent>@ResLoc["Asset"]</ThComponent>
@@ -229,15 +227,4 @@
 {
     [Parameter]
     public Form1 F1 { get; set; } = new();
-
-    private event Action? fieldChanged;
-
-    protected override void OnInitialized()
-    {
-        fieldChanged = () => StateHasChanged();
-        F1.OnChange += fieldChanged;
-        base.OnInitialized();
-    }
-
-    public void Dispose() => F1.OnChange -= fieldChanged;
 }

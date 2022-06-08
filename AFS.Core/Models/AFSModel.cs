@@ -1,14 +1,13 @@
 ﻿using AFS.Core.Models;
+using System.ComponentModel;
 
 namespace AFS.Core.Model
 {
-    public class AFSModel
+    public class AFSModel: TrackedEntity
     {
         private int baseYear;
         private int currentYear;
         private string? companyName;
-
-        public event Action? OnChange;
 
         public AFSModel()
         {
@@ -25,25 +24,20 @@ namespace AFS.Core.Model
         public string CompanyName
         {
             get => companyName ?? string.Empty;
-            set
-            {
-                companyName = value;
-                NotifyStateChanged();
-            }
+            set => SetProperty(ref companyName, value);
         }
         public int BaseYear
         {
             get => baseYear;
             set
             {
-                if (baseYear != value)
+                if (!baseYear.Equals(value))
                 {
-                    baseYear = value;
-                    if (baseYear + 1 != CurrentYear)
+                    SetProperty(ref baseYear, value);
+                    if (!CurrentYear.Equals(baseYear + 1))
                     {
-                        CurrentYear = baseYear + 1;
+                        SetProperty(ref currentYear, value + 1);
                     }
-                    NotifyStateChanged();
                 }
             }
         }
@@ -52,14 +46,13 @@ namespace AFS.Core.Model
             get => currentYear;
             set
             {
-                if (currentYear != value)
+                if (!currentYear.Equals(value))
                 {
-                    currentYear = value;
-                    if (currentYear - 1 != BaseYear)
+                    SetProperty(ref currentYear, value);
+                    if (!BaseYear.Equals(currentYear - 1))
                     {
-                        BaseYear = currentYear - 1;
+                        SetProperty(ref baseYear, value-1);
                     }
-                    NotifyStateChanged();
                 }
             }
         }
@@ -75,40 +68,29 @@ namespace AFS.Core.Model
             F2Current.Init(readModel.F2Current);
             AdditionalInfo.Init(readModel.AdditionalInfo);
 
-            NotifyStateChanged();
+            OnPropertyChanged();
         }
-        public void SubscribeOnChange(Action onChange)
+        public void SubscribeOnChange(PropertyChangedEventHandler propertyChanged)
         {
-            OnChange += onChange;
-            F1Base.OnChange += onChange;
-            F1Current.OnChange += onChange;
-            F2Base.OnChange += onChange;
-            F2Current.OnChange += onChange;
-            AdditionalInfo.OnChange += onChange;
-            F1Base.SubscribeOnChange(onChange);
-            F1Current.SubscribeOnChange(onChange);
-            F2Base.SubscribeOnChange(onChange);
-            F2Current.SubscribeOnChange(onChange);
-            AdditionalInfo.SubscribeOnChange(onChange);
+            PropertyChanged += propertyChanged;
+            F1Base.SubscribeOnChange(propertyChanged);
+            F1Current.SubscribeOnChange(propertyChanged);
+            F2Base.SubscribeOnChange(propertyChanged);
+            F2Current.SubscribeOnChange(propertyChanged);
+            AdditionalInfo.SubscribeOnChange(propertyChanged);
 
         }
-        public void UnSubscribeOnChange(Action? onChange)
+        public void UnSubscribeOnChange(PropertyChangedEventHandler? propertyChanged)
         {
-            if (onChange != null)
+            if (propertyChanged != null)
             {
-                OnChange -= onChange;
-                F1Base.OnChange -= OnChange;
-                F1Current.OnChange -= OnChange;
-                F2Base.OnChange -= OnChange;
-                F2Current.OnChange -= OnChange;
-                AdditionalInfo.OnChange -= onChange;
-                F1Base.UnSubscribeOnChange(onChange);
-                F1Current.UnSubscribeOnChange(onChange);
-                F2Base.UnSubscribeOnChange(onChange);
-                F2Current.UnSubscribeOnChange(onChange);
-                AdditionalInfo.UnSubscribeOnChange(onChange);
+                PropertyChanged -= propertyChanged;
+                F1Base.UnSubscribeOnChange(propertyChanged);
+                F1Current.UnSubscribeOnChange(propertyChanged);
+                F2Base.UnSubscribeOnChange(propertyChanged);
+                F2Current.UnSubscribeOnChange(propertyChanged);
+                AdditionalInfo.UnSubscribeOnChange(propertyChanged);
             }
         }
-        private void NotifyStateChanged() => OnChange?.Invoke();
     }
 }

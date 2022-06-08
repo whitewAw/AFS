@@ -1,4 +1,5 @@
-﻿@implements IDisposable
+﻿@using System.ComponentModel
+@implements IDisposable
 
 <RadzenCard Style="width: 100%;">
     <table class="table table-bordered py-0 table-sm">
@@ -54,7 +55,7 @@
             <tr>
                 <TdComponent>@MainModel.CurrentYear&nbsp;@ResLoc["year"]</TdComponent>
                 <TdComponent Align="MR">
-                    <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.FixedAssetsInfoCurrent.ReceivedFixedAssets Class="w-100" />
+                    <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.FixedAssetsInfoCurrent.ReceivedFixedAssets Class="w-100"  />
                 </TdComponent>
                 <TdComponent Align="MR">
                     <RadzenNumeric TValue="double" ShowUpDown="false" @bind-Value=@MainModel.AdditionalInfo.FixedAssetsInfoCurrent.ReceivedNewFixedAssets Class="w-100" />
@@ -71,15 +72,14 @@
 </RadzenCard>
 
 @code {
-
-    private event Action? fieldChanged;
+    public event PropertyChangedEventHandler? fieldChanged;
 
     protected override void OnInitialized()
     {
-        fieldChanged = () => StateHasChanged();
-        MainModel.OnChange += fieldChanged;
+        fieldChanged += async (sender, e) => await InvokeAsync(StateHasChanged);
+        MainModel.PropertyChanged += fieldChanged;
         base.OnInitialized();
     }
 
-    public void Dispose() => MainModel.OnChange -= fieldChanged;
+    public void Dispose() => MainModel.PropertyChanged -= fieldChanged;
 }
