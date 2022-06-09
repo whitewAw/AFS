@@ -1,5 +1,3 @@
-﻿@implements IDisposable
-
 <RadzenCard Style="width: 100%;">
     <div class="row mb-2">
         <div class="col-md-2" style="align-self: center;">
@@ -14,7 +12,7 @@
             <RadzenLabel Text="@ResLoc["BaseYear"]" />
         </div>
         <div class="col">
-            <YearSelectBase />
+            <YearSelectBase FieldChanged=FieldChanged/>
         </div>
     </div>
     <div class="row mb-2">
@@ -22,20 +20,12 @@
             <RadzenLabel Text="@ResLoc["CurrentYear"]" />
         </div>
         <div class="col">
-            <YearSelectCurrent />
+            <YearSelectCurrent FieldChanged=FieldChanged/>
         </div>
     </div>
 </RadzenCard>
 
 @code {
-    public event Action? fieldChanged;
-
-    protected override void OnInitialized()
-    {
-        fieldChanged += () => StateHasChanged();
-        MainModel.PropertyChanged += fieldChanged;
-        base.OnInitialized();
-    }
-
-    public void Dispose() =>MainModel.PropertyChanged -= fieldChanged;
+    [Parameter]
+    public Action FieldChanged { get; set; }  = () => {};
 }

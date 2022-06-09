@@ -4,11 +4,11 @@
 <RadzenTabs TabPosition="0" RenderMode="TabRenderMode.Client">
     <Tabs>
         <RadzenTabsItem class="align-middle text-center" Text="@ResLoc["GeneralInformation"]">
-            <GeneralInformationComponent />
+            <GeneralInformationComponent FieldChanged=fieldChanged />
             <SaveLoadEraseComponent />
         </RadzenTabsItem>
         <RadzenTabsItem class="align-middle text-center" Text="@ResLoc["AdditionalInfo"]">
-            <AdditionalInfoComponent />
+            <AdditionalInfoComponent FieldChanged=fieldChanged />
         </RadzenTabsItem>
         <RadzenTabsItem class="align-middle text-center" Text="@baseYearF1">
             <Form1Component F1="@MainModel.F1Base" />
@@ -34,12 +34,12 @@
 
     private string baseYearF2 => $"{ResLoc["StatementOfFinancialPerformance"]} ({MainModel.BaseYear})";
 
-    public event Action? fieldChanged;
+    public event Action fieldChanged = () => {};
 
     protected override void OnInitialized()
     {
 
-        fieldChanged += async () =>
+        fieldChanged = async () =>
         {
             StateHasChanged();
             await SaveModelToLocalStorage(MainModel);
@@ -51,5 +51,5 @@
 
     private async Task SaveModelToLocalStorage(AFSModel model) => await modelStorag.WriteModelAsync(model);
 
-    public void Dispose()=> MainModel.UnSubscribeOnChange(fieldChanged);
+    public void Dispose() => MainModel.UnSubscribeOnChange(fieldChanged);
 }

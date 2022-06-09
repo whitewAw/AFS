@@ -2,7 +2,6 @@
 @inject ICultureStorageHandler CultureHandler
 @inject NavigationManager Navigator
 
-
 <RadzenDropDown TValue="CultureInfo"
                 Data="@suportCulture.Select(c=> new{Value = c, Text = c.NativeName})"
                 TextProperty="Text"

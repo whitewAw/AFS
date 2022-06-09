@@ -2,7 +2,7 @@
 
 namespace AFS.Core.Model
 {
-    public class BeginEnd: TrackedEntity
+    public class BeginEnd : TrackedEntity
     {
         private double begin;
         private double end;

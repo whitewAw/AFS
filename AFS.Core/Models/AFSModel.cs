@@ -2,7 +2,7 @@
 
 namespace AFS.Core.Model
 {
-    public class AFSModel: TrackedEntity
+    public class AFSModel : TrackedEntity
     {
         private int baseYear;
         private int currentYear;
@@ -50,7 +50,7 @@ namespace AFS.Core.Model
                     SetProperty(ref currentYear, value);
                     if (!BaseYear.Equals(currentYear - 1))
                     {
-                        SetProperty(ref baseYear, value-1);
+                        SetProperty(ref baseYear, value - 1);
                     }
                 }
             }
@@ -79,7 +79,7 @@ namespace AFS.Core.Model
             AdditionalInfo.SubscribeOnChange(propertyChanged);
 
         }
-        public void UnSubscribeOnChange(Action propertyChanged)
+        public void UnSubscribeOnChange(Action? propertyChanged)
         {
             if (propertyChanged != null)
             {

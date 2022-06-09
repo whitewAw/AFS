@@ -1,5 +1,3 @@
-﻿@implements IDisposable
-
 <RadzenCard Style="width: 100%;">
     <table class="table table-bordered py-0 table-sm">
         <thead>
@@ -71,14 +69,6 @@
 </RadzenCard>
 
 @code {
-    public event Action? fieldChanged;
-
-    protected override void OnInitialized()
-    {
-        fieldChanged += () => StateHasChanged();
-        MainModel.PropertyChanged += fieldChanged;
-        base.OnInitialized();
-    }
-
-    public void Dispose() => MainModel.PropertyChanged -= fieldChanged;
+    [Parameter, EditorRequired]
+    public Action? FieldChanged {get; set;} 
 }

@@ -181,7 +181,7 @@
             F1700.PropertyChanged += propertyChanged;
         }
 
-        internal void UnSubscribeOnChange(Action propertyChanged)
+        internal void UnSubscribeOnChange(Action? propertyChanged)
         {
             if (propertyChanged != null)
             {

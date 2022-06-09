@@ -1,12 +1,11 @@
-﻿@implements IDisposable
-
 <RadzenDropDown TValue="int" Class="w-100"
                 Data=@YearList
                 @bind-Value=@MainModel.BaseYear />
 
 @code {
-    event Action? fieldChanged;
-
+    [Parameter]
+    public Action? FieldChanged {get; set;}
+    
     protected List<int> YearList = new();
 
     protected void FillYearList()
@@ -20,10 +19,7 @@
     protected override void OnInitialized()
     {
         FillYearList();
-        fieldChanged += () => StateHasChanged();
-        MainModel.PropertyChanged += fieldChanged;
         base.OnInitialized();
     }
-    public void Dispose()=> MainModel.PropertyChanged -= fieldChanged;
 }
 
