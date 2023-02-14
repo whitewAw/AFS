@@ -25,18 +25,21 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Setup .NET 6
+    - name: Setup .NET 7
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '7.0.x'
         include-prerelease: true
         
     - name: Install .NET WebAssembly Tools
       run: dotnet workload install wasm-tools
+      
+    - name: Install the wasm-experimental workload
+      run: dotnet workload install wasm-experimental
         
      # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
-      run: dotnet publish AFS.sln -c Release -o release --nologo
+      run: dotnet publish AFS/AFS.csproj -c Release -o release --nologo
     
     # changes the base-tag in index.html from '/' to 'UFIN' to match GitHub Pages repository subdirectory
     - name: Change base-tag in index.html from / to UFIN
