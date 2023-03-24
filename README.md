@@ -2,15 +2,15 @@
 Assessment of Ukrainian financial statements
 
 
-##  ASP.NET Blazor WebAssembly PWA to GitHub Pages example
+##  An example of using ASP.NET Blazor WebAssembly to create a progressive web app (PWA) that can be deployed to GitHub Pages.
 
-## WebAssembly Application which runs natively in the browser
+## This application is able to run directly in the browser using WebAssembly technology.
 
 [![N|Solid](https://miro.medium.com/max/875/1*mNOKpf7lW6dQC8LvewtMdQ.jpeg)](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly)
 
 [Working instance of the application](https://whitewaw.github.io/UFIN/).
 
-You can integrate into your build process or continuous integration pipeline next script, as done in this GitHub Actions workflow:
+This GitHub Actions workflow provides an example of how to deploy an ASP.NET Blazor WebAssembly PWA to GitHub Pages. You can incorporate the script into your build process or continuous integration pipeline. The workflow installs .NET 7 and the necessary WebAssembly tools, publishes the Blazor project to a release folder, modifies the base tag in index.html to match the repository subdirectory, and fixes the hashes in the service-worker-assets.js file. Finally, the workflow deploys the content of the release/wwwroot directory to GitHub Pages using the JamesIves/github-pages-deploy-action.
 
 ```sh
 name: Deploy to GitHub Pages
