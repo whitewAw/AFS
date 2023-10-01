@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Assessment of Ukrainian financial statements</title>
-    <meta name="description" content="Комплексна оцінка і експрес аналіз фінансового стану підприємства. Оцінка платоспроможності. Оцінка фінансової стійкості. Оцінка ділової активності. Оцінка рентабельності. Онлайн. UFIN." />
-    <meta name="keywords" content="ASP.NET, Blazor, WebAssembly, PWA, solvency assessment, assessment of financial stability, assessment of business activity, estimation of profitability, UFIN." />
-    <meta name="Author" content="whitewAw" />
-    <base href="/UFIN/" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
-    <link href="AFS.styles.css" rel="stylesheet" />
-    <link href="manifest.json" rel="manifest" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
-    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment of Ukrainian Financial Statements</title>
+    <meta name="description" content="Комплексна оцінка і експрес аналіз фінансового стану підприємства. Оцінка платоспроможності. Оцінка фінансової стійкості. Оцінка ділової активності. Оцінка рентабельності. Онлайн. UFIN.">
+    <meta name="keywords" content="ASP.NET, Blazor, WebAssembly, PWA, solvency assessment, assessment of financial stability, assessment of business activity, estimation of profitability, UFIN.">
+    <meta name="Author" content="whitewAw">
+    <base href="/">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+
+    <!-- Preload important resources if necessary -->
+
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="AFS.styles.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+
+    <!-- Add integrity attribute with SRI hash if using external stylesheets -->
+
     <link rel="stylesheet" href="_content/Radzen.Blazor/css/default-base.css">
     <link rel="stylesheet" href="_content/Radzen.Blazor/css/default.css">
 </head>
-
 <body>
     <div id="app">
         <div class="d-flex align-items-center justify-content-center mt-5">
@@ -34,8 +38,11 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
+
     <script src="_framework/blazor.webassembly.js"></script>
-    <script>navigator.serviceWorker.register('service-worker.js');</script>
+
+    <!-- Consider moving this script to the end of the body if not critical for rendering -->
+    <script src="navigator.serviceWorker.register('service-worker.js')"></script>
     <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
 </body>
 </html>

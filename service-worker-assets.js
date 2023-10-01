@@ -69,11 +69,11 @@
       "url": "images\/community.svg"
     },
     {
-      "hash": "sha256-gibQ+mAv8ZJVHv04JJqeJthEFjr9712MrBebSDfzDrM=",
+      "hash": "sha256-8jAaCNcnmfZK9mxQuC0QiGqEvrgehU\/4v2WIvLGFGAw=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-jnw1Dk13G\/+reuOorILNh6jbpfQouG12fimmwmcBO4c=",
+      "hash": "sha256-WcpFGyucSDvjlq2Lz78xjiDLl8oPE\/R\/iwEOJnjLL68=",
       "url": "manifest.json"
     },
     {
@@ -105,7 +105,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-aTpwv5+xTANpOTajeSZIDj212CLA7duNwCMCOUVnPvM=",
+      "hash": "sha256-6dow+DQnbp1Lw0XQy5T2HoirEZQvqKSqPIAWAyvmB+Q=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -117,7 +117,7 @@
       "url": "_framework\/AFS.Core.dll"
     },
     {
-      "hash": "sha256-8FWG5T8QiTOLgW2QpprQ7YUZcJcj9PwuCk4xVJKp4BI=",
+      "hash": "sha256-b3yshJ4Mh+rv6Iv58f8pf3r6EuhMkQM9t5zrPhOMVZw=",
       "url": "_framework\/AFS.dll"
     },
     {
@@ -361,7 +361,7 @@
       "url": "_framework\/dotnet.7.0.11.djoc0clnxy.js"
     },
     {
-      "hash": "sha256-pDbSJtRd8XjKJuGLiKQBD5\/HYlq8TfI1zcB\/VkUe3dQ=",
+      "hash": "sha256-F2IbGUA3C\/e\/5MyPIN4CxdbWQzwyqxTVUSUNRy5aZVI=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -509,5 +509,5 @@
       "url": "_content\/AFS.ComponentLibrary\/AFS.ComponentLibrary.bundle.scp.css"
     }
   ],
-  "version": "4bsFkTMU"
+  "version": "ZilzZJfD"
 };

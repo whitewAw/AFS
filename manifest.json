@@ -1,5 +1,5 @@
 {
-  "name": "Assessment of Ukrainian financial statements",
+  "name": "Assessment of Ukrainian Financial Statements",
   "short_name": "UFIN",
   "start_url": "./",
   "display": "standalone",
@@ -17,5 +17,8 @@
       "type": "image/png",
       "sizes": "192x192"
     }
-  ]
+  ],
+  "description": "Комплексна оцінка і експрес аналіз фінансового стану підприємства. Оцінка платоспроможності. Оцінка фінансової стійкості. Оцінка ділової активності. Оцінка рентабельності. Онлайн. UFIN.",
+  "lang": "en",
+  "categories": [ "finance", "business" ]
 }
