@@ -101,7 +101,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-I\/ik3rb1uvqXANACcvPg5JF7YmcuQ0yteKs5LHgsj+U=",
+      "hash": "sha256-Cal0NLWnw7uMVGmaNuFRI7t9uJWi76qgFT0Fib9n6co=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -109,19 +109,19 @@
       "url": "_framework\/dotnet.native.8.0.1.18uq3d7g8t.js"
     },
     {
-      "hash": "sha256-89o08j6OInXMOLQM7zDZvWRgUYVD4L9\/WPJiD+6SNI0=",
+      "hash": "sha256-k2jlUrPIoIunQYTQ798kLKt2XzrWk2\/7txVO4So+RIE=",
       "url": "_framework\/dotnet.native.wasm"
     },
     {
-      "hash": "sha256-OcK4h1LZFH81dZy0n80D4w\/HUtwGlIBJDLTLEmw72r4=",
+      "hash": "sha256-1aDLRkEgHZDde9bA7epVH2KGcx34zmBekgwQZVtVrNQ=",
       "url": "_framework\/AFS.ComponentLibrary.wasm"
     },
     {
-      "hash": "sha256-vhDFKJ\/RFxcNeJy+yK0QIsqwn23d7JLAbqLl4CGAU40=",
+      "hash": "sha256-eb48ioxgSL+4JrftjZM8QDTJpqKcbflf0nXv9YjVoOs=",
       "url": "_framework\/AFS.Core.wasm"
     },
     {
-      "hash": "sha256-y\/ZZF9iVCGMWZYIY8uF\/MjOag5NHAaFPhbNDWo8WzpQ=",
+      "hash": "sha256-H1wtHzaEzfTS6OBo4wlNNFQuCNKahvxsA\/UULm80Bo8=",
       "url": "_framework\/AFS.wasm"
     },
     {
@@ -369,19 +369,23 @@
       "url": "_framework\/System.Xml.XDocument.wasm"
     },
     {
-      "hash": "sha256-HafXvlYdPT47jXF2eUwoG85nKX3WCq4A\/M7\/H+dPL70=",
+      "hash": "sha256-KWONkEZKK3tzLtIBpeAY\/bKA2lHxbvr7FjirFTrpNI4=",
       "url": "_framework\/de\/AFS.ComponentLibrary.resources.wasm"
     },
     {
-      "hash": "sha256-Opn9jmO\/ZjmhzwctXvO44e9IpP9MetAxUkx1IGgibMM=",
+      "hash": "sha256-P+2\/GX1vhTOm0uT9OsQ0Hp5QCfzo7cHqOXo+sSzgPlQ=",
+      "url": "_framework\/en\/AFS.ComponentLibrary.resources.wasm"
+    },
+    {
+      "hash": "sha256-czCVLbYVm1wMkJjyKJvnZrXcQWFhJp7HS6CCuY0qHTs=",
       "url": "_framework\/es\/AFS.ComponentLibrary.resources.wasm"
     },
     {
-      "hash": "sha256-f3ZHMPx7U2Yw7xRiNwEemFV1vH8lVhmw9v0FaOepqj0=",
+      "hash": "sha256-YMNXcVcXbJqKfuUd\/mKbLSYQPgJQeafCofWR8CV019Q=",
       "url": "_framework\/fr\/AFS.ComponentLibrary.resources.wasm"
     },
     {
-      "hash": "sha256-Gz7GV5WQ3A7f4J\/qH13cKTEuLIhFRSsN9X\/q7J3oQ8w=",
+      "hash": "sha256-ygikHVcSfbAKVY1EaCdb1z5TIXkkmxGQpCBvOnNAE9A=",
       "url": "_framework\/ru\/AFS.ComponentLibrary.resources.wasm"
     },
     {
@@ -565,5 +569,5 @@
       "url": "_content\/AFS.ComponentLibrary\/AFS.ComponentLibrary.bundle.scp.css"
     }
   ],
-  "version": "Y7qJEr3f"
+  "version": "lpjS0qOE"
 };
