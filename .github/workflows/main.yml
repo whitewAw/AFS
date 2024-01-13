@@ -28,9 +28,9 @@ jobs:
       - name: Publish .NET Core Project
         run: dotnet publish AFS/AFS.csproj -c Release -o release --nologo
 
-      - name: Change base-tag in index.html from / to UFIN
+      - name: Change base-tag in index.html from / to Assessment-of-Ukrainian-financial-statements
         run: |
-          sed -i 's/<base href="\/" \/>/<base href="\/UFIN\/" \/>/g' release/wwwroot/index.html
+          sed -i 's/<base href="\/" \/>/<base href="\/Assessment-of-Ukrainian-financial-statements\/" \/>/g' release/wwwroot/index.html
 
       - name: Fix service-worker-assets.js hashes
         working-directory: release/wwwroot
