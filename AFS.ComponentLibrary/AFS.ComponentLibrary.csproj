@@ -6,15 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<BlazorEnableCompression>true</BlazorEnableCompression>
 	</PropertyGroup>
-
-	<ItemGroup>
-		<Content Remove="wwwroot\PJSC_AZOVSTAL_IRON_AND_STEEL_WORKS_2019_2020.json" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EmbeddedResource Remove="Resources\Resource.en.resx" />
-	</ItemGroup>
-
+	
 	<ItemGroup>
 	  <ApplicationDefinition Include="Resources\Resource.en.resx" />
 	</ItemGroup>
