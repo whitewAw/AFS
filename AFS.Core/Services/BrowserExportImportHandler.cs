@@ -1,5 +1,5 @@
 ﻿using AFS.Core.Interfaces;
-using AFS.Core.Model;
+using AFS.Core.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.JSInterop;
 using System.Text;

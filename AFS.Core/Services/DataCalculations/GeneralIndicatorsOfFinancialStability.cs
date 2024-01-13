@@ -1,5 +1,5 @@
 ﻿
-using AFS.Core.Model;
+using AFS.Core.Models;
 using AFS.Core.Models.TablsModels;
 
 namespace AFS.Core.Services.DataCalculations

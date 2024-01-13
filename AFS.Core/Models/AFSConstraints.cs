@@ -1,4 +1,4 @@
-﻿namespace AFS.Core.Model
+﻿namespace AFS.Core.Models
 {
     public class AFSConstraints
     {

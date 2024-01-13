@@ -1,6 +1,6 @@
 using AFS;
 using AFS.Core.Interfaces;
-using AFS.Core.Model;
+using AFS.Core.Models;
 using AFS.Core.Services;
 using AFS.Core.Services.DataCalculations;
 using Blazored.LocalStorage;

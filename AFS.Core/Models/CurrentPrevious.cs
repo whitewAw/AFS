@@ -1,6 +1,6 @@
 ﻿using AFS.Core.Models;
 
-namespace AFS.Core.Model
+namespace AFS.Core.Models
 {
     public class CurrentPrevious : TrackedEntity
     {
