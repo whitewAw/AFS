@@ -10,7 +10,7 @@ Assessment of Ukrainian financial statements
 
 [Working instance of the application](https://whitewaw.github.io/UFIN/).
 
-This GitHub Actions workflow provides an example of how to deploy an ASP.NET Blazor WebAssembly PWA to GitHub Pages. You can incorporate the script into your build process or continuous integration pipeline. The workflow installs .NET 7 and the necessary WebAssembly tools, publishes the Blazor project to a release folder, modifies the base tag in index.html to match the repository subdirectory, and fixes the hashes in the service-worker-assets.js file. Finally, the workflow deploys the content of the release/wwwroot directory to GitHub Pages using the JamesIves/github-pages-deploy-action.
+This GitHub Actions workflow provides an example of how to deploy an ASP.NET Blazor WebAssembly PWA to GitHub Pages. You can incorporate the script into your build process or continuous integration pipeline. The workflow installs .NET 8 and the necessary WebAssembly tools, publishes the Blazor project to a release folder, modifies the base tag in index.html to match the repository subdirectory, and fixes the hashes in the service-worker-assets.js file. Finally, the workflow deploys the content of the release/wwwroot directory to GitHub Pages using the JamesIves/github-pages-deploy-action.
 
 ```sh
 name: Deploy to GitHub Pages
@@ -25,10 +25,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Setup .NET 7
+    - name: Setup .NET 8
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '7.0.x'
+        dotnet-version: '8.0.x'
         include-prerelease: true
         
     - name: Install .NET WebAssembly Tools
