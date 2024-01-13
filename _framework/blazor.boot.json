@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AFS",
   "resources": {
-    "hash": "sha256-TW05/+pnF8pfwvtYYXqnea5y3BUcIZ4hoRZFOyh9pDQ=",
+    "hash": "sha256-vDvwt8w4P6zfwx/yMmDYHKZY8muRO27f1QLXex12GRE=",
     "jsModuleNative": {
       "dotnet.native.8.0.1.fpzlgjgmsn.js": "sha256-I7vsDaGu9YSoclZBlhiS3KslPFb6t8UXEy48P8hvR38="
     },
@@ -9,15 +9,15 @@
       "dotnet.runtime.8.0.1.jvv0ztohpa.js": "sha256-HZOoaGpz9ekMa/oSmeApSKp3DXNdVUq2UBqsTIIiN8A="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-ZNrbGlnPbY1TtEbpypXskcFQflHaOekWAmLQl4c6lYk="
+      "dotnet.native.wasm": "sha256-wisKM8ZWe5JQIEPjIvC1w0HgY9XSdJDw9N7YOaMKE8k="
     },
     "icu": {
       "icudt.dat": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4="
     },
     "assembly": {
-      "AFS.ComponentLibrary.wasm": "sha256-Zpro91zueDNdSDYmJdvIvXv8T/UpFs5+1wWJruCbPBw=",
-      "AFS.Core.wasm": "sha256-8jonv24AIphFQV7VFTaE/UoheRh5C3GFZIJaSx4tmyc=",
-      "AFS.wasm": "sha256-pHfdFkiXpO/AeonRbBoHd1FI6SNMDhdXBWgED9wU7R0=",
+      "AFS.ComponentLibrary.wasm": "sha256-2s3/9deWI1jXoh52qzT3xaqW0QLu4ZlmHDUDWBzx6nE=",
+      "AFS.Core.wasm": "sha256-aAiN/w8riu+o9Lw8rZsmbOgG1dLlws6dzaSkkTrvWX4=",
+      "AFS.wasm": "sha256-D+GJQvmGZH5dyqDrFFU5W0+2s4+afvZLpcL59yFtyNY=",
       "Blazored.LocalStorage.wasm": "sha256-xHBGFCMjDjvvTwtMvgaMBNmQk9JdVhGmws2/GMZlxrI=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-HbtTz7tHi6f5g3WMfJFnXZChZj2DYpqWas3pr1Usy5U=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-Lzww4MKFeAPcvbDZJvKb9RrTpgzyipmLlZ29P7yNEio=",
@@ -82,19 +82,19 @@
     },
     "satelliteResources": {
       "de": {
-        "AFS.ComponentLibrary.resources.wasm": "sha256-N1QrKDlm6YmbbYzSVWVpPzqZFWb119wfShIMsjiIkeg="
+        "AFS.ComponentLibrary.resources.wasm": "sha256-KZQa/EGwaagT0zwiY0gWR8fO7bSkeNF0CX/pPDGEnn0="
       },
       "en": {
-        "AFS.ComponentLibrary.resources.wasm": "sha256-kVG5BqUe5a0iqMchbIWgq98noEmlDHr6MHTaqMXtnEk="
+        "AFS.ComponentLibrary.resources.wasm": "sha256-qYhHtjfShL2FGHf3tYpSobQnref4b+7VeUFNCXauBks="
       },
       "es": {
-        "AFS.ComponentLibrary.resources.wasm": "sha256-NfxyCMAy+2jAAi/Urpqhk4NN5OsFIK8PsqNA+a6SmhY="
+        "AFS.ComponentLibrary.resources.wasm": "sha256-78eP1IeCe/jWrcr3lW53fS7EYQOEjkBgxGg0nOWmmqc="
       },
       "fr": {
-        "AFS.ComponentLibrary.resources.wasm": "sha256-sRA8OMovck4j/BPlj5V0Ki21pIInOUuy/bk90Pnp3Ew="
+        "AFS.ComponentLibrary.resources.wasm": "sha256-13jDPkz1gBrtJp7E/TyWeacFXENk2L+T/k1JCwZl59A="
       },
       "ru": {
-        "AFS.ComponentLibrary.resources.wasm": "sha256-XaCtl4lZoWcYWkdZ4ozMkZ5ltkDQj5UrXpWhhjawKb0="
+        "AFS.ComponentLibrary.resources.wasm": "sha256-WU9kyUOyV52jf8AupoK37xAVX/qESXNRG2LiRLKY4Jg="
       }
     }
   },
