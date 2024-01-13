@@ -11,6 +11,14 @@
 		<Content Remove="wwwroot\PJSC_AZOVSTAL_IRON_AND_STEEL_WORKS_2019_2020.json" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <EmbeddedResource Remove="Resources\Resource.en.resx" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ApplicationDefinition Include="Resources\Resource.en.resx" />
+	</ItemGroup>
+
 
 	<ItemGroup>
 		<SupportedPlatform Include="browser" />
@@ -40,34 +48,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<EmbeddedResource Update="Resources\Resource.ua.resx">
-		  <SubType>Designer</SubType>
-		  <LastGenOutput>Resource.ua.Designer.cs</LastGenOutput>
-		  <Generator>ResXFileCodeGenerator</Generator>
-		</EmbeddedResource>
-		<EmbeddedResource Update="Resources\Resource.fr.resx">
-		  <LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
-		  <Generator>ResXFileCodeGenerator</Generator>
-		</EmbeddedResource>
 		<EmbeddedResource Update="Resources\Resource.de.resx">
-		  <LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
-		  <Generator>ResXFileCodeGenerator</Generator>
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</EmbeddedResource>
 		<EmbeddedResource Update="Resources\Resource.es.resx">
-		  <LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
-		  <Generator>ResXFileCodeGenerator</Generator>
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</EmbeddedResource>
-		<EmbeddedResource Update="Resources\Resource.ru.resx">
-		  <LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
-		  <Generator>ResXFileCodeGenerator</Generator>
-		</EmbeddedResource>
-		<EmbeddedResource Update="Resources\Resource.en.resx">
-			<LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
-			<Generator>ResXFileCodeGenerator</Generator>
+		<EmbeddedResource Update="Resources\Resource.fr.resx">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</EmbeddedResource>
 		<EmbeddedResource Update="Resources\Resource.resx">
-			<Generator>ResXFileCodeGenerator</Generator>
-			<LastGenOutput>Resource.Designer.cs</LastGenOutput>
+		  <SubType>Designer</SubType>
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Resource.ru.resx">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Resource.ua.resx">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</EmbeddedResource>
 	</ItemGroup>
 

@@ -1,6 +1,4 @@
-﻿using AFS.Core.Models;
-
-namespace AFS.Core.Models
+﻿namespace AFS.Core.Models
 {
     public class BeginEnd : TrackedEntity
     {

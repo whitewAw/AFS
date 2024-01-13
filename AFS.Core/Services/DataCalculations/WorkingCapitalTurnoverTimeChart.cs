@@ -1,5 +1,4 @@
 ﻿using AFS.Core.Models;
-using AFS.Core.Models;
 
 namespace AFS.Core.Services.DataCalculations
 {
