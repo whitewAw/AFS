@@ -15,7 +15,9 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddSingleton<AFSModel>();
 builder.Services.AddSingleton<AFSConstraints>();
-builder.Services.AddLocalization(options => options.ResourcesPath = "");
+
+builder.Services.AddLocalization();
+
 
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddScoped<ICultureStorageHandler, LocalStorageCultureHandler>();

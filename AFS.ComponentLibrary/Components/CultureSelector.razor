@@ -3,7 +3,7 @@
 @inject NavigationManager Navigator
 
 <RadzenDropDown TValue="CultureInfo"
-                Data="@suportCulture.Select(c=> new{Value = c, Text = c.NativeName})"
+                Data="@suportCulture.Select(c=> new{Value = c, Text = c.ThreeLetterWindowsLanguageName})"
                 TextProperty="Text"
                 ValueProperty="Value"
                 @bind-Value="@currentCulture"
@@ -11,10 +11,13 @@
 
 @code {
     private readonly CultureInfo[] suportCulture = new[]
-                {
+    {
+            new CultureInfo("en-Us"),
             new CultureInfo("uk-UA"),
-            //new CultureInfo("ru-Ru"),
-            //new CultureInfo("en-Us")
+            new CultureInfo("ru-Ru"),
+            new CultureInfo("es-ES"),
+            new CultureInfo("de-DE"),
+            new CultureInfo("fr-FR")
     };
 
     private CultureInfo? currentCulture = CultureInfo.DefaultThreadCurrentCulture;

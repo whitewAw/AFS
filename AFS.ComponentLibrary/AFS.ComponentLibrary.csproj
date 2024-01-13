@@ -17,9 +17,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.3" />
-		<PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.3" />
-		<PackageReference Include="Radzen.Blazor" Version="4.7.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.15" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.15" />
+		<PackageReference Include="Radzen.Blazor" Version="4.23.9" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -33,19 +33,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="Resources\Resource.en.Designer.cs">
-			<DependentUpon>Resource.en.resx</DependentUpon>
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-		</Compile>
-		<Compile Update="Resources\Resource.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Resource.resx</DependentUpon>
-		</Compile>
-	</ItemGroup>
-
-	<ItemGroup>
 		<Content Update="wwwroot\JsInterop.js">
 			<SubType>Code</SubType>
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
@@ -53,6 +40,27 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<EmbeddedResource Update="Resources\Resource.ua.resx">
+		  <SubType>Designer</SubType>
+		  <LastGenOutput>Resource.ua.Designer.cs</LastGenOutput>
+		  <Generator>ResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Resource.fr.resx">
+		  <LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
+		  <Generator>ResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Resource.de.resx">
+		  <LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
+		  <Generator>ResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Resource.es.resx">
+		  <LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
+		  <Generator>ResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Resource.ru.resx">
+		  <LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
+		  <Generator>ResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
 		<EmbeddedResource Update="Resources\Resource.en.resx">
 			<LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
 			<Generator>ResXFileCodeGenerator</Generator>
