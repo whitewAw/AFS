@@ -199,7 +199,7 @@ window.Radzen = {
 
     document.body.appendChild(script);
   },
-  createMap: function (wrapper, ref, id, apiKey, zoom, center, markers, options) {
+  createMap: function (wrapper, ref, id, apiKey, zoom, center, markers, options, fitBoundsToMarkersOnUpdate) {
     var api = function () {
       var defaultView = document.defaultView;
 
@@ -227,53 +227,74 @@ window.Radzen = {
         });
       });
 
-      Radzen.updateMap(id, zoom, center, markers, options);
+      Radzen.updateMap(id, zoom, center, markers, options, fitBoundsToMarkersOnUpdate);
     });
   },
-  updateMap: function (id, zoom, center, markers, options) {
-    if (Radzen[id] && Radzen[id].instance) {
-        if (Radzen[id].instance.markers && Radzen[id].instance.markers.length) {
-            for (var i = 0; i < Radzen[id].instance.markers.length; i++) {
-                Radzen[id].instance.markers[i].setMap(null);
+  updateMap: function (id, zoom, center, markers, options, fitBoundsToMarkersOnUpdate) {
+    var api = function () {
+        var defaultView = document.defaultView;
+
+        return new Promise(function (resolve, reject) {
+            if (defaultView.google && defaultView.google.maps) {
+                return resolve(defaultView.google);
             }
-        }
 
-        if (markers) {
-            Radzen[id].instance.markers = [];
+            Radzen.loadGoogleMaps(defaultView, apiKey, resolve, reject);
+        });
+    };
+    api().then(function (google) {
+        let markerBounds = new google.maps.LatLngBounds();
 
-            markers.forEach(function (m) {
-                var marker = new this.google.maps.Marker({
-                    position: m.position,
-                    title: m.title,
-                    label: m.label
-                });
+        if (Radzen[id] && Radzen[id].instance) {
+            if (Radzen[id].instance.markers && Radzen[id].instance.markers.length) {
+                for (var i = 0; i < Radzen[id].instance.markers.length; i++) {
+                    Radzen[id].instance.markers[i].setMap(null);
+                }
+            }
 
-                marker.addListener('click', function (e) {
-                    Radzen[id].invokeMethodAsync('RadzenGoogleMap.OnMarkerClick', {
-                        Title: marker.title,
-                        Label: marker.label,
-                        Position: marker.position
+            if (markers) {
+                Radzen[id].instance.markers = [];
+
+                markers.forEach(function (m) {
+                    var marker = new this.google.maps.Marker({
+                        position: m.position,
+                        title: m.title,
+                        label: m.label
                     });
+
+                    marker.addListener('click', function (e) {
+                        Radzen[id].invokeMethodAsync('RadzenGoogleMap.OnMarkerClick', {
+                            Title: marker.title,
+                            Label: marker.label,
+                            Position: marker.position
+                        });
+                    });
+
+                    marker.setMap(Radzen[id].instance);
+
+                    Radzen[id].instance.markers.push(marker);
+
+                        markerBounds.extend(marker.position);
                 });
-
-                marker.setMap(Radzen[id].instance);
-
-                Radzen[id].instance.markers.push(marker);
-            });
-        }
-
-        if (zoom) {
-            Radzen[id].instance.setZoom(zoom);
             }
 
-        if (center) {
-            Radzen[id].instance.setCenter(center);
-        }
+            if (zoom) {
+                Radzen[id].instance.setZoom(zoom);
+                }
 
-        if (options) {
-            Radzen[id].instance.setOptions(options);
+            if (center) {
+                Radzen[id].instance.setCenter(center);
+            }
+
+            if (options) {
+                Radzen[id].instance.setOptions(options);
+            }
+
+            if (markers && fitBoundsToMarkersOnUpdate) {
+                Radzen[id].instance.fitBounds(markerBounds);
+            }
         }
-    }
+    });
   },
   destroyMap: function (id) {
     if (Radzen[id].instance) {
@@ -310,13 +331,11 @@ window.Radzen = {
       }
 
       var newValue = percent * (max - min) + min;
-      var oldValue = range ? value[slider.isMin ? 0 : 1] : value;
 
       if (
         slider.canChange &&
         newValue >= min &&
-        newValue <= max &&
-        newValue != oldValue
+        newValue <= max
       ) {
         slider.invokeMethodAsync(
           'RadzenSlider.OnValueChange',
@@ -463,6 +482,55 @@ window.Radzen = {
     }
 
     return ul.nextSelectedIndex;
+    },
+  focusTableRow: function (gridId, isDown, startIndex, multiple) {
+    var grid = document.getElementById(gridId);
+    if (!grid) return;
+
+    var table = grid.querySelector('.rz-grid-table').getElementsByTagName("tbody")[0];
+
+    if (!table.rows || table.rows.length == 0) return;
+
+    if (startIndex == undefined || startIndex == null) {
+      startIndex = -1;
+    }
+
+    table.nextSelectedIndex = startIndex;
+    if (isDown) {
+        while (table.nextSelectedIndex < table.rows.length - 1) {
+            table.nextSelectedIndex++;
+            if (!table.rows[table.nextSelectedIndex].classList.contains('rz-state-disabled'))
+                break;
+        }
+    } else {
+        while (table.nextSelectedIndex > 0) {
+            table.nextSelectedIndex--;
+            if (!table.rows[table.nextSelectedIndex].classList.contains('rz-state-disabled'))
+                break;
+        }
+    }
+
+    if (!multiple) {
+        var highlighted = table.querySelectorAll('.rz-state-highlight');
+        if (highlighted.length) {
+            for (var i = 0; i < highlighted.length; i++) {
+                highlighted[i].classList.remove('rz-state-highlight');
+            }
+        }
+    }
+
+    if (
+      table.nextSelectedIndex >= 0 &&
+      table.nextSelectedIndex <= table.rows.length - 1
+    ) {
+      if (!table.rows[table.nextSelectedIndex].classList.contains('rz-state-highlight')) {
+        table.rows[table.nextSelectedIndex].classList.add('rz-state-highlight');
+      }
+     
+      table.parentNode.parentNode.scrollTop = table.rows[table.nextSelectedIndex].offsetTop - table.rows[table.nextSelectedIndex].offsetHeight;
+    }
+
+    return table.nextSelectedIndex;
   },
   uploadInputChange: function (e, url, auto, multiple, clear, parameterName) {
       if (auto) {
@@ -547,6 +615,7 @@ window.Radzen = {
       files.push({Name: file.name, Size: file.size});
     }
     var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
     xhr.upload.onprogress = function (e) {
       if (e.lengthComputable) {
         var uploadComponent =
@@ -627,8 +696,12 @@ window.Radzen = {
       e.preventDefault();
     }
   },
-  numericOnInput: function (e, min, max) {
+  numericOnInput: function (e, min, max, isNullable) {
       var value = e.target.value;
+
+      if (!isNullable && value == '' && min != null) {
+          e.target.value = min;
+      }
 
       if (value && !isNaN(+value)) {
         var numericValue = +value;
@@ -665,20 +738,27 @@ window.Radzen = {
     Radzen.openPopup(null, id, false, null, x, y, instance, callback);
   },
   openTooltip: function (target, id, delay, duration, position, closeTooltipOnDocumentClick, instance, callback) {
-    Radzen.closePopup(id);
-
-    if (Radzen[id + 'duration']) {
-      clearTimeout(Radzen[id + 'duration']);
-    }
+    Radzen.closeTooltip(id);
 
     if (delay) {
-        setTimeout(Radzen.openPopup, delay, target, id, false, position, null, null, instance, callback, closeTooltipOnDocumentClick);
+        Radzen[id + 'delay'] = setTimeout(Radzen.openPopup, delay, target, id, false, position, null, null, instance, callback, closeTooltipOnDocumentClick);
     } else {
         Radzen.openPopup(target, id, false, position, null, null, instance, callback, closeTooltipOnDocumentClick);
     }
 
     if (duration) {
       Radzen[id + 'duration'] = setTimeout(Radzen.closePopup, duration, id, instance, callback);
+    }
+  },
+  closeTooltip(id) {
+    Radzen.closePopup(id);
+
+    if (Radzen[id + 'delay']) {
+        clearTimeout(Radzen[id + 'delay']);
+    }
+
+    if (Radzen[id + 'duration']) {
+        clearTimeout(Radzen[id + 'duration']);
     }
   },
   findPopup: function (id) {
@@ -811,45 +891,40 @@ window.Radzen = {
     }
 
     Radzen[id] = function (e) {
+        var lastPopup = Radzen.popups && Radzen.popups[Radzen.popups.length - 1];
+        var currentPopup = lastPopup != null && document.getElementById(lastPopup.id) || popup;
+        currentPopup.instance = lastPopup.instance;
+        currentPopup.callback = lastPopup.callback;
+
         if(e.type == 'contextmenu' || !e.target || !closeOnDocumentClick) return;
         if (!/Android/i.test(navigator.userAgent) &&
             !['input', 'textarea'].includes(document.activeElement ? document.activeElement.tagName.toLowerCase() : '') && e.type == 'resize') {
-            Radzen.closePopup(id, instance, callback, e);
+            Radzen.closePopup(currentPopup.id, currentPopup.instance, currentPopup.callback, e);
             return;
         }
-        var closestPopup = e.target.closest && (e.target.closest('.rz-popup') || e.target.closest('.rz-overlaypanel'));
-        if (closestPopup && closestPopup != popup) {
-          return;
+
+        var closestLink = e.target.closest && (e.target.closest('.rz-link') || e.target.closest('.rz-navigation-item-link'));
+        if (closestLink && closestLink.closest && closestLink.closest('a')) {
+            if (Radzen.closeAllPopups) {
+                Radzen.closeAllPopups();
+            }
         }
         if (parent) {
-          if (e.type == 'mousedown' && !parent.contains(e.target) && !popup.contains(e.target)) {
-            Radzen.closePopup(id, instance, callback, e);
+          if (e.type == 'mousedown' && !parent.contains(e.target) && !currentPopup.contains(e.target)) {
+              Radzen.closePopup(currentPopup.id, currentPopup.instance, currentPopup.callback, e);
           }
         } else {
-          if (!popup.contains(e.target)) {
-            Radzen.closePopup(id, instance, callback, e);
+          if (!currentPopup.contains(e.target)) {
+              Radzen.closePopup(currentPopup.id, currentPopup.instance, currentPopup.callback, e);
           }
         }
     };
 
-    if (!Radzen.closeAllPopups) {
-        Radzen.closeAllPopups = function (e) {
-            for (var i = 0; i < Radzen.popups.length; i++) {
-                var p = Radzen.popups[i];
-
-                var closestPopup = e && e.target && e.target.closest && (e.target.closest('.rz-popup') || e.target.closest('.rz-overlaypanel'));
-                if (closestPopup && closestPopup != p) {
-                    return;
-                }
-
-                Radzen.closePopup(p.id, p.instance, p.callback, e);
-            }
-            Radzen.popups = [];
-        };
+    if (!Radzen.popups) {
         Radzen.popups = [];
     }
 
-    Radzen.popups.push({id, instance, callback});
+    Radzen.popups.push({ id, instance, callback });
 
     document.body.appendChild(popup);
     document.removeEventListener('mousedown', Radzen[id]);
@@ -870,6 +945,21 @@ window.Radzen = {
         document.removeEventListener('contextmenu', Radzen[id]);
         document.addEventListener('contextmenu', Radzen[id]);
     }
+  },
+  closeAllPopups: function (e, id) {
+    if (!Radzen.popups) return;
+    var el = e && e.target || id && documentElement.getElementById(id);
+    for (var i = 0; i < Radzen.popups.length; i++) {
+        var p = Radzen.popups[i];
+
+        var closestPopup = el && el.closest && (el.closest('.rz-popup') || el.closest('.rz-overlaypanel'));
+        if (closestPopup && closestPopup != p) {
+            return;
+        }
+
+        Radzen.closePopup(p.id, p.instance, p.callback, e);
+    }
+    Radzen.popups = [];
   },
   closePopup: function (id, instance, callback, e) {
     var popup = document.getElementById(id);
@@ -908,6 +998,9 @@ window.Radzen = {
     if (instance) {
       instance.invokeMethodAsync(callback);
     }
+    Radzen.popups = (Radzen.popups || []).filter(function (obj) {
+        return obj.id !== id;
+    });
 
     if (Radzen.activeElement && Radzen.activeElement == document.activeElement ||
         Radzen.activeElement && document.activeElement == document.body ||
@@ -960,7 +1053,7 @@ window.Radzen = {
         }
     }
   },
-  openDialog: function (options, dialogService) {
+  openDialog: function (options, dialogService, dialog) {
     if (Radzen.closeAllPopups) {
         Radzen.closeAllPopups();
     }
@@ -972,13 +1065,36 @@ window.Radzen = {
       document.body.classList.add('no-scroll');
     }
 
-    if (options.autoFocusFirstElement) {
-        setTimeout(function () {
-            var dialogs = document.querySelectorAll('.rz-dialog-content');
-            if (dialogs.length == 0) return;
-            var lastDialog = dialogs[dialogs.length - 1];
+    setTimeout(function () {
+        var dialogs = document.querySelectorAll('.rz-dialog-content');
+        if (dialogs.length == 0) return;
+        var lastDialog = dialogs[dialogs.length - 1];
 
-            if (lastDialog) {
+        if (lastDialog) {
+            lastDialog.removeEventListener('keydown', Radzen.focusTrapDialog);
+            lastDialog.addEventListener('keydown', Radzen.focusTrapDialog);
+
+            if (options.resizable) {
+                dialog.offsetWidth = lastDialog.parentElement.offsetWidth;
+                dialog.offsetHeight = lastDialog.parentElement.offsetHeight;
+                var dialogResize = function (e) {
+                    if (!dialog) return;
+                    if (dialog.offsetWidth != e[0].target.offsetWidth || dialog.offsetHeight != e[0].target.offsetHeight) {
+
+                        dialog.offsetWidth = e[0].target.offsetWidth;
+                        dialog.offsetHeight = e[0].target.offsetHeight;
+
+                        dialog.invokeMethodAsync(
+                            'RadzenDialog.OnResize',
+                            e[0].target.offsetWidth,
+                            e[0].target.offsetHeight
+                        );
+                    }
+                };
+                Radzen.dialogResizer = new ResizeObserver(dialogResize).observe(lastDialog.parentElement);
+            }
+
+            if (options.autoFocusFirstElement) {
                 if (lastDialog.querySelectorAll('.rz-html-editor-content').length) {
                     var editable = lastDialog.querySelector('.rz-html-editor-content');
                     if (editable) {
@@ -990,24 +1106,57 @@ window.Radzen = {
                         selection.addRange(range);
                     }
                 } else {
-                    var focusable = [...lastDialog.querySelectorAll('a, button, input, textarea, select, details, iframe, embed, object, summary dialog, audio[controls], video[controls], [contenteditable], [tabindex]')]
-                        .filter(el => el && el.tabIndex > -1 && !el.hasAttribute('disabled') && !el.hasAttribute('hidden') && el.computedStyleMap && el.computedStyleMap().get('display').value !== 'none');
+                    var focusable = Radzen.getFocusableDialogElements();
                     var firstFocusable = focusable[0];
                     if (firstFocusable) {
                         firstFocusable.focus();
                     }
                 }
             }
-        }, 500);
-    }
+        }
+    }, 500);
+
+    document.removeEventListener('keydown', Radzen.closePopupOrDialog);
     if (options.closeDialogOnEsc) {
-        document.removeEventListener('keydown', Radzen.closePopupOrDialog);
         document.addEventListener('keydown', Radzen.closePopupOrDialog);
     }
   },
   closeDialog: function () {
+    Radzen.dialogResizer = null;
     document.body.classList.remove('no-scroll');
-    document.removeEventListener('keydown', Radzen.closePopupOrDialog);
+    var dialogs = document.querySelectorAll('.rz-dialog-content');
+    if (dialogs.length == 0) {
+        document.removeEventListener('keydown', Radzen.closePopupOrDialog);
+    }
+  },
+  getFocusableDialogElements: function () {
+    var dialogs = document.querySelectorAll('.rz-dialog-content');
+    if (dialogs.length == 0) return [];
+    var lastDialog = dialogs[dialogs.length - 1];
+    return [...lastDialog.querySelectorAll('a, button, input, textarea, select, details, iframe, embed, object, summary dialog, audio[controls], video[controls], [contenteditable], [tabindex]')]
+        .filter(el => el && el.tabIndex > -1 && !el.hasAttribute('disabled') && el.offsetParent !== null);
+  },
+  focusTrapDialog: function (e) {
+    e = e || window.event;
+    var isTab = false;
+    if ("key" in e) {
+        isTab = (e.key === "Tab");
+    } else {
+        isTab = (e.keyCode === 9);
+    }
+    if (isTab) {
+        var focusable = Radzen.getFocusableDialogElements();
+        var firstFocusable = focusable[0];
+        var lastFocusable = focusable[focusable.length - 1];
+
+        if (firstFocusable && e.shiftKey && document.activeElement === firstFocusable) {
+            e.preventDefault();
+            firstFocusable.focus();
+        } else if (lastFocusable && !e.shiftKey && document.activeElement === lastFocusable) {
+            e.preventDefault();
+            lastFocusable.focus();
+        }
+    }
   },
   closePopupOrDialog: function (e) {
       e = e || window.event;
@@ -1024,7 +1173,10 @@ window.Radzen = {
                   return;
               }
           }
-          document.removeEventListener('keydown', Radzen.closePopupOrDialog);
+          var dialogs = document.querySelectorAll('.rz-dialog-content');
+          if (dialogs.length == 0) {
+              document.removeEventListener('keydown', Radzen.closePopupOrDialog);
+          }
           Radzen.dialogService.invokeMethodAsync('DialogService.Close', null);
       }
   },
@@ -1189,7 +1341,7 @@ window.Radzen = {
     var inside = false;
     ref.mouseMoveHandler = this.throttle(function (e) {
       if (inside) {
-        if (e.target.matches('.rz-chart-tooltip') || e.target.closest('.rz-chart-tooltip')) {
+        if (e.target.matches('.rz-chart-tooltip-content') || e.target.closest('.rz-chart-tooltip-content')) {
             return
         }
         var rect = ref.getBoundingClientRect();
@@ -1209,7 +1361,9 @@ window.Radzen = {
       var rect = ref.getBoundingClientRect();
       var x = e.clientX - rect.left;
       var y = e.clientY - rect.top;
-      instance.invokeMethodAsync('Click', x, y);
+      if (!e.target.closest('.rz-marker')) {
+        instance.invokeMethodAsync('Click', x, y);
+      }
     };
 
     ref.addEventListener('mouseenter', ref.mouseEnterHandler);
@@ -1258,7 +1412,7 @@ window.Radzen = {
   },
   queryCommands: function (ref) {
     return {
-      html: ref.innerHTML,
+      html: ref != null ? ref.innerHTML : null,
       fontName: document.queryCommandValue('fontName'),
       fontSize: document.queryCommandValue('fontSize'),
       formatBlock: document.queryCommandValue('formatBlock'),
@@ -1321,10 +1475,10 @@ window.Radzen = {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     var status = xhr.status;
                     if (status === 0 || (status >= 200 && status < 400)) {
-                    var result = JSON.parse(xhr.responseText);
-                    document.execCommand("insertHTML", false, '<img src="' + result.url + '">');
+                        var result = JSON.parse(xhr.responseText);
+                        document.execCommand("insertHTML", false, '<img src="' + result.url + '">');
                     } else {
-                    console.log(xhr.responseText);
+                        instance.invokeMethodAsync('OnError', xhr.responseText);
                     }
                 }
             }
@@ -1377,8 +1531,21 @@ window.Radzen = {
       selection.addRange(range);
     }
   },
-  selectionAttributes: function (selector, attributes) {
+  selectionAttributes: function (selector, attributes, container) {
     var selection = getSelection();
+    var range = selection.rangeCount > 0 && selection.getRangeAt(0);
+    var parent = range && range.commonAncestorContainer;
+    var inside = false;
+    while (parent) {
+      if (parent == container) {
+        inside = true;
+        break;
+      }
+      parent = parent.parentNode;
+    }
+    if (!inside) {
+      return {};
+    }
     var target = selection.focusNode;
     var innerHTML;
     if (target) {
@@ -1390,7 +1557,7 @@ window.Radzen = {
           innerHTML = target.outerHTML;
         }
       }
-      if (target && !target.matches(selector)) {
+      if (target && target.matches && !target.matches(selector)) {
         target = target.closest(selector);
       }
     }
@@ -1409,6 +1576,9 @@ window.Radzen = {
     }
   },
   startDrag: function (ref, instance, handler) {
+    if (!ref) {
+        return { left: 0, top: 0, width: 0, height: 0 };
+    }
     ref.mouseMoveHandler = function (e) {
       instance.invokeMethodAsync(handler, { clientX: e.clientX, clientY: e.clientY });
     };
@@ -1443,7 +1613,7 @@ window.Radzen = {
     document.removeEventListener('touchend', ref.mouseUpHandler);
   },
   startColumnReorder: function(id) {
-      var el = document.getElementById(id);
+      var el = document.getElementById(id + '-drag');
       var cell = el.parentNode.parentNode;
       var visual = document.createElement("th");
       visual.className = cell.className + ' rz-column-draggable';
@@ -1457,12 +1627,21 @@ window.Radzen = {
       visual.id = id + 'visual';
       document.body.appendChild(visual);
 
+      var resizers = cell.parentNode.querySelectorAll('.rz-column-resizer');
+      for (let i = 0; i < resizers.length; i++) {
+          resizers[i].style.display = 'none';
+      }
+
       Radzen[id + 'end'] = function (e) {
           var el = document.getElementById(id + 'visual');
           if (el) {
               document.body.removeChild(el);
               Radzen[id + 'end'] = null;
               Radzen[id + 'move'] = null;
+              var resizers = cell.parentNode.querySelectorAll('.rz-column-resizer');
+              for (let i = 0; i < resizers.length; i++) {
+                  resizers[i].style.display = 'block';
+              }
           }
       }
       document.removeEventListener('click', Radzen[id + 'end']);
@@ -1489,7 +1668,7 @@ window.Radzen = {
       document.addEventListener('mousemove', Radzen[id + 'move']);
   },
   startColumnResize: function(id, grid, columnIndex, clientX) {
-      var el = document.getElementById(id);
+      var el = document.getElementById(id + '-resizer');
       var cell = el.parentNode.parentNode;
       var col = document.getElementById(id + '-col');
       var dataCol = document.getElementById(id + '-data-col');
@@ -1504,6 +1683,7 @@ window.Radzen = {
                       columnIndex,
                       cell.getBoundingClientRect().width
                   );
+                  el.style.width = null;
                   document.removeEventListener('mousemove', Radzen[el].mouseMoveHandler);
                   document.removeEventListener('mouseup', Radzen[el].mouseUpHandler);
                   document.removeEventListener('touchmove', Radzen[el].touchMoveHandler)
@@ -1534,6 +1714,7 @@ window.Radzen = {
               }
           }
       };
+      el.style.width = "100%";
       document.addEventListener('mousemove', Radzen[el].mouseMoveHandler);
       document.addEventListener('mouseup', Radzen[el].mouseUpHandler);
       document.addEventListener('touchmove', Radzen[el].touchMoveHandler, { passive: true })
